@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Noto+Sans:wght@300&display=swap');
+*{margin: 0;padding: 0;font-family: Noto Sans;}
+
+
+/*Versão Para celular*/
+img{
+    width: 200px;
+}
+#divContainer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.divProduto{
+    border-radius: 20px;
+    margin: 15px;
+    border: solid 3px #F59E0B;
+    box-shadow: 3px 3px 3px 2px rgba(172, 111, 7, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.divProduto:hover{
+    transform: scale(1.05);
+}
+
+/*Versão para Tablet*/
+@media only screen and (min-width: 600px) {
+    
+    #divContainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/*Versão para Computador ou mais*/
+@media only screen and (min-width: 1024px) {
+    
+    #divContainer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
