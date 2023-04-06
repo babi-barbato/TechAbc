@@ -1,0 +1,277 @@
+:root {
+    --orange: #D75A00;
+    --blue: #0066FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: 0;
+    text-decoration: none;
+}
+.mobile-nav .logo-btns  {
+    padding: 10px;
+}
+.mobile-nav form {
+    padding: 10px 5px;
+}
+.mobile-nav .logo-btns {
+    display: flex;
+    align-items: center;
+}
+.mobile-nav .logo-btns > div {
+    flex: 0 0 50%;
+}
+.mobile-nav .logo-btns .btns {
+    display: flex;
+    justify-content: right;
+}
+.mobile-nav .logo-btns .btns .cadastro {
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.mobile-nav .logo-btns .btns .login {
+    background-color: var(--orange);
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+} 
+
+
+.mobile-nav form .text-box {
+    width: 98%;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);
+}
+.mobile-nav form .text-box input {
+    flex: 0 0 85%;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mobile-nav form .text-box button {
+    flex: 0 0 15%;
+    background-color: none;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background-color: var(--orange);
+    color: #fff;
+    transition: all .15s ease-in-out;
+}
+.mobile-nav form .text-box button:hover {
+    background-color: #dc6918;
+}
+.mobile-nav .menu {
+    padding: 0px 10px 0px 10px;
+    background-color: var(--orange);
+}
+.mobile-nav .menu .icon {
+    background-color: var(--orange);
+    padding: 8px 15px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.mobile-nav .menu .icon i {
+    width: 40px;
+}
+.mobile-nav .menu .menu-opt {
+    color: #fff;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.mobile-nav .menu .menu-opt a {
+    color: #fff;
+}
+.mobile-nav .menu .menu-opt > span.menu-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.mobile-nav .menu .menu-opt div.hr {
+    height: 1px;
+    background-color: #fff;
+    width: 98%;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.mobile-nav .menu .menu-opt ul {
+    columns: 2;
+    list-style: none;
+    line-height: 50px;
+}
+.mobile-nav .menu .menu-opt ul li {
+    transition: all 0.3s ease;
+}
+.mobile-nav .menu .menu-opt ul li:hover {
+    margin-left: 5px;
+    display: list-item;
+}
+
+.carrinho-btn {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50px;
+    line-height: normal;
+    padding: 10px;
+    max-width: 180px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.carrinho-btn:hover {
+    background-color: #005de9;
+}
+.carrinho-btn .center span {
+    display: block;
+}
+.carrinho-btn .center {
+    text-align: left;
+}
+
+.desktop-nav {
+    display: none;
+}
+.desktop-nav .left {
+    padding: 10px;
+    font-size: 35px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desktop-nav .center {
+    width: 60%;
+    padding: 10px;
+}
+.desktop-nav .center a {
+    color: #000;
+    font-weight: 600;
+}
+.desktop-nav .center ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.desktop-nav .center ul li a {
+    transition: all .3s ease;
+}
+.desktop-nav .center ul li:hover a {
+    color: var(--orange);
+}
+.desktop-nav .center .text-box {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);
+}
+.desktop-nav .center .text-box input {
+    flex: 0 0 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #f0f0f0;
+}
+.desktop-nav .center .text-box button {
+    width: 10%;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--orange);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.desktop-nav .center .text-box button:hover {
+    background-color: #de6108;
+}
+
+.desktop-nav .right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop-nav .cadastro-login {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro-login .cadastro {
+    border: 2px solid var(--orange);
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-right: 15px;
+}
+.cadastro-login .login {
+    background-color: var(--orange);
+    padding: 9px 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.desktop-nav .carrinho-btn {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 40px;
+    line-height: normal;
+    padding: 10px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #fff;
+}
+.desktop-nav .carrinho-btn .left {
+    font-size: 20px;
+}
+.desktop-nav .carrinho-btn:hover {
+    background-color: #005de9;
+}
+.desktop-nav .carrinho-btn .center span {
+    display: block;
+}
+.desktop-nav .carrinho-btn .center {
+    text-align: left;
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 900px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: flex;
+    }
+}

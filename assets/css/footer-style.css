@@ -1,0 +1,30 @@
+:root {
+    --orange: #D75A00;
+    --blue: #0066FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+a {
+    color: #fff;
+}
+
+footer {
+    background-color: var(--orange);
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+footer > div {
+    flex: 0 0 25%;
+    padding-left: 10px;
+}
+footer > div:not(:last-child) {
+    border-right: 1px solid #fff;
+}
