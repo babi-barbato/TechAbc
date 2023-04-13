@@ -1,21 +1,23 @@
 :root {
-    --orange: #D75A00;
-    --blue: #0066FF;
+    --orange: #D75A00; /* Variável para a cor Laranja */
+    --blue: #0066FF; /* Variável para a cor Azul */
 }
 
 .container {
-    height: 100vh;
+    height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
     display: flex;
 }
+
+/* PARTE ESQUERDA DA PÁGINA */
 .container .left {
-    flex: 0 0 50%;
-    background-color: var(--orange);
+    flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
+    background-color: var(--orange); /* Referência à variável orange, pegando a cor atribuída a ela */
     padding: 20px;
     color: #fff;
 }
 .container .left .back-to-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
     width: 145px;
     align-items: center;
     padding: 5px;
@@ -29,7 +31,6 @@
 .container .left .text {
     width: 500px;
     margin: auto;
-    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 .container .left .text a {
     color: #fff;
@@ -42,6 +43,7 @@
 .container .left .text h1 {
     margin-bottom: 40px;
     font-size: 2.5rem;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35); /* Sombra no texto */
 }
 .container .left .text p {
     font-size: 1.5rem;
@@ -51,16 +53,18 @@
     margin: 60px auto;
 }
 
+/* PARTE DIREITA DA PÁGINA */
 .container .right {
     flex: 0 0 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: #efefef;
 }
 .container .right form {
     padding: 10px;
     width: 80%;
+    margin: 0 auto;
 }
 .container .right form .field {
     line-height: 50px;
@@ -98,4 +102,29 @@ form .button button {
 }
 form .button button:hover {
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298);
+}
+
+.container .right .back-to-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 145px;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 100px;
+    margin-left: 60px;
+    display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container .left  {
+        display: none;
+    }
+    .container .right {
+        flex: 0 0 100%;
+    }
+    .container .right .back-to-menu {
+        display: flex;
+    }
 }
