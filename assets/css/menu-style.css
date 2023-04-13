@@ -11,6 +11,9 @@
     outline: 0;
     text-decoration: none;
 }
+.mobile-nav img{
+    width: 130px;
+}
 .mobile-nav .logo-btns  {
     padding: 10px;
 }
@@ -48,6 +51,11 @@
     display: flex;
     align-items: center;
 } 
+.mobile-nav .logo-btns .logo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
 
 
 .mobile-nav form .text-box {
@@ -270,7 +278,9 @@
     .mobile-nav {
         display: none;
     }
-
+    .desktop-nav img{
+        width: 150px;    
+    }
     .desktop-nav {
         display: flex;
     }

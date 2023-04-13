@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/menu-style.css">
-    <title>no title</title>
-</head>
-<body>
+const header = document.createElement('template');
 
-    <!-- MOBILE NAV START -->
+header.innerHTML = `
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- MOBILE NAV START -->
 
     <nav class="mobile-nav">
         <div class="logo-btns">
             <div class="logo">
-                <h1>LOGO</h1>
+                <img src="../../img/logoMenor.png">
             </div>
             <div class="btns">
                 <a href="#" class="cadastro">
@@ -79,15 +73,13 @@
             </div>
         </div>
     </nav>
-
     <!-- MOBILE NAV END -->
 
     <!-- DESKTOP NAV START -->
-
     <nav class="desktop-nav">
         <div class="left">
             <div class="logo">
-                <strong>LOGO</strong>
+            <img src="../../img/logoMenor.png">
             </div>
         </div>
         <div class="center">
@@ -147,8 +139,6 @@
         </div>
     </nav>
 
-    <!-- DESKTOP NAV START -->
+    `
 
-    <script src="../assets/js/toggleMenu.js"></script>
-</body>
-</html>
+document.body.appendChild(header.content);
