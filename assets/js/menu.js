@@ -9,7 +9,7 @@ header.innerHTML = `
     <nav class="mobile-nav">
         <div class="logo-btns">
             <div class="logo">
-                <img src="../../img/logoMenor.png">
+                <img src="../img/logoMenor.png">
             </div>
             <div class="btns">
                 <a href="#" class="cadastro">
@@ -79,7 +79,7 @@ header.innerHTML = `
     <nav class="desktop-nav">
         <div class="left">
             <div class="logo">
-            <img src="../../img/logoMenor.png">
+            <img src="../img/logoMenor.png">
             </div>
         </div>
         <div class="center">
