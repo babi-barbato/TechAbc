@@ -2,11 +2,54 @@
 *{margin: 0;padding: 0;font-family: Noto Sans;}
 
 
-/*Versão Para celular*/
-img{
+/*VERSÃO PARA CELULAR*/
+
+/*TEXTOS*/
+.pTexto{/*desc do produto*/
+    font-size: 13px;
+    /*text-align: center;*/
+}
+.pPreco{/*preço do produto*/
+    font-size: 25px;
+    color: rgb(0, 165, 0);
+    font-weight: 600;
+}
+.pTitulo{
+    margin-top: 40px;
+    font-size: 18px;
+}
+.pverm{
+    margin-bottom: -5px;
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+}
+.pverm label{
+    text-decoration: line-through;
+}
+
+/*IMAGENS*/
+img{/*img dos produtos*/
     width: 200px;
 }
-.divTitulo{
+.divTitulo img{/*img do titulo grande*/
+    width: 60px;
+}
+.fa-heart{/*icone de coração*/
+    position: absolute;
+    font-size: 25px;
+    top: 15px;
+    right: 15px;
+    color: #D75A00;
+}
+
+/*DIVS*/
+#divContainer{/*Div que pega todos os elementos*/
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+}
+.divTitulo{/*div q tem o titulo grande e a img*/
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -14,16 +57,9 @@ img{
     gap: 20px;
     align-items: center;
 }
-#divContainer{
-    padding: 60px;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 30px;
-}
-.divTitulo img{
-    width: 60px;
-}
-.divProduto{
+.divProduto{/*div do produto em si*/
+    overflow: hidden;
+    position: relative;
     border-radius: 20px;
     border: solid 3px rgba(120, 120, 120, 0.321);
     box-shadow: 3px 3px 3px 2px rgba(212, 212, 212, 0.2);
@@ -34,15 +70,33 @@ img{
     align-items: center;
     transition: all 0.5s;
 }
-.divProduto:hover{
-    border: solid 3px #F59E0B;
+.divProduto div{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.divProduto div div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.divazul{
+    background-color: #0066FF;
+    padding: 10px;
+    border-radius: 10px;
+    color:aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+.divProduto:hover{/*div do produto qnd passa o mouse em cima*/
+    border: solid 3px #d26b20bb;
     transform: scale(1.03);
     cursor: pointer;
 }
 
-/*Versão para Tablet*/
-@media only screen and (min-width: 600px) {
-    
+/*VERSÃO PARA TABLET*/
+@media only screen and (min-width: 600px) {  
     #divContainer{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -53,9 +107,8 @@ img{
     }
 }
 
-/*Versão para Computador ou mais*/
-@media only screen and (min-width: 1100px) {
-    
+/*VERSÃO PARA COMPUTADOR*/
+@media only screen and (min-width: 1100px) { 
     #divContainer{
         display: grid;
         grid-template-columns: repeat(4,1fr);
