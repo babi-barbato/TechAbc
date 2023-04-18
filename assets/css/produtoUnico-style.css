@@ -1,0 +1,41 @@
+*{margin: 0;padding: 0;}/*configurações gerais para a pagina*/
+
+
+/*CONFIGURAÇÃO PARA CELULAR*/
+
+/*CONFIGURAÇÕES DIVS*/
+#divContainer{/*div que vai ocupar a tela inteira*/
+    display: flex;/*display flex*/
+    flex-direction: row;/*elemeneto em posição de linha*/
+}
+#divDireita{/*div que pega os elementos que estão na direita da página*/
+    width: 50%;/*largura de 50% da divContainer*/
+    display: flex;/*display flex*/
+    background-color: aqua;
+}
+#divEsquerda{/*div que pega os elementos que estão na direita da página*/
+    width: 50%;/*largura de 50% da divContainer*/
+    display: flex;/*display flex*/
+    flex-direction: column;/*posição do flex coluna*/
+    align-items: center;/*elementos alinhados no centro*/
+    justify-content: center;/*elementos alinhados no centro*/
+}
+#divProduto{
+    border-radius: 20px;/*curvatura da borda*/
+    border:solid 3px #D75A00;/*borda: cor, tamanho, tipo*/
+    padding: 20px;/*margem interna de 20px*/
+    position: relative;/*posição relativa*/
+    width: 60%;/*largura de 60% da divEsquerda*/
+}
+
+/*CONFIGURAÇÕES IMAGENS*/
+.imgProduto{
+    width: 100%;/*largura de 100% da divProduto*/
+}
+.fa-heart{/*icone de coração*/
+    position: absolute;/*posição absolute*/
+    top: 12px;/*distancia do top da divProduto*/
+    right: 12px;/*distancia da direita da divProduto*/
+    font-size: 50px;/*tamanho da letra (do icone em si)*/
+    color: #D75A00;/*cor da letra (do icone em si)*/
+}
