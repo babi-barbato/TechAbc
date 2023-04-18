@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/cadastro-style.css">
+    
+    <title> Cadastro - Tech ABC</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <a href="#" class="back-to-menu">
+                <div class="icon">
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <span>Voltar ao menu</span> <!--versão para desktop e not-->
+            </a>
+            <div class="text">
+                <h1>Cadastre-se já!</h1>
+                <p>Cadastre-se agora para ver as novidades disponíveis no nosso site.
+                    Caso já tenha um cadastro, clique  <a href="#">aqui</a> para se logar.</p>
+            </div>
+            <div class="image">
+                <img src="../img/login.png" alt="ícone de login">
+            </div>
+        </div>
+        <div class="right">
+            <a href="#" class="back-to-menu">
+                <div class="icon">
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <span>Voltar ao menu</span> <!--versão celular-->
+            </a>
+            <form action="" method="post" id="form">
+                <div class="field">
+                    <label for="user">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input class="color" id="nome" type="text" placeholder="abelinha_exemplo">
+                    <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="field">
+                    <label for="cpf">CPF</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="cpf" type="text" placeholder="000.000.000-00">
+                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="field">
+                    <label for="email">Email</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="email" type="email" placeholder="username@example.com">
+                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="field">
+                    <label for="senha">Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="senha" type="password" placeholder="Digite sua senha...">
+                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="field">
+                    <label for="conf">Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="conf" type="password" placeholder="Confirme a senha acima senha...">
+                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="button">
+                    <button type="submit">
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <script src="..//assets/js/cadastro_cliente.js"></script>
+</body>
+</html>
