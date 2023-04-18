@@ -61,8 +61,8 @@ img{/*img dos produtos*/
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    border: solid 3px rgba(120, 120, 120, 0.321);
-    box-shadow: 3px 3px 3px 2px rgba(212, 212, 212, 0.2);
+    border: solid 1px rgba(120, 120, 120, 0.321);
+    box-shadow: 3px 3px 3px 2px rgba(212, 212, 212, 0.338);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ img{/*img dos produtos*/
     text-align: center;
 }
 .divProduto:hover{/*div do produto qnd passa o mouse em cima*/
-    border: solid 3px #d26b20bb;
+    border: solid 1px #d26b20bb;
     transform: scale(1.03);
     cursor: pointer;
 }
