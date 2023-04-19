@@ -39,7 +39,7 @@ footer h3 {
 footer ul li a {
     transition: all 0.2s ease;
 }
-footer ul li:hover a {
+footer ul li a:hover {
     padding-left: 10px;
 }
 .left {

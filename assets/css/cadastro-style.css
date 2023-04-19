@@ -77,8 +77,9 @@
   flex: 0 0 50%;
   display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
-  justify-content: center; /*alinha os elementos*/
+  align-items: center; /*alinha os elementos*/
   background-color: #efefef;
+  overflow-y: auto;
 }
 
 /* LARGURA DOS CAMPOS DO FORMULARIO*/
@@ -154,16 +155,17 @@ form .button button:hover {
 	left: -2px;
 	visibility: hidden; /*deixa o elemento invisivel*/
   font-size: 15px;
+  color: red;
   }
   
 /* ERROR AND SUCCESS */
-div.success  { /*a borda do input fica verde quando certo*/
+.success  { /*a borda do input fica verde quando certo*/
   border: 1px solid #2ecc71;
-  }
+}
   
-  div.error { /*a borda do input fica vermelho quando errado*/
-    border: 1px solid #cf2c1a;
-  }
+input.error { /*a borda do input fica vermelho quando errado*/
+  border: 1px solid #cf2c1a;
+}
   
   
   /*MENSAGEM*/

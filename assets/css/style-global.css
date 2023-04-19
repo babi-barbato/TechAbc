@@ -29,6 +29,7 @@ img {
 .container, .divContainer {
     margin-left: 60px;
     margin-right: 60px;
+    margin-bottom: 60px;
 }
 
 .slide-show {
@@ -40,10 +41,22 @@ img {
     max-height: 100%;
 }
 
+.container > h1 {
+    margin: 30px 0px;
+}
+.container > h1 > i {
+    color: #fff;
+    background-color: var(--orange);
+    font-size: 22px;
+    padding: 7px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
 
 .container .announcement {
     height: 100px;
     margin: 20px auto;
+    margin-bottom: 40px;
     border-radius: 8px;
     border: 1px solid #0000004e;
 }
@@ -56,7 +69,7 @@ img {
     border: 1px solid #00000040;
     border-radius: 10px;
     padding: 10px;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     cursor: pointer;
 }
 .products-container .item:hover {
@@ -71,10 +84,21 @@ img {
 .products-container .item h2 {
     font-size: 22px;
     margin-bottom: 8px;
+    color: #000;
 }
-.products-container .item .last-price {
+.products-container .item .parcela {
+    color: #000;
+}
+.products-container .item .content .last-price {
     color: red;
 }
 .products-container .item .last-price span {
     text-decoration: line-through;
+}
+.products-container .item .current-price {
+    margin: 10px 0px;
+    color: rgb(0, 174, 0);
+}
+.products-container .item .content > h2 {
+    font-size: 18px;
 }

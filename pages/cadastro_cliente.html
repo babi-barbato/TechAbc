@@ -34,31 +34,30 @@
                 </div>
                 <span>Voltar ao menu</span> <!--versão celular-->
             </a>
-            <form action="" method="post" id="form">
+            <form action="" method="post" id="form" onsubmit="return formControl(this)">
                 <div class="field">
                     <label for="user">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input class="color" id="nome" type="text" placeholder="abelinha_exemplo">
-                    <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
                 </div>
                 <div class="field">
                     <label for="cpf">CPF</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input id="cpf" type="text" placeholder="000.000.000-00">
-                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
+                </div>
+                <div class="field">
+                    <label for="conf">Telefone</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="conf" type="tel" placeholder="Confirme a senha acima senha...">
                 </div>
                 <div class="field">
                     <label for="email">Email</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input id="email" type="email" placeholder="username@example.com">
-                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
                 </div>
                 <div class="field">
                     <label for="senha">Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input id="senha" type="password" placeholder="Digite sua senha...">
-                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
                 </div>
                 <div class="field">
                     <label for="conf">Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input id="conf" type="password" placeholder="Confirme a senha acima senha...">
-                     <small>Mensagem de erro</small><!--mensagem de erro que aparece embaixo-->
                 </div>
                 <div class="button">
                     <button type="submit">
@@ -69,6 +68,6 @@
         </div>
     </div>
    
-    <script src="..//assets/js/cadastro_cliente.js"></script>
+    <script src="..//assets/js/cadastro_teste.js"></script>
 </body>
 </html>
