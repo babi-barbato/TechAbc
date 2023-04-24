@@ -5,18 +5,18 @@ header.innerHTML = `
 
 
 <!-- MOBILE NAV START -->
-
-    <nav class="mobile-nav">
-        <div class="logo-btns">
-            <div class="logo">
-                <img src="../img/logoMenor.png">
+    <!-- Mobile Menu Start -->
+    <nav class="mobile-nav"> 
+        <div class="logo-btns"> <!-- Div que armazena o logo e os botões de Cadastro e Login -->
+            <div class="logo"> <!-- Div que armazena o logo -->
+                <img src="../img/logoMenor.png"> <!--Imagem do Logo-->
             </div>
-            <div class="btns">
-                <a href="#" class="cadastro">
-                    <span>Cadastro</span>
+            <div class="btns"> <!-- Div que armazena os botões de Cadastro e Login -->
+                <a href="#" class="cadastro"> <!-- Link para a página de cadastro -->
+                    <span>Cadastro</span> <!-- Tag que tem o nome "Cadastro" -->
                 </a>
-                <a href="#" class="login">
-                    <span>Login</span>
+                <a href="#" class="login"> <!-- Link para a página de Login -->
+                    <span>Login</span> <!-- Nome "Login" -->
                 </a>
             </div>
         </div>
@@ -73,9 +73,9 @@ header.innerHTML = `
             </div>
         </div>
     </nav>
-    <!-- MOBILE NAV END -->
+    <!-- MOBILE MENU END -->
 
-    <!-- DESKTOP NAV START -->
+    <!-- DESKTOP MENU START -->
     <nav class="desktop-nav">
         <div class="left">
             <div class="logo">
@@ -138,6 +138,7 @@ header.innerHTML = `
             </div>
         </div>
     </nav>
+    <!-- DESKTOP MENU END -->
 
     `
 
