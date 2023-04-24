@@ -10,7 +10,10 @@
   outline: 0;
   font-family: sans-serif;
 }
-
+/*TEXTO 'VOLTAR AO MENU'*/
+a{
+  text-decoration: none;/*Tira o risco debaixo dessa palavra*/
+}
 /*DIV  QUE ARMAZENA TUDO*/
 .container {
   height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
@@ -77,7 +80,6 @@
   flex: 0 0 50%;
   display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
-  align-items: center; /*alinha os elementos*/
   background-color: #efefef;
   overflow-y: auto;
 }
@@ -140,10 +142,10 @@ form .button button:hover {
   justify-content: space-between; /*/* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
   width: 145px;
   align-items: center; /*alinhamento*/
-  padding: 5px;
   cursor: pointer; /*maozinha do mouse para click*/
   color: #000;
   margin-bottom: 100px;
+  margin-top: 100px;
   margin-left: 60px;
   display: none; /*esconde o "voltar ao menu" do celular*/
 }

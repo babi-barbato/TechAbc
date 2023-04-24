@@ -3,28 +3,77 @@
 
 /*CONFIGURAÇÃO PARA CELULAR*/
 
+/*CONFIGURAÇÕES DOS TEXTOS*/
+p{
+    margin: 0;
+    padding: 0;
+}
+.pTexto{/*desc do produto*/
+    font-size: 15px;/*tamanho da letra*/
+    text-indent: 40px;/*distancia de paragrafo de 40px*/
+}
+.pPreco{/*preço do produto*/
+    font-size: 15px;/*Tamanho da letra*/
+    color: rgb(0, 165, 0);/*Cor da letra*/
+    font-weight: 600;/*Negrito da letra*/
+}
+.pPreco label{
+    font-size: 24px;/*Tamanho da letra*/
+}
+.pTitulo{
+    font-size: 23px;/*tamanho da letra*/
+    font-weight: 600;
+}
+
 /*CONFIGURAÇÕES DIVS*/
+.divTextos{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.divSelect{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 #divContainer{/*div que vai ocupar a tela inteira*/
     display: flex;/*display flex*/
-    flex-direction: row;/*elemeneto em posição de linha*/
+    flex-direction: column;/*elemeneto em posição de linha*/
 }
 #divDireita{/*div que pega os elementos que estão na direita da página*/
-    width: 50%;/*largura de 50% da divContainer*/
+    width: 100%;/*largura de 50% da divContainer*/
     display: flex;/*display flex*/
-    background-color: aqua;
+    flex-direction: column;/*posição do flex coluna*/
+    align-items: center;/*elementos alinhados no centro*/
+    justify-content: start;/*elementos alinhados no centro*/
+    margin-top: 20px;
+    padding: 20px;
+}
+.divTudo{
+    width: 85%;
 }
 #divEsquerda{/*div que pega os elementos que estão na direita da página*/
-    width: 50%;/*largura de 50% da divContainer*/
+    width: 100%;/*largura de 50% da divContainer*/
     display: flex;/*display flex*/
     flex-direction: column;/*posição do flex coluna*/
     align-items: center;/*elementos alinhados no centro*/
     justify-content: center;/*elementos alinhados no centro*/
+    margin-top: 20px;
 }
 #divProduto{
     border-radius: 20px;/*curvatura da borda*/
     border:solid 3px #D75A00;/*borda: cor, tamanho, tipo*/
     padding: 20px;/*margem interna de 20px*/
     position: relative;/*posição relativa*/
+    width: 60%;/*largura de 60% da divEsquerda*/
+}
+#divPagamento{
+    display: flex;/*display flex*/
+    align-items: center;/*alinhando elementos verticalmente no centro*/
+    justify-content: space-around;/*distancia horizontal entre as imagens*/
+    border-radius: 12px;/*curvatura da borda*/
+    border:solid 3px #D75A00;/*borda: cor, tamanho, tipo*/
     width: 60%;/*largura de 60% da divEsquerda*/
 }
 
@@ -34,8 +83,37 @@
 }
 .fa-heart{/*icone de coração*/
     position: absolute;/*posição absolute*/
-    top: 12px;/*distancia do top da divProduto*/
-    right: 12px;/*distancia da direita da divProduto*/
-    font-size: 50px;/*tamanho da letra (do icone em si)*/
+    top: 15px;/*distancia do top da divProduto*/
+    right: 15px;/*distancia da direita da divProduto*/
+    font-size: 35px;/*tamanho da letra (do icone em si)*/
     color: #D75A00;/*cor da letra (do icone em si)*/
+    transition: all 0.5s;/*tempo da transição*/
+}
+.fa-heart:hover{/*o que acontece quando passa o mouse em cima do logo da coração*/
+    transform: scale(1.1);/*aumenta um pouco o coração*/
+    cursor: pointer;/*cursor fica possivel clicar*/
+
+}
+#divPagamento img{
+    width: 35px;/*tamanho das img de pagamentos (bancos, boleto e pix)*/
+}
+
+/*VERSÃO PARA TABLET*/
+@media only screen and (min-width: 600px) {  
+    #divPagamento img{
+        width: 44px;/*tamanho das img de pagamentos (bancos, boleto e pix)*/
+    }
+}
+
+/*VERSÃO PARA COMPUTADOR*/
+@media only screen and (min-width: 1024px) { 
+    #divContainer{/*Div que pega todos os elementos*/
+        flex-direction: row;
+    }
+    #divDireita{
+        width: 50%;
+    }
+    #divEsquerda{
+        width: 50%;
+    }
 }
