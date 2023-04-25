@@ -12,10 +12,10 @@ header.innerHTML = `
                 <img src="../img/logoMenor.png"> <!--Imagem do Logo-->
             </div>
             <div class="btns"> <!-- Div que armazena os botões de Cadastro e Login -->
-                <a href="#" class="cadastro"> <!-- Link para a página de cadastro -->
+                <a href="../pages/cadastro_cliente.html" class="cadastro"> <!-- Link para a página de cadastro -->
                     <span>Cadastro</span> <!-- Tag que tem o nome "Cadastro" -->
                 </a>
-                <a href="#" class="login"> <!-- Link para a página de Login -->
+                <a href="../pages/login.html" class="login"> <!-- Link para a página de Login -->
                     <span>Login</span> <!-- Nome "Login" -->
                 </a>
             </div>
@@ -37,19 +37,19 @@ header.innerHTML = `
                 <div class="hr"></div>
                 <ul>
                     <li>
-                        <a href="#">Peças</a>
+                        <a href="../pages/produtosGerais.html">Peças</a>
                     </li>
                     <li>
-                        <a href="#">Acessórios</a>
+                        <a href="../pages/produtosGerais.html">Acessórios</a>
                     </li>
                     <li>
-                        <a href="#">Monte seu PC</a>
+                        <a href="../pages/produtosGerais.html">Monte seu PC</a>
                     </li>
                     <li>
-                        <a href="#">Desktops</a>
+                        <a href="../pages/produtosGerais.html">Desktops</a>
                     </li>
                     <li>
-                        <a href="#">Notebooks</a>
+                        <a href="../pages/produtosGerais.html">Notebooks</a>
                     </li>
                     <li>
                         <!-- BOTÃO DO CARRINHO START -->
@@ -86,19 +86,64 @@ header.innerHTML = `
             <div class="menu-opt">
                 <ul>
                     <li>
-                        <a href="#">Peças</a>
+                        <a href="../pages/produtosGerais.html">Peças</a>
+
+                        <ul class="pecas-opt">
+                            <li>
+                                <a href="../pages/produtosGerais.html">Placa Mãe</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Processador</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Memória RAM</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Placa de Vídeo</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Fonte de Energia</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Cooler</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Armazenamento</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Gabinete</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">Acessórios</a>
+                        <a href="../pages/produtosGerais.html">Acessórios</a>
+                        <ul class="cascading-opt">
+                            <li>
+                                <a href="../pages/produtosGerais.html">Mouse Pads</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Monitores</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Teclados</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Mouses</a>
+                            </li>
+                            <li>
+                                <a href="../pages/produtosGerais.html">Fones</a>
+                            </li>
+                        </ul>
+                    </li>
                     </li>
                     <li>
-                        <a href="#">Notebooks</a>
+                        <a href="../pages/produtosGerais.html">Notebooks</a>
                     </li>
                     <li>
-                        <a href="#">Desktops</a>
+                        <a href="../pages/produtosGerais.html">Desktops</a>
                     </li>
                     <li>
-                        <a href="#">Monte o seu PC</a>
+                        <a href="../pages/monte_pc.html">Monte o seu PC</a>
                     </li>
                 </ul>
             </div>
@@ -113,15 +158,15 @@ header.innerHTML = `
         </div>
         <div class="right">
             <div class="cadastro-login">
-                <a href="#" class="cadastro">
+                <a href="../pages/cadastro_cliente.html" class="cadastro">
                     <span>Cadastro</span>
                 </a>
-                <a href="#" class="login">
+                <a href="../pages/login.html" class="login">
                     <span>Login</span>
                 </a>
             </div>
             <div class="cart-container">
-                <a class="carrinho-btn" href="#">
+                <a class="carrinho-btn" href="../pages/carrinho.html">
                     <div class="left">
                         <i class="fa fa-cart-shopping"></i>
                     </div>

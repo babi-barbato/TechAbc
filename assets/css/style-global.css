@@ -26,6 +26,9 @@ a {
 img {
     width: 100%;
 }
+.mg-60 {
+    margin: 0px 60px;
+}
 
 .slide-show {
     display: flex;

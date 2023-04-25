@@ -186,18 +186,22 @@
     list-style: none;
     justify-content: space-between;
 }
-.desktop-nav .center ul li {
+.desktop-nav .center .menu-opt > ul > li {
     position: relative;
+    padding: 0px 30px;
 }
 
 .desktop-nav .center ul li a {
     transition: all .3s ease;
     /* color: #fff; */
 }
-.desktop-nav .center ul li:hover a {
+.desktop-nav .center > .menu-opt > ul > li:hover > a {
     color: var(--orange);
 }
-.desktop-nav .center ul li:hover::after {
+.desktop-nav .center > .menu-opt .cascading-opt > li:hover > a {
+    color: var(--orange);
+}
+.desktop-nav .center .menu-opt > ul > li:hover::after {
     content: "";
     position: absolute;
     bottom: -8px;
@@ -207,6 +211,58 @@
     background-color: var(--orange);
     animation: borderBottom forwards .3s;
     width: 100%;
+}
+
+.desktop-nav .center .cascading-opt {
+    height: 0px;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    padding: 0px 5px;
+    transition: all .05s ease;
+}
+.desktop-nav .center .menu-opt .cascading-opt > li {
+    padding: 5px 0px;
+}
+.desktop-nav .center .menu-opt .cascading-opt > li:not(:last-child) {
+    border-bottom: 1px solid var(--orange);
+}
+.desktop-nav .center .menu-opt .cascading-opt > li > a {
+    font-weight: normal;
+}
+
+.desktop-nav .center .menu-opt > ul > li:nth-child(2):hover > ul {
+    height: 190px;
+}
+
+.desktop-nav .center .pecas-opt {
+    height: 0px;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #fff;
+    width: 120%;
+    padding: 0px 5px;
+    transition: all .05s ease;
+}
+.desktop-nav .center .menu-opt .pecas-opt > li {
+    padding: 5px 0px;
+}
+.desktop-nav .center .menu-opt .pecas-opt > li:not(:last-child) {
+    border-bottom: 1px solid var(--orange);
+}
+.desktop-nav .center .menu-opt .pecas-opt > li > a {
+    font-weight: normal;
+}
+
+.desktop-nav .center .menu-opt > ul > li:nth-child(1):hover > ul {
+    height: 350px;
 }
 
 @keyframes borderBottom {
