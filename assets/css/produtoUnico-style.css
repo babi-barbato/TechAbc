@@ -1,12 +1,32 @@
-*{margin: 0;padding: 0;}/*configurações gerais para a pagina*/
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');/*Importando font que usaremos no site*/
+*{margin: 0;padding: 0;font-family: "Noto Sans";}/*definições padrões para a página, como o tipo da font e margens 0*/
 
 /*CONFIGURAÇÃO PARA CELULAR*/
 
+/*CONFIGURAÇÕES DOS BOTÕES*/
+.btnAzul{/*botão com fundo azul*/
+    background-color: #0066FF;/*cor de fundo do botão*/
+    color: white;/*cor da fonte*/
+    border: 3px solid white;/*borda*/
+    height: 25px;/*altura do btn*/
+    width: 90%;/*largura do btn*/
+    font-size: 16px;/*tamanho do btn*/
+    border-radius: 5px;/*curvatura do btn*/
+}
+.btnBranco{/*botão com fundo branco*/
+    border-radius: 5px;/*curvatura do btn*/
+    height: 25px;/*btn altura*/
+    width: 90%;/*btn largura*/
+    font-size: 16px;/*tamanho da fonte*/
+    background-color: white;/*cor de fundo*/
+    color: #0066FF;/*cor da fonte*/
+    border: 3px solid #0066FF;/*borda*/
+}
+
 /*CONFIGURAÇÕES DOS TEXTOS*/
 p{
-    margin: 0;
-    padding: 0;
+    margin: 0;/*margem de fora = a 0*/
+    padding: 0;/*margem de dentro = a 0*/
 }
 .pTexto{/*desc do produto*/
     font-size: 15px;/*tamanho da letra*/
@@ -22,20 +42,22 @@ p{
 }
 .pTitulo{
     font-size: 23px;/*tamanho da letra*/
-    font-weight: 600;
+    font-weight: 600;/*negrito na fonte*/
 }
 
 /*CONFIGURAÇÕES DIVS*/
 .divTextos{
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+    display: flex;/*display flex*/
+    gap: 15px;/*distancia entre elementos de 15px*/
+    flex-direction: column;/*elementos alinhados em coluna*/
+    justify-content: center;/*elementos alinhados*/
+    align-items: center;/*elementos alinhados*/
 }
-.divSelect{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+.divSelect{/*div que tem o select (quantidade de cada produto)*/
+    display: flex;/*display flex*/
+    align-items: center;/*elementos alinhados*/
+    gap: 10px;/*distancia entre os elemento de 10px*/
+    width: 100%;/*largura de 100%*/
 }
 #divContainer{/*div que vai ocupar a tela inteira*/
     display: flex;/*display flex*/
@@ -47,11 +69,11 @@ p{
     flex-direction: column;/*posição do flex coluna*/
     align-items: center;/*elementos alinhados no centro*/
     justify-content: start;/*elementos alinhados no centro*/
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 20px;/*margem top de 20px*/
+    padding: 20px;/*margem interna de 20px*/
 }
-.divTudo{
-    width: 85%;
+.divTudo{/*div que tem tudo*/
+    width: 85%;/*largura de 85%*/
 }
 #divEsquerda{/*div que pega os elementos que estão na direita da página*/
     width: 100%;/*largura de 50% da divContainer*/
@@ -59,7 +81,7 @@ p{
     flex-direction: column;/*posição do flex coluna*/
     align-items: center;/*elementos alinhados no centro*/
     justify-content: center;/*elementos alinhados no centro*/
-    margin-top: 20px;
+    margin-top: 20px;/*margem top de 20 px*/
 }
 #divProduto{
     border-radius: 20px;/*curvatura da borda*/
@@ -108,12 +130,12 @@ p{
 /*VERSÃO PARA COMPUTADOR*/
 @media only screen and (min-width: 1024px) { 
     #divContainer{/*Div que pega todos os elementos*/
-        flex-direction: row;
+        flex-direction: row;/*deixa ela em display de linha*/
     }
     #divDireita{
-        width: 50%;
+        width: 50%;/*div direita com 50% de largura*/
     }
     #divEsquerda{
-        width: 50%;
+        width: 50%;/*div esquerda com 50% de largura*/
     }
 }
