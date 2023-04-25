@@ -6,7 +6,10 @@
     margin-right: 60px;
 }
 .divTitulo{
+    text-align: center;
+    text-decoration: underline;
     font-size: 18px;
+    color: #D75A00;
 }
 .h1Texto{
     font-size: 24px;
@@ -17,6 +20,7 @@
     align-items: center;
     flex-direction: column;
     gap: 25px;
+    margin-top: 25px;
 }
 
 .divEsquerda div, .divMeio div, .divDireita div{
@@ -26,7 +30,7 @@
     gap: 5px;
 }
 .divDescr{
-    height: 200px;
+    height: 60%;
     background-color: antiquewhite;
 }
 
@@ -40,7 +44,7 @@
 .btnLaranja{
     height: 40px;
     width: 100%;
-    background-color: orange;
+    background-color: #0066FF;
     border-radius: 10px;
     border: 2px solid white;
 }
@@ -48,7 +52,9 @@
     color: rgb(0, 0, 0);
 }
 
-@media only screen and (min-width: 1100px) { 
+
+
+@media only screen and (min-width: 880px) { 
     #divContainer{/*Div que pega todos os elementos*/
         display: grid;/*display grid (separar por colunas)*/
         grid-template-columns: repeat(3,1fr);/*vai repitir as colunas quatro vez de forma fracionada*/
@@ -68,6 +74,5 @@
     .divDireita{
         grid-column-start: 3;
         grid-column-end: 4;
-
     }
 }
