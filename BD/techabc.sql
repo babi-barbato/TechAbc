@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Abr-2023 às 02:18
+-- Tempo de geração: 26-Abr-2023 às 00:59
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -51,6 +51,14 @@ CREATE TABLE `clientes` (
   `senha` varchar(10) NOT NULL,
   `idClientes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `clientes`
+--
+
+INSERT INTO `clientes` (`nome`, `cpf`, `email`, `telefone`, `senha`, `idClientes`) VALUES
+('Bárbara Barbato', '16353267899', 'babi@gmail.com', '(11) 962436388', 'babi', 1),
+('Camila Freo', '98798364301', 'camila@gmail.com', '(11) 955448792', 'camila', 2);
 
 -- --------------------------------------------------------
 
@@ -172,7 +180,7 @@ ALTER TABLE `acessorios`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `desktops`

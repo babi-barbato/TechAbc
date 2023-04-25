@@ -13,10 +13,10 @@
            echo "<script> window.location='../../pages/login.html'</script>";
 
        }else{// se a pessoa digitou tudo certinho vai seguir o código abaixo
-            $email = $_POST['email'];// crio a variavel email e pego o valor digitado no email
+            $email = $_POST['user'];// crio a variavel email e pego o valor digitado no email
             $senha = $_POST['senha'];// crio a variavel senha e pego o valor digitado na senha
 
-            $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'"; //verifico se o email e senha digitados tem no banco
+            $sql_code = "SELECT * FROM clientes WHERE email = '$email' AND senha = '$senha'"; //verifico se o email e senha digitados tem no banco
             $result = mysqli_query($conexao,$sql_code);// pega o resultado fazendo a conexão
             $quantidade = mysqli_num_rows($result); // pego a qtd de linhas (se tiver uma linha significa que tem um login)
            
@@ -24,12 +24,12 @@
            
                 if($email == "babi@gmail.com" && $senha == "babi"){ //email de adm abaixo
 
-                    $_SESSION['user'] = $linha['email'];// crio uma variavel global e dou a ela o valor do email
+                    $_SESSION['user'] = $linha['user'];// crio uma variavel global e dou a ela o valor do email
                     header("Location: ../../pages/produtosGerais.html"); //leva para a pag cadastrar produtos
                     
                 }else if($quantidade == 1){ //parte de clientes abaixo
                     
-                    $_SESSION['user'] = $linha['email'];// crio uma variavel global e dou a ela o valor do email
+                    $_SESSION['user'] = $linha['user'];// crio uma variavel global e dou a ela o valor do email
                     header("Location: ../html/agenda.php"); //leva para a pag da agenda
 
                 }
