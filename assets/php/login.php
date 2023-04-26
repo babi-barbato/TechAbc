@@ -30,7 +30,7 @@
                 }else if($quantidade == 1){ //parte de clientes abaixo
                     
                     $_SESSION['user'] = $linha['user'];// crio uma variavel global e dou a ela o valor do email
-                    header("Location: ../html/agenda.php"); //leva para a pag da agenda
+                    header("Location: ../../pages/index.html"); //leva para a pag da agenda
 
                 }
             }

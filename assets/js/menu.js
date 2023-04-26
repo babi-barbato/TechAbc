@@ -43,7 +43,7 @@ header.innerHTML = `
                         <a href="../pages/produtosGerais.html">Acessórios</a>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Monte seu PC</a>
+                        <a href="../pages/monte_pc.html">Monte seu PC</a>
                     </li>
                     <li>
                         <a href="../pages/produtosGerais.html">Desktops</a>
@@ -163,7 +163,10 @@ header.innerHTML = `
                 </a>
                 <a href="../pages/login.html" class="login">
                     <span>Login</span>
-                </a>
+                </a>    
+                <a href="../pages/login.html" class="login">
+                    <span>Login</span>
+                </a>    
             </div>
             <div class="cart-container">
                 <a class="carrinho-btn" href="../pages/carrinho.html">
