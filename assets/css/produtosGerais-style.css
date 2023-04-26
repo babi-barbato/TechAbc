@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');/*Importando font que usaremos no site*/
-*{margin: 0;padding: 0;font-family: Noto Sans;}/*definições padrões para a página, como o tipo da font e margens 0*/
+*{  margin: 0;
+    padding: 0;
+    font-family: Noto Sans;}/*definições padrões para a página, como o tipo da font e margens 0*/
 
 
 /*VERSÃO PARA CELULAR*/

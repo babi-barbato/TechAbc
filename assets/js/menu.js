@@ -5,11 +5,19 @@ header.innerHTML = `
 
 
 <!-- MOBILE NAV START -->
+<<<<<<< HEAD
+
+    <nav class="mobile-nav"> 
+        <div class="logo-btns">
+            <div class="logo">
+                <img src="../img/logoMenor.png">
+=======
     <!-- Mobile Menu Start -->
     <nav class="mobile-nav"> 
         <div class="logo-btns"> <!-- Div que armazena o logo e os botões de Cadastro e Login -->
             <div class="logo"> <!-- Div que armazena o logo -->
                 <img src="../img/logoMenor.png"> <!--Imagem do Logo-->
+>>>>>>> refs/remotes/origin/main
             </div>
             <div class="btns"> <!-- Div que armazena os botões de Cadastro e Login -->
                 <a href="../pages/cadastro_cliente.html" class="cadastro"> <!-- Link para a página de cadastro -->
