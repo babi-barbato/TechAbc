@@ -214,22 +214,20 @@
     list-style: none;/*tira qualquer estilo da escrita*/
     justify-content: space-between;/*deixa o mesmo tamanho de espaçamento na horizontal entre os elementos*/
 }
-<<<<<<< HEAD
+
 /*OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li {
     position: relative;/*a posição é relativa*/
-=======
+}
 .desktop-nav .center .menu-opt > ul > li {
     position: relative;
     padding: 0px 30px;
->>>>>>> refs/remotes/origin/main
 }
 /*TITULO DAS OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li a {
     transition: all .3s ease;/*cor da fonte*/
     /* color: #fff; */
 }
-<<<<<<< HEAD
 /*EFEITO LARANJA NA LETRA*/
 .desktop-nav .center ul li:hover a {/*muda a cor do texto quando passa o mouse em cima*/
     color: var(--orange);/*cor da letra será laranja*/
@@ -247,7 +245,7 @@
 }
 
 /*ANIMAÇÃO BORDINHA LARANJA*/
-=======
+
 .desktop-nav .center > .menu-opt > ul > li:hover > a {
     color: var(--orange);
 }
@@ -318,7 +316,6 @@
     height: 350px;
 }
 
->>>>>>> refs/remotes/origin/main
 @keyframes borderBottom {
     from {
         width: 0px;/*não tem largura*/
