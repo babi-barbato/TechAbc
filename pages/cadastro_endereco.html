@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- linguagem padrão de pt-br -->
+<head>
+    <meta charset="UTF-8"><!-- charset utf8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compativel com outros navegadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
+    <link rel="stylesheet" href="../assets/css/cadastro_endereco.css"> <!--link do css-->
+    
+    <title> Cadastro de Endereço - Tech ABC</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left"> <!--parte esquerda-->
+            <a href="#" class="back-to-menu">
+               
+               
+            </a>
+            <div class="text">
+             
+            </div>
+            
+            </div>
+        <div class="right">
+            <form action="" method="post" id="form" onsubmit="return formControl(this)">
+                <!--INPUTS-->
+                <div class="field">
+                    <input id="nome" type="text" placeholder="Nome completo">
+                    <input id="tel" type="text" placeholder="N° de Telefone">
+                </div>
+
+                <div class="field">
+                    <input id="cep" type="cep" placeholder="CEP">
+                </div>
+
+                <div class="field">
+                    <input id="cidade" type="text" placeholder="Estado - Cidade">
+                </div>
+
+                <div class="field">
+                    <input id="rua" type="text" placeholder="Rua/Avenida">
+                </div>
+
+                <div class="field">
+                    <input id="bairro" type="text" placeholder=" Bairro">
+                    <input id="numero" type="text" placeholder="Número">
+                </div>
+
+                <div class="field">
+                    <input id="complemento" type="text" placeholder="Complemento">
+                </div>
+
+                <!--SALVAR-->
+                <label class="salvar">Salvar Como:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                <div class="salvar-btn">
+                    <button type="submit" id="casa">
+                        Casa 
+                    </button>
+                    <button type="submit" id="trabalho">
+                        Trabalho
+                    </button>
+                </div>
+
+                <!--PAGAMENTO-->
+                <div class="paga">
+                <label class="salvar">Selecione a forma de pagamento:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                <select class="pagamento">
+                    <option value="selecione">Selecione</option>
+                    <option value="cartao"> Cartão</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="pix">Pix</option>
+                </select>
+            </div>
+            
+                <!--BOTÃO-->
+                <div class="button">
+                    <button type="submit" id="cancelar">
+                        Cancelar  
+                    </button>
+                    <button type="submit" id="enviar">
+                        Enviar 
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    
+</body>
+</html>

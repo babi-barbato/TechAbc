@@ -1,315 +1,347 @@
-:root {
-    --orange: #D75A00;
-    --blue: #0066FF;
+:root { 
+    --orange: #D75A00; /* Variável para a cor Laranja */
+    --blue: #0066FF; /* Variável para a cor Azul */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    outline: 0;
-    text-decoration: none;
+* { /* PREENCHIMENTO DE TELA */
+    margin: 0; /*margem externa*/
+    padding: 0; /*margem interna*/
+    box-sizing: border-box; /*eclui as margens padding, bordas e etc da contagem da dimenção do elemento*/
+    font-family: sans-serif; /*tipo de fonte*/
+    outline: 0; /*borda de fora do elemento*/
+    text-decoration: none; /*tira a decoração padrão do texto*/
+}  
+
+/*CELULAR*/
+
+.mobile-nav img{ /*IMAGM DA LOGO*/
+    width: 130px; /*tamanho da largura da imagem*/
 }
-.desktop-nav {
-    /* background-color: #171717; */
+.mobile-nav .logo-btns  { /* BOTÕES*/
+    padding: 10px; /*margem interna*/
 }
-.mobile-nav img{
-    width: 130px;
+
+.mobile-nav form { /**/
+    padding: 10px 5px; /*margem interna, altura e largura*/
 }
-.mobile-nav .logo-btns  {
-    padding: 10px;
+.mobile-nav .logo-btns { /* BOTÕES*/
+    display: flex; /*ele coloca os elementos em linha na horizontal*/
+    align-items: center; /*alinha os itens no centro*/
 }
-.mobile-nav form {
-    padding: 10px 5px;
+.mobile-nav .logo-btns > div {/* DIV DOS BOTÕES*/
+    flex: 0 0 50%;/*largura do elemento em 50%*/
 }
-.mobile-nav .logo-btns {
-    display: flex;
-    align-items: center;
+.mobile-nav .logo-btns .btns { /*BOTÃO CADASTRO E LOGIN*/
+    display: flex; /*ele coloca os elementos em linha na horizontal*/
+    justify-content: right;/*alinha os elementos a direita*/
 }
-.mobile-nav .logo-btns > div {
-    flex: 0 0 50%;
+
+/*BOTÃO DE CADASTRO*/
+.mobile-nav .logo-btns .btns .cadastro { 
+    border: 2px solid var(--orange);/*borda do tamanho 2px, borda solida, cor laranja*/
+    color: var(--orange);/*cor da letra*/
+    border-radius: 4px;/*arredondamento da borda*/
+    padding: 5px 10px; /*margem interna, altura e largura*/
+    text-align: center;/*texto alinhado no centro*/
+    font-weight: 600;/*letra em negrito*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    align-items: center; /*itens centralizado no centro*/
 }
-.mobile-nav .logo-btns .btns {
-    display: flex;
-    justify-content: right;
-}
-.mobile-nav .logo-btns .btns .cadastro {
-    border: 2px solid var(--orange);
-    color: var(--orange);
-    border-radius: 4px;
-    padding: 5px 10px;
-    text-align: center;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-}
-.mobile-nav .logo-btns .btns .login {
-    background-color: var(--orange);
-    color: #fff;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
+/*BOTÃO DE LOGIN*/
+.mobile-nav .logo-btns .btns .login { 
+    background-color: var(--orange); /*fundo da cor laranja*/
+    color: #fff;/*cor da letra*/
+    font-weight: 600;/*letra em negrito*/
+    padding: 5px 10px;/*margem interna, altura e largura*/
+    border-radius: 4px;/*arredondamento da borda*/
+    margin-left: 20px;/*uma margem de 20px do lado esquerda*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    align-items: center;/*itens alinhados no centro*/
 } 
-.mobile-nav .logo-btns .logo{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+/*IMAGEM DA LOGO*/
+.mobile-nav .logo-btns .logo{ 
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    align-content: center;/*alinha os elementos no centro*/
+    justify-content: center; /*alinha os elementos*/
 }
 
-
-.mobile-nav form .text-box {
-    width: 98%;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);
+/*BARRA DEPESQUISA */
+.mobile-nav form .text-box { 
+    width: 98%; /*largura*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    margin: 0 auto;/*margem só na lateral*/
+    border-radius: 5px;/*arredondamento das bordas*/
+    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);/*somba do elemento*/
 }
+
+/*CAIXINHA DA BARRA DE PESQUISA*/
 .mobile-nav form .text-box input {
-    flex: 0 0 85%;
-    border: none;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    flex: 0 0 85%;/*largura de 85%*/
+    border: none;/*arredondamneto da borda*/
+    background-color: #f0f0f0;/*cor de fundo*/
+    padding: 10px;/*margem interna*/
+    border-top-left-radius: 5px;/*arredondamento da borda do topo do lado esquerdo*/
+    border-bottom-left-radius: 5px;/*arredondamento da borda debaixo do lado esquerdo*/
 }
+/*BOTÃO DA BARRA DE PESQUISA*/
 .mobile-nav form .text-box button {
-    flex: 0 0 15%;
-    background-color: none;
-    border: none;
-    padding: 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    cursor: pointer;
-    background-color: var(--orange);
-    color: #fff;
-    transition: all .15s ease-in-out;
+    flex: 0 0 15%;/*largura de 15%*/
+    background-color: none;/*cor de fundo*/
+    border: none;/*não tem borda*/
+    padding: 10px;/*margem interna*/
+    border-top-right-radius: 5px;/*arredondamento da borda do topo do lado direito*/
+    border-bottom-right-radius: 5px;/*arredondamento da borda debaixo do lado direito*/
+    cursor: pointer;/*tipo do mouse: mão*/
+    background-color: var(--orange);/* cor de fundo*/
+    color: #fff;/* cor da letra*/
+    transition: all .15s ease-in-out;/*mudança da cor de fundo*/
 }
+
+/*COR DO BOTÃO DA BARRA DE EPSQUISA*/
 .mobile-nav form .text-box button:hover {
-    background-color: #dc6918;
+    background-color: #dc6918;/* cor de fundo*/
 }
+/*CASCATA DO MENU DE CELULAR */
 .mobile-nav .menu {
-    padding: 0px 10px 0px 10px;
-    background-color: var(--orange);
+    padding: 0px 10px 0px 10px;/*margem interna, para os 4 lados*/
+    background-color: var(--orange);/*cor de fundo*/
 }
+/*DIV QUE ARMAZENA O INCON DO MENU */
 .mobile-nav .menu .icon {
-    background-color: var(--orange);
-    padding: 8px 15px;
-    font-size: 24px;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
+    background-color: var(--orange);/*cor de fundo*/
+    padding: 8px 15px;/*margem interna, altura e largura*/
+    font-size: 24px;/*tamanho da letra*/
+    text-align: center;/*textos alinhados no centro*/
+    color: #fff;/*cor da letra*/
+    cursor: pointer;/*tipo do mouse: mão*/
 }
+/*ICON DO EFEITO CASCATA*/
 .mobile-nav .menu .icon i {
-    width: 40px;
+    width: 40px;/*largura em 40px*/
 }
+/*OPÇÕES DO MENU*/
 .mobile-nav .menu .menu-opt {
-    color: #fff;
-    height: 0px;
-    overflow: hidden;
-    transition: all 0.2s ease;
+    color: #fff;/*cor da letra*/
+    height: 0px;/*começa sem altura, efeito cascata*/
+    overflow: hidden;/*esconde tudo que ultrapassa o limite do elemento*/
+    transition: all 0.2s ease;/*efeito cascata, na hora q ele desce*/
 }
+
+/*TITULOS DO MENU*/
 .mobile-nav .menu .menu-opt a {
-    color: #fff;
+    color: #fff;/*cor da letra*/
 }
+/*TITULO DO MENU DE CELULAR*/
 .mobile-nav .menu .menu-opt > span.menu-title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 18px;/*tamanho da letra*/
+    font-weight: 600;/*letra em negrito*/
 }
+/*EFEITO DA LINHA DEBAIXO DOS COMPONENTES*/
 .mobile-nav .menu .menu-opt div.hr {
-    height: 1px;
-    background-color: #fff;
-    width: 98%;
-    margin-top: 6px;
-    margin-bottom: 10px;
+    height: 1px;/*a altura comeca em 1px*/
+    background-color: #fff;/*cor da letra*/
+    width: 98%;/*tem uma largura de 98%*/
+    margin-top: 6px;/*margem do topo para baixo*/
+    margin-bottom: 10px;/*margem na parte debaxo*/
 }
+
+/* LISTA DE OPÇÕES DO MENU*/
 .mobile-nav .menu .menu-opt ul {
-    columns: 2;
-    list-style: none;
-    line-height: 50px;
+    columns: 2;/*colunas que foi dividida a pagina*/
+    list-style: none;/*nenhum estilo de lista*/
+    line-height: 50px;/*altura da linha*/
 }
+/*COMPONENTES DA LISTA*/
 .mobile-nav .menu .menu-opt ul li {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/*transição de mouse*/
 }
-.mobile-nav .menu .menu-opt ul li:hover {
-    margin-left: 5px;
-    display: list-item;
+.mobile-nav .menu .menu-opt ul li:hover { /*quando clicado, cria um efeito lateral*/
+    margin-left: 5px;/*margem da esquerda*/
 }
 
+/*BOTÃO DO CARRINHO*/
 .carrinho-btn {
-    background-color: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 50px;
-    line-height: normal;
-    padding: 10px;
-    max-width: 180px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .2s ease;
-}
-.carrinho-btn:hover {
-    background-color: #005de9;
-}
-.carrinho-btn .center span {
-    display: block;
-}
-.carrinho-btn .center {
-    text-align: left;
+    background-color: var(--blue);/*cor de fundo*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    justify-content: space-between;/*deixa o mesmo tamanho de espaçamento na horizontal entre os elementos*/
+    align-items: center;/*centraliza os elementos*/
+    max-height: 50px;/* maximo de latura*/
+    line-height: normal;/*altura da linha padrão*/
+    padding: 10px;/*margem interna*/
+    max-width: 180px;/*maximo de largura*/
+    border-radius: 5px;/*arredondamento das bordas*/
+    cursor: pointer;/*tipo do mouse: mão*/
+    transition: all .2s ease;/*cor de fundo*/
 }
 
-.desktop-nav {
-    display: none;
+.carrinho-btn:hover {/*fica mais claro quando passa o mouse em cima*/
+    background-color: #005de9;/*cor de fundo*/
 }
+.carrinho-btn .center span {/*titulo do carrinho*/
+    display: block;/*não deixa elementos ficar ao lado*/
+}
+.carrinho-btn .center {/* clas da div do carrinho, alinhas todo o carrinho para a esquerda da div*/
+    text-align: left;/*textos alinhado a esquerda*/
+}
+
+
+/*DESKTOP*/
+.desktop-nav {/*quando for pra celular, esconde o do desktop*/
+    display: none;/*deixa invisivel o elemento*/
+}
+/*IMAGEM DO DESK*/
 .desktop-nav .left {
-    padding: 10px;
-    font-size: 35px;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;/*margem interna*/
+    font-size: 35px;/*tamanho da fonte*/
+    width: 20%;/*largura do elemento em 20%*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    justify-content: center;/*alinha os elemento na horizontal*/
+    align-items: center;/*alinha os itens no centro*/
 }
+/*ALINHAMENTO DAS OPÇÕES DO MENU*/
 .desktop-nav .center {
-    width: 60%;
-    padding: 10px;
+    width: 60%;/*largura em 60%*/
+    padding: 10px;/*margem interna*/
 }
+/*TITULOS DO MENU*/
 .desktop-nav .center a {
-    color: #000;
-    font-weight: 600;
+    color: #000;/*cor da letra*/
+    font-weight: 600;/*letra em negrito*/
 }
+/*LISTA QUE CRIA O MEU*/
 .desktop-nav .center ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    list-style: none;/*tira qualquer estilo da escrita*/
+    justify-content: space-between;/*deixa o mesmo tamanho de espaçamento na horizontal entre os elementos*/
 }
+/*OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li {
-    position: relative;
+    position: relative;/*a posição é relativa*/
 }
-
+/*TITULO DAS OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li a {
-    transition: all .3s ease;
+    transition: all .3s ease;/*cor da fonte*/
     /* color: #fff; */
 }
-.desktop-nav .center ul li:hover a {
-    color: var(--orange);
+/*EFEITO LARANJA NA LETRA*/
+.desktop-nav .center ul li:hover a {/*muda a cor do texto quando passa o mouse em cima*/
+    color: var(--orange);/*cor da letra será laranja*/
 }
-.desktop-nav .center ul li:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    right: 0;
-    height: 3px;
-    border-radius: 20px;
-    background-color: var(--orange);
-    animation: borderBottom forwards .3s;
-    width: 100%;
+.desktop-nav .center ul li:hover::after {/*forma uma linha laranja embaico da opção do menu*/
+    content: "";/*para não aparecer nada na tela*/
+    position: absolute;/*ele fica preso ao elemento*/
+    bottom: -8px;/*margem debaixo*/
+    right: 0;/*não tem distancia ao lado direito*/
+    height: 3px;/*a altura é 3px*/
+    border-radius: 20px;/*arredondamento das bordas*/
+    background-color: var(--orange);/*cor de fundo*/
+    animation: borderBottom forwards .3s;/*efeito mouse no menu*/
+    width: 100%;/*largura*/
 }
 
+/*ANIMAÇÃO BORDINHA LARANJA*/
 @keyframes borderBottom {
     from {
-        width: 0px;
+        width: 0px;/*não tem largura*/
     } to {
-        width: 100%;
+        width: 100%;/*largura*/
     }
 }
 
+/**/
 .desktop-nav .center .text-box {
-    width: 100%;
-    display: flex;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);
+    width: 100%;/*largura*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    margin-top: 20px;/*margem de cima do elemento*/
+    border-radius: 5px;/*arredondamento das bordas*/
+    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);/*sombra das text-box*/
 }
 .desktop-nav .center .text-box input {
-    flex: 0 0 90%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px 0px 0px 5px;
-    background-color: #f0f0f0;
+    flex: 0 0 90%;/*largura de 90%*/
+    padding: 12px;/*margem interna*/
+    border: none;/* sem borda*/
+    border-radius: 5px 0px 0px 5px;/*arredondamento das bordas*/
+    background-color: #f0f0f0;/*cor da letra*/
 }
-.desktop-nav .center .text-box button {
-    width: 10%;
-    border: none;
-    border-radius: 0px 5px 5px 0px;
-    background-color: var(--orange);
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.desktop-nav .center .text-box button {/**/
+    width: 10%;/*largura*/
+    border: none;/*sem borda*/
+    border-radius: 0px 5px 5px 0px;/*arredondamento das bordas*/
+    background-color: var(--orange);/*cor de fundo*/
+    color: #fff;/*cor da letra*/
+    cursor: pointer;/*tipo do mouse:mão*/
+    transition: all 0.2s ease;/*cor de fundo*/
 }
-.desktop-nav .center .text-box button:hover {
-    background-color: #de6108;
-}
-
-.desktop-nav .right {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.desktop-nav .center .text-box button:hover {/**/
+    background-color: #de6108;/*cor de fundo*/
 }
 
-.desktop-nav .cadastro-login {
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cadastro-login .cadastro {
-    border: 2px solid var(--orange);
-    padding: 8px 12px;
-    border-radius: 8px;
-    color: var(--orange);
-    font-weight: 600;
-    margin-right: 15px;
-}
-.cadastro-login .login {
-    background-color: var(--orange);
-    padding: 9px 15px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 600;
+.desktop-nav .right {/**/
+    width: 20%;/*largura*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    flex-direction: column;/*joga os elementos para baixo, como uma coluna*/
+    align-items: center;/*alinha os itens no centro*/
 }
 
-.desktop-nav .carrinho-btn {
-    background-color: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 40px;
-    line-height: normal;
-    padding: 10px;
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .2s ease;
-    color: #fff;
+.desktop-nav .cadastro-login {/**/
+    height: 50%;/*altura que o elemento começa*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    justify-content: center;/*alinha os elementos no centro*/
+    align-items: center;/*alinhas os itens no centro*/
 }
-.desktop-nav .carrinho-btn .left {
-    font-size: 20px;
+.cadastro-login .cadastro {/**/
+    border: 2px solid var(--orange);/*borda da grossura 2px, sera sólida, tem a cor laranja*/
+    padding: 8px 12px;/*margem interna, altura e largura*/
+    border-radius: 8px;/*arredondamento das bordas*/
+    color: var(--orange);/*cor da letra*/
+    font-weight: 600;/*letra em negrito*/
+    margin-right: 15px;/*margem da parte direita*/
 }
-.desktop-nav .carrinho-btn:hover {
-    background-color: #005de9;
-}
-.desktop-nav .carrinho-btn .center span {
-    display: block;
-}
-.desktop-nav .carrinho-btn .center {
-    text-align: left;
-    font-size: 15px;
+.cadastro-login .login {/**/
+    background-color: var(--orange);/*cor de fundo*/
+    padding: 9px 15px;/*margem interna, altura e largura*/
+    border-radius: 5px;/*arredondamento das bordas*/
+    color: #fff;/*cor da letra*/
+    font-weight: 600;/*letra em negrito*/
 }
 
-@media only screen and (min-width: 900px) {
+.desktop-nav .carrinho-btn {/**/
+    background-color: var(--blue);/*cor de fundo*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    justify-content: space-between;/*deixa o mesmo espaçodos elementos na horizontal*/
+    align-items: center;/*alinha os itens no centro*/
+    max-height: 40px;/*altura máxima*/
+    line-height: normal;/*espaçamento na vertical entre as linhas*/
+    padding: 10px;/*margem interna, altura e largura*/
+    width: 100%;/*laruramáxima*/
+    margin-right: 20px;/*margem na parte direita*/
+    border-radius: 5px;/*arredondamneto das bordas*/
+    cursor: pointer;/*estilo do mouse: mão*/
+    transition: all .2s ease;/*cor do botão para mais escuro */
+    color: #fff;/*cor da letra*/
+}
+.desktop-nav .carrinho-btn .left {/**/
+    font-size: 20px;/*tamanho da letra*/
+}
+.desktop-nav .carrinho-btn:hover {/**/
+    background-color: #005de9;/*cor de fundo*/
+}
+.desktop-nav .carrinho-btn .center span {/**/
+    display: block;/*transforma em boco*/
+}
+.desktop-nav .carrinho-btn .center {/**/
+    text-align: left;/*alinhado a esquerda*/
+    font-size: 15px;/*tamanho da letra*/
+}
+
+@media only screen and (min-width: 900px) {/**/
     .mobile-nav {
-        display: none;
+        display: none;/*deixa invisivel o elemento*/
     }
     .desktop-nav img{
-        width: 150px;    
+        width: 150px;    /*largura*/
     }
     .desktop-nav {
-        display: flex;
+        display: flex;/*ele coloca os elementos em linha na horizontal*/
     }
 }

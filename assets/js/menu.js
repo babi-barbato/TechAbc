@@ -6,7 +6,7 @@ header.innerHTML = `
 
 <!-- MOBILE NAV START -->
 
-    <nav class="mobile-nav">
+    <nav class="mobile-nav"> 
         <div class="logo-btns">
             <div class="logo">
                 <img src="../img/logoMenor.png">

@@ -1,0 +1,205 @@
+/* PREENCHIMENTO DE TELA */
+  * {
+        margin: 0;/*margem externa*/
+        padding: 0; /*margem interna*/
+        box-sizing: border-box;/*eclui as margens padding, bordas e etc da contagem da dimenção do elemento*/
+        outline: 0;/*borda de fora do elemento*/
+        font-family: sans-serif;/*tipo de fonte*/}
+  
+/*DIV  QUE ARMAZENA TUDO*/
+.container {
+        height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
+
+/* COR DA PARTE DA ESQUERDA */
+.container .left {
+        flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
+        background-color: #D75A00; /* Referência à variável orange, pegando a cor atribuída a ela */
+        padding: 20px;/*margem interna*/
+        color: #fff;/*cor da letra*/}
+  
+   
+/* TITULOS DA PARTE LARANJA */
+.container .left .text {
+        width: 500px;/*largura*/
+        margin: auto;/*margem externa*/}
+  
+  
+/* PARTE DIREITA DA PÁGINA */
+.container .right {
+        flex: 0 0 50%;/*ele coloca os elementos em linha na horizontal*/
+        display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
+        align-items: center; /*alinha os elementos*/
+        background-color: #efefef; /*cor de fundo*/
+        overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/}
+  
+/* MARGEM DAS BORDAS DOS CAMPOS*/
+.container .right form {
+        padding: 10px;/*margem interna*/
+        margin: 0 auto;/*margem externa*/
+        margin-top: 10px ;}
+
+/*INPUTS*/
+#nome{
+        padding: 10px;/*margem interna*/
+        margin: 0 auto;/*margem externa*/
+        width: 60%;/*largura do campo*/} 
+#tel{
+        padding: 10px;/*margem interna*/
+        margin: 0 auto;/*margem externa*/
+        width: 40%;/*largura do campo*/}
+#bairro{
+        padding: 10px;/*margem interna*/
+        margin: 0 auto;/*margem externa*/
+        width: 60%;/*largura do campo*/}
+#numero{
+        padding: 10px;/*margem interna*/
+        margin: 0 auto;/*margem externa*/
+        width: 40%;/*largura do campo*/}
+
+  
+
+/* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
+  .container .right form .field {
+        line-height: 40px; /*espaçamento da letra e o campo*/
+        margin-bottom: 17px;/*espaçamento entre os campos*/
+        font-size: 1.4rem;/*tamanho da letra*/
+        position: relative; /*posiciona o elemento da página como desejado*/
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /*espaçamente entre os elementos da mesma div*/}
+
+/* TITULO INPUT */
+  .salvar {
+    font-weight: 800; /*negrito*/
+    margin: 0;/*margem externa*/}
+
+/* CAMPOS*/
+  .container .right form .field input {
+        width: 100%;/*tamanho da largura da imagem*/
+        border: none;/*não apresenta borda*/
+        padding: 15px 10px;/*margem interna*/
+        border-radius: 6px; /*arredondamento da borda*/
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*somba do elemento*/
+        font-size: 1.0rem;/*tamanho da letra*/
+        display: block; /*transforma em bloco*/
+        font-weight: 600; /*negrito*/
+        height: 45px;}
+
+  .container .right form .field * {
+        display: block;/*transforma em bloco*/}
+
+
+/*BOTÕES DE CASA OU TRABALHO*/
+    form .salvar-btn button {
+        background-color: #fff;
+        color: #D75A00;
+        border: none; /*não apresenta borda*/
+        padding: 12px;/*margem interna*/
+        font-weight: 600; /*negrito*/
+        font-size: 1.3rem;/*tamanho da letra*/
+        border-radius: 10px;/*arredondamento da borda*/
+        transition: all .20s ease; /*transição para o botão vir para frente*/
+        cursor: pointer; /*maozinha do mouse para click*/
+        margin-top: 8px;/*margem externa*/
+        margin-bottom: 25px;}
+    
+    form .salvar-btn button:hover {
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
+
+      .salvar-btn{
+        display : flex ;
+        gap: 5px;}
+      
+/*BOTÃO DE CASA E TRABALHO*/
+#casa{
+    border:2px solid #D75A00;
+    width: 22%;
+    height: 33px;
+    display: flex; 
+    align-items: center; /*centraliza na horizontal*/
+    justify-content: center; /*centraliza na vertical*/}
+  
+#trabalho{
+    border:2px solid #D75A00;
+    width: 22%;
+    height: 33px;
+    display: flex;
+    align-items: center; /*centraliza na horizontal*/
+   justify-content: center; /*centraliza na vertical*/}
+
+    
+
+
+.pag{
+    display : flex ;
+    gap: 5px;
+}
+.pagamento{
+    height: 35px;
+    width: 50%;
+    background-color: #fff;
+    color: #D75A00;
+    font-weight: 600; /*negrito*/
+    font-size: 1.3rem;/*tamanho da letra*/
+    border-radius: 10px;/*arredondamento da borda*/
+    transition: all .20s ease; /*transição para o botão vir para frente*/
+    cursor: pointer; /*maozinha do mouse para click*/
+    border:2px solid #D75A00;
+    text-align: center;
+    display: flex; 
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* BOTÃO DE ENVIAR E CANCELAR*/
+form .button button {
+        background-color: #0066FF;; /*váriavel laranja*/
+        padding: 12px;/*margem interna*/
+        color: #fff;/*cor da letra*/
+        font-weight: 600; /*negrito*/
+        font-size: 1.3rem;/*tamanho da letra*/
+        border-radius: 10px;/*arredondamento da borda*/
+        transition: all .20s ease; /*transição para o botão vir para frente*/
+        cursor: pointer; /*maozinha do mouse para click*/
+        margin-top: 10px;/*margem externa*/}
+
+form .button button:hover {
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
+
+.button{
+        display : flex ;
+        flex-direction: row;
+        justify-content: right;
+    gap: 10px;}
+
+#cancelar{
+        background-color: #fff;
+        border:2px solid #0066FF;
+        color: #0066FF;
+        width: 30%;
+        height: 43px;
+        text-align: center;}
+#enviar{
+        width: 30%;
+        height: 43px;
+        border: none; /*não apresenta borda, botão envia*/}
+  
+  
+  
+  /* DESKTOP*/
+  @media only screen and (max-width: 1080px) {
+    .container .left  {
+        display: none; /*esconde a parte laranja */}
+
+    .container .right {
+        flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container */}
+
+    .container .right .back-to-menu {
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
+  }
