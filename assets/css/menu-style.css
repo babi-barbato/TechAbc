@@ -121,10 +121,10 @@
 }
 /*OPÇÕES DO MENU*/
 .mobile-nav .menu .menu-opt {
-    color: #fff;/*cor da letra*/
-    height: 0px;/*começa sem altura, efeito cascata*/
-    overflow: hidden;/*esconde tudo que ultrapassa o limite do elemento*/
-    transition: all 0.2s ease;/*efeito cascata, na hora q ele desce*/
+    color: #fff;
+    height: 0px;
+    overflow: hidden;
+    transition: all .2s ease;
 }
 
 /*TITULOS DO MENU*/

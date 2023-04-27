@@ -164,10 +164,7 @@ header.innerHTML = `
                 </a>
                 <a href="../pages/login.html" class="login">
                     <span>Login</span>
-                </a>    
-                <a href="../pages/login.html" class="login">
-                    <span>Login</span>
-                </a>    
+                </a>  
             </div>
             <div class="cart-container">
                 <a class="carrinho-btn" href="../pages/carrinho.html">
