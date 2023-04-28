@@ -26,35 +26,31 @@
                         session_start();
                     }
 
-                    $sql = "SELECT tipo FROM ".$_SESSION['produto']." WHERE idNote = 1 AND tipo = 'notebooks'"; //seleciona o tipo do primeiro produdo cadastrado na tabela
-                    $result = mysqli_query($conexao,$sql); //resultado
-
-                    while ($linha = mysqli_fetch_array($result)){
-                        echo "<h1>".$linha['tipo']."</h1><!-- titulo -->";
-                    }
+                    echo "<h1>".$_SESSION['titulo']."</h1><!-- titulo -->";
+                    
                 ?>
             </div><!-- fecha divTitulo -->
             
             
             <?php
-                $sqlProdutos = "SELECT * FROM notebooks WHERE tipo = 'notebooks'"; //seleciona todos os produtos de uma determinada tabela
+                $sqlProdutos = "SELECT * FROM ".$_SESSION['produto']." WHERE tipo = '".$_SESSION['tipo']."'"; //seleciona todos os produtos de uma determinada tabela
                 $resultado = mysqli_query($conexao,$sqlProdutos); //resultado
                 
-                while ($linha2 = mysqli_fetch_array($resultado)){
+                while ($linha = mysqli_fetch_array($resultado)){
                     
                     
                 echo "
                     <div class='divProduto'>
                         <i class='fa-regular fa-heart'></i>
-                        <img src='../img/".$linha2['tipo']."/".$linha2['foto']."'>
+                        <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
                         
                         <div class='divTextos'>
 
-                        <p class='pTitulo'>".$linha2['nome']."</p>
-                        <p class='pverm'>De <label>R$ ".$linha2['precoAntigo'].",00</label> por:</p>
+                        <p class='pTitulo'>".$linha['nome']."</p>
+                        <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
                         
                             <div>
-                                <p class='pPreco'>R$ ".$linha2['preco'].",00</p>
+                                <p class='pPreco'>R$ ".$linha['preco'].",00</p>
                                 <div class='divazul'>
                                     <i class='fa fa-cart-shopping'></i>
                                 </div>
