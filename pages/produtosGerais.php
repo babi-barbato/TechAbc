@@ -26,18 +26,18 @@
                         session_start();
                     }
 
-                    $sql = "SELECT tipo FROM notebooks WHERE idNote = 1"; //seleciona o tipo do primeiro produdo cadastrado na tabela
+                    $sql = "SELECT tipo FROM ".$_SESSION['produto']." WHERE idNote = 1 AND tipo = 'notebooks'"; //seleciona o tipo do primeiro produdo cadastrado na tabela
                     $result = mysqli_query($conexao,$sql); //resultado
 
                     while ($linha = mysqli_fetch_array($result)){
                         echo "<h1>".$linha['tipo']."</h1><!-- titulo -->";
                     }
-                    ?>
+                ?>
             </div><!-- fecha divTitulo -->
             
             
             <?php
-                $sqlProdutos = "SELECT * FROM notebooks"; //seleciona todos os produtos de uma determinada tabela
+                $sqlProdutos = "SELECT * FROM notebooks WHERE tipo = 'notebooks'"; //seleciona todos os produtos de uma determinada tabela
                 $resultado = mysqli_query($conexao,$sqlProdutos); //resultado
                 
                 while ($linha2 = mysqli_fetch_array($resultado)){
