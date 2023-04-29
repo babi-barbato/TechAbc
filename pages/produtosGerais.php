@@ -22,33 +22,25 @@
                 <img src="https://i.pinimg.com/564x/51/27/39/5127391bfe4834839a9ff382c6a4d546.jpg" alt=""><!-- imagem de um pc que aparece no canto antes do título -->
 
                 <?php
-                    if(!isset($_SESSION)){ //inicia a sessão
-                        session_start();
+                    if(!isset($_SESSION)){ //se a sessão não estiver iniciada
+                        session_start();//inicia a sessão
                     }
-
-                    echo "<h1>".$_SESSION['titulo']."</h1><!-- titulo -->";
-                    
+                    echo "<h1>".$_SESSION['titulo']."</h1>";//Titulo que fica no topo da página   
                 ?>
             </div><!-- fecha divTitulo -->
-            
-            
+
             <?php
                 $sqlProdutos = "SELECT * FROM ".$_SESSION['produto']." WHERE tipo = '".$_SESSION['tipo']."'"; //seleciona todos os produtos de uma determinada tabela
-                $resultado = mysqli_query($conexao,$sqlProdutos); //resultado
+                $resultado = mysqli_query($conexao,$sqlProdutos); //resultado 
                 
                 while ($linha = mysqli_fetch_array($resultado)){
-                    
-                    
                 echo "
                     <div class='divProduto'>
                         <i class='fa-regular fa-heart'></i>
                         <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
-                        
                         <div class='divTextos'>
-
-                        <p class='pTitulo'>".$linha['nome']."</p>
-                        <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
-                        
+                            <p class='pTitulo'>".$linha['nome']."</p>
+                            <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
                             <div>
                                 <p class='pPreco'>R$ ".$linha['preco'].",00</p>
                                 <div class='divazul'>
@@ -57,13 +49,10 @@
                             </div>
                             <p class='pTexto'>Parcele em até 12x sem juros</p>
                         </div>
-                    </div>
-                ";
+                    </div>";
                 }
-                ?>
-
+            ?>
         </div><!-- fecha divContainer  --> 
-
         <script src="../assets/js/footer.js"></script><!-- puxa footer que esta no js  -->
         <script src="../assets/js/toggleMenu.js"></script><!-- puxa js que faz menu de celular funcionar  -->
     </body>
