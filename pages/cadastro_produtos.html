@@ -24,9 +24,50 @@
                         <label required for="nomeProduto">Nome do produto</label>
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450">
                     </div>
+                    <div class="item">
+                        <label required for="nomeProduto">Categoria</label>
+                        <select name="categorias" id="categorias">
+                            <option value="">Peças</option>
+                            <option value="">Acessórios</option>
+                            <option value="">Notebooks</option>
+                            <option value="">Desktops</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="nomeProduto">Subcategoria</label>
+                        <select name="categorias" id="categorias">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label required for="nomeProduto">Preço</label>
+                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450" pattern="">
+                    </div>
+                    <div class="item">
+                        <label required for="nomeProduto">Peso</label>
+                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="ex.: 0.3 para 300g">
+                    </div>
+                    <div class="item">
+                        <label for="nomeProduto">Altura</label>
+                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
+                    </div>
+                    <div class="item">
+                        <label for="nomeProduto">largura</label>
+                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
+                    </div>
+                    <div class="item">
+                        <label required for="nomeProduto">Descrição</label>
+                        <textarea name="descricao" id="descricao" placeholder="ex.: A Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450 é muito utilizada por profissionais do mundo dos games...  "></textarea>
+                    </div>
                 </div>
                 <div class="right grid">
-                    RIGHT
+                    <div class="item">
+                        <label required for="nomeProduto">Imagem do Produto</label>
+                        <input required type="file" name="produtoNome" id="produtoNome">
+                    </div>
                 </div>
             </form>
         </div>
