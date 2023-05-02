@@ -91,7 +91,7 @@ p{
     width: 60%;/*largura de 60% da divEsquerda*/
 }
 #divPagamento{
-    display: flex;/*display flex*/
+    display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
     align-items: center;/*alinhando elementos verticalmente no centro*/
     justify-content: space-around;/*distancia horizontal entre as imagens*/
     border-radius: 12px;/*curvatura da borda*/
