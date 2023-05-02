@@ -14,174 +14,215 @@
 
 /*CELULAR*/
 
-.mobile-nav img{ /*IMAGM DA LOGO*/
-    width: 130px; /*tamanho da largura da imagem*/
+hr {
+    margin-top: 10px;
 }
-.mobile-nav .logo-btns  { /* BOTÕES*/
-    padding: 10px; /*margem interna*/
-}
-
-.mobile-nav form { /**/
-    padding: 10px 5px; /*margem interna, altura e largura*/
-}
-.mobile-nav .logo-btns { /* BOTÕES*/
-    display: flex; /*ele coloca os elementos em linha na horizontal*/
-    align-items: center; /*alinha os itens no centro*/
-}
-.mobile-nav .logo-btns > div {/* DIV DOS BOTÕES*/
-    flex: 0 0 50%;/*largura do elemento em 50%*/
-}
-.mobile-nav .logo-btns .btns { /*BOTÃO CADASTRO E LOGIN*/
-    display: flex; /*ele coloca os elementos em linha na horizontal*/
-    justify-content: right;/*alinha os elementos a direita*/
+:root {
+    --orange: #D75A00;
+    --blue: #0066FF;
 }
 
-/*BOTÃO DE CADASTRO*/
-.mobile-nav .logo-btns .btns .cadastro { 
-    border: 2px solid var(--orange);/*borda do tamanho 2px, borda solida, cor laranja*/
-    color: var(--orange);/*cor da letra*/
-    border-radius: 4px;/*arredondamento da borda*/
-    padding: 5px 10px; /*margem interna, altura e largura*/
-    text-align: center;/*texto alinhado no centro*/
-    font-weight: 600;/*letra em negrito*/
-    display: flex;/*ele coloca os elementos em linha na horizontal*/
-    align-items: center; /*itens centralizado no centro*/
+.fa-chevron-down {
+    transition: all .3s ease; /* aplica uma transição de 3 milésimos de duração */
+    font-size: 12px;
+    font-weight: bold;
+    height: fit-content; /* Altura fica de acordo com o espaço que os elementos dentro dele ocupam */
 }
-/*BOTÃO DE LOGIN*/
-.mobile-nav .logo-btns .btns .login { 
-    background-color: var(--orange); /*fundo da cor laranja*/
-    color: #fff;/*cor da letra*/
-    font-weight: 600;/*letra em negrito*/
-    padding: 5px 10px;/*margem interna, altura e largura*/
-    border-radius: 4px;/*arredondamento da borda*/
-    margin-left: 20px;/*uma margem de 20px do lado esquerda*/
-    display: flex;/*ele coloca os elementos em linha na horizontal*/
-    align-items: center;/*itens alinhados no centro*/
-} 
-/*IMAGEM DA LOGO*/
-.mobile-nav .logo-btns .logo{ 
-    display: flex;/*ele coloca os elementos em linha na horizontal*/
-    align-content: center;/*alinha os elementos no centro*/
-    justify-content: center; /*alinha os elementos*/
+ul {
+    list-style: none; /* A ul perde as bolinhas (características de listas não ordenadas) */
+}
+.flex {
+    display: flex;
 }
 
-/*BARRA DEPESQUISA */
-.mobile-nav form .text-box { 
-    width: 98%; /*largura*/
-    display: flex;/*ele coloca os elementos em linha na horizontal*/
-    margin: 0 auto;/*margem só na lateral*/
-    border-radius: 5px;/*arredondamento das bordas*/
-    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.142);/*somba do elemento*/
+.mobile-nav {
+    padding: 0px 10px;
+}
+.mobile-nav > .top {
+    justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
+    align-items: center;
+    padding: 15px 0px;
 }
 
-/*CAIXINHA DA BARRA DE PESQUISA*/
-.mobile-nav form .text-box input {
-    flex: 0 0 85%;/*largura de 85%*/
-    border: none;/*arredondamneto da borda*/
-    background-color: #f0f0f0;/*cor de fundo*/
-    padding: 10px;/*margem interna*/
-    border-top-left-radius: 5px;/*arredondamento da borda do topo do lado esquerdo*/
-    border-bottom-left-radius: 5px;/*arredondamento da borda debaixo do lado esquerdo*/
+.mobile-nav > .top > .left {
+    font-size: 24px;
 }
-/*BOTÃO DA BARRA DE PESQUISA*/
-.mobile-nav form .text-box button {
-    flex: 0 0 15%;/*largura de 15%*/
-    background-color: none;/*cor de fundo*/
-    border: none;/*não tem borda*/
-    padding: 10px;/*margem interna*/
-    border-top-right-radius: 5px;/*arredondamento da borda do topo do lado direito*/
-    border-bottom-right-radius: 5px;/*arredondamento da borda debaixo do lado direito*/
-    cursor: pointer;/*tipo do mouse: mão*/
-    background-color: var(--orange);/* cor de fundo*/
-    color: #fff;/* cor da letra*/
-    transition: all .15s ease-in-out;/*mudança da cor de fundo*/
+.mobile-nav > .top > .left > i {
+    cursor: pointer;
 }
 
-/*COR DO BOTÃO DA BARRA DE EPSQUISA*/
-.mobile-nav form .text-box button:hover {
-    background-color: #dc6918;/* cor de fundo*/
+.mobile-nav .search-box {
+    width: 100%;
+    padding: 5px 0px;
 }
-/*CASCATA DO MENU DE CELULAR */
-.mobile-nav .menu {
-    padding: 0px 10px 0px 10px;/*margem interna, para os 4 lados*/
-    background-color: var(--orange);/*cor de fundo*/
+.mobile-nav .search-box form {
+    width: 100%;
 }
-/*DIV QUE ARMAZENA O INCON DO MENU */
-.mobile-nav .menu .icon {
-    background-color: var(--orange);/*cor de fundo*/
-    padding: 8px 15px;/*margem interna, altura e largura*/
-    font-size: 24px;/*tamanho da letra*/
-    text-align: center;/*textos alinhados no centro*/
-    color: #fff;/*cor da letra*/
-    cursor: pointer;/*tipo do mouse: mão*/
+.mobile-nav .search-box .text-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px rgba(0,0,0,0.2);
 }
-/*ICON DO EFEITO CASCATA*/
-.mobile-nav .menu .icon i {
-    width: 40px;/*largura em 40px*/
+
+.mobile-nav .search-box .text-box input {
+    flex: 90%;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 13px;
 }
-/*OPÇÕES DO MENU*/
-.mobile-nav .menu .menu-opt {
+.mobile-nav .search-box .text-box .button-container {
+    flex: 0 0 10%;
+}
+.mobile-nav .search-box .text-box > .button-container button {
+    background-color: rgb(211, 89, 2);
     color: #fff;
+    font-weight: 600;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-container a {
+    color: #000;
+    transition: all .3s ease;
+}
+.box-opacity {
+    background-color: #000000c0; /* Fundo preto semi-transparente */
+    height: 100vh; /* vh = viewport height. 100vh = 100% da altura da viewport (tela) */
+    width: 100%;
+    position: fixed; /* Fica fixo na tela */
+    top: 0;
+    left: 0;
+    z-index: 0; /* camada 0 de profundidade */
+    display: none;
+    transition: all .3s ease;
+}
+.menu-container {
+    margin-left: -100%;
+    position: absolute;
+    background-color: #fff;
+    height: 100%;
+    width: 80%;
+    padding: 10px 20px;
+    overflow-y: auto; /* Adiciona uma barra de rolagem caso o conteúdo ultrapasse os limites do elemento */
+    z-index: 1; /* Camada 1 de profundidade */
+    top: 0;
+    transition: all .3s ease;
+}
+.menu-container .top {
+    justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
+    align-items: center;
+    padding: 0px 10px;
+}
+.menu-container .top .close {
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(237, 79, 0);
+}
+.menu-container .menu-opt {
+    margin-top: 20px;
+}
+.menu-container .menu-opt > ul > li > .item:hover,
+.menu-container .menu-opt > ul > li > .item:hover > a {
+    color: rgb(237, 79, 0);
+}
+.menu-container .menu-opt > ul > li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.menu-container .menu-opt > ul > li > .item {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.menu-container .menu-opt > ul > li > ul li {
+    padding: 10px 20px;
+}
+.menu-container .menu-opt > ul > li > ul li:not(:last-child) {
+    border-bottom: 1px solid rgb(217, 79, 0);
+}
+
+.menu-container .menu-opt .cascading-opt {
     height: 0px;
     overflow: hidden;
-    transition: all .2s ease;
+    transition: all .3s ease-in-out;
 }
 
-/*TITULOS DO MENU*/
-.mobile-nav .menu .menu-opt a {
-    color: #fff;/*cor da letra*/
+.mobile-nav .top .right {
+    justify-content: right;
+    width: 35%;
 }
-/*TITULO DO MENU DE CELULAR*/
-.mobile-nav .menu .menu-opt > span.menu-title {
-    font-size: 18px;/*tamanho da letra*/
-    font-weight: 600;/*letra em negrito*/
+.mobile-nav .top .right .cadastro {
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 5px 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-right: 15px;
 }
-/*EFEITO DA LINHA DEBAIXO DOS COMPONENTES*/
-.mobile-nav .menu .menu-opt div.hr {
-    height: 1px;/*a altura comeca em 1px*/
-    background-color: #fff;/*cor da letra*/
-    width: 98%;/*tem uma largura de 98%*/
-    margin-top: 6px;/*margem do topo para baixo*/
-    margin-bottom: 10px;/*margem na parte debaxo*/
-}
-
-/* LISTA DE OPÇÕES DO MENU*/
-.mobile-nav .menu .menu-opt ul {
-    columns: 2;/*colunas que foi dividida a pagina*/
-    list-style: none;/*nenhum estilo de lista*/
-    line-height: 50px;/*altura da linha*/
-}
-/*COMPONENTES DA LISTA*/
-.mobile-nav .menu .menu-opt ul li {
-    transition: all 0.3s ease;/*transição de mouse*/
-}
-.mobile-nav .menu .menu-opt ul li:hover { /*quando clicado, cria um efeito lateral*/
-    margin-left: 5px;/*margem da esquerda*/
+.mobile-nav .top .right .login {
+    color: #fff;
+    padding: 5px 25px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 5px;
 }
 
-/*BOTÃO DO CARRINHO*/
-.carrinho-btn {
-    background-color: var(--blue);/*cor de fundo*/
-    display: flex;/*ele coloca os elementos em linha na horizontal*/
-    justify-content: space-between;/*deixa o mesmo tamanho de espaçamento na horizontal entre os elementos*/
-    align-items: center;/*centraliza os elementos*/
-    max-height: 50px;/* maximo de latura*/
-    line-height: normal;/*altura da linha padrão*/
-    padding: 10px;/*margem interna*/
-    max-width: 180px;/*maximo de largura*/
-    border-radius: 5px;/*arredondamento das bordas*/
-    cursor: pointer;/*tipo do mouse: mão*/
-    transition: all .2s ease;/*cor de fundo*/
+.menu-container .middle-box {
+    margin-left: 10px;
+    justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menu-container .middle-box .carrinho {
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 1.2rem;
+    width: 45%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.menu-container .middle-box .carrinho .left {
+    justify-content: center;
+    align-items: center;
+    background-color: #0055d5;
+    width: 25%;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 0px;
+}
+.menu-container .middle-box .carrinho .right {
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 10px 0px;
+}
+.menu-container .middle-box .favoritos {
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 1.2rem;
+    width: 45%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.menu-container .middle-box .favoritos .left {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+.menu-container .middle-box .favoritos .right {
+    background-color: #b64c00;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
-.carrinho-btn:hover {/*fica mais claro quando passa o mouse em cima*/
-    background-color: #005de9;/*cor de fundo*/
-}
-.carrinho-btn .center span {/*titulo do carrinho*/
-    display: block;/*não deixa elementos ficar ao lado*/
-}
-.carrinho-btn .center {/* clas da div do carrinho, alinhas todo o carrinho para a esquerda da div*/
-    text-align: left;/*textos alinhado a esquerda*/
+div.special {
+    justify-content: space-between;
 }
 
 
@@ -221,7 +262,7 @@
 }
 .desktop-nav .center .menu-opt > ul > li {
     position: relative;
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
 }
 /*TITULO DAS OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li a {
@@ -272,9 +313,12 @@
     justify-content: space-evenly;
     flex-direction: column;
     background-color: #fff;
-    width: 100%;
+    width: 100px;
     padding: 0px 5px;
     transition: all .05s ease;
+    border-right: 1px solid #00000025;
+    border-bottom: 1px solid #00000025;
+    border-left: 1px solid #00000025;
 }
 .desktop-nav .center .menu-opt .cascading-opt > li {
     padding: 5px 0px;
@@ -287,7 +331,7 @@
 }
 
 .desktop-nav .center .menu-opt > ul > li:nth-child(2):hover > ul {
-    height: 190px;
+    height: 200px;
 }
 
 .desktop-nav .center .pecas-opt {
@@ -298,7 +342,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     background-color: #fff;
-    width: 120%;
+    width: 150px;
     padding: 0px 5px;
     transition: all .05s ease;
 }
@@ -411,7 +455,7 @@
 }
 
 @media only screen and (min-width: 900px) {/**/
-    .mobile-nav {
+    .mobile-nav, .menu-container, .box-opacity {
         display: none;/*deixa invisivel o elemento*/
     }
     .desktop-nav img{

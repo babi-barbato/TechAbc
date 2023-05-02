@@ -1,0 +1,54 @@
+.container {
+    margin: 20px 60px;
+}
+.container > .title {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+.container .form-container form {
+    background-color: lightgreen;
+    padding: 10px;
+}
+.container .form-container form .left,
+.container .form-container form .right {
+    width: 50%;
+}
+
+/* LEFT BOX */
+.container .form-container form .left {
+    background-color: lightcoral;
+    grid-template-areas:
+    "box1 box1 box1 box1"
+    "box2 box2 box3 box3"
+    "box4 box4 box5 box6"
+    "box7 box7 box7 box7";
+    padding: 5px 10px;
+}
+.container .form-container form .left .item:nth-child(1) {
+    width: 100%;
+    grid-area: box1;
+    text-align: left;
+}
+.container .form-container form .left .item input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    border-radius: 3px;
+}
+
+.container .form-container form .right {
+    background-color: lightseagreen;
+}
+
+.form-container form label {
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+label[required]::after {
+    content: "*";
+    position: absolute;
+    color: red;
+    left: 102%;
+}

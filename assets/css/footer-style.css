@@ -42,7 +42,7 @@ footer ul li a {
 footer ul li a:hover {
     padding-left: 10px;
 }
-.left {
+footer .left {
     text-align: center;
 }
 span.copyright {
