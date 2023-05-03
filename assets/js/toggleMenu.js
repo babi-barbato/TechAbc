@@ -1,16 +1,29 @@
-let menuBtn = document.querySelector('#menu-button');
-let menuOptions = document.querySelector('#menu-opt');
-let menuBox = document.querySelector('#mobile-menu')
-let menuStatus = false;
+let menu = document.querySelector('div.box-opacity');
+let menuBox = document.querySelector('.menu-container');
 
-function toggleMenu () {
-    if (menuStatus == true) {
-        menuStatus = false;
-        menuOptions.style.height = '0px';
-        menuBox.style.paddingBottom = '0px';
+function openMenu () {
+    menu.style.display = 'block';
+    menuBox.style.marginLeft = '0px'
+}
+function closeMenu () {
+    menuBox.style.marginLeft = '-100%';
+    menu.style.display = 'none';
+}
+
+let cascadingOpt = document.querySelectorAll('.cascading-opt');
+let chevron = document.querySelectorAll('i.fa-chevron-down');
+let cascadingOptVisibility = false;
+
+function toggleCascading (id) {
+    if (cascadingOptVisibility == false) {
+        cascadingOpt[id].style.height = 'auto';
+        chevron[id].style.transform = 'rotate(180deg)'
+        cascadingOptVisibility = true;
     } else {
-        menuStatus = true;
-        menuOptions.style.height = '188px';
-        menuBox.style.paddingBottom = '10px';
+        cascadingOpt[id].style.height = '0px';
+        chevron[id].style.transform = 'rotate(0deg)';
+        cascadingOptVisibility = false;
     }
+
+    
 }

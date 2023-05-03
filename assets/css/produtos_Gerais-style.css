@@ -29,8 +29,14 @@
 }
 
 /*IMAGENS*/
-img{/*img dos produtos*/
+.divImg{/*img dos produtos*/
     width: 200px;/*largura de 200px*/
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 100%;
 }
 .divTitulo img{/*img do titulo grande*/
     width: 60px;/*largura de 60px*/
@@ -97,7 +103,7 @@ img{/*img dos produtos*/
 }
 
 /*VERSÃO PARA TABLET*/
-@media only screen and (min-width: 600px) {  
+@media only screen and (min-width: 620px) {  
     #divContainer{/*Div que pega todos os elementos*/
         display: grid;/*display grid (separar por colunas)*/
         grid-template-columns: repeat(2,1fr);/*vai repitir as colunas duas vezes de forma fracionada*/
@@ -109,7 +115,18 @@ img{/*img dos produtos*/
 }
 
 /*VERSÃO PARA COMPUTADOR*/
-@media only screen and (min-width: 1100px) { 
+@media only screen and (min-width: 950px) { 
+    #divContainer{/*Div que pega todos os elementos*/
+        display: grid;/*display grid (separar por colunas)*/
+        grid-template-columns: repeat(3,1fr);/*vai repitir as colunas quatro vez de forma fracionada*/
+    }
+    .divTitulo{
+        grid-column-start: 1;/*começa na primeira coluna*/
+        grid-column-end: 4;/* termina na quinta*/
+    }
+}
+
+@media only screen and (min-width: 1200px) { 
     #divContainer{/*Div que pega todos os elementos*/
         display: grid;/*display grid (separar por colunas)*/
         grid-template-columns: repeat(4,1fr);/*vai repitir as colunas quatro vez de forma fracionada*/

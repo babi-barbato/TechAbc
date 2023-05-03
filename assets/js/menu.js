@@ -7,73 +7,135 @@ header.innerHTML = `
 <!-- MOBILE NAV START -->
 
     <!-- Mobile Menu Start -->
-    <nav class="mobile-nav"> 
-        <div class="logo-btns"> <!-- Div que armazena o logo e os botões de Cadastro e Login -->
-            <div class="logo"> <!-- Div que armazena o logo -->
-                <img src="../img/logoMenor.png"> <!--Imagem do Logo-->
+        <nav class="mobile-nav">
+            <div class="top flex">
+                <div class="left" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="center">
+                    <h2>LOGO</h2>
+                </div>
+                <div class="right flex">
+                    <a href="#" class="cadastro flex">
+                        <span>Cadastro</span>
+                    </a>
+                    <a href="#" class="login flex">
+                        <span>Login</span>
+                    </a>
+                </div>
             </div>
-            <div class="btns"> <!-- Div que armazena os botões de Cadastro e Login -->
-                <a href="../pages/cadastro_cliente.html" class="cadastro"> <!-- Link para a página de cadastro -->
-                    <span>Cadastro</span> <!-- Tag que tem o nome "Cadastro" -->
+
+            <div class="search-box">
+                <form action="" method="post">
+                    <div class="text-box flex">
+                        <input type="text" name="search-text" id="search" placeholder="Digite o que procura">
+                    
+                        <div class="button-container">
+                            <button type="submit" name="buscar">
+                                <i class="fa fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        
+        <div class="menu-container">
+            <div class="top flex">
+                <div class="welcome">
+                    <p>Bem-vindo,</p>
+                    <span>$nome!</span>
+                </div>
+                <div class="close" onclick="closeMenu()">
+                    <i class="fa fa-close"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="middle-box flex">
+                <a href="#" class="carrinho flex">
+                    <div class="left flex">
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                    <div class="right flex">
+                        <strong>Carrinho</strong>
+                    </div>
                 </a>
-                <a href="../pages/login.html" class="login"> <!-- Link para a página de Login -->
-                    <span>Login</span> <!-- Nome "Login" -->
+                <a href="#" class="favoritos flex">
+                    <div class="left flex">
+                        <strong>Favoritos</strong>
+                    </div>
+                    <div class="right flex">
+                        <i class="fa fa-heart"></i>
+                    </div>
                 </a>
             </div>
-        </div>
-        <form action="" method="post" class="search" id="search">
-            <div class="text-box">
-                <input id="search-text" name="search-value" type="text" placeholder="Digite o que procura...">
-                <button type="submit" name="search">
-                    <i class="fa fa-magnifying-glass"></i>
-                </button>
-            </div>
-        </form>
-        <div class="menu" id="mobile-menu">
-            <div id="menu-button" class="icon" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div class="menu-opt" id="menu-opt">
-                <span class="menu-title">Departamentos</span>
-                <div class="hr"></div>
+            <div class="menu-opt">
                 <ul>
                     <li>
-                        <a href="../pages/produtosGerais.html">Peças</a>
+                        <div class="item flex special" onclick="toggleCascading(0)">
+                            <span>Peças</span>
+                            <i class="fa fa-chevron-down" ></i>
+                        </div>
+                        <ul class="cascading-opt">
+                            <li>
+                                <a href="#">Fontes de energia</a>
+                            </li>
+                            <li>
+                                <a href="#">Armazenamentos</a>
+                            </li>
+                            <li>
+                                <a href="#">Placa de Vídeo</a>
+                            </li>
+                            <li>
+                                <a href="#">Memória RAM</a>
+                            </li>
+                            <li>
+                                <a href="#">Processador</a>
+                            </li>
+                            <li>
+                                <a href="#">Placa mãe</a>
+                            </li>
+                            <li>
+                                <a href="#">Gabinete</a>
+                            </li>
+                            <li>
+                                <a href="#">Cooler</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Acessórios</a>
+                        <div class="item flex special" onclick="toggleCascading(1)">
+                            <span>Acessórios</span>
+                            <i class="fa fa-chevron-down" ></i>
+                        </div>
+                        <ul class="cascading-opt">
+                            <li><a href="#">Fones</a></li>
+                            <li><a href="#">Teclados</a></li>
+                            <li><a href="#">Mouses</a></li>
+                            <li><a href="#">Mouse pads</a></li>
+                            <li><a href="#">Monitores</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="../pages/monte_pc.html">Monte seu PC</a>
+                        <div class="item">
+                            <a href="#">Notebooks</a>
+                        </div>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Desktops</a>
+                        <div class="item">
+                            <a href="#">Desktops</a>
+                        </div>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Notebooks</a>
-                    </li>
-                    <li>
-                        <!-- BOTÃO DO CARRINHO START -->
-                        <a class="carrinho-btn" href="#">
-                            <div class="left">
-                                <i class="fa fa-cart-shopping"></i>
-                            </div>
-                            <div class="center">
-                                <span>
-                                    <strong>Carrinho</strong>
-                                </span>
-                                <small>0 Produtos</small>
-                            </div>
-                            <div class="right">
-                                <i class="fa fa-chevron-down"></i>
-                            </div>
-                        </a>
-                        <!-- BOTÃO DO CARRINHO END -->
+                        <div class="item flex">
+                            <a href="#">Monte o seu PC</a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+        <div class="box-opacity"></div>
     <!-- MOBILE MENU END -->
 
     <!-- DESKTOP MENU START -->

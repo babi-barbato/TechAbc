@@ -1,0 +1,86 @@
+@import url("style-global.css");
+.container {
+    margin: 20px 60px;
+}
+.container > .title {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+.container .form-container form {
+    padding: 10px;
+}
+.container .form-container form .left,
+.container .form-container form .right {
+    width: 50%;
+}
+
+/* LEFT BOX */
+.container .form-container form .left {
+    grid-template-areas:
+    "box1 box1 box1 box1 box1 box1"
+    "box2 box2 box3 box3 box4 box4"
+    "box5 box5 box6 box6 box7 box7"
+    "box8 box8 box8 box8 box8 box8";
+    padding: 5px 10px;
+    gap: 15px;
+}
+.container .form-container form .left .item input,
+.container .form-container form .left .item select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    border-radius: 3px;
+    background-color: #fff;
+}
+.container .form-container form .left .item textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 5px;
+    text-align: justify;
+}
+.container .form-container form .left .item label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.container .form-container form .left .item:nth-child(1) {
+    grid-area: box1;
+}
+.container .form-container form .left .item:nth-child(2) {
+    grid-area: box2;
+}
+.container .form-container form .left .item:nth-child(3) {
+    grid-area: box3;
+}
+.container .form-container form .left .item:nth-child(4) {
+    grid-area: box4;
+}
+.container .form-container form .left .item:nth-child(5) {
+    grid-area: box5;
+}
+.container .form-container form .left .item:nth-child(6) {
+    grid-area: box6;
+}
+.container .form-container form .left .item:nth-child(7) {
+    grid-area: box7;
+}
+.container .form-container form .left .item:nth-child(8) {
+    grid-area: box8;
+}
+
+.container .form-container form .right {
+    background-color: lightseagreen;
+}
+
+.form-container form label {
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+label[required]::after {
+    content: "*";
+    position: absolute;
+    color: var(--orange);
+    left: 103%;
+    top: 2px;
+}
