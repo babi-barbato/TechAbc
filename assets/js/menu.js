@@ -1,11 +1,20 @@
 const header = document.createElement('template');
 
 header.innerHTML = `
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-<!-- MOBILE NAV START -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menu_style.css">
+    <link rel="stylesheet" href="../css/style-global.css">
+</head>
+<script src="toggleMenu.js"></script>
+<body>
+    <!-- MOBILE NAV START -->
+    
     <!-- Mobile Menu Start -->
         <nav class="mobile-nav">
             <div class="top flex">
@@ -139,8 +148,10 @@ header.innerHTML = `
     <!-- MOBILE MENU END -->
 
     <!-- DESKTOP MENU START -->
-    <nav class="desktop-nav">
-        <div class="left">
+    <form action="" name="form" method="post">
+
+        <nav class="desktop-nav">
+            <div class="left">
             <div class="logo">
             <img src="../img/logoMenor.png">
             </div>
@@ -149,64 +160,63 @@ header.innerHTML = `
             <div class="menu-opt">
                 <ul>
                     <li>
-                        <a href="../pages/produtosGerais.html">Peças</a>
-
+                        Peças
                         <ul class="pecas-opt">
-                            <li>
-                                <a href="../pages/produtosGerais.html">Placa Mãe</a>
+                        <li>
+                                <button class="btnPhp" type="submit" name="placaMae">Placa Mãe</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Processador</a>
+                                <button class="btnPhp" type="submit" name="processador">Processador</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Memória RAM</a>
+                                <button class="btnPhp" type="submit" name="ram">Memoria RAM</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Placa de Vídeo</a>
+                                <button class="btnPhp" type="submit" name="placaVideo">Placa de Vídeo</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Fonte de Energia</a>
+                                <button class="btnPhp" type="submit" name="fonte">Fonte de Energia</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Cooler</a>
+                                <button class="btnPhp" type="submit" name="cooler">Cooler</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Armazenamento</a>
+                                <button class="btnPhp" type="submit" name="armazenamento">Armazenamento</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Gabinete</a>
+                                <button class="btnPhp" type="submit" name="gabinete">Gabinete</button>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Acessórios</a>
+                        Acessórios
                         <ul class="cascading-opt">
                             <li>
-                                <a href="../pages/produtosGerais.html">Mouse Pads</a>
+                                <button class="btnPhp" type="submit" name="mousePad"> Mouse Pads</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Monitores</a>
+                                <button class="btnPhp" type="submit" name="monitor"> Monitores</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Teclados</a>
+                                <button class="btnPhp" type="submit" name="teclado"> Teclados</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Mouses</a>
+                                <button class="btnPhp" type="submit" name="mouse"> Mouses</button>
                             </li>
                             <li>
-                                <a href="../pages/produtosGerais.html">Fones</a>
+                                <button class="btnPhp" type="submit" name="fone">Fones</button>
                             </li>
                         </ul>
                     </li>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Notebooks</a>
+                        <button class="btnPhp" type="submit" name="notebook">Notebooks</button>
                     </li>
                     <li>
-                        <a href="../pages/produtosGerais.html">Desktops</a>
+                        <button class="btnPhp" type="submit" name="desktop">Desktops</button>
                     </li>
                     <li>
-                        <a href="../pages/monte_pc.html">Monte o seu PC</a>
+                        <button class="btnPhp" type="submit" name="monte">Monte seu PC</button>
                     </li>
                 </ul>
             </div>
@@ -247,7 +257,8 @@ header.innerHTML = `
         </div>
     </nav>
     <!-- DESKTOP MENU END -->
-
-    `
-
+</form>
+</body>
+</html>
+`
 document.body.appendChild(header.content);

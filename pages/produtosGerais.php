@@ -1,5 +1,6 @@
 <?php
-    include("../assets/php/conexao.php")
+    include("../assets/php/conexao.php");
+    include("../assets/php/menu.php")
 ?>
 <!DOCTYPE html>
 <html lang="pt-br"><!-- linguagem padrão de pt-br -->
@@ -10,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
         <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
         <link rel="stylesheet" href="../assets/css/produtos_Gerais-style.css">
-        <link rel="stylesheet" href="../assets/css/menu-style.css"><!-- css do menu -->
+        <link rel="stylesheet" href="../assets/css/menu_style.css"><!-- css do menu -->
         <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
         <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
     </head>
