@@ -9,12 +9,9 @@
 /*DIV  QUE ARMAZENA TUDO*/
 .container {
         height: 100%; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
-        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
-    
-/*PARA O FORMULARIO DA ESQUERDA NÃO ULTRAPASSAR A TELA*/
-body{
-        overflow:hidden;/*esconde tudo que ultrapassa o limite do elemento*/
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
     }
+    
     
 /*PARTE ESQUERDA DA PÁGINA */
     .container .esquerda { /*div que armazena tudo da parte esquerda*/
@@ -23,7 +20,9 @@ body{
         flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
         align-items: center; /*alinha os elementos*/
         background-color: #efefef; /*cor de fundo*/
-        color: #000;} /*cor da letra*/
+        color: #000;/*cor da letra*/
+      
+    } 
     
 
     /*FORMULARIO*/
@@ -33,7 +32,7 @@ body{
         flex-direction: column; /*joga os elementos para baixo, como uma coluna*/}
 
     /* MARGEM DAS BORDAS DOS CAMPOS*/
-    .container .esquerda form { /*div que armazena o formulario da parte esquerda*/
+    .container .esquerda .cart { /*div que armazena o formulario da parte esquerda*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
         margin-top: 10px ; /*margem externa do topo*/
@@ -60,7 +59,7 @@ body{
     
     
     /* DIV DOS INPUTS DA ESQUERDA*/
-    .container .esquerda form .field {/*div que armazena a div dos campos*/
+    .container .esquerda .field {/*div que armazena a div dos campos*/
         line-height: 40px; /*espaçamento da letra e o campo*/
         margin-bottom: 17px;/*espaçamento entre os campos*/
         font-size: 1.4rem;/*tamanho da letra*/
@@ -157,7 +156,7 @@ body{
         transition: all .20s ease; /*transição para o botão vir para frente*/
         cursor: pointer; /*maozinha do mouse para click*/
         margin-top: 10px;/*margem externa do topo*/}
-    form .button button:hover { /*cria o efeito sobressalto quando passa o mouse em cima*/
+    .cart .button button:hover { /*cria o efeito sobressalto quando passa o mouse em cima*/
         box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
     .button{ /*div do botão*/
         display : flex ; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
@@ -192,11 +191,13 @@ body{
         flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
         align-items: center; /*alinha os elementos*/
         overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/
+        
        }
     
     
     /*DIV QUE ARMAZENA O FORM DO CARTÃO*/
-    .cartao{display: none;} /*não deixa um elemento aparecer*/
+    #cartao{display: none;
+    flex-direction: column;} /*não deixa um elemento aparecer*/
       
        
     /*LABEL DO CARTÃO*/
@@ -222,7 +223,7 @@ body{
     
 
     /* DIV DO LADO DIREITO*/
-    .container .direita form .form-branco input {/*div da direita que contem todos os inputs que tem a classe de form-branco*/
+    .container .direita .form-branco input {/*div da direita que contem todos os inputs que tem a classe de form-branco*/
         border: none;/*não apresenta borda*/
         border-radius: 6px; /*arredondamento da borda*/
         box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*somba do elemento*/
@@ -256,9 +257,11 @@ body{
     .cliente{font-weight: 600; /*negrito*/} /*titulo do input das informações do dono do cartao*/
     
     /*DIVs DO BOLETO*/
-    .boleto{ /*div que armazena as informações do boleto*/
+    #boleto{ /*div que armazena as informações do boleto*/
     margin-top: 210px;/*margem externa do topo*/
     display: none;/*não deixa um elemento aparecer*/
+    flex-direction: column;
+    height: 57.5vh;
 }
     /*LABEL DO BOLETO*/    
     .pag-boleto{ /*titulo antes do input do boleto*/
@@ -289,7 +292,7 @@ body{
    
 
     /*DIVS DO PIX*/
-    .pix{ /*div que armazena todas as informações do pix*/
+    #pix{ /*div que armazena todas as informações do pix*/
         display: flex;  /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
         display: none;/*não deixa um elemento aparecer*/
         flex-direction: column;/*deixa os elementos em coluna, deixa um emabaixo do outro*/
@@ -333,14 +336,25 @@ body{
         body{
                 overflow-y: auto; /*esconde tudo que ultrapassa o limite do elemento*/
         }
+        .container{
+            flex-direction: column;
+            overflow:hidden;
+        }
+
     .container .direita  {
-        display: none; /*esconde a parte laranja */}
+        display: flex; /*esconde a parte laranja */
+        
+    }
     
     .container .esquerda {
         flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container 
         */
+        
+      
 }
     
     .container .esquerda .back-to-menu {
-        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+
     }
+}

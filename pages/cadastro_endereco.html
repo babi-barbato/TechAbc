@@ -9,10 +9,10 @@
     
     <title> Cadastro de Endereço - Tech ABC</title> <!--titulo da pagina-->
 </head>
-<body>
+<body id="body">
     <div class="container"> <!--div que armazena tudo-->
-        <div class="esquerda"> <!--parte esquerda-->
-            <form action="" method="post" class="cart"> <!--formulário-->
+        <div class="esquerda" id="esquerda"> <!--parte esquerda-->
+            <div id="cart" class="cart"> <!--formulário-->
                   <!--INPUTS-->
                     <div class="field"> <!--estão na mesma div pois precisam ficar uma do lado da outra-->
                         <input id="nome" type="text" placeholder="Nome completo"> <!--input do nome-->
@@ -43,10 +43,10 @@
                     <!--SALVAR-->
                     <label class="salvar">Salvar Como:</label> <!--div que armazena o titulo do input-->
                     <div class="salvar-btn"> <!--div dos botões-->
-                        <button type="submit" id="casa"> <!--botão da casa-->
+                        <button name="text" type="submit" id="casa"> <!--botão da casa-->
                             Casa <!--o que aparece escrito dentro do botão-->
                         </button>
-                        <button type="submit" id="trabalho"> <!--botão do trabalho-->
+                        <button name="text" type="submit" id="trabalho"> <!--botão do trabalho-->
                             Trabalho<!--o que aparece escrito dentro do botão-->
                         </button>
                     </div>
@@ -54,7 +54,7 @@
                     <!--PAGAMENTO-->
                     <div class="paga"> <!--div que armazena o select e a label-->
                         <label class="salvar">Selecione a forma de pagamento:</label> <!--titulo dos inputs-->
-                        <select class="forma-pagamento"> <!--forma as opções de pagamento-->
+                        <select id="select" class="forma-pagamento" > <!--forma as opções de pagamento-->
                             <option value="selecione">Selecione</option> <!--primeira opção-->
                             <option value="cartao"> Cartão</option><!--segunda opção-->
                             <option value="boleto">Boleto</option><!--terceira opção-->
@@ -64,18 +64,17 @@
                 
                     <!--BOTÃO-->
                     <div class="button"> <!--dv que armazena os botões -->
-                        <button type="submit" id="cancelar"> <!--botão de canecalr-->
+                        <button id="cancelar"> <!--botão de canecalr-->
                             Cancelar  <!--o que aparece dentro do botão-->
                         </button>
-                        <button type="submit" id="enviar"><!--botão de enviar -->
-                            Enviar <!--o que aparece dentro do botão-->
+                        <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
                         </button>
                     </div>  
-            </form>
+                </div>
         </div>
     <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
         <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
-            <div class="cartao"> <!--armazena tudo que for do cartão-->
+            <div id="cartao"> <!--armazena tudo que for do cartão-->
                 <label class="info">Informações do cartão:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                 <div id="pagamento" ><!--armazena todas as imagens-->
                     <img  src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" > <!--imagem do boelto-->
@@ -126,7 +125,7 @@
             </div>
 
 
-            <div class="boleto"><!--div que armazena todas as informações do boleto-->
+            <div id="boleto"><!--div que armazena todas as informações do boleto-->
                 <label class="pag-boleto">Insira seu email para receber o boleto:</label> <!--titulo do input-->
                 <div class="form-branco"><!--classe do input-->
                     <input id="bolet" type="text" placeholder="Insira um email válido"><!-- input para inserir email-->
@@ -142,7 +141,7 @@
             </div>
 
 
-            <div class="pix">
+            <div id="pix">
                 <label class="pag-pix">Pagameno no Pix:</label> <!--titulo do input-->
                 <img src="../img/pix.jpg" alt="" class="qr"><!--imagem do qrCODE-->
                 <div class="button" style="justify-content: space-between !important;"><!--utilizado o style para definir os mesmo espaços do elemento como importante-->
@@ -156,6 +155,7 @@
             </form>
         </div>
     </div>
+    <script src="../assets/js/cadastro_endereco.js"></script>
 </body>
 </html>
 
