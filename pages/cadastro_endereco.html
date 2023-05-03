@@ -7,84 +7,172 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
     <link rel="stylesheet" href="../assets/css/cadastro_endereco.css"> <!--link do css-->
     
-    <title> Cadastro de Endereço - Tech ABC</title>
+    <title> Cadastro de Endereço - Tech ABC</title> <!--titulo da pagina-->
 </head>
-<body>
-    <div class="container">
-        <div class="left"> <!--parte esquerda-->
-            <a href="#" class="back-to-menu">
-               
-               
-            </a>
-            <div class="text">
-             
+<body id="body">
+    <div class="container"> <!--div que armazena tudo-->
+        <div class="esquerda" id="esquerda"> <!--parte esquerda-->
+            <div id="cart" class="cart"> <!--formulário-->
+                  <!--INPUTS-->
+                    <div class="field"> <!--estão na mesma div pois precisam ficar uma do lado da outra-->
+                        <input id="nome" type="text" placeholder="Nome completo"> <!--input do nome-->
+                        <input id="tel" type="text" placeholder="N° de Telefone"><!--input do telefone-->
+                    </div>
+
+                    <div class="field">
+                            <input id="cep" type="cep" placeholder="CEP"><!--input do telefone-->
+                    </div>
+
+                    <div class="field">
+                        <input id="cidade" type="text" placeholder="Estado - Cidade"><!--input do telefone-->
+                    </div>
+
+                    <div class="field">
+                        <input id="rua" type="text" placeholder="Rua/Avenida"><!--input do telefone-->
+                    </div>
+
+                    <div class="field"><!--estão na mesma div pois precisam ficar uma do lado da outra-->
+                        <input id="bairro" type="text" placeholder=" Bairro"><!--input do telefone-->
+                        <input id="numero" type="text" placeholder="Número"><!--input do telefone-->
+                    </div>
+
+                    <div class="field">
+                        <input id="complemento" type="text" placeholder="Complemento"><!--input do telefone-->
+                    </div>
+
+                    <!--SALVAR-->
+                    <label class="salvar">Salvar Como:</label> <!--div que armazena o titulo do input-->
+                    <div class="salvar-btn"> <!--div dos botões-->
+                        <button name="text" type="submit" id="casa"> <!--botão da casa-->
+                            Casa <!--o que aparece escrito dentro do botão-->
+                        </button>
+                        <button name="text" type="submit" id="trabalho"> <!--botão do trabalho-->
+                            Trabalho<!--o que aparece escrito dentro do botão-->
+                        </button>
+                    </div>
+
+                    <!--PAGAMENTO-->
+                    <div class="paga"> <!--div que armazena o select e a label-->
+                        <label class="salvar">Selecione a forma de pagamento:</label> <!--titulo dos inputs-->
+                        <select id="select" class="forma-pagamento" > <!--forma as opções de pagamento-->
+                            <option value="selecione">Selecione</option> <!--primeira opção-->
+                            <option value="cartao"> Cartão</option><!--segunda opção-->
+                            <option value="boleto">Boleto</option><!--terceira opção-->
+                            <option value="pix">Pix</option><!--quarta opção-->
+                        </select>
+                    </div>
+                
+                    <!--BOTÃO-->
+                    <div class="button"> <!--dv que armazena os botões -->
+                        <button id="cancelar"> <!--botão de canecalr-->
+                            Cancelar  <!--o que aparece dentro do botão-->
+                        </button>
+                        <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
+                        </button>
+                    </div>  
+                </div>
+        </div>
+    <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
+        <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
+            <div id="cartao"> <!--armazena tudo que for do cartão-->
+                <label class="info">Informações do cartão:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                <div id="pagamento" ><!--armazena todas as imagens-->
+                    <img  src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" > <!--imagem do boelto-->
+                    <img  src="https://devtools.com.br/img/pix/logo-pix-png-930x616.png" ><!--imagem do pix-->
+                    <img  src="https://logodownload.org/wp-content/uploads/2016/10/visa-logo-1.png"><!--imagem da visa-->
+                    <img  src="https://logodownload.org/wp-content/uploads/2020/11/c6-bank-logo.png" ><!--imagem da c6-->
+                    <img  src="https://logospng.org/download/banco-do-brasil/logo-banco-do-brasil-4096.png" > <!--imagem do banco do brasil-->
+                    <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png" > <!--imagem do santander-->
+                    <img  src="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2020/03/mastercard-1000x600.png" ><!--imagem do mastercard-->
+                </div>
+                
+                <div class="form-branco"> <!--classe do input-->
+                    <input id="numero-c" type="text" placeholder="Numero do cartão"><!--input do numero do cartao-->
+                </div>
+                
+                <div class="form-branco"><!--classe do input-->
+                    <input id="data" type="text" placeholder="Data de validade (MM/AA)"><!--input da data de validade-->
+                    <input id="cvv" type="text" placeholder="CVV"><!--input do cvv-->
+                </div>
+                <div class="form-branco"><!--classe do input-->
+                    <input id="nome-c" type="text" placeholder="Nome no cartão"><!--input do nome que esta no cartao-->
+                </div>
+                
+                <label class="cliente">Informações do dono:</label> <!--titulo do input-->
+                <div class="form-branco"><!--classe do input-->
+                    <input id="c" type="text" placeholder="CEP"><!--input do cep-->
+                </div>
+                
+                <div class="form-branco"><!--classe do input-->
+                    <input id="est" type="text" placeholder="Estado"><!--input dp estado-->
+                    <input id="num" type="text" placeholder="Número"><!--input do numero da casa-->
+                </div>
+                <div class="form-branco"><!--classe do input-->
+                    <input id="av" type="text" placeholder="Rua/Avenida"><!--input da rua-->
+                </div>
+                <div class="form-branco"><!--classe do input-->
+                    <input id="comp" type="text" placeholder="Complemento"><!--input do complemento-->
+                </div>
+                  <!--BOTÃO-->
+                  <div class="button"> <!--classe do botão-->
+                    <button type="submit" id="cancelar"> <!--botão de cancelar-->
+                        Cancelar  <!--o que aparece dentro do botão-->
+                    </button>
+                    <button type="submit" id="enviar"><!--botão de cancelar-->
+                        Enviar <!--o que aparece dentro do botão-->
+                    </button>
+                </div>
             </div>
-            
+
+
+            <div id="boleto"><!--div que armazena todas as informações do boleto-->
+                <label class="pag-boleto">Insira seu email para receber o boleto:</label> <!--titulo do input-->
+                <div class="form-branco"><!--classe do input-->
+                    <input id="bolet" type="text" placeholder="Insira um email válido"><!-- input para inserir email-->
+                </div>
+                <div class="button"> <!--classe do botão-->
+                    <button type="submit"  id="cancelar-boleto"><!--botão de cancelar-->
+                        Cancelar  <!--o que aparece dentro do botão-->
+                    </button>
+                    <button type="submit"  id="enviar-boleto"><!--botão de cancelar-->
+                        Enviar <!--o que aparece dentro do botão-->
+                    </button>
+                </div>
             </div>
-        <div class="right">
-            <form action="" method="post" id="form" onsubmit="return formControl(this)">
-                <!--INPUTS-->
-                <div class="field">
-                    <input id="nome" type="text" placeholder="Nome completo">
-                    <input id="tel" type="text" placeholder="N° de Telefone">
-                </div>
 
-                <div class="field">
-                    <input id="cep" type="cep" placeholder="CEP">
-                </div>
 
-                <div class="field">
-                    <input id="cidade" type="text" placeholder="Estado - Cidade">
-                </div>
-
-                <div class="field">
-                    <input id="rua" type="text" placeholder="Rua/Avenida">
-                </div>
-
-                <div class="field">
-                    <input id="bairro" type="text" placeholder=" Bairro">
-                    <input id="numero" type="text" placeholder="Número">
-                </div>
-
-                <div class="field">
-                    <input id="complemento" type="text" placeholder="Complemento">
-                </div>
-
-                <!--SALVAR-->
-                <label class="salvar">Salvar Como:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                <div class="salvar-btn">
-                    <button type="submit" id="casa">
-                        Casa 
+            <div id="pix">
+                <label class="pag-pix">Pagameno no Pix:</label> <!--titulo do input-->
+                <img src="../img/pix.jpg" alt="" class="qr"><!--imagem do qrCODE-->
+                <div class="button" style="justify-content: space-between !important;"><!--utilizado o style para definir os mesmo espaços do elemento como importante-->
+                    <button type="submit" id="cancel"><!--botão de cancelar-->
+                        Cancelar  <!--o que aparece dentro do botão-->
                     </button>
-                    <button type="submit" id="trabalho">
-                        Trabalho
+                    <button type="submit" id="voltar"><!--botão de cancelar-->
+                        Voltar<!--o que aparece dentro do botão-->
                     </button>
-                </div>
-
-                <!--PAGAMENTO-->
-                <div class="paga">
-                <label class="salvar">Selecione a forma de pagamento:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                <select class="pagamento">
-                    <option value="selecione">Selecione</option>
-                    <option value="cartao"> Cartão</option>
-                    <option value="boleto">Boleto</option>
-                    <option value="pix">Pix</option>
-                </select>
             </div>
-            
-                <!--BOTÃO-->
-                <div class="button">
-                    <button type="submit" id="cancelar">
-                        Cancelar  
-                    </button>
-                    <button type="submit" id="enviar">
-                        Enviar 
-                    </button>
-                </div>
             </form>
         </div>
     </div>
-   
-    
+    <script src="../assets/js/cadastro_endereco.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,83 +1,81 @@
 /* PREENCHIMENTO DE TELA */
-  * {
+* {
         margin: 0;/*margem externa*/
         padding: 0; /*margem interna*/
-        box-sizing: border-box;/*eclui as margens padding, bordas e etc da contagem da dimenção do elemento*/
-        outline: 0;/*borda de fora do elemento*/
-        font-family: sans-serif;/*tipo de fonte*/}
-  
+        box-sizing: border-box;/*eclui as margens padding, bordas e etc da contagem da dimenção do elemento, o preenchimento e a borda serão incluídos na largura e na altura*/
+        font-family: sans-serif;/*tipo de fonte*/
+        outline: 0;/*borda externa para o select*/}
+    
 /*DIV  QUE ARMAZENA TUDO*/
 .container {
-        height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
-        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
-
-/* COR DA PARTE DA ESQUERDA */
-.container .left {
-        flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
-        background-color: #D75A00; /* Referência à variável orange, pegando a cor atribuída a ela */
-        padding: 20px;/*margem interna*/
-        color: #fff;/*cor da letra*/}
-  
-   
-/* TITULOS DA PARTE LARANJA */
-.container .left .text {
-        width: 500px;/*largura*/
-        margin: auto;/*margem externa*/}
-  
-  
-/* PARTE DIREITA DA PÁGINA */
-.container .right {
+        height: 100%; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    }
+    
+    
+/*PARTE ESQUERDA DA PÁGINA */
+    .container .esquerda { /*div que armazena tudo da parte esquerda*/
         flex: 0 0 50%;/*ele coloca os elementos em linha na horizontal*/
         display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
         flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
         align-items: center; /*alinha os elementos*/
         background-color: #efefef; /*cor de fundo*/
-        overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/}
-  
-/* MARGEM DAS BORDAS DOS CAMPOS*/
-.container .right form {
+        color: #000;/*cor da letra*/
+      
+    } 
+    
+
+    /*FORMULARIO*/
+    .cart{/*div que armazena todo o formulario da parte esquerda*/
+        margin-left: 70px; /*margem externa do lado esquerdo*/
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        flex-direction: column; /*joga os elementos para baixo, como uma coluna*/}
+
+    /* MARGEM DAS BORDAS DOS CAMPOS*/
+    .container .esquerda .cart { /*div que armazena o formulario da parte esquerda*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
-        margin-top: 10px ;}
-
-/*INPUTS*/
-#nome{
+        margin-top: 10px ; /*margem externa do topo*/
+        height: 100%;/*altura*/}
+    
+    /*INPUTS DA PARTE ESQUERDA*/
+    #nome{ /*input do nome*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
         width: 60%;/*largura do campo*/} 
-#tel{
+    #tel{/*input do telefone*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
         width: 40%;/*largura do campo*/}
-#bairro{
+    #bairro{/*input do bairro*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
         width: 60%;/*largura do campo*/}
-#numero{
+    #numero{/*input do numero*/
         padding: 10px;/*margem interna*/
         margin: 0 auto;/*margem externa*/
         width: 40%;/*largura do campo*/}
-
-  
-
-/* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
-  .container .right form .field {
+    
+    
+    
+    /* DIV DOS INPUTS DA ESQUERDA*/
+    .container .esquerda .field {/*div que armazena a div dos campos*/
         line-height: 40px; /*espaçamento da letra e o campo*/
         margin-bottom: 17px;/*espaçamento entre os campos*/
         font-size: 1.4rem;/*tamanho da letra*/
         position: relative; /*posiciona o elemento da página como desejado*/
-        display: flex;
-        justify-content: space-between;
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        justify-content: space-between;/*deixa o mesmo espaço dos elementos na horizontal*/
         gap: 10px; /*espaçamente entre os elementos da mesma div*/}
-
-/* TITULO INPUT */
-  .salvar {
-    font-weight: 800; /*negrito*/
-    margin: 0;/*margem externa*/}
-
-/* CAMPOS*/
-  .container .right form .field input {
-        width: 100%;/*tamanho da largura da imagem*/
+    
+    /* TITULO DOS BOTÕES ESQUERDA*/
+    .salvar { /* div que armazena o titulo que vai em cima dos botões*/
+        font-weight: 800; /*negrito*/
+        margin: 0;/*margem externa*/}
+        
+    /* DIV QUE ARMAZENA TODOS OS INPUTS */
+    .field input {/*chama os inputs que tem a a mesma classe, field*/
+        width: 100%;/*tamanho da largura do input*/
         border: none;/*não apresenta borda*/
         padding: 15px 10px;/*margem interna*/
         border-radius: 6px; /*arredondamento da borda*/
@@ -85,16 +83,15 @@
         font-size: 1.0rem;/*tamanho da letra*/
         display: block; /*transforma em bloco*/
         font-weight: 600; /*negrito*/
-        height: 45px;}
-
-  .container .right form .field * {
-        display: block;/*transforma em bloco*/}
-
-
-/*BOTÕES DE CASA OU TRABALHO*/
-    form .salvar-btn button {
-        background-color: #fff;
-        color: #D75A00;
+        height: 45px;/*altura*/}
+    
+    
+    
+    
+    /*BOTÕES DE CASA OU TRABALHO*/
+    .salvar-btn button { /* div que armazena o botão da casa e do trabalho */
+        background-color: #fff; /*cor de fundo*/
+        color: #D75A00;/*cor da letra*/
         border: none; /*não apresenta borda*/
         padding: 12px;/*margem interna*/
         font-weight: 600; /*negrito*/
@@ -102,104 +99,262 @@
         border-radius: 10px;/*arredondamento da borda*/
         transition: all .20s ease; /*transição para o botão vir para frente*/
         cursor: pointer; /*maozinha do mouse para click*/
-        margin-top: 8px;/*margem externa*/
-        margin-bottom: 25px;}
+        margin-top: 8px;/*margem externa do topo*/
+        margin-bottom: 25px;} /*margem externa da parte inferior*/
     
-    form .salvar-btn button:hover {
+     .salvar-btn button:hover { /*efeito de sobressalto do botão*/
         box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
-
-      .salvar-btn{
-        display : flex ;
-        gap: 5px;}
+    
+    .salvar-btn{ /*div do botão*/
+        display : flex ; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        gap: 5px;/*espaçamento entre os elementos*/}
       
-/*BOTÃO DE CASA E TRABALHO*/
-#casa{
-    border:2px solid #D75A00;
-    width: 22%;
-    height: 33px;
-    display: flex; 
+    /*BOTÃO DE CASA E TRABALHO*/
+    #casa{ /*id botão da casa*/
+    border:2px solid #D75A00; /*espessura da borda, cor da borda*/
+    width: 22%;/*largura*/
+    height: 33px;/*altura*/
+    display: flex;  /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
     align-items: center; /*centraliza na horizontal*/
     justify-content: center; /*centraliza na vertical*/}
-  
-#trabalho{
-    border:2px solid #D75A00;
-    width: 22%;
-    height: 33px;
-    display: flex;
-    align-items: center; /*centraliza na horizontal*/
-   justify-content: center; /*centraliza na vertical*/}
-
     
+    #trabalho{/*id botão de trabalho*/
+    border:2px solid #D75A00; /*espessura da borda, cor da borda*/
+    width: 22%; /*largura*/
+    height: 33px;/*altura*/
+    display: flex;  /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    align-items: center; /*centraliza na horizontal*/
+    justify-content: center; /*centraliza na vertical*/}
+    
+    /*DIV QUE ARMAZENA O TITULO E O SELECT*/
+    .pag{ 
+        display : flex ; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        gap: 5px; /*espaçamento entre os elementos*/}
+    .forma-pagamento{/*armazena as opções do select*/
+        height: 35px; /*altura*/
+        width: 50%; /*largura*/
+        background-color: #fff;/*cor de fundo*/
+        color: #D75A00;/*cor da letra*/
+        font-weight: 600; /*negrito*/
+        font-size: 1.3rem;/*tamanho da letra*/
+        border-radius: 10px;/*arredondamento da borda*/
+        cursor: pointer; /*maozinha do mouse para click*/
+        border:2px solid #D75A00;/*espessura da borda e cor da borda*/
+        text-align: center;/*alinha os elementos no cento*/
+        display: flex;  /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        margin-top: 8px; /*margem externa do topo*/
+        margin-bottom: 20px; /*margem externa da parte inferior*/}
+        
 
-
-.pag{
-    display : flex ;
-    gap: 5px;
-}
-.pagamento{
-    height: 35px;
-    width: 50%;
-    background-color: #fff;
-    color: #D75A00;
-    font-weight: 600; /*negrito*/
-    font-size: 1.3rem;/*tamanho da letra*/
-    border-radius: 10px;/*arredondamento da borda*/
-    transition: all .20s ease; /*transição para o botão vir para frente*/
-    cursor: pointer; /*maozinha do mouse para click*/
-    border:2px solid #D75A00;
-    text-align: center;
-    display: flex; 
-    margin-top: 8px;
-    margin-bottom: 20px;
-}
-
-
-
-
-
-/* BOTÃO DE ENVIAR E CANCELAR*/
-form .button button {
+    /* BOTÃO DE ENVIAR E CANCELAR*/
+    .button button { /*div que chama o botão*/
         background-color: #0066FF;; /*váriavel laranja*/
-        padding: 12px;/*margem interna*/
         color: #fff;/*cor da letra*/
         font-weight: 600; /*negrito*/
         font-size: 1.3rem;/*tamanho da letra*/
         border-radius: 10px;/*arredondamento da borda*/
         transition: all .20s ease; /*transição para o botão vir para frente*/
         cursor: pointer; /*maozinha do mouse para click*/
-        margin-top: 10px;/*margem externa*/}
-
-form .button button:hover {
+        margin-top: 10px;/*margem externa do topo*/}
+    .cart .button button:hover { /*cria o efeito sobressalto quando passa o mouse em cima*/
         box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
-
-.button{
-        display : flex ;
+    .button{ /*div do botão*/
+        display : flex ; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
         flex-direction: row;
         justify-content: right;
-    gap: 10px;}
+        gap: 10px;/*espassamento entre os elementos*/}
+    
+    #cancelar{ /*botaõ de cancelar*/
+        background-color: #ffffff; /*cor de fundo*/
+        border:2px solid #0066FF;/*espessura e cor da borda*/
+        color: #0066FF;/*cor da letra*/
+        width: 30%;/*largura*/
+        height: 43px;/*altura*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/}
+    #enviar{/*botão de enviar*/
+        width: 30%; /*largura*/
+        height: 43px;/*altura*/
+        border: none; /*não apresenta borda, botão envia*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/}
+    
+    
+ 
+/*PARTE DA DIREITA */
+    .container .direita { /*div que armazena tudo da parte direita*/
+        flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
+        background-color: #D75A00; /* Referência à variável orange, pegando a cor atribuída a ela */
+        padding: 20px;/*margem interna*/
+        color: #fff;/*cor da letra*/
+        display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
+        align-items: center; /*alinha os elementos*/
+        overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/
+        
+       }
+    
+    
+    /*DIV QUE ARMAZENA O FORM DO CARTÃO*/
+    #cartao{display: none;
+    flex-direction: column;} /*não deixa um elemento aparecer*/
+      
+       
+    /*LABEL DO CARTÃO*/
+    .info{ /*div que armazena o titulo do cartão*/
+        font-weight: 600; /*negrito*/
+        margin: 0;/*margem externa*/
+    }
+    
+    /*DIV IMAGENS*/
+    #pagamento{/*div que armazena as imagens*/
+        display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        justify-content: space-around;/*distancia horizontal entre as imagens*/
+        border-radius: 12px;/*curvatura da borda*/
+        width: 63%;/*largura de 60% da divEsquerda*/
+        height: 30px;/*altura*/
+        border: 2px solid #0066FF;/*espessura e cor da borda*/
+        background-color: #fff;/*cor de fundo*/
+        align-items: center;/*alinha os itens no centro*/
+        margin-top: 10px; /*margem externa do topo*/
+    }
+    /*TAMANHO DAS IIMAGENS*/
+    img{width: 35px;} /*largura da imagem*/
+    
 
-#cancelar{
-        background-color: #fff;
-        border:2px solid #0066FF;
-        color: #0066FF;
-        width: 30%;
-        height: 43px;
-        text-align: center;}
-#enviar{
-        width: 30%;
-        height: 43px;
-        border: none; /*não apresenta borda, botão envia*/}
-  
-  
-  
-  /* DESKTOP*/
-  @media only screen and (max-width: 1080px) {
-    .container .left  {
-        display: none; /*esconde a parte laranja */}
+    /* DIV DO LADO DIREITO*/
+    .container .direita .form-branco input {/*div da direita que contem todos os inputs que tem a classe de form-branco*/
+        border: none;/*não apresenta borda*/
+        border-radius: 6px; /*arredondamento da borda*/
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*somba do elemento*/
+        font-size: 1.0rem;/*tamanho da letra*/
+        font-weight: 600; /*negrito*/
+        height: 45px;/*altura do campo*/
+        width: 100%;/*largura do campo*/
+        margin-top: 20px; /*margem externa do topo*/
+        padding: 10px;/*margem interna*/
+       }
+    
+    /*DIV DO INPUT*/
+    .form-branco{ /*class que clama todos os inputs so cartão*/
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        flex-direction: row; /*deixa os elementos em linha na horizontal*/
+        gap: 20px;/*espaçamento entre os elementos*/
+    }
+    
+    /*ID DOS INPUTS*/
+    #data{width: 70%;/*largura do campo*/} /*input da data*/
+    #cvv{width: 30%;/*largura do campo*/} /*input do cvv*/
+    #nome-c{margin-bottom: 13%;/*margem externa da parte inferior*/}  /*input do nome qe esta no cartao*/
 
-    .container .right {
-        flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container */}
+     /*ID DOS INPUTS*/
+     #est{width: 80%;/*largura do campo*/} /*input do estado*/
+     #num{width: 20%;/*largura do campo*/}/*input do numero*/
+     #comp{margin-bottom: 20px; /*margem externa da parte inferior*/} /*input do complemento*/
+    
+    
+    /*LABEL DO CARTÃO*/
+    .cliente{font-weight: 600; /*negrito*/} /*titulo do input das informações do dono do cartao*/
+    
+    /*DIVs DO BOLETO*/
+    #boleto{ /*div que armazena as informações do boleto*/
+    margin-top: 210px;/*margem externa do topo*/
+    display: none;/*não deixa um elemento aparecer*/
+    flex-direction: column;
+    height: 57.5vh;
+}
+    /*LABEL DO BOLETO*/    
+    .pag-boleto{ /*titulo antes do input do boleto*/
+        font-weight: 600; /*negrito*/
+        font-size: 20px;/*tamanho da letra*/
+       }
 
-    .container .right .back-to-menu {
-        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
-  }
+       /*BOTÕES DO BOLETO*/
+    #cancelar-boleto{ /*botão e cancelar*/
+        background-color: #ffffff; /*cor de fundo*/
+        border:2px solid #0066FF;/*espessura e cor da borda*/
+        color: #0066FF;/*cor da letra*/
+        width: 30%;/*largura*/
+        height: 43px;/*altura*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        margin-top: 30px;/*margem externa do topo*/
+    }
+
+    #enviar-boleto{/*botão de envar*/
+        width: 30%;/*largura*/
+        height: 43px;/*altura*/
+        border: none; /*não apresenta borda, botão envia*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        margin-top: 30px;/*margem externa do topo*/
+    }
+   
+
+    /*DIVS DO PIX*/
+    #pix{ /*div que armazena todas as informações do pix*/
+        display: flex;  /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        display: none;/*não deixa um elemento aparecer*/
+        flex-direction: column;/*deixa os elementos em coluna, deixa um emabaixo do outro*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/}
+
+    .pag-pix{ /*label do pix*/
+        font-weight: 600; /*negrito*/    
+
+    }
+    .qr{ /*class que armazena a imagem do qrCODE */
+        margin-top: 30px;/*margem externa do topo*/
+        width: 90%;/*largura*/
+        height: 90%;/*latura*/
+    }
+    /*BOTÕES*/
+    #cancel{ /*botão de cancelar*/
+        background-color: #ffffff;/*cor de fundo*/
+        border:2px solid #0066FF;/*espessura e cor da borda*/
+        color: #0066FF;/*cor da letra*/
+        width: fit-content;/*tamanho máximo da largura*/
+        height: 43px;/*altura*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        padding: 10px;/*margem interna*/
+    }
+   #voltar{/*botão de voltar*/
+        padding: 10px;/*margem interna*/
+        width: fit-content; /*largura máxima*/
+        height: 43px;/*altura*/
+        border: none; /*não apresenta borda, botão envia*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+
+   }
+
+
+
+    /* DESKTOP*/
+    @media only screen and (max-width: 1080px) {
+        body{
+                overflow-y: auto; /*esconde tudo que ultrapassa o limite do elemento*/
+        }
+        .container{
+            flex-direction: column;
+            overflow:hidden;
+        }
+
+    .container .direita  {
+        display: flex; /*esconde a parte laranja */
+        
+    }
+    
+    .container .esquerda {
+        flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container 
+        */
+        
+      
+}
+    
+    .container .esquerda .back-to-menu {
+        display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+
+    }
+}
