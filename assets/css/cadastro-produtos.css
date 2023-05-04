@@ -1,37 +1,53 @@
 @import url("style-global.css");
+
+:root {
+    --orange: #D75A00;
+    --blue: #0066FF;
+}
+
+span[required] {
+    color: var(--orange) !important;
+}
+
 .container {
     margin: 20px 60px;
 }
 .container > .title {
-    background-color: lightblue;
     padding: 10px;
     text-align: center;
 }
 .container .form-container form {
     padding: 10px;
+    gap: 20px;
 }
-.container .form-container form .left,
+.container .form-container form .left {
+    width: 70%;
+}
+
 .container .form-container form .right {
-    width: 50%;
+    width: 30%;
 }
 
 /* LEFT BOX */
-.container .form-container form .left {
+.container .form-container form > .left {
     grid-template-areas:
     "box1 box1 box1 box1 box1 box1"
     "box2 box2 box3 box3 box4 box4"
     "box5 box5 box6 box6 box7 box7"
     "box8 box8 box8 box8 box8 box8";
-    padding: 5px 10px;
+    padding: 10px;
     gap: 15px;
 }
 .container .form-container form .left .item input,
-.container .form-container form .left .item select {
+.container .form-container form .left .item select,
+.container .form-container form .right .item input,
+.container .form-container form .right .item select {
     width: 100%;
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.358);
     border-radius: 3px;
     background-color: #fff;
+    margin-top: 10px;
 }
 .container .form-container form .left .item textarea {
     width: 100%;
@@ -39,9 +55,10 @@
     padding: 5px;
     text-align: justify;
 }
-.container .form-container form .left .item label {
-    margin-bottom: 6px;
+.container .form-container form .left .item label,
+.container .form-container form .right .item label {
     font-weight: 600;
+    display: block;
 }
 .container .form-container form .left .item:nth-child(1) {
     grid-area: box1;
@@ -68,19 +85,83 @@
     grid-area: box8;
 }
 
+/* RIGHT BOX */
 .container .form-container form .right {
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
+    padding: 10px;
+    grid-template-areas: 
+    "box1 box1"
+    "box2 box3"
+    "box4 box4";
+    gap: 15px;
+}
+.container .form-container form .right .item:nth-child(1){
+    grid-area: box1;
+}
+.container .form-container form .right .item:nth-child(2){
+    grid-area: box2;
+}
+.container .form-container form .right .item:nth-child(3){
+    grid-area: box3;
+}
+.container .form-container form .right .item .pick-image {
+    background-color: #dcdcdc;
+    width: 180px;
+    aspect-ratio: 16/16;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-top: 10px;
+    border: 2px dashed;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .form-container form .right .item .pick-image label {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.container .form-container form .right .item .pick-image img.pictureImg {
+    width: 100%;
+}
+.container .form-container form .right .item .pick-image .picture_image {
+    font-weight: normal;
+}
+.container .form-container form .right .item .pick-image:hover {
+    background-color: #ccc;
+    color: #888;
+}
+.container .form-container form .right .item .image-box-right {
+    align-items: flex-end;
+}
+.container .form-container form .right .item .image-box-right > div > small {
+    color: #555;
 }
 
-.form-container form label {
-    position: relative;
-    display: block;
-    width: fit-content;
+.container .form-container form .right .buttons {
+    grid-area: box4;
 }
-label[required]::after {
-    content: "*";
-    position: absolute;
+.container .form-container form .right .buttons button[name='cadastrar'] {
+    border: none;
+    background-color: var(--orange);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 6px 10px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container .form-container form .right .buttons a.cancelar {
+    border: 2px solid var(--orange);
     color: var(--orange);
-    left: 103%;
-    top: 2px;
+    padding: 4px 7px;
+    font-weight: 600;
+    margin-top: 10px;
+    justify-content: center;
+    border-radius: 5px;
 }

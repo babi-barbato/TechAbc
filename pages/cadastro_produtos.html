@@ -16,16 +16,17 @@
     <div class="container">     
         <div class="title">
             <h2>Cadastrar Produtos</h2>
+            <hr>
         </div>
         <div class="form-container">
             <form action="" method="post" class="flex">
                 <div class="left grid">
                     <div class="item">
-                        <label required for="nomeProduto">Nome do produto</label>
+                        <label required for="nomeProduto">Nome do produto <span required>*</span></label>
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Categoria</label>
+                        <label required for="nomeProduto">Categoria <span required>*</span></label>
                         <select name="categorias" id="categorias">
                             <option value="">Peças</option>
                             <option value="">Acessórios</option>
@@ -43,11 +44,11 @@
                         </select>
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Preço</label>
+                        <label required for="nomeProduto">Preço <span required>*</span></label>
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450" pattern="">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Peso</label>
+                        <label required for="nomeProduto">Peso <span required>*</span></label>
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="ex.: 0.3 para 300g">
                     </div>
                     <div class="item">
@@ -55,18 +56,40 @@
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
                     </div>
                     <div class="item">
-                        <label for="nomeProduto">largura</label>
+                        <label for="nomeProduto">Largura</label>
                         <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Descrição</label>
+                        <label required for="nomeProduto">Descrição <span required>*</span></label>
                         <textarea name="descricao" id="descricao" placeholder="ex.: A Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450 é muito utilizada por profissionais do mundo dos games...  "></textarea>
                     </div>
                 </div>
                 <div class="right grid">
                     <div class="item">
-                        <label required for="nomeProduto">Imagem do Produto</label>
-                        <input required type="file" name="produtoNome" id="produtoNome">
+                        <strong>Imagem do Produto <span required>*</span></strong>
+                        <div class="left">
+                            <label class="pick-image" for="picture_input">
+                                <span class="picture_image"></span>
+                            </label>
+                            <input style="display: none;" required type="file" name="produtoNome" id="picture_input" accept=".jpg, .jpeg, .png, .webp">
+                        </div>
+                        <div class="image-info">
+                            <small>.jpg, .png, .webp</small>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label for="produtoQtd">Estoque <span required>*</span></label>
+                        <input required type="text" name="produtoQtd" id="produtoQtd">
+                    </div>
+                    <div class="item">
+                        <label for="produtoQtd">Classe <span required>*</span></label>
+                        <input required type="text" name="produtoQtd" id="produtoQtd">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" name="cadastrar" class="flex">Cadastrar produto</button>
+                        <a href="#" class="cancelar flex">
+                            <span>Cancelar</span>
+                        </a>
                     </div>
                 </div>
             </form>
@@ -74,5 +97,6 @@
     </div>
 
     <script src="../assets/js/toggleMenu.js"></script>
+    <script src="../assets/js/imagePreview.js"></script>
 </body>
 </html>
