@@ -1,3 +1,16 @@
+<?php
+    include("../assets/php/conexao.php");
+    include("../assets/php/menu.php");
+    echo "<style>#sair{display:none}</style>";
+    echo "<style>#saair{display:none}</style>";
+
+    if(isset($_SESSION['user'])){
+        echo "<style>#teste{display:none}</style>";
+        echo "<style>#cadLogin{display:none}</style>";
+        echo "<style>#sair{display:flex;}</style>";
+        echo "<style>#saair{display:flex}</style>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,13 +18,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/menu_style.css">
+    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../assets/css/style-global.css">
     <link rel="stylesheet" href="../assets/css/footer-style.css">
     <title>TechABC</title>
 </head>
 <body>
-    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/menu-ofc.js"></script>
 
     <!-- DESKTOP NAV END -->
 
@@ -264,7 +277,7 @@
         </div>
     </div>
 
-    <script src="../assets/js/toggleMenu.js"></script>
+    <script src="toggleMenu.js"></script>
     <script src="../assets/js/footer.js"></script>
 </body>
 </html>
