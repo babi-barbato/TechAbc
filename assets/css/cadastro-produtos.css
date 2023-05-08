@@ -5,6 +5,10 @@
     --blue: #0066FF;
 }
 
+select.subcategorias:not(select[name="sub_pecas"]) {
+    display: none;
+}
+
 span[required] {
     color: var(--orange) !important;
 }
@@ -54,6 +58,8 @@ span[required] {
     min-height: 150px;
     padding: 5px;
     text-align: justify;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    margin-top: 10px;
 }
 .container .form-container form .left .item label,
 .container .form-container form .right .item label {
@@ -114,7 +120,7 @@ span[required] {
     border-radius: 0px;
     margin-top: 10px;
     border: 2px dashed;
-    transition: all .3s ease;
+    transition: all .2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +139,10 @@ span[required] {
 .container .form-container form .right .item .pick-image:hover {
     background-color: #ccc;
     color: #888;
+}
+.container .form-container form .right .item .pick-image:active {
+    color: var(--orange);
+    background-color: #dca791;
 }
 .container .form-container form .right .item .image-box-right {
     align-items: flex-end;
@@ -164,4 +174,39 @@ span[required] {
     margin-top: 10px;
     justify-content: center;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        margin: 20px 20px;
+    }
+    .form-container form {
+        flex-direction: column;
+    }
+    .form-container form  .left,
+    .form-container form  .right {
+        width: 100% !important;
+    }
+
+    .container .form-container form > .left {
+        grid-template-areas:
+        "box1 box1 box1 box1 box1 box1"
+        "box2 box2 box2 box3 box3 box3"
+        "box4 box4 box4 box5 box5 box5"
+        "box6 box6 box6 box7 box7 box7"
+        "box8 box8 box8 box8 box8 box8";
+        gap: 8px !important;
+    }
+    .container .form-container form > .right {
+        grid-template-areas: 
+        "box1 box2 box2"
+        "box1 box2 box2"
+        "box1 box3 box3"
+        "box1 box3 box3"
+        "box4 box4 box4";
+        gap: 5px !important;
+    }
+    .container .form-container form .item, .buttons {
+        margin-top: 10px;
+    }
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/cadastro-produtos.css">
-    <link rel="stylesheet" href="../assets/css/menu-style.css">
+    <link rel="stylesheet" href="../assets/css/menu_style.css">
     <link rel="stylesheet" href="../assets/css/footer-style.css">
     <link rel="stylesheet" href="../assets/css/style-global.css">
     <title>Cadastro de Produtos</title>
@@ -23,45 +24,65 @@
                 <div class="left grid">
                     <div class="item">
                         <label required for="nomeProduto">Nome do produto <span required>*</span></label>
-                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450">
+                        <input title="Nome do produto" required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Categoria <span required>*</span></label>
-                        <select name="categorias" id="categorias">
-                            <option value="">Peças</option>
-                            <option value="">Acessórios</option>
-                            <option value="">Notebooks</option>
-                            <option value="">Desktops</option>
+                        <label required for="categorias">Categoria <span required>*</span></label>
+                        <select name="categorias" id="categorias" title="Categorias">
+                            <option class="categorias_opt" value="">Peças</option>
+                            <option class="categorias_opt" value="">Acessórios</option>
+                            <option class="categorias_opt" value="">Notebooks</option>
+                            <option class="categorias_opt" value="">Desktops</option>
                         </select>
                     </div>
                     <div class="item">
-                        <label for="nomeProduto">Subcategoria</label>
-                        <select name="categorias" id="categorias">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
+                        <label for="Subcategorias">Subcategoria <span required>*</span></label>
+                        <select class="subcategorias" required name="sub_pecas" id="sub_pecas" title="Subcategorias">
+                            <option value="">Placa Mãe</option>
+                            <option value="">Processador</option>
+                            <option value="">Memória RAM</option>
+                            <option value="">Placa de Vídeo</option>
+                            <option value="">Fonte de Energia</option>
+                            <option value="">Cooler</option>
+                            <option value="">Armazenamento</option>
+                            <option value="">Gabinete</option>
+                        </select>
+
+                        <select class="subcategorias" required name="sub_acessorios" id="sub_acessorios" title="Subcategorias">
+                            <option value="">Mouse Pad</option>
+                            <option value="">Monitore</option>
+                            <option value="">Teclado</option>
+                            <option value="">Mouse</option>
+                            <option value="">Fone</option>
+                        </select>
+
+                        <select class="subcategorias" required name="sub_notebook" id="sub_notebook" title="Subcategorias">
+                            <option value="">Notebook</option>
+                        </select>
+
+                        <select class="subcategorias" required name="sub_desktop" id="sub_desktop" title="Subcategorias">
+                            <option value="">Desktop</option>
                         </select>
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Preço <span required>*</span></label>
-                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Ex.: Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450" pattern="">
+                        <label required for="preco">Preço <span required>*</span></label>
+                        <input required type="text" name="preco" id="preco" placeholder="Ex.: R$ 220,00">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Peso <span required>*</span></label>
-                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="ex.: 0.3 para 300g">
+                        <label required for="peso">Peso <span required>*</span></label>
+                        <input required type="text" name="peso" id="peso" placeholder="ex.: 0.3 para 300g">
                     </div>
                     <div class="item">
-                        <label for="nomeProduto">Altura</label>
-                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
+                        <label for="altura">Altura</label>
+                        <input type="text" name="altura" id="altura" placeholder="Em centímetros">
                     </div>
                     <div class="item">
-                        <label for="nomeProduto">Largura</label>
-                        <input required type="text" name="produtoNome" id="produtoNome" placeholder="Em centímetros">
+                        <label for="largura">Largura</label>
+                        <input type="text" name="largura" id="largura" placeholder="Em centímetros">
                     </div>
                     <div class="item">
-                        <label required for="nomeProduto">Descrição <span required>*</span></label>
-                        <textarea name="descricao" id="descricao" placeholder="ex.: A Placa Mae Gigabyte B450M GAMING DDR4 Socket AM4 Chipset AMD B450 é muito utilizada por profissionais do mundo dos games...  "></textarea>
+                        <label required for="descricao">Descrição <span required>*</span></label>
+                        <textarea name="descricao" id="descricao"></textarea>
                     </div>
                 </div>
                 <div class="right grid">
@@ -71,7 +92,7 @@
                             <label class="pick-image" for="picture_input">
                                 <span class="picture_image"></span>
                             </label>
-                            <input style="display: none;" required type="file" name="produtoNome" id="picture_input" accept=".jpg, .jpeg, .png, .webp">
+                            <input style="display: none;" required type="file" name="fotoProduto" id="picture_input" accept=".jpg, .jpeg, .png, .webp">
                         </div>
                         <div class="image-info">
                             <small>.jpg, .png, .webp</small>
@@ -100,3 +121,12 @@
     <script src="../assets/js/imagePreview.js"></script>
 </body>
 </html>
+
+<script>
+    const categorias = document.querySelectorAll("option.categorias_opt");
+    let selectSubcategorias = document.querySelectorAll("select.subcategorias");
+
+    selectSubcategorias.addEventListener('select', function(e) {
+        alert('Aeee')
+    })
+</script>

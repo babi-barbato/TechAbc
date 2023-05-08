@@ -15,6 +15,7 @@ inputFile.addEventListener('change', function(e) {
 
             const img = document.createElement('img');
             img.src = readerTarget.result;
+            console.log(readerTarget.result);
             img.classList.add('pictureImg');
             
             pictureImage.innerHTML = '';
