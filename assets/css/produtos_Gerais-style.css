@@ -41,7 +41,7 @@ img{
 .divTitulo img{/*img do titulo grande*/
     width: 60px;/*largura de 60px*/
 }
-.fa-heart{/*icone de coração*/
+.divProduto > .fa-heart{/*icone de coração*/
     position: absolute;/*posição absolute*/
     font-size: 25px;/*tamanho da letra (do icone em si)*/
     top: 15px;/*distancia do top*/

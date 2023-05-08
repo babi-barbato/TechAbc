@@ -11,34 +11,13 @@
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
     }
 
-    if(isset($_POST["fone"])){
+    if(isset($_POST["monte"])){
         $_SESSION['titulo'] = "Fones";
         $_SESSION['produto'] = "acessorios";
         $_SESSION['tipo'] = "fone";
-        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
+        header("Location: monte_pc.php"); //leva para a pag cadastrar produtos
     }
 
-    if(isset($_POST["fone"])){
-        $_SESSION['titulo'] = "Fones";
-        $_SESSION['produto'] = "acessorios";
-        $_SESSION['tipo'] = "fone";
-        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
-    }
-
-    if(isset($_POST["fone"])){
-        $_SESSION['titulo'] = "Fones";
-        $_SESSION['produto'] = "acessorios";
-        $_SESSION['tipo'] = "fone";
-        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
-    }
-
-    if(isset($_POST["fone"])){
-        $_SESSION['titulo'] = "Fones";
-        $_SESSION['produto'] = "acessorios";
-        $_SESSION['tipo'] = "fone";
-        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
-    }
-    
     if(isset($_POST["fone"])){
         $_SESSION['titulo'] = "Fones";
         $_SESSION['produto'] = "acessorios";

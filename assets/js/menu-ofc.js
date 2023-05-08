@@ -8,30 +8,30 @@ header.innerHTML = `
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/menu_style.css">
-    <link rel="stylesheet" href="../css/style-global.css">
 </head>
-<script src="toggleMenu.js"></script>
 <body>
-    <!-- MOBILE NAV START -->
+<!-- MOBILE NAV START -->
     
     <!-- Mobile Menu Start -->
         <nav class="mobile-nav">
             <div class="top flex">
                 <div class="left" onclick="openMenu()">
-                    <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
                 </div>
                 <div class="center">
                     <h2>LOGO</h2>
                 </div>
-                <div class="right flex">
-                    <a href="#" class="cadastro flex">
+                <div id="cadLogin" class="right flex">
+                    <a href="cadastro_cliente.html" class="cadastro flex">
                         <span>Cadastro</span>
                     </a>
-                    <a href="#" class="login flex">
+                    <a href="login.html" class="login flex">
                         <span>Login</span>
                     </a>
                 </div>
+            <a style="" href="../assets/php/logout.php">
+                <span id="sair" style="align-items:center;justify-content:center;margin:5px 0px;border-radius:10px;background-color:#0066FF;color:white;width:25vh;height:35px;font-size:17px;border:none" class="login">Sair</span>
+            </a>
             </div>
 
             <div class="search-box">
@@ -41,19 +41,18 @@ header.innerHTML = `
                     
                         <div class="button-container">
                             <button type="submit" name="buscar">
-                                <i class="fa fa-magnifying-glass"></i>
+                            <i class="fa fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
                 </form>
             </div>
         </nav>
-        
+
         <div class="menu-container">
             <div class="top flex">
                 <div class="welcome">
-                    <p>Bem-vindo,</p>
-                    <span>$nome!</span>
+                    <p>Bem-vindo!</p>
                 </div>
                 <div class="close" onclick="closeMenu()">
                     <i class="fa fa-close"></i>
@@ -79,6 +78,7 @@ header.innerHTML = `
                     </div>
                 </a>
             </div>
+            <form action="" name="form" method="post">
             <div class="menu-opt">
                 <ul>
                     <li>
@@ -88,28 +88,28 @@ header.innerHTML = `
                         </div>
                         <ul class="cascading-opt">
                             <li>
-                                <a href="#">Fontes de energia</a>
+                            <button class="btnPhp" type="submit" name="fonte">Fontes de energia</button>
                             </li>
                             <li>
-                                <a href="#">Armazenamentos</a>
+                                <button class="btnPhp" type="submit" name="armazenamento">Armazenamentos</button>
                             </li>
                             <li>
-                                <a href="#">Placa de Vídeo</a>
+                                <button class="btnPhp" type="submit" name="placaVideo">Placa de Vídeo</button>
                             </li>
                             <li>
-                                <a href="#">Memória RAM</a>
+                            <button class="btnPhp" type="submit" name="ram">Memória RAM</button>
                             </li>
                             <li>
-                                <a href="#">Processador</a>
+                                <button class="btnPhp" type="submit" name="processador">Processador</button>
                             </li>
                             <li>
-                                <a href="#">Placa mãe</a>
+                                <button class="btnPhp" type="submit" name="placaMae">Placa mãe</button>
                             </li>
                             <li>
-                                <a href="#">Gabinete</a>
+                                <button class="btnPhp" type="submit" name="gabinete">Gabinete</button>
                             </li>
                             <li>
-                                <a href="#">Cooler</a>
+                                <button class="btnPhp" type="submit" name="cooler">Cooler</button>
                             </li>
                         </ul>
                     </li>
@@ -119,30 +119,31 @@ header.innerHTML = `
                             <i class="fa fa-chevron-down" ></i>
                         </div>
                         <ul class="cascading-opt">
-                            <li><a href="#">Fones</a></li>
-                            <li><a href="#">Teclados</a></li>
-                            <li><a href="#">Mouses</a></li>
-                            <li><a href="#">Mouse pads</a></li>
-                            <li><a href="#">Monitores</a></li>
+                            <li><button class="btnPhp" type="submit" name="fone">Fones</button></li>
+                            <li><button class="btnPhp" type="submit" name="teclado">Teclados</button></li>
+                            <li><button class="btnPhp" type="submit" name="mouse">Mouses</button></li>
+                            <li><button class="btnPhp" type="submit" name="mousePad">Mouse pads</button></li>
+                            <li><button class="btnPhp" type="submit" name="monitor">Monitores</button></li>
                         </ul>
                     </li>
                     <li>
                         <div class="item">
-                            <a href="#">Notebooks</a>
+                            <button class="btnPhp" type="submit" name="notebook">Notebooks</button>
                         </div>
                     </li>
                     <li>
                         <div class="item">
-                            <a href="#">Desktops</a>
+                            <button class="btnPhp" type="submit" name="desktop">Desktops</button>
                         </div>
                     </li>
                     <li>
                         <div class="item flex">
-                            <a href="#">Monte o seu PC</a>
+                            <button class="btnPhp" type="submit" name="monte">Monte o seu PC</button>
                         </div>
                     </li>
                 </ul>
             </div>
+            </form>
         </div>
         <div class="box-opacity"></div>
     <!-- MOBILE MENU END -->
@@ -230,7 +231,7 @@ header.innerHTML = `
             </form>
         </div>
         <div class="right">
-            <div class="cadastro-login">
+            <div id="teste" class="cadastro-login">
                 <a href="../pages/cadastro_cliente.html" class="cadastro">
                     <span>Cadastro</span>
                 </a>
@@ -238,6 +239,10 @@ header.innerHTML = `
                     <span>Login</span>
                 </a>  
             </div>
+            <a href="../assets/php/logout.php">
+                <span id="saair" style="align-items:center;justify-content:center;margin:5px 0px;border-radius:10px;background-color:#0066FF;color:white;width:25vh;height:35px;font-size:17px;border:none" class="login">Sair</span>
+            </a>
+            <div></div>
             <div class="cart-container">
                 <a class="carrinho-btn" href="../pages/carrinho.html">
                     <div class="left">

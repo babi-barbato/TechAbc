@@ -2,9 +2,9 @@
     include('conexao.php'); //Inclui a conexão 
     session_start(); //inicia uma sessão (isso permte saber se está logado ou não)
    
-   if(isset($_POST['user']) || isset($_POST['senha'])){ //esse email e senha é do html (é pegado por meio do NAME do input)
+   if(isset($_POST['usuario']) || isset($_POST['senha'])){ //esse email e senha é do html (é pegado por meio do NAME do input)
 
-       if(strlen($_POST['user']) == 0 ){ //caso a pessoa não tenha digitado nada aparecera isso
+       if(strlen($_POST['usuario']) == 0 ){ //caso a pessoa não tenha digitado nada aparecera isso
            echo "<script> alert('Preencha seu e-mail')</script>";
            echo "<script> window.location='../../pages/login.html'</script>";
 
@@ -13,7 +13,7 @@
            echo "<script> window.location='../../pages/login.html'</script>";
 
        }else{// se a pessoa digitou tudo certinho vai seguir o código abaixo
-            $email = $_POST['user'];// crio a variavel email e pego o valor digitado no email
+            $email = $_POST['usuario'];// crio a variavel email e pego o valor digitado no email
             $senha = $_POST['senha'];// crio a variavel senha e pego o valor digitado na senha
 
             $sql_code = "SELECT * FROM clientes WHERE email = '$email' AND senha = '$senha'"; //verifico se o email e senha digitados tem no banco
@@ -24,13 +24,14 @@
            
                 if($email == "babi@gmail.com" && $senha == "babi"){ //email de adm abaixo
 
-                    $_SESSION['user'] = $linha['user'];// crio uma variavel global e dou a ela o valor do email
-                    header("Location: ../../pages/produtosGerais.html"); //leva para a pag cadastrar produtos
+                    $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
+                    echo $_SESSION['user'];
+                    header("Location: ../../pages/monte_pc.php"); //leva para a pag cadastrar produtos
                     
                 }else if($quantidade == 1){ //parte de clientes abaixo
                     
-                    $_SESSION['user'] = $linha['user'];// crio uma variavel global e dou a ela o valor do email
-                    header("Location: ../../pages/index.html"); //leva para a pag da agenda
+                    $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
+                    header("Location: ../../pages/index.php"); //leva para a pag da agenda
 
                 }
             }
