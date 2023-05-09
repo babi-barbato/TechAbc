@@ -4,5 +4,5 @@
     }
 
     session_destroy(); //destroi ela
-    header("Location: ../../pages/index.html"); //leva para o index
+    header("Location: ../../pages/index.php"); //leva para o index
 ?>

@@ -1,8 +1,3 @@
-:root { 
-    --orange: #D75A00; /* Variável para a cor Laranja */
-    --blue: #0066FF; /* Variável para a cor Azul */
-}
-
 * { /* PREENCHIMENTO DE TELA */
     margin: 0; /*margem externa*/
     padding: 0; /*margem interna*/
@@ -84,7 +79,7 @@ ul {
     padding: 10px;
     cursor: pointer;
 }
-.menu-container a {
+.menu-container .btnPhp {
     color: #000;
     transition: all .3s ease;
 }
@@ -125,7 +120,7 @@ ul {
     margin-top: 20px;
 }
 .menu-container .menu-opt > ul > li > .item:hover,
-.menu-container .menu-opt > ul > li > .item:hover > a {
+.menu-container .menu-opt > ul > li > .item:hover > .btnPhp {
     color: rgb(237, 79, 0);
 }
 .menu-container .menu-opt > ul > li:not(:last-child) {
@@ -245,9 +240,8 @@ div.special {
     padding: 10px;/*margem interna*/
 }
 /*TITULOS DO MENU*/
-.desktop-nav .center a {
+.desktop-nav .center .btnPhp {
     color: #000;/*cor da letra*/
-    font-weight: 600;/*letra em negrito*/
 }
 /*LISTA QUE CRIA O MEU*/
 .desktop-nav .center ul {
@@ -265,15 +259,15 @@ div.special {
     /* padding: 0px 30px; */
 }
 /*TITULO DAS OPÇÕES DA LISTA DO MENU*/
-.desktop-nav .center ul li a {
+.desktop-nav .center ul li .btnPhp {
     transition: all .3s ease;/*cor da fonte*/
     /* color: #fff; */
 }
 /*EFEITO LARANJA NA LETRA*/
-.desktop-nav .center ul li:hover a {/*muda a cor do texto quando passa o mouse em cima*/
+.desktop-nav .center ul li:hover .btnPhp {/*muda a cor do texto quando passa o mouse em cima*/
     color: var(--orange);/*cor da letra será laranja*/
 }
-.desktop-nav .center ul li:hover::after {/*forma uma linha laranja embaico da opção do menu*/
+.desktop-nav .center .menu-opt > ul > li:hover::after {/*forma uma linha laranja embaico da opção do menu*/
     content: "";/*para não aparecer nada na tela*/
     position: absolute;/*ele fica preso ao elemento*/
     bottom: -8px;/*margem debaixo*/
@@ -287,10 +281,10 @@ div.special {
 
 /*ANIMAÇÃO BORDINHA LARANJA*/
 
-.desktop-nav .center > .menu-opt > ul > li:hover > a {
+.desktop-nav .center > .menu-opt > ul > li:hover  {
     color: var(--orange);
 }
-.desktop-nav .center > .menu-opt .cascading-opt > li:hover > a {
+.desktop-nav .center > .menu-opt .cascading-opt > li:hover {
     color: var(--orange);
 }
 .desktop-nav .center .menu-opt > ul > li:hover::after {
@@ -306,6 +300,7 @@ div.special {
 }
 
 .desktop-nav .center .cascading-opt {
+    z-index: 1;
     height: 0px;
     overflow-y: hidden;
     position: absolute;
@@ -316,9 +311,6 @@ div.special {
     width: 100px;
     padding: 0px 5px;
     transition: all .05s ease;
-    border-right: 1px solid #00000025;
-    border-bottom: 1px solid #00000025;
-    border-left: 1px solid #00000025;
 }
 .desktop-nav .center .menu-opt .cascading-opt > li {
     padding: 5px 0px;
@@ -326,7 +318,7 @@ div.special {
 .desktop-nav .center .menu-opt .cascading-opt > li:not(:last-child) {
     border-bottom: 1px solid var(--orange);
 }
-.desktop-nav .center .menu-opt .cascading-opt > li > a {
+.desktop-nav .center .menu-opt .cascading-opt > li > .btnPhp {
     font-weight: normal;
 }
 
@@ -335,6 +327,7 @@ div.special {
 }
 
 .desktop-nav .center .pecas-opt {
+    z-index: 1;
     height: 0px;
     overflow-y: hidden;
     position: absolute;
@@ -352,7 +345,7 @@ div.special {
 .desktop-nav .center .menu-opt .pecas-opt > li:not(:last-child) {
     border-bottom: 1px solid var(--orange);
 }
-.desktop-nav .center .menu-opt .pecas-opt > li > a {
+.desktop-nav .center .menu-opt .pecas-opt > li > .btnPhp {
     font-weight: normal;
 }
 
@@ -452,6 +445,16 @@ div.special {
 .desktop-nav .carrinho-btn .center {/**/
     text-align: left;/*alinhado a esquerda*/
     font-size: 15px;/*tamanho da letra*/
+}
+
+.btnPhp{
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #00000000;
+    font-size: 16px;
 }
 
 @media only screen and (min-width: 900px) {/**/
