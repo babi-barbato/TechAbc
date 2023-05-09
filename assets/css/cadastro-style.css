@@ -1,13 +1,7 @@
-:root {
-  --orange: #D75A00; /* Variável para a cor Laranja */
-  --blue: #0066FF; /* Variável para a cor Azul */
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 0;
   font-family: sans-serif;
 }
 /*TEXTO 'VOLTAR AO MENU'*/
@@ -23,9 +17,9 @@ a{
 /* COR DA PARTE DA ESQUERDA */
 .container .left {
   flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
-  background-color: var(--orange); /* Referência à variável orange, pegando a cor atribuída a ela */
-  padding: 20px;
-  color: #fff;
+  background-color: #D75A00; /* cor de fundo */
+  padding: 20px; /*margem interna*/
+  color: #fff; /*cor da letra*/
 }
 
 /* PARTE DO MENU */
@@ -34,10 +28,9 @@ a{
   justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
   width: 145px;
   align-items: center;/*alinhamento*/
-  padding: 5px;
   cursor: pointer; /*maozinha do mouse para click*/
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 100px; /*distancia entre o voltar até o titulo da página*/
 }
 .back-to-menu span {
   font-weight: 600; /*negrito do menu*/
@@ -45,15 +38,18 @@ a{
 
 /* TITULOS DA PARTE LARANJA */
 .container .left .text {
-  width: 500px;
-  margin: auto;
+  width: 500px; /*largura máxima que o texto pode alcancar*/
+  margin: auto; /*centralizar o texto*/
 }
 
 /*BOTÃO "AQUI"*/
-.container .left .text a { /*botão "aqui"*/
-  color: #fff;
+.container .left .text a { /*configurações da tag A*/
+  color: #fff; /*cor da letra*/
   text-decoration: underline; /*risco debaixo da palavra "aqui"*/
   transition: all 0.1s ease; /*transição das cores*/
+}
+.container .left .text a:hover {/*cor do botão  "aqui"*/
+  color: #0046ae; /* ao passar o mause em cima do *aqui, ele ficara azul*/
 }
  /*CADASTTRE-SE JÁ*/
 .container .left .text h1 {
@@ -65,10 +61,7 @@ a{
 .container .left .text p {
   font-size: 1.5rem;
 }
-/* COR DO BOTÃO CLIQUE AQUI*/
-.container .left .text a:hover {/* ao passar o mause em cima do *aqui, ele ficara azul*/
-  color: #0046ae; /* */
-}
+
 /* IMAGEM DA PARTE LARANJA */
 .container .left .image {
   width: 150px;
@@ -86,9 +79,9 @@ a{
 
 /* LARGURA DOS CAMPOS DO FORMULARIO*/
 .container .right form {
-  padding: 10px;
-  width: 80%;
-  margin: 0 auto;
+  padding: 10px; /*margem interna*/
+  width: 80%; /*largura dos campos*/
+  margin: 0 auto; /*centralizando no meio*/
 }
 /* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
 .container .right form .field {
@@ -119,7 +112,7 @@ a{
 
   /* BOTÃO DO FORMULARIO*/
 form .button button {
-  background-color: var(--orange); /*váriavel laranja*/
+  background-color: #D75A00; /*váriavel laranja*/
   border: none; /*não apresenta borda*/
   width: 100%;
   height: 100%;
@@ -150,31 +143,12 @@ form .button button:hover {
   display: none; /*esconde o "voltar ao menu" do celular*/
 }
 
-/*MENSAGENS DE ERRO*/
-.field small {
-	position: absolute; /*sua posição acompanha o input*/
-	bottom: -30px;
-	left: -2px;
-	visibility: hidden; /*deixa o elemento invisivel*/
-  font-size: 15px;
-  color: red;
-  }
+
   
-/* ERROR AND SUCCESS */
-.success  { /*a borda do input fica verde quando certo*/
-  border: 1px solid #2ecc71;
-}
-  
-input.error { /*a borda do input fica vermelho quando errado*/
-  border: 1px solid #cf2c1a;
-}
+
+
   
   
-  /*MENSAGEM*/
-  .field.error small { /*a mensagem do small fica vermelha e visivel */
-	visibility: visible; /*deixa um elemento visivel */
-	color: #e74c3c;
-  }
   
 /* DESKTOP*/
 @media only screen and (max-width: 1080px) {

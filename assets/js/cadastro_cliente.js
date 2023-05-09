@@ -2,6 +2,7 @@
 const form = document.getElementById("form");
 const nome = document.getElementById("nome");
 const cpf = document.getElementById("cpf");
+const tel = document.getElementById("tel");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const conf = document.getElementById("conf");
@@ -15,7 +16,7 @@ form.addEventListener("submit", (e) => {
 // faz a verificacao dos inputs, chama as funcao e faz alteracao na classe para error o success
          function checkInputs() {
   const nomeValue = nome.value; //pega os valores dos inputs, e guarda o valor deles
-  
+  const telValue = tel.value;
   const cpfValue = cpf.value;
   const emailValue = email.value;
   const senhaValue = senha.value;
@@ -28,7 +29,12 @@ form.addEventListener("submit", (e) => {
   } else {
     setSuccessFor(nome);
   }
-               
+              
+  if (telValue === "") {     // pega o input e compara, se ficar vazio exibi a msg, se nao success
+    setErrorFor(tel, "O telefone é obrigatório.");
+  } else {
+    setSuccessFor(tel);
+  }
 
                 // CPF
    if (cpfValue === "") {          // pega o input e compara, se ficar vazio exibi a msg
@@ -82,11 +88,7 @@ form.addEventListener("submit", (e) => {
   small.innerText = message;                  // Adiciona a mensagem de erro
   field.classList.add("error");   // Adiciona a classe de erro, se esta vazia,buscando no css
 }
-               //funcao de success
-          function setSuccessFor(input) {
-  const field = input.parentElement;        // input.parentElement: retorna a div formCaixa onde fica o input
-  field.classList.add("success");   // Adicionar a classe de success, se esta vazia,buscando no css
-}
+               
              
 
   //GERA OLHO1
