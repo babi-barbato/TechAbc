@@ -21,7 +21,7 @@
             <div class="text">
                 <h1>Cadastre-se já!</h1>
                 <p>Cadastre-se agora para ver as novidades disponíveis no nosso site.
-                    Caso já tenha um cadastro, clique  <a href="#">aqui</a> para se logar.</p>
+                    Caso já tenha um cadastro, clique  <a href="login.html">aqui</a> para se logar.</p>
             </div>
             <div class="image">
                 <img src="../img/login.png" alt="ícone de login">
@@ -34,33 +34,33 @@
                 </div>
                 <span>Voltar ao menu</span> <!--versão celular-->
             </a>
-            <form action="" method="post" id="form" onsubmit="return formControl(this)">
+            <form action="../assets/php/cad_teste.php" method="post" id="form" onsubmit="return formControl(this)" name="form">
                 <div class="field">
-                    <label for="user">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input class="color" id="nome" type="text" placeholder="abelinha_exemplo">
+                    <label for="nome">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input class="nome" id="nome" name="nome" type="text" required placeholder="abelinha_exemplo">
                 </div>
                 <div class="field">
                     <label for="cpf">CPF</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="cpf" type="text" placeholder="000.000.000-00">
+                    <input id="cpf" name="cpf" type="text" required placeholder="000.000.000-00">
                 </div>
                 <div class="field">
-                    <label for="conf">Telefone</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="conf" type="tel" placeholder="Confirme a senha acima senha...">
+                    <label for="telefone">Telefone</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="telefone" name="telefone" type="text" required placeholder="(00) 00000-0000">
                 </div>
                 <div class="field">
                     <label for="email">Email</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="email" type="email" placeholder="username@example.com">
+                    <input id="email" name="email" type="email" required placeholder="username@example.com">
                 </div>
                 <div class="field">
                     <label for="senha">Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="senha" type="password" placeholder="Digite sua senha...">
+                    <input id="senha" name="senha" type="password" required placeholder="Digite sua senha...">
                 </div>
                 <div class="field">
                     <label for="conf">Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="conf" type="password" placeholder="Confirme a senha acima senha...">
+                    <input id="conf" name="conf" type="password" required placeholder="Confirme a senha acima senha...">
                 </div>
                 <div class="button">
-                    <button type="submit">
+                    <button type="submit" name="cadastrar">
                         Cadastrar
                     </button>
                 </div>

@@ -15,12 +15,12 @@
             <div id="cart" class="cart"> <!--formulário-->
                   <!--INPUTS-->
                     <div class="field"> <!--estão na mesma div pois precisam ficar uma do lado da outra-->
-                        <input id="nome" type="text" placeholder="Nome completo"> <!--input do nome-->
-                        <input id="tel" type="text" placeholder="N° de Telefone"><!--input do telefone-->
+                        <input id="nome" type="text"  placeholder="Nome completo" > <!--input do nome-->
+                        <input id="tel" type="text"  placeholder="N° de Telefone"><!--input do telefone-->
                     </div>
 
                     <div class="field">
-                            <input id="cep" type="cep" placeholder="CEP"><!--input do telefone-->
+                            <input id="cep" type="cep"  placeholder="CEP"><!--input do telefone-->
                     </div>
 
                     <div class="field">
@@ -28,12 +28,12 @@
                     </div>
 
                     <div class="field">
-                        <input id="rua" type="text" placeholder="Rua/Avenida"><!--input do telefone-->
+                        <input id="rua" type="text"   placeholder="Rua/Avenida"><!--input do telefone-->
                     </div>
 
                     <div class="field"><!--estão na mesma div pois precisam ficar uma do lado da outra-->
-                        <input id="bairro" type="text" placeholder=" Bairro"><!--input do telefone-->
-                        <input id="numero" type="text" placeholder="Número"><!--input do telefone-->
+                        <input id="bairro" type="text"  placeholder=" Bairro"><!--input do telefone-->
+                        <input id="numero" type="text"  placeholder="Número"><!--input do telefone-->
                     </div>
 
                     <div class="field">
@@ -42,11 +42,11 @@
 
                     <!--SALVAR-->
                     <label class="salvar">Salvar Como:</label> <!--div que armazena o titulo do input-->
-                    <div class="salvar-btn"> <!--div dos botões-->
-                        <button name="text" type="submit" id="casa"> <!--botão da casa-->
+                    <div class="salvar-btn" > <!--div dos botões-->
+                        <button name="text" type="submit" id="casa" onclick="cas()" > <!--botão da casa-->
                             Casa <!--o que aparece escrito dentro do botão-->
                         </button>
-                        <button name="text" type="submit" id="trabalho"> <!--botão do trabalho-->
+                        <button name="text" type="submit" id="trabalho" onclick="trampo()" > <!--botão do trabalho-->
                             Trabalho<!--o que aparece escrito dentro do botão-->
                         </button>
                     </div>
@@ -64,8 +64,10 @@
                 
                     <!--BOTÃO-->
                     <div class="button"> <!--dv que armazena os botões -->
-                        <button id="cancelar"> <!--botão de canecalr-->
+                        <button id="cancelar">
+                       
                             Cancelar  <!--o que aparece dentro do botão-->
+                     
                         </button>
                         <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
                         </button>
@@ -87,37 +89,41 @@
                 </div>
                 
                 <div class="form-branco"> <!--classe do input-->
-                    <input id="numero-c" type="text" placeholder="Numero do cartão"><!--input do numero do cartao-->
+                    <input id="numero-c" type="text" required placeholder="Numero do cartão"><!--input do numero do cartao-->
                 </div>
                 
                 <div class="form-branco"><!--classe do input-->
-                    <input id="data" type="text" placeholder="Data de validade (MM/AA)"><!--input da data de validade-->
-                    <input id="cvv" type="text" placeholder="CVV"><!--input do cvv-->
+                    <input id="data" type="text"  required placeholder="Data de validade (MM/AA)"><!--input da data de validade-->
+                    <input id="cvv" type="text"  required placeholder="CVV"><!--input do cvv-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="nome-c" type="text" placeholder="Nome no cartão"><!--input do nome que esta no cartao-->
+                    <input id="nome-c" type="text" required placeholder="Nome no cartão"><!--input do nome que esta no cartao-->
                 </div>
                 
                 <label class="cliente">Informações do dono:</label> <!--titulo do input-->
                 <div class="form-branco"><!--classe do input-->
-                    <input id="c" type="text" placeholder="CEP"><!--input do cep-->
+                    <input id="c" type="text" required placeholder="CEP"><!--input do cep-->
                 </div>
                 
                 <div class="form-branco"><!--classe do input-->
-                    <input id="est" type="text" placeholder="Estado"><!--input dp estado-->
-                    <input id="num" type="text" placeholder="Número"><!--input do numero da casa-->
+                    <input id="est" type="text" required placeholder="Estado"><!--input dp estado-->
+                    <input id="num" type="text" required placeholder="Número"><!--input do numero da casa-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="av" type="text" placeholder="Rua/Avenida"><!--input da rua-->
+                    <input id="av" type="text" required placeholder="Rua/Avenida"><!--input da rua-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="comp" type="text" placeholder="Complemento"><!--input do complemento-->
+                    <input id="comp" type="text" required placeholder="Complemento"><!--input do complemento-->
                 </div>
                   <!--BOTÃO-->
                   <div class="button"> <!--classe do botão-->
                     <button type="submit" id="cancelar"> <!--botão de cancelar-->
+                        <a href="cadastro_endereco.html">
                         Cancelar  <!--o que aparece dentro do botão-->
-                    </button>
+                    </a>
+                    </button>    
+                      
+                 
                     <button type="submit" id="enviar"><!--botão de cancelar-->
                         Enviar <!--o que aparece dentro do botão-->
                     </button>
@@ -128,12 +134,14 @@
             <div id="boleto"><!--div que armazena todas as informações do boleto-->
                 <label class="pag-boleto">Insira seu email para receber o boleto:</label> <!--titulo do input-->
                 <div class="form-branco"><!--classe do input-->
-                    <input id="bolet" type="text" placeholder="Insira um email válido"><!-- input para inserir email-->
+                    <input id="bolet" type="text" required placeholder="Insira um email válido"><!-- input para inserir email-->
                 </div>
                 <div class="button"> <!--classe do botão-->
                     <button type="submit"  id="cancelar-boleto"><!--botão de cancelar-->
+                        <a href="cadastro_endereco.html">
                         Cancelar  <!--o que aparece dentro do botão-->
-                    </button>
+                    </a>
+                    </button> 
                     <button type="submit"  id="enviar-boleto"><!--botão de cancelar-->
                         Enviar <!--o que aparece dentro do botão-->
                     </button>
@@ -145,8 +153,10 @@
                 <label class="pag-pix">Pagameno no Pix:</label> <!--titulo do input-->
                 <img src="../img/pix.jpg" alt="" class="qr"><!--imagem do qrCODE-->
                 <div class="button" style="justify-content: space-between !important;"><!--utilizado o style para definir os mesmo espaços do elemento como importante-->
-                    <button type="submit" id="cancel"><!--botão de cancelar-->
+                    <button type="submit" id="cancel" ><!--botão de cancelar-->
+                        <a href="cadastro_endereco.html">
                         Cancelar  <!--o que aparece dentro do botão-->
+                    </a>
                     </button>
                     <button type="submit" id="voltar"><!--botão de cancelar-->
                         Voltar<!--o que aparece dentro do botão-->
