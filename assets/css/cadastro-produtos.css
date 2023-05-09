@@ -182,6 +182,7 @@ span[required] {
     }
     .form-container form {
         flex-direction: column;
+        gap: 0;
     }
     .form-container form  .left,
     .form-container form  .right {

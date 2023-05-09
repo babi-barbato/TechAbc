@@ -8,21 +8,27 @@ inputFile.addEventListener('change', function(e) {
     const file = inputTarget.files[0];
 
     if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        reader.addEventListener('load', function(e) {
-            const readerTarget = e.target;
+            reader.addEventListener('load', function(e) {
+                if (file.type == "image/png" || file.type == "image/jpeg" || file.type == "image/webp") {
 
-            const img = document.createElement('img');
-            img.src = readerTarget.result;
-            console.log(readerTarget.result);
-            img.classList.add('pictureImg');
-            
-            pictureImage.innerHTML = '';
-            pictureImage.appendChild(img);
-        });
+                    console.log(file.type)
+                    const readerTarget = e.target;
 
-        reader.readAsDataURL(file);
+                    const img = document.createElement('img');
+                    img.src = readerTarget.result;
+                    img.classList.add('pictureImg');
+                    
+                    pictureImage.innerHTML = '';
+                    pictureImage.appendChild(img);
+
+                } else {
+                    alert('====================[ERRO]==================== \n Tipo de imagem inválido. \n Por favor insira um tipo válido');
+                }
+            });
+
+            reader.readAsDataURL(file);
     } else {
         pictureImage.innerHTML = pictureImageTxt;
     }

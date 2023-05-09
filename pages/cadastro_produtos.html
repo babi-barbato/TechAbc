@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/cadastro-produtos.css">
-    <link rel="stylesheet" href="../assets/css/menu_style.css">
+    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../assets/css/footer-style.css">
     <link rel="stylesheet" href="../assets/css/style-global.css">
     <title>Cadastro de Produtos</title>
 </head>
 <body>
-    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/menu-ofc.js"></script>
 
     <div class="container">     
         <div class="title">
@@ -28,11 +28,11 @@
                     </div>
                     <div class="item">
                         <label required for="categorias">Categoria <span required>*</span></label>
-                        <select name="categorias" id="categorias" title="Categorias">
-                            <option class="categorias_opt" value="">Peças</option>
-                            <option class="categorias_opt" value="">Acessórios</option>
-                            <option class="categorias_opt" value="">Notebooks</option>
-                            <option class="categorias_opt" value="">Desktops</option>
+                        <select name="categorias" id="categorias" title="Categorias" onchange="setSubcategory(this)">
+                            <option id="pecas" class="categorias_opt" value="pecas">Peças</option>
+                            <option id="acessorios" class="categorias_opt" value="acessorios">Acessórios</option>
+                            <option id="notebook" class="categorias_opt" value="notebook">Notebook</option>
+                            <option id="desktop" class="categorias_opt" value="desktop">Desktop</option>
                         </select>
                     </div>
                     <div class="item">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="item">
                         <label required for="preco">Preço <span required>*</span></label>
-                        <input required type="text" name="preco" id="preco" placeholder="Ex.: R$ 220,00">
+                        <input required type="text" name="preco" id="preco" placeholder="Ex.: 220,00">
                     </div>
                     <div class="item">
                         <label required for="peso">Peso <span required>*</span></label>
@@ -119,14 +119,17 @@
 
     <script src="../assets/js/toggleMenu.js"></script>
     <script src="../assets/js/imagePreview.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>
 
 <script>
-    const categorias = document.querySelectorAll("option.categorias_opt");
     let selectSubcategorias = document.querySelectorAll("select.subcategorias");
 
-    selectSubcategorias.addEventListener('select', function(e) {
-        alert('Aeee')
-    })
+    function setSubcategory (select) {
+        for (i = 0; i <= document.getElementsByClassName('subcategorias').length - 1; i++) {
+            document.getElementsByClassName('subcategorias')[i].style.display = 'none';
+        }
+        document.querySelector('#sub_' + select.value).style.display = 'block';
+    }
 </script>
