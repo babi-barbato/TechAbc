@@ -49,6 +49,7 @@
                         <div class='divImg'>
                             <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
                         </div>
+                        <form>
                         <div class='divTextos'>
                             <p class='pTitulo'>".$linha['nome']."</p>
                             <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
@@ -60,6 +61,7 @@
                             </div>
                             <p class='pTexto'>Parcele em até 12x sem juros</p>
                         </div>
+                        </form>
                     </div>";
                 }
             ?>
