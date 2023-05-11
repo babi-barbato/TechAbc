@@ -24,7 +24,7 @@ inputFile.addEventListener('change', function(e) {
                     pictureImage.appendChild(img);
 
                 } else {
-                    alert('====================[ERRO]==================== \n Tipo de imagem inválido. \n Por favor insira um tipo válido');
+                    alert('=================== [ERRO] =================== \n Tipo de imagem inválido. \n Por favor insira um tipo válido');
                 }
             });
 
