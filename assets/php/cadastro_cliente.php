@@ -1,50 +1,39 @@
 <?php
- session_start(); //inicia uma sessão (isso permte saber se está logado ou não)
+session_start(); 
+
  
- if (isset($_POST["cadastrar"])){
-    include('conexao.php'); //Inclui a conexão 
+if (isset($_POST['cadastrar'])){
+
+    include('conexao.php'); 
     $nome=$_POST['nome'];
     $cpf=$_POST['cpf'];
     $telefone=$_POST['telefone'];
     $email=$_POST['email'];
     $senha=$_POST['senha'];
     
-
-
-    $sqli_email= "SELECT * FROM cliente WHERE email = '$email'";
+    $sql_email= "SELECT * FROM clientes WHERE email = '$email'";
     $result1 = mysqli_query($conexao,$sql_email);
         
     if (mysqli_num_rows($result1) != 0){  
      
         echo "<script>alert ('email ja cadastrado')</script>";
+        echo "<script>  window.location.href=' ../../pages/login.html '</script>";
+    }else {
 
-            while ($linha = mysqli_fetch_array($result1)){
-                if ($cpf == $linha['cpf']){
-                    echo "<script>alert ('cpf ja cadastrado')</script>";} 
-          
-            }
-    }
-
-    $sql_cpf = "SELECT * FROM cliente WHERE cpf = '$cpf'";
+           
+     $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'";
     $result2 = mysqli_query($conexao,$sql_cpf);
     if(mysqli_num_rows($result2) != 0){
         echo "<script> alert (' cpf ja cadastrado')</script>";
         
-        echo "<script> window.location='../../pages/login.html'</script>"; 
+        echo "<script> window.location='../../pages/login.html'</script>";
 
-    
-                            
-}else{
-    $sql_cpf = "SELECT * FROM cliente WHERE cpf = '$cpf'";
-    $result2 = mysqli_query($conexao,$sql_cpf);
-    if(mysqli_num_rows($result2) != 0){
-        echo "<script> alert (' cpf ja cadastrado, cadastrar novo email')</script>"; }
-      else {         
-      $sql="INSERT INTO clientes (`nome`, `cpf`, `email`, `telefone`, `senha`) VALUES ('$nome', '$cpf','$email','$telefone','$senha')";
-    $result=mysqli_query($conexao,$sql);
-    echo "<script> window.location.href=' ../html/login.php'</script>"; }
-      
-      }
+    }  else{
+
+
+     $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 
+     $result = mysqli_query($conexao,$sql);
+     header ( 'Location:../../pages/login.html');
     }
-    
-?>
+}
+}
