@@ -194,7 +194,9 @@
         overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/
         
        }
-    
+
+      .direita.image{
+       margin-top: 20px;}
     
     /*DIV QUE ARMAZENA O FORM DO CARTÃO*/
     #cartao{

@@ -12,9 +12,6 @@
     }
 
     if(isset($_POST["monte"])){
-        $_SESSION['titulo'] = "Fones";
-        $_SESSION['produto'] = "acessorios";
-        $_SESSION['tipo'] = "fone";
         header("Location: monte_pc.php"); //leva para a pag cadastrar produtos
     }
 
@@ -23,6 +20,13 @@
         $_SESSION['produto'] = "acessorios";
         $_SESSION['tipo'] = "fone";
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos
+    }
+    
+    if(isset($_POST["mouse"])){
+        $_SESSION['titulo'] = "Mouses";
+        $_SESSION['produto'] = "acessorios";
+        $_SESSION['tipo'] = "mouse";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
 
 ?>
