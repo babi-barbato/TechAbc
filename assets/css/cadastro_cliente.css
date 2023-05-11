@@ -145,12 +145,12 @@ form .button button:hover {
 #olho{
   z-index: 2;
 }
-#oiio{
+#oiio, #oio{
   position: absolute;
   background-color: rgba(0, 255, 255, 0);
   width: 50px;
   height: 50px;
-  margin-left: 390px;
+  right: 0;
   margin-top: 42px;
   z-index: 7;
   border: none;
@@ -159,16 +159,6 @@ form .button button:hover {
 #olho2{
   z-index: 2;
 }
-  #oio{
-    position: absolute;
-  background-color: rgba(0, 255, 255, 0);
-  width: 50px;
-  height: 50px;
-  margin-left: 218px;
-  margin-top: 42px;
-  z-index: 7;
-  border: none;
-  }
   
   
 /* DESKTOP*/
