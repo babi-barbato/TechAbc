@@ -10,7 +10,7 @@ function oiio() {
   }
   }; 
 
-  var a = 0;
+var a = 0;
 function oiio2() {
   if(a == 0){
     document.getElementById("conf").type = 'text';
