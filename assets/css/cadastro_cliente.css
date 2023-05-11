@@ -84,20 +84,20 @@ a{
   margin: 0 auto; /*centralizando no meio*/
 }
 /* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
-.container .right form .field {
+ .field {
   line-height: 40px; /*espaçamento da letra e o campo*/
   margin-bottom: 17px;/*espaçamento entre os campos*/
   font-size: 1.4rem;
   position: relative; /*posiciona o elemento da página como desejado*/
 }
 /* TITULO INPUT */
-.container .right form .field label {
+ .field label {
   font-weight: 600; /*negrito*/
   margin: 0;
   
 }
 /* CAMPOS*/
-.container .right form .field input {
+ .field input {
   width: 100%;
   border: none;/**/
   padding: 15px 10px;
@@ -105,10 +105,9 @@ a{
   box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);
   font-size: 1.0rem;
   display: block; /*transforma em bloco*/
+  position: relative;
 }
-.container .right form .field * {
-  display: block;/*transforma em bloco*/
-}
+
 
   /* BOTÃO DO FORMULARIO*/
 form .button button {
@@ -143,11 +142,33 @@ form .button button:hover {
   display: none; /*esconde o "voltar ao menu" do celular*/
 }
 
+#olho{
+  z-index: 2;
+}
+#oiio{
+  position: absolute;
+  background-color: rgba(0, 255, 255, 0);
+  width: 50px;
+  height: 50px;
+  margin-left: 390px;
+  margin-top: 42px;
+  z-index: 7;
+  border: none;
+}
 
-  
-
-
-  
+#olho2{
+  z-index: 2;
+}
+  #oio{
+    position: absolute;
+  background-color: rgba(0, 255, 255, 0);
+  width: 50px;
+  height: 50px;
+  margin-left: 218px;
+  margin-top: 42px;
+  z-index: 7;
+  border: none;
+  }
   
   
 /* DESKTOP*/

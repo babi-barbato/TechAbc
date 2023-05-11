@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compativel com outros navegadores -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
-    <link rel="stylesheet" href="../assets/css/cadastro-style.css"> <!--link do css-->
-    
+    <link rel="stylesheet" href="../assets/css/cadastro_cliente.css"> <!--link do css-->
+    <script src="../assets/js/cadastro_cliente.js"></script><!--link do script do formulário-->
+    <script src="../assets/js/jquery.js"></script><!--link da jquery da mascara -->
+    <script src="../assets/js/jquerycfp.js"></script><!--link da jquery da mascara -->
+
     <title> Cadastro - Tech ABC</title>
 </head>
 <body>
@@ -34,8 +37,8 @@
                 </div>
                 <span>Voltar ao menu</span> <!--versão celular-->
             </a>
-            <form action="../assets/php/cad_teste.php" method="post" id="form" onsubmit="return formControl(this)" name="form">
-                <div class="field">
+            <form action="" method="post" id="form"  name="form">
+                <div class="field"> <!--../assets/php/cad_teste.php-->
                     <label for="nome">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <input class="nome" id="nome" name="nome" type="text" required placeholder="abelinha_exemplo">
                 </div>
@@ -52,14 +55,22 @@
                     <input id="email" name="email" type="email" required placeholder="username@example.com">
                 </div>
                 <div class="field">
+                  
                     <label for="senha">Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="senha" name="senha" type="password" required placeholder="Digite sua senha...">
+                    <button type="button" onclick="oiio()" id="oiio">
+                        <img id="olho" src="../img/olhinho1.png" width="25px" height="25px" >
+                    </button>
+                    <input id="senha"  name="senha" type="password" required placeholder="Digite sua senha..." >
+                    
                 </div>
                 <div class="field">
                     <label for="conf">Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <button type="button" onclick="oiio2()" id="oio">
+                        <img id="olho2" src="../img/olhinho1.png" width="25px" height="25px" >
+                    </button>
                     <input id="conf" name="conf" type="password" required placeholder="Confirme a senha acima senha...">
                 </div>
-                <div class="button">
+                <div onclick="verifica()" class="button">
                     <button type="submit" name="cadastrar">
                         Cadastrar
                     </button>
@@ -68,6 +79,6 @@
         </div>
     </div>
    
-    <script src="../assets/js/cadastro_teste.js"></script>
+  
 </body>
 </html>
