@@ -1,14 +1,17 @@
 //OLINHO
-var i = 0;
-function oiio() {
-  if(i == 0){
-    document.getElementById("senha").type = 'text';
-    i = 1;
-  }else{
-    document.getElementById("senha").type = 'password';
-    i = 0;
-  }
-  }; 
+
+
+  var c = 0;
+  function ioi(){
+    if(i == 0){
+        document.getElementById("senha").type = "text";
+        i =1;
+    }
+    else{
+        document.getElementById("senha").type = 'password';
+        i = 0;
+      }
+      }; 
 
   var a = 0;
 function oiio2() {

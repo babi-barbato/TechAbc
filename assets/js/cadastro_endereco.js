@@ -4,14 +4,17 @@ function pagar(){
         cartao.style.display = "flex";
         pix.style.display = "none";
         boleto.style.display = "none";
+        fotoIcone.style.display = "none";
     } else if(paga == "pix"){
         cartao.style.display = "none";
         boleto.style.display = "none";
         pix.style.display = "flex";
+        fotoIcone.style.display = "none";
     }else if(paga == "boleto"){
         cartao.style.display = "none";
         pix.style.display = "none";
         boleto.style.display = "flex";
+        fotoIcone.style.display = "none";
     }
    
 
