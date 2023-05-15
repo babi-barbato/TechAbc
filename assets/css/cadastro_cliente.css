@@ -1,8 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  margin: 0; /*margem externa*/
+  padding: 0; /*margem interna */
+  box-sizing: border-box; /*tamanho da borda*/
+  font-family: sans-serif; /*tipo da letra*/
 }
 /*TEXTO 'VOLTAR AO MENU'*/
 a{
@@ -15,7 +15,7 @@ a{
 }
 
 /* COR DA PARTE DA ESQUERDA */
-.container .left {
+.container .esquerda {
   flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
   background-color: #D75A00; /* cor de fundo */
   padding: 20px; /*margem interna*/
@@ -23,53 +23,53 @@ a{
 }
 
 /* PARTE DO MENU */
-.container .left .back-to-menu {
+.container .esquerda .back-to-menu {
   display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
-  width: 145px;
+  width: 145px;/*largura*/
   align-items: center;/*alinhamento*/
   cursor: pointer; /*maozinha do mouse para click*/
-  color: #fff;
-  margin-bottom: 100px; /*distancia entre o voltar até o titulo da página*/
+  color: #fff;/*cor da letra*/
+  margin-bottom: 60px; /*distancia entre o voltar até o titulo da página*/
 }
 .back-to-menu span {
   font-weight: 600; /*negrito do menu*/
 }
 
 /* TITULOS DA PARTE LARANJA */
-.container .left .text {
+.container .esquerda .text {
   width: 500px; /*largura máxima que o texto pode alcancar*/
   margin: auto; /*centralizar o texto*/
 }
 
 /*BOTÃO "AQUI"*/
-.container .left .text a { /*configurações da tag A*/
+.container .esquerda .text a { /*configurações da tag A*/
   color: #fff; /*cor da letra*/
   text-decoration: underline; /*risco debaixo da palavra "aqui"*/
   transition: all 0.1s ease; /*transição das cores*/
 }
-.container .left .text a:hover {/*cor do botão  "aqui"*/
+.container .esquerda .text a:hover {/*cor do botão  "aqui"*/
   color: #0046ae; /* ao passar o mause em cima do *aqui, ele ficara azul*/
 }
  /*CADASTTRE-SE JÁ*/
-.container .left .text h1 {
-  margin-bottom: 40px;
+.container .esquerda .text h1 {
+  margin-bottom: 20px;
   font-size: 2.5rem;
   text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35); /* Sombra no texto */
 }
 /*TEXTO DA PARTE LARANJA*/
-.container .left .text p {
+.container .esquerda .text p {
   font-size: 1.5rem;
 }
 
 /* IMAGEM DA PARTE LARANJA */
-.container .left .image {
-  width: 150px;
-  margin: 60px auto;
+.container .esquerda .image {
+  width: 50px;
+  
 }
 
 /* PARTE DIREITA DA PÁGINA */
-.container .right {
+.container .direita {
   flex: 0 0 50%;
   display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
@@ -77,8 +77,11 @@ a{
   overflow-y: auto;
 }
 
+img{
+  margin: auto;
+}
 /* LARGURA DOS CAMPOS DO FORMULARIO*/
-.container .right form {
+.container .direita form {
   padding: 10px; /*margem interna*/
   width: 80%; /*largura dos campos*/
   margin: 0 auto; /*centralizando no meio*/
@@ -129,7 +132,7 @@ form .button button:hover {
 }
 
 /* VOLTAR AO MENU */
-.container .right .back-to-menu {
+.container .direita .back-to-menu {
   display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   justify-content: space-between; /*/* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
   width: 145px;
@@ -159,17 +162,28 @@ form .button button:hover {
 #olho2{
   z-index: 2;
 }
+  #oio{
+    position: absolute;
+  background-color: rgba(0, 255, 255, 0);
+  width: 50px;
+  height: 50px;
+  margin-left: 218px;/**/
+  margin-top: 42px;
+  z-index: 7;
+  border: none;
+  }
+
   
   
 /* DESKTOP*/
 @media only screen and (max-width: 1080px) {
-  .container .left  {
+  .container .esquerda  {
       display: none; /*esconde a parte laranja */
   }
-  .container .right {
+  .container .direita {
       flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container */
   }
-  .container .right .back-to-menu {
+  .container .direita .back-to-menu {
       display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   }
 }
