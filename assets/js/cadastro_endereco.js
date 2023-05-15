@@ -1,5 +1,9 @@
 function pagar(){
     var paga = document.getElementById("select").value;
+    var tela = window.screen.height;
+    if(tela > 1000){
+        cart.style.display = "none";
+    }
     if(paga == "cartao"){
         cartao.style.display = "flex";
         pix.style.display = "none";
@@ -13,9 +17,6 @@ function pagar(){
         pix.style.display = "none";
         boleto.style.display = "flex";
     }
-   
-
-   
 }
 
 var verifica = 0;
