@@ -57,6 +57,7 @@
         flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
         background-color: #efefef; /*cor da letra*/
         overflow-y: auto;}/*não deixa ultrapassar*/
+    /*INPUT*/
     .direita form {/* LARGURA DOS CAMPOS DO FORMULARIO*/
           padding: 10px; /*margem interna*/
           width: 80%; /*largura dos campos*/
@@ -68,25 +69,25 @@
               position: relative; /*posiciona o elemento da página como desejado*/}
     .field label {/* TITULO INPUT */
           font-weight: 600; /*negrito*/
-          margin: 0;}
-    .field input {/* CAMPOS*/
-          width: 100%;
-          border: none;/**/
-          padding: 15px 10px;
-          border-radius: 6px; /**/
-          box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);
-          font-size: 1.0rem;
+          margin: 0;/*margem externa*/}
+    .field input {/* input*/
+          width: 100%; /*largura*/
+          border: none;/*não tem borda*/
+          padding: 15px 10px;/*margem interna*/
+          border-radius: 6px; /*curvatura da borda*/
+          box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombra do input*/
+          font-size: 1.0rem;/*tamanho da letra*/
           display: block; /*transforma em bloco*/
-          position: relative;}
+          position: relative;/*posição relativa dos outros elementos*/}
 
 
     /*OLINHO*/
     img{/*CONF DO OLINHO*/
-        margin: auto;}
+        margin: auto;} /*margem externa*/
     #olho, #olho2{ /*IMAGEM DO OLHO*/
-          z-index: 2;}
+          z-index: 2;}/*faz vir para frente do elemento*/
     #oiio, #oio{/*BOTÃO QUE ESTA ESCONIDO*/
-        position: absolute;
+        position: absolute;/*posição absoluta*/
         background-color: rgba(0, 255, 255, 0);
         width: 50px;
         height: 50px;
