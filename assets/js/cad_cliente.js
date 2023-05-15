@@ -1,7 +1,7 @@
 //OLINHO
 
 
-  var c = 0;
+  var i = 0;
   function ioi(){
     if(i == 0){
         document.getElementById("senha").type = "text";
