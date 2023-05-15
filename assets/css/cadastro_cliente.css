@@ -1,8 +1,8 @@
 * {
   margin: 0; /*margem externa*/
-  padding: 0; /**/
-  box-sizing: border-box;
-  font-family: sans-serif;
+  padding: 0; /*margem interna */
+  box-sizing: border-box; /*tamanho da borda*/
+  font-family: sans-serif; /*tipo da letra*/
 }
 /*TEXTO 'VOLTAR AO MENU'*/
 a{
@@ -26,10 +26,10 @@ a{
 .container .esquerda .back-to-menu {
   display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
-  width: 145px;
+  width: 145px;/*largura*/
   align-items: center;/*alinhamento*/
   cursor: pointer; /*maozinha do mouse para click*/
-  color: #fff;
+  color: #fff;/*cor da letra*/
   margin-bottom: 60px; /*distancia entre o voltar até o titulo da página*/
 }
 .back-to-menu span {
@@ -148,12 +148,12 @@ form .button button:hover {
 #olho{
   z-index: 2;
 }
-#oiio{
+#oiio, #oio{
   position: absolute;
   background-color: rgba(0, 255, 255, 0);
   width: 50px;
   height: 50px;
-  margin-left: 390px;
+  right: 0;
   margin-top: 42px;
   z-index: 7;
   border: none;
@@ -172,6 +172,7 @@ form .button button:hover {
   z-index: 7;
   border: none;
   }
+
   
   
 /* DESKTOP*/

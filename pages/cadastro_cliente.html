@@ -36,6 +36,7 @@
                 </div>
                 <span>Voltar ao menu</span> <!--versão celular-->
             </a>
+<<<<<<< HEAD
             <!--FORMULARIO-->
             <form action="../assets/php/cadastro_cliente.php" method="post" id="form"  name="form"> <!--formulario-->
                 <div class="field"> <!--div que armazena a label e o input-->
@@ -67,11 +68,48 @@
                     <label for="conf">Confirmação de senha</label><!--label- titulo do input-->
                     <button type="button" onclick="oiio2()" id="oio"><!--função que faz o olinho funcionar-->
                         <img id="olho2" src="../img/olhinho1.png" width="25px" height="25px" ><!--imagem do olinho dentro do input-->
+=======
+            <form action="../assets/php/cadastro_cliente.php" method="post" id="form"  name="form">
+                <div class="field"> 
+                    <label>Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input class="nome" id="nome" name="nome" type="text" required placeholder="abelinha_exemplo">
+                </div>
+                <div class="field">
+                    <label>CPF</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="cpf" name="cpf" type="text" required placeholder="000.000.000-00">
+                </div>
+                <div class="field">
+                    <label>Telefone</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="telefone" name="telefone" type="text" required placeholder="(00) 00000-0000">
+                </div>
+                <div class="field">
+                    <label>Email</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <input id="email" name="email" type="email" required placeholder="username@example.com">
+                </div>
+
+                <div class="field">  
+                    <label>Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <button type="button" onclick="oiio1()" id="oiio">
+                        <img id="olho" src="../img/olhinho1.png" width="25px" height="25px" >
+                    </button>
+                    <input id="senha" name="senha" type="password" required placeholder="Digite sua senha..." >
+                    
+                </div>
+                <div class="field">
+                    <label>Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <button type="button" onclick="oiio2()" id="oio">
+                        <img id="olho2" src="../img/olhinho1.png" width="25px" height="25px" >
+
                     </button>
                     <input id="conf" name="conf" type="password" required placeholder="Confirme a senha acima senha..."><!--input da confirmação de senha. required- aviso de preenchimento de campo-->
                 </div>
+
                 <div onclick="verifica()" class="button"> <!--função que faz a verificação dos campos cpf e confirmações da senha-->
                     <button type="submit" name="cadastrar"> <!--botão de cadastrar-->
+
+                <div class="button">
+                    <button type="submit" name="cadastrar">
+
                         Cadastrar
                     </button>
                 </div>
@@ -80,8 +118,6 @@
     </div>
     
     <script src="../assets/js/cad_cliente.js"></script><!--link do script do formulário-->
-    <script src="../assets/js/jquery.js"></script><!--link da jquery da mascara -->
-    <script src="../assets/js/jquerycfp.js"></script><!--link da jquery da mascara -->
     
 </body>
 </html>
