@@ -22,7 +22,7 @@
            
             while ($linha = mysqli_fetch_array($result)){ // crio um while para armazenar as informações
            
-                if($email == "babi@gmail.com" && $senha == "babi"){ //email de adm abaixo
+                if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
 
                     $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
                     echo $_SESSION['user'];

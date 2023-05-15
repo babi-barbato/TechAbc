@@ -49,39 +49,32 @@ if (isset($_POST['cadastrar'])){
         $erro++;
     }
 
-    
     $sql_email= "SELECT * FROM clientes WHERE email = '$email'";
     $result1 = mysqli_query($conexao,$sql_email);
         
     if (mysqli_num_rows($result1) != 0){  
-     
         echo "<script>alert ('email ja cadastrado')</script>";
         echo "<script>  window.location.href=' ../../pages/cadastro_cliente.html '</script>";
-    }else {
-
-           
-     $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'";
-    $result2 = mysqli_query($conexao,$sql_cpf);
-    if(mysqli_num_rows($result2) != 0){
-        echo "<script> alert ('cpf ja cadastrado')</script>";
-        
-        echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
-        
-    }else{
-        
-        if($senha != $conf){
-            echo "<script>alert('Senhas diferentes')</script>";
+    } else {       
+        $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'";
+        $result2 = mysqli_query($conexao,$sql_cpf);
+        if(mysqli_num_rows($result2) != 0){
+            echo "<script> alert ('cpf ja cadastrado')</script>";
             echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
         }else{
-            if($erro != 0){
-                echo "<script>alert('Arrume o CPF antes de prosseguir')</script>";
-                echo "<script>window.location='../../pages/cadastro_cliente.html'</script>";
+            if($senha != $conf){
+                echo "<script>alert('Senhas diferentes')</script>";
+                echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
             }else{
-                $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 
-                $result = mysqli_query($conexao,$sql);
-                header ( 'Location:../../pages/login.html');
+                if($erro != 0){
+                    echo "<script>alert('Arrume o CPF antes de prosseguir')</script>";
+                    echo "<script>window.location='../../pages/cadastro_cliente.html'</script>";
+                }else{
+                    $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 
+                    $result = mysqli_query($conexao,$sql);
+                    header ( 'Location:../../pages/login.html');
+                }
             }
         }
     }
-}
 }
