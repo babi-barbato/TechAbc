@@ -1,21 +1,25 @@
 function pagar(){
     var paga = document.getElementById("select").value;
+    var tela = window.screen.height;
+    if(tela > 1000){
+        cart.style.display = "none";
+    }
     if(paga == "cartao"){
         cartao.style.display = "flex";
         pix.style.display = "none";
         boleto.style.display = "none";
+        fotoIcone.style.display = "none";
     } else if(paga == "pix"){
         cartao.style.display = "none";
         boleto.style.display = "none";
         pix.style.display = "flex";
+        fotoIcone.style.display = "none";
     }else if(paga == "boleto"){
         cartao.style.display = "none";
         pix.style.display = "none";
         boleto.style.display = "flex";
+        fotoIcone.style.display = "none";
     }
-   
-
-   
 }
 
 var verifica = 0;

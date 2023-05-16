@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--inicia o html-->
 <html lang="pt-br"> <!-- linguagem padrão de pt-br -->
 <head>
     <meta charset="UTF-8"><!-- charset utf8 -->
@@ -6,79 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
     <link rel="stylesheet" href="../assets/css/cadastro_cliente.css"> <!--link do css-->
-    <script src="../assets/js/cadastro_cliente.js"></script><!--link do script do formulário-->
-    <script src="../assets/js/jquery.js"></script><!--link da jquery da mascara -->
-    <script src="../assets/js/jquerycfp.js"></script><!--link da jquery da mascara -->
-
-    <title> Cadastro - Tech ABC</title>
+    
+    <title> Cadastro - Tech ABC</title> <!--titulo da barra de pesquisa-->
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <a href="index.php" class="back-to-menu">
+    <div class="container"> <!--div que armazena tudo -->
+        <div class="esquerda"><!--div que armazena a esquerda-->
+            <a href="index.php" class="back-to-menu"><!--menu-->
                 <div class="icon">
-                    <i class="fa fa-chevron-left"></i>
+                    <i class="fa fa-chevron-left"></i> <!--icone de voltar ao menu-->
                 </div>
                 <span>Voltar ao menu</span> <!--versão para desktop e not-->
             </a>
-            <div class="text">
+            <div class="text"> <!--div que armazena o texto-->
                 <h1>Cadastre-se já!</h1>
                 <p>Cadastre-se agora para ver as novidades disponíveis no nosso site.
-                    Caso já tenha um cadastro, clique  <a href="login.html">aqui</a> para se logar.</p>
+                    Caso já tenha um cadastro, clique  <a href="login.html">aqui</a> <!--botão do clique aqui-->para se logar.</p><!--tesxto da parte laranja-->
+           
+            <div class="image"> <!--imagem da parte laranja-->
+                <img src="../img/cadastro.PNG" style="width: 460px;  margin-top: 0px;" alt="ícone de login"> <!--style da image-->
             </div>
-            <div class="image">
-                <img src="../img/login.png" alt="ícone de login">
-            </div>
+        </div> 
         </div>
-        <div class="right">
-            <a href="index.php" class="back-to-menu">
+        <!--PARTE DIREITA-->
+        <div class="direita"> <!--div que armazen atoda a parte direita-->
+            <a href="index.php" class="back-to-menu"><!--menu-->
                 <div class="icon">
-                    <i class="fa fa-chevron-left"></i>
+                    <i class="fa fa-chevron-left"></i><!--icone de voltar ao menu-->
                 </div>
                 <span>Voltar ao menu</span> <!--versão celular-->
             </a>
-            <form action="" method="post" id="form"  name="form">
-                <div class="field"> <!--../assets/php/cad_teste.php-->
-                    <label for="nome">Nome de usuário</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input class="nome" id="nome" name="nome" type="text" required placeholder="abelinha_exemplo">
+
+            <!--FORMULARIO-->
+            <form action="../assets/php/cadastro_cliente.php" method="post" id="form"  name="form"> <!--formulario-->
+                <div class="field"> <!--div que armazena a label e o input-->
+                    <label for="nome">Nome de usuário</label> <!--label- titulo do input-->
+                    <input class="nome" id="nome" name="nome" type="text" required placeholder="abelinha_exemplo"> <!--input do nome. required- aviso de preenchimento de campo. -->
                 </div>
-                <div class="field">
-                    <label for="cpf">CPF</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="cpf" name="cpf" type="text" required placeholder="000.000.000-00">
+                <div class="field"><!--div que armazena a label e o input-->
+                    <label for="cpf">CPF</label><!--label- titulo do input-->
+                    <input id="cpf" name="cpf" type="text" required placeholder="000.000.000-00"><!--input do cpf. required- aviso de preenchimento de campo-->
                 </div>
-                <div class="field">
-                    <label for="telefone">Telefone</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="telefone" name="telefone" type="text" required placeholder="(00) 00000-0000">
+                <div class="field"><!--div que armazena a label e o input-->
+                    <label for="telefone">Telefone</label><!--label- titulo do input-->
+                    <input id="telefone" name="telefone" type="text" required placeholder="(00) 00000-0000"><!--input do telefone. required- aviso de preenchimento de campo-->
                 </div>
-                <div class="field">
-                    <label for="email">Email</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <input id="email" name="email" type="email" required placeholder="username@example.com">
+                <div class="field"><!--div que armazena a label e o input-->
+                    <label for="email">Email</label><!--label- titulo do input-->
+                    <input id="email" name="email" type="email" required placeholder="username@example.com"><!--input do email. required- aviso de preenchimento de campo-->
                 </div>
-                <div class="field">
+                <div class="field"><!--div que armazena a label e o input-->
                   
-                    <label for="senha">Senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
-                    <button type="button" onclick="oiio()" id="oiio">
-                        <img id="olho" src="../img/olhinho1.png" width="25px" height="25px" >
+                    <label for="senha">Senha</label><!--label- titulo do input-->
+                    <button type="button" onclick="ioi()" id="oiio"><!--função que faz o olinho funcionar-->
+                        <img id="olho" src="../img/olhinho1.png" width="25px" height="25px" ><!--imagem do olinho dentro do input-->
                     </button>
-                    <input id="senha"  name="senha" type="password" required placeholder="Digite sua senha..." >
+                    <input id="senha"  name="senha" type="password" required placeholder="Digite sua senha..." ><!--inputsenha. required- aviso de preenchimento de campo-->
                     
                 </div>
+
                 <div class="field">
-                    <label for="conf">Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
+                    <label>Confirmação de senha</label><!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                     <button type="button" onclick="oiio2()" id="oio">
                         <img id="olho2" src="../img/olhinho1.png" width="25px" height="25px" >
+
                     </button>
-                    <input id="conf" name="conf" type="password" required placeholder="Confirme a senha acima senha...">
+                    <input id="conf" name="conf" type="password" required placeholder="Confirme a senha acima senha..."><!--input da confirmação de senha. required- aviso de preenchimento de campo-->
                 </div>
-                <div onclick="verifica()" class="button">
-                    <button type="submit" name="cadastrar">
+
+                <div onclick="verifica()" class="button"> <!--função que faz a verificação dos campos cpf e confirmações da senha-->
+
+                <div class="button">
+                    <button type="submit" name="cadastrar"> <!--botão de cadastrar-->
                         Cadastrar
                     </button>
                 </div>
             </form>
         </div>
     </div>
-   
-  
+    
+    <script src="../assets/js/cad_cliente.js"></script><!--link do script do formulário-->
+    
 </body>
 </html>

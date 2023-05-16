@@ -12,7 +12,7 @@
 <body id="body">
     <div class="container"> <!--div que armazena tudo-->
         
-        <div class="esquerda" id="esquerda"> <!--parte esquerda-->
+        <div style="height: 100vh;" class="esquerda" id="esquerda"> <!--parte esquerda-->
             <div id="cart" class="cart"> <!--formulário-->
                 <!--INPUTS-->
                 <div class="field"> <!--estão na mesma div pois precisam ficar uma do lado da outra-->
@@ -66,18 +66,24 @@
                     <!--BOTÃO-->
                     <div class="button"> <!--dv que armazena os botões -->
                         <button id="cancelar">
-                            
-                            Cancelar  <!--o que aparece dentro do botão-->
-                     
+                            <a href="index.php">
+                                Cancelar  <!--o que aparece dentro do botão-->
+                            </a>
                         </button>
                         <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
                         </button>
                     </div>  
                 </div>
             </div>
-            <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
+<<<<<<< HEAD
+            <div class="direita" style="height: 100vh;"> <!-- div que armazena tudo que aparece na direita-->
                 <div class="image">
-                    <img style="width: 450px;  margin-top: 20px;" src="teste.gif" alt="ícone de cadastro">
+                    <!-- <img style="width: 450px;  margin-top: 20px;" src="teste.gif" alt="ícone de cadastro"> -->
+=======
+            <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
+                <div id="fotoIcone" class="image">
+                    <img  style="width: 450px;  margin-top: 60px;" src="../img/endereco.png" alt="ícone de cadastro">
+>>>>>>> a6733b84a1f626c4351efa6d758cf2516515aa69
                 </div>
                 <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
                     <div id="cartao"> <!--armazena tudo que for do cartão-->
@@ -123,8 +129,8 @@
                   <div class="button"> <!--classe do botão-->
                     <button type="submit" id="cancelar"> <!--botão de cancelar-->
                         <a href="cadastro_endereco.html">
-                        Cancelar  <!--o que aparece dentro do botão-->
-                    </a>
+                            Cancelar  <!--o que aparece dentro do botão-->
+                        </a>
                     </button>    
                       
                  
@@ -163,13 +169,15 @@
                     </a>
                     </button>
                     <button type="submit" id="voltar"><!--botão de cancelar-->
-                        Voltar<!--o que aparece dentro do botão-->
+                        <a href="index.php">
+                            Voltar  <!--o que aparece dentro do botão-->
+                        </a>
                     </button>
             </div>
             </form>
         </div>
     </div>
-    <script src="../assets/js/cadastro_endereco.js"></script>
+    <script src="../assets/js/cadastro_endereco.js"></script> <!--link do script-->
 </body>
 </html>
 

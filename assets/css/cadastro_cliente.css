@@ -1,185 +1,146 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-/*TEXTO 'VOLTAR AO MENU'*/
-a{
-  text-decoration: none;/*Tira o risco debaixo dessa palavra*/
-}
-/*DIV  QUE ARMAZENA TUDO*/
-.container {
-  height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
-  display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
-}
+    * { /*tamanhosdas margens e fontes da tela inicial*/
+      margin: 0; /*margem externa*/
+      padding: 0; /*margem interna */
+      box-sizing: border-box; /*tamanho da borda*/
+      font-family: sans-serif; /*tipo da letra*/}
 
-/* COR DA PARTE DA ESQUERDA */
-.container .left {
-  flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
-  background-color: #D75A00; /* cor de fundo */
-  padding: 20px; /*margem interna*/
-  color: #fff; /*cor da letra*/
-}
-
-/* PARTE DO MENU */
-.container .left .back-to-menu {
-  display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
-  justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
-  width: 145px;
-  align-items: center;/*alinhamento*/
-  cursor: pointer; /*maozinha do mouse para click*/
-  color: #fff;
-  margin-bottom: 100px; /*distancia entre o voltar até o titulo da página*/
-}
-.back-to-menu span {
-  font-weight: 600; /*negrito do menu*/
-}
-
-/* TITULOS DA PARTE LARANJA */
-.container .left .text {
-  width: 500px; /*largura máxima que o texto pode alcancar*/
-  margin: auto; /*centralizar o texto*/
-}
-
-/*BOTÃO "AQUI"*/
-.container .left .text a { /*configurações da tag A*/
-  color: #fff; /*cor da letra*/
-  text-decoration: underline; /*risco debaixo da palavra "aqui"*/
-  transition: all 0.1s ease; /*transição das cores*/
-}
-.container .left .text a:hover {/*cor do botão  "aqui"*/
-  color: #0046ae; /* ao passar o mause em cima do *aqui, ele ficara azul*/
-}
- /*CADASTTRE-SE JÁ*/
-.container .left .text h1 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35); /* Sombra no texto */
-}
-/*TEXTO DA PARTE LARANJA*/
-.container .left .text p {
-  font-size: 1.5rem;
-}
-
-/* IMAGEM DA PARTE LARANJA */
-.container .left .image {
-  width: 150px;
-  margin: 60px auto;
-}
-
-/* PARTE DIREITA DA PÁGINA */
-.container .right {
-  flex: 0 0 50%;
-  display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
-  flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
-  background-color: #efefef;
-  overflow-y: auto;
-}
-
-/* LARGURA DOS CAMPOS DO FORMULARIO*/
-.container .right form {
-  padding: 10px; /*margem interna*/
-  width: 80%; /*largura dos campos*/
-  margin: 0 auto; /*centralizando no meio*/
-}
-/* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
- .field {
-  line-height: 40px; /*espaçamento da letra e o campo*/
-  margin-bottom: 17px;/*espaçamento entre os campos*/
-  font-size: 1.4rem;
-  position: relative; /*posiciona o elemento da página como desejado*/
-}
-/* TITULO INPUT */
- .field label {
-  font-weight: 600; /*negrito*/
-  margin: 0;
+    a{/*TEXTO 'VOLTAR AO MENU'*/
+      text-decoration: none;/*Tira o risco debaixo dessa palavra*/}
+    .container {/*DIV  QUE ARMAZENA TUDO*/
+      height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
+      display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/}
+ 
+/*DIVS MENU*/
+    .back-to-menu {/* PARTE DO MENU */
+          display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+          justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
+          width: 145px;/*largura*/
+          align-items: center;/*alinhamento*/
+          cursor: pointer; /*maozinha do mouse para click*/
+          color: #fff;/*cor da letra*/
+          margin-bottom: 60px; /*distancia entre o voltar até o titulo da página*/}
+    .back-to-menu span {
+        font-weight: 600; /*negrito do menu*/}
   
-}
-/* CAMPOS*/
- .field input {
-  width: 100%;
-  border: none;/**/
-  padding: 15px 10px;
-  border-radius: 6px; /**/
-  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);
-  font-size: 1.0rem;
-  display: block; /*transforma em bloco*/
-  position: relative;
-}
+/*ESQUERDA*/
+    .container .esquerda {/* COR DA PARTE DA ESQUERDA */
+          flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
+          background-color: #D75A00; /* cor de fundo */
+          padding: 20px; /*margem interna*/
+          color: #fff; /*cor da letra*/}
+    .container .esquerda .text {/*TEXTOS*/
+          width: 500px; /*largura máxima que o texto pode alcancar*/
+          margin: auto; /*centralizar o texto*/}
+    /*BOTÃO "AQUI"*/
+    .container .esquerda .text a { /*configurações da tag A*/
+          color: #fff; /*cor da letra*/
+          text-decoration: underline; /*risco debaixo da palavra "aqui"*/
+          transition: all 0.1s ease; /*transição das cores*/}
+    .container .esquerda .text a:hover {/*cor do botão "aqui"*/
+        color: #0046ae; /* ao passar o mause em cima do *aqui, ele ficara azul*/}
+    /*TEXTOS*/
+    .container .esquerda .text p {
+          font-size: 1.5rem;}/*tamanho da letra*/
+    .container .esquerda .text h1 {/*CADASTTRE-SE JÁ*/
+      margin-bottom: 20px;/*espaçamento entre os campos*/
+      font-size: 2.5rem;/*tamanho da letra*/
+      text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35); /* Sombra no texto */}
+    /* IMAGEM */
+    .image {
+      width: 50px;}/*largura da imagem*/
 
 
-  /* BOTÃO DO FORMULARIO*/
-form .button button {
-  background-color: #D75A00; /*váriavel laranja*/
-  border: none; /*não apresenta borda*/
-  width: 100%;
-  height: 100%;
-  padding: 12px;
-  color: #fff;
-  font-weight: 600; /*negrito*/
-  font-size: 1.3rem;
-  border-radius: 10px;
-  transition: all .20s ease; /*transição para o botão vir para frente*/
-  cursor: pointer; /*maozinha do mouse para click*/
-  margin-top: 10px;
-}
-form .button button:hover {
-  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/
-}
+/*DIREITA*/
+    .direita {/*ARMAZENA TUDO QUE FICA NA PARTE DA DIREITA*/
+        flex: 0 0 50%;/* O elemento .left recebe uma largura de 50% da largura do .container */
+        display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+        flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
+        background-color: #efefef; /*cor da letra*/
+        overflow-y: auto;}/*não deixa ultrapassar*/
+    /*INPUT*/
+    .direita form {/* LARGURA DOS CAMPOS DO FORMULARIO*/
+          padding: 10px; /*margem interna*/
+          width: 80%; /*largura dos campos*/
+          margin: 0 auto; /*centralizando no meio*/}
+    .field {/* ESPAÇAMENTO ENTRE OS CAMPOS E PROXIMIDADE*/
+              line-height: 40px; /*espaçamento da letra e o campo*/
+              margin-bottom: 17px;/*espaçamento entre os campos*/
+              font-size: 1.4rem;/*tamanho da letra*/
+              position: relative; /*posiciona o elemento da página como desejado*/}
+    .field label {/* TITULO INPUT */
+          font-weight: 600; /*negrito*/
+          margin: 0;/*margem externa*/}
+    .field input {/* input*/
+          width: 100%; /*largura*/
+          border: none;/*não tem borda*/
+          padding: 15px 10px;/*margem interna*/
+          border-radius: 6px; /*curvatura da borda*/
+          box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombra do input*/
+          font-size: 1.0rem;/*tamanho da letra*/
+          display: block; /*transforma em bloco*/
+          position: relative;/*posição relativa dos outros elementos*/}
 
-/* VOLTAR AO MENU */
-.container .right .back-to-menu {
-  display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
-  justify-content: space-between; /*/* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
-  width: 145px;
-  align-items: center; /*alinhamento*/
-  cursor: pointer; /*maozinha do mouse para click*/
-  color: #000;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  margin-left: 60px;
-  display: none; /*esconde o "voltar ao menu" do celular*/
-}
 
-#olho{
-  z-index: 2;
-}
-#oiio{
-  position: absolute;
-  background-color: rgba(0, 255, 255, 0);
-  width: 50px;
-  height: 50px;
-  margin-left: 390px;
-  margin-top: 42px;
-  z-index: 7;
-  border: none;
-}
+    /*OLINHO*/
+    img{/*CONF DO OLINHO*/
+        margin: auto;} /*margem externa*/
+    #olho, #olho2{ /*IMAGEM DO OLHO*/
+          z-index: 2;}/*faz vir para frente do elemento*/
+    #oiio, #oio{/*BOTÃO QUE ESTA ESCONIDO*/
+        position: absolute;/*posição absoluta*/
+        background-color: rgba(0, 255, 255, 0);/*cor de fundo transparente*/
+        width: 50px;/*largura*/
+        height: 50px; /*altura*/
+        right: 0;/*para o elemento ficar a direita*/
+        margin-top: 42px;/*margem quem vem de cima*/
+        z-index: 7;/*faz com que o elemento sobreponha os demais*/
+        border: none;/*não existe borda*/} 
 
-#olho2{
-  z-index: 2;
-}
-  #oio{
-    position: absolute;
-  background-color: rgba(0, 255, 255, 0);
-  width: 50px;
-  height: 50px;
-  margin-left: 218px;
-  margin-top: 42px;
-  z-index: 7;
-  border: none;
-  }
+
+    /*BOTÃO*/
+    form .button button {
+          background-color: #D75A00; /*váriavel laranja*/
+          border: none; /*não apresenta borda*/
+          width: 100%;/*largura*/
+          height: 100%;/*altura*/
+          padding: 12px;/*margem interna*/
+          color: #fff;/*cor da letra*/
+          font-weight: 600; /*negrito*/
+          font-size: 1.3rem;/*tamanho da letra*/
+          border-radius: 10px;/*curvatura da borda*/
+          transition: all .20s ease; /*transição para o botão vir para frente*/
+          cursor: pointer; /*maozinha do mouse para click*/
+          margin-top: 10px;/*margem externa que vem de cima do elemento*/}
+    form .button button:hover {
+          box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298); /*cor da sombra da transição*/}
+  
+    /* VOLTAR AO MENU */
+    .container .direita .back-to-menu {
+          display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+          justify-content: space-between; /*/* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
+          width: 145px;/*largura*/
+          align-items: center; /*alinhamento*/
+          cursor: pointer; /*maozinha do mouse para click*/
+          color: #000;/*cor da letra*/
+          margin-bottom: 100px;/*margem externa que vem debaixo do elemnto*/
+          margin-top: 100px;/*margem externa que vem de cima do elemento*/
+          margin-left: 60px;/*margem externa do lado esquerdo*/
+          display: none; /*esconde o "voltar ao menu" do celular*/
+        }
+
+
+
   
   
 /* DESKTOP*/
 @media only screen and (max-width: 1080px) {
-  .container .left  {
+  .container .esquerda  {
       display: none; /*esconde a parte laranja */
   }
-  .container .right {
+  .container .direita {
       flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container */
   }
-  .container .right .back-to-menu {
+  .container .direita .back-to-menu {
       display: flex; /*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
   }
 }
