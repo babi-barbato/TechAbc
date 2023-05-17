@@ -145,6 +145,8 @@
     if (isset($_POST['cadastrar'])) {
         $conexao = mysqli_connect('localhost', 'andre', '@sR290905', 'techabc'); //realiza de fato a conexão com o banco de dados
 
+        # var_dump($_FILES['fotoProduto']);
+        $imagem = $_FILES['fotoProduto']['name'];
         $categoria = $_POST['categorias'];
         $nome_produto = $_POST['produtoNome'];
         $tipo = $_POST['subcategorias'];
@@ -155,8 +157,11 @@
         $descricao = $_POST['descricao'];
         $estoque = $_POST['produtoQtd'];
 
-        $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', 'a','$estoque', '$peso', '$altura', '$largura', NULL)";
+        $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', '$imagem','$estoque', '$peso', '$altura', '$largura', NULL)";
 
         $result = mysqli_query($conexao, $sql);
+
+        $temp = $_FILES['fotoProduto']['tmp_name'];
+        move_uploaded_file($temp, "$imagem");
     }
 ?>
