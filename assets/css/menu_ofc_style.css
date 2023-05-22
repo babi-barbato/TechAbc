@@ -224,6 +224,7 @@ div.special {
 /*DESKTOP*/
 .desktop-nav {/*quando for pra celular, esconde o do desktop*/
     display: none;/*deixa invisivel o elemento*/
+    background-color: #fff;
 }
 /*IMAGEM DO DESK*/
 .desktop-nav .left {
