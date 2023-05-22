@@ -1,11 +1,16 @@
 <?php
-session_start(); 
+include("conexao.php");
+
+if(!isset($_SESSION)){ //inicia a sessão
+    session_start();
+}
 
 if (isset($_POST['cadastrar'])){
     
     include('conexao.php'); 
     $erro = 0;
-
+    $_SESSION['idCad'] = $_POST['cpf'];
+    
     $nome=$_POST['nome'];
     $cpf=$_POST['cpf'];
     $telefone=$_POST['telefone'];
@@ -67,12 +72,11 @@ if (isset($_POST['cadastrar'])){
                 echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
             }else{
                 if($erro != 0){
-                    echo "<script>alert('Arrume o CPF antes de prosseguir')</script>";
                     echo "<script>window.location='../../pages/cadastro_cliente.html'</script>";
                 }else{
                     $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 
                     $result = mysqli_query($conexao,$sql);
-                    header ( 'Location:../../pages/login.html');
+                    header ( 'Location:../../pages/cad_enndee.php');
                 }
             }
         }

@@ -1,3 +1,16 @@
+<?php
+    include("../assets/php/conexao.php");
+    include("../assets/php/menu.php");
+    echo "<style>#sair{display:none}</style>";
+    echo "<style>#saair{display:none}</style>";
+
+    if(isset($_SESSION['user'])){
+        echo "<style>#teste{display:none}</style>";
+        echo "<style>#cadLogin{display:none}</style>";
+        echo "<style>#sair{display:flex;}</style>";
+        echo "<style>#saair{display:flex}</style>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -143,7 +156,7 @@
 </html>
 <?php
     if (isset($_POST['cadastrar'])) {
-        $conexao = mysqli_connect('localhost', 'andre', '@sR290905', 'techabc'); //realiza de fato a conexão com o banco de dados
+        $conexao = mysqli_connect('localhost', 'root', '', 'techabc'); //realiza de fato a conexão com o banco de dados
 
         $categoria = $_POST['categorias'];
         $nome_produto = $_POST['produtoNome'];
@@ -155,7 +168,7 @@
         $descricao = $_POST['descricao'];
         $estoque = $_POST['produtoQtd'];
 
-        $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', 'a','$estoque', '$peso', '$altura', '$largura', NULL)";
+        $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', 'mouse3.png','$estoque', '$peso', '$altura', '$largura', NULL)";
 
         $result = mysqli_query($conexao, $sql);
     }
