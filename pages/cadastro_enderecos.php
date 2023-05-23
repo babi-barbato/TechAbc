@@ -26,6 +26,10 @@ if(!isset($_SESSION)){ //inicia a sessão
                 <br>
                 <!--INPUTS-->            
                 <div class="field">
+                    <input name="email" type="email" placeholder="Email Cadastrado" required><!--input do telefone-->
+                </div>
+
+                <div class="field">
                     <input id="cep" name="cep" type="text" placeholder="CEP" oninput="consultaCep()"  minlength="9" required pattern=".{9,}"><!--input do telefone-->
                 </div>
                     
@@ -94,24 +98,27 @@ function consultaCep(){
 include("../assets/php/conexao.php");
 
 if (isset($_POST['envior'])){
-
-    $select = "SELECT idClientes FROM clientes WHERE cpf = '".$_SESSION['idCad']."'";
+    $email = $_POST['email'];
+    $select = "SELECT idClientes FROM clientes WHERE email LIKE '$email'";
     $resultado = mysqli_query($conexao,$select);
-    while ($linha1 = mysqli_fetch_array($resultado)){
-        
-        $cep = $_POST['cep'];
-        $num = $_POST['numero'];
-        $cidade = $_POST['cidade'];
-        $rua = $_POST['rua'];
-        $bairro = $_POST['bairro'];
-        $complemento = $_POST['complemento'];
-        
-        $sqla = "INSERT INTO `enderecos`(`rua`, `bairro`, `movel`, `numero`, `cidade`, `cep`, `fkEndereco`) VALUES ($rua,$bairro,$complemento,$num,$cidade,$cep,$linha1)";
-        $result = mysqli_query($conexao,$sqla);
-    
-        header('Location: login.html');
+    $qtdLinhas = mysqli_num_rows($resultado);
+    if($qtdLinhas!= 0){
 
+        while ($linha1 = mysqli_fetch_array($resultado)){
+            
+            $cep = $_POST['cep'];
+            $num = $_POST['numero'];
+            $cidade = $_POST['cidade'];
+            $rua = $_POST['rua'];
+            $bairro = $_POST['bairro'];
+            $complemento = $_POST['complemento'];
+            
+            $sqla = "INSERT INTO `enderecos`(`rua`, `bairro`, `movel`, `numero`, `cidade`, `cep`, `fkEndereco`) VALUES ('$rua','$bairro','$complemento','$num','$cidade','$cep',".$linha1['idClientes'].")";
+            $result = mysqli_query($conexao,$sqla);
+            echo "<script>window.location.href = 'login.html'</script>";
+        }
+    }else{
+        echo "<script>alert('Insira seu email que abacou de ser cadastrado')</script>";
     }
-
 }
 ?>    

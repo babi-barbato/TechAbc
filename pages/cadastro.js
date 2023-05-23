@@ -1,12 +1,7 @@
 //OLINHO
 alert("01")
 var i = 0;
-<<<<<<< HEAD:pages/cadastro.js
-function oiio() {
-  alert("02")
-=======
 function oiio1() {
->>>>>>> 4aa1d7b275fa4459142dbc8005a67697075850a4:assets/js/cadastro_cliente.js
   if(i == 0){
     document.getElementById("senha").type = 'text';
     i = 1;

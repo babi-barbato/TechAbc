@@ -170,11 +170,8 @@
         $descricao = $_POST['descricao'];
         $estoque = $_POST['produtoQtd'];
 
-<<<<<<< HEAD
-        $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', 'mouse3.png','$estoque', '$peso', '$altura', '$largura', NULL)";
-=======
+
         $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', '$imagem','$estoque', '$peso', '$altura', '$largura', NULL)";
->>>>>>> e27f25847cf65dd3847194690053c991db8432c3
 
         $result = mysqli_query($conexao, $sql);
 

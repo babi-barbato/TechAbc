@@ -9,7 +9,6 @@ if (isset($_POST['cadastrar'])){
     
     include('conexao.php'); 
     $erro = 0;
-    $_SESSION['idCad'] = $_POST['cpf'];
     
     $nome=$_POST['nome'];
     $cpf=$_POST['cpf'];
@@ -76,7 +75,7 @@ if (isset($_POST['cadastrar'])){
                 }else{
                     $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 
                     $result = mysqli_query($conexao,$sql);
-                    header ( 'Location:../../pages/cad_enndee.php');
+                    header ( 'Location:../../pages/cadastro_enderecos.php');
                 }
             }
         }
