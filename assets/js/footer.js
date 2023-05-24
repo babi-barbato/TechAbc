@@ -29,7 +29,7 @@ footer.innerHTML = `
             <a href="#">WhatsApp</a>
         </li>
         <li>
-            <span>(11)4224-0679</span>
+            <span>(11) 4224-0679</span>
         </li>
     </ul>
     </div>
@@ -43,7 +43,7 @@ footer.innerHTML = `
                 <a href="#">Sobre Nós</a>
             </li>
             <li>
-                <span>(11)9876-6789</span>
+                <span>(11) 9876-6789</span>
             </li>
         </ul>
     </div>

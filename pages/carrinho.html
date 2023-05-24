@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br"><!-- linguagem padrão de pt-br -->
+
+<head>
+  <meta charset="UTF-8"><!-- charset utf8 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compativel com outros navegadores -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
+  <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
+  <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
+  <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
+
+  <link rel="stylesheet" href="../assets/css/carrinho-style.css">
+  <title>Carrinho</title>
+</head>
+
+<body>
+  <script src="../assets/js/menu-ofc.js"></script><!-- menu chamado pelo js-->
+  <div class="container"> <!--div que pega tudo-->
+    <div class="produtos"> <!-- que armazena a caixinha da direita -->
+      <table> <!--inicio da tabela-->
+        <div class="content"> <!--ega o letreinoem cima da imagem-->
+          <thead> <!--adicina uma linha-->
+            <tr>
+
+              <th>Produto</th> <!--titulo da parte de cima-->
+              <th>Preço</th><!--titulo da parte de cima-->
+              <th>Quantidade</th><!--titulo da parte de cima-->
+              <th>Total</th><!--titulo da parte de cima-->
+            </tr>
+          </thead>
+        </div>
+      </table>
+
+
+      <div class="product">
+        <div class="titulo">
+          <label class="name">Nome do produto</label>
+          <img src="https://picsum.photos/100/120" alt="" class="foto" />
+        </div>
+        <img src="https://picsum.photos/100/120" alt="" class="imagem" />
+        <label class="nome">Nome do produto</label>
+        <div>
+          <label class="preco">R$ 120</label>
+        </div>
+        <div>
+          <div class="qtd">
+            <select class="select">
+              <option value="0">0</option> <!--primeira opção-->
+              <option value="1">1</option><!--segunda opção-->
+              <option value="2">2</option><!--segunda opção-->
+              <option value="3">3</option><!--terceira opção-->
+              <option value="4">4</option><!--quarta opção-->
+              <option value="1">5</option><!--segunda opção-->
+              <option value="2">6</option><!--segunda opção-->
+              <option value="3">7</option><!--terceira opção-->
+              <option value="4">8</option><!--quarta opção-->
+              <option value="3">9</option><!--terceira opção-->
+              <option value="4">10</option><!--quarta opção-->
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="tot">R$ 240</label>
+          <td>
+            <button class="excluir">
+              <i class="fa fa-trash-can"></i>
+            </button>
+          </td>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+  <div class="total">
+    <label class="resumo">Resumo da compra</label>
+    <hr>
+    <div class="info">
+      <div><label>Subtotal</label>
+        <label>R$ 418</label>
+      </div>
+      <div><label>Frete</label>
+        <label class="grat">Gratuito</span>
+      </div>
+    </div>
+    <hr>
+    <div class="mini-total">
+      <label> Total</label>
+      <label>R$ 418</label>
+    </div>
+    <div class="button">
+      <button type="button" class="enviar">
+        Finalizar compra
+      </button>
+      <button type="button" class="continuar">
+        Continuar comprando
+      </button>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
+<script src="../assets/js/footer.js"></script>

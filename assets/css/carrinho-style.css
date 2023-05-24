@@ -22,6 +22,7 @@
   display: flex;
   left: 0%;
   padding: 10px ;
+  
 
 }
 
@@ -49,6 +50,7 @@ table {
     padding-bottom: 10px;
     text-transform: uppercase; /*deixa tudo com letra maiuscula */
     color: #666;
+    width: 25%;
   }
   
  
@@ -63,19 +65,27 @@ table {
   }
   .product {
     display: flex;
-    margin-left: 20px;
     align-items: center;
+    justify-content: space-between;
+  }
+  .product div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }  
+  
   .product img {
     border-radius: 6px;
   }
 
-  .qty {
+  .qtd {
     background: #eee;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-width: 70px;
+    max-width: 70px;
     border-radius: 20px;
     overflow: hidden;
     height: 30px;
@@ -83,7 +93,7 @@ border: none;}
 
     
       
-      .qty button {
+      .qtd button {
         display: flex;
         align-items: center;
         background: transparent;
@@ -155,6 +165,18 @@ border: none;}
         margin-top: 6px;
         
       }
+      .titulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #555;
+        padding: 10px;
+        gap:5%;
+        width: 100%;
+      }
+      
       .info{
         display: flex;
         justify-content: center;
@@ -178,7 +200,111 @@ border: none;}
         
       }
 
-      
-      @media only screen and (max-width: 1080px){
-        
+      .total .info label .grat{
+        color: chartreuse;
       }
+
+      .enviar{
+        display: flex;
+        width: 100%; /*largura*/
+        height: 43px;/*altura*/
+        border: none; /*não apresenta borda, botão envia*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        color: #fff;
+        background-color:#D75A00 ;
+        font-family: sans-serif;/*tipo de fonte*/
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .continuar{
+        display: flex;
+        width: 100%; /*largura*/
+        height: 43px;/*altura*/
+        border-color: #0066FF; /*não apresenta borda, botão envia*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        color: #0066FF;
+        background-color:#f2eeeb00 ;
+        font-family: sans-serif;/*tipo de fonte*/
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .button{
+        padding: 15px 10px 10px 10px ;
+      }
+
+      .nome, .imagem {
+        display: none;
+      }
+      @media only screen and (max-width: 600px){
+        
+            .container{
+              flex-direction: column;
+            }
+            .total{
+              width: 100%;
+            }
+         thead {
+          display: none;
+         }
+          .produtos{
+            width: 100%;
+
+          }
+         .product{
+          display: grid;
+          width: 100%;
+          justify-content: flex-start;
+         }
+         .tot{
+          display: none;
+         }
+         .titulo{
+          display:none;
+         }
+         
+         .nome, .imagem{
+          display: flex;
+         }
+         .produtos .product{
+          display: grid;
+          grid-template-areas: 
+          "imagem nome nome nome "
+          " imagem preco qtd excluir";
+         margin-bottom: 40px;
+         padding: 3%;
+          gap:6%;
+         }
+         .product > .imagem{
+          grid-area: imagem;
+         }
+         .product > .nome{
+          grid-area: nome;
+          text-align: center;
+         
+         }
+         .product > .preco{
+          grid-area: preco;
+          text-align: center;
+        
+         }
+         .product > .qtd{
+          grid-area: qtd;
+          text-align: center;
+         
+         }
+         .product > .excluir{
+          grid-area: excluir;
+          justify-content: center;
+          
+         }
+        .product > .titulo{
+          display: none;
+         
+        }
+        }
