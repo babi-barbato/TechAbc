@@ -79,8 +79,3 @@
         <script src="../assets/js/toggleMenu.js"></script><!-- puxa js que faz menu de celular funcionar  -->
     </body>
 </html>
-<script>
-    function teste(){
-        window.location.href = 'login.html';
-    }
-</script>

@@ -28,5 +28,11 @@
         $_SESSION['tipo'] = "mouse";
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
-
+    
+    if(isset($_POST["desktop"])){
+        $_SESSION['titulo'] = "Desktops";
+        $_SESSION['produto'] = "desktops";
+        $_SESSION['tipo'] = "desktop";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
 ?>
