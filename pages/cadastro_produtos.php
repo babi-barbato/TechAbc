@@ -22,7 +22,7 @@
             <hr>
         </div>
         <div class="form-container">
-            <form action="" method="post" name='form' class="flex">
+            <form action="" method="post" name='form' class="flex" enctype="multipart/form-data">
                 <div class="left grid">
                     <div class="item">
                         <label  for="nomeProduto">Nome do produto <span required>*</span></label>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="item">
                         <label for="Subcategorias">Subcategoria <span required>*</span></label>
-                        <select class="subcategorias" id="sub_pecas" title="Subcategorias">
+                        <select class="subcategorias" id="sub_pecas" name="sub_pecas" title="Subcategorias">
                             <option value="">Selecione</option>
                             <option value="placa_mae">Placa Mãe</option>
                             <option value="processador">Processador</option>
@@ -51,7 +51,7 @@
                             <option value="gabinete">Gabinete</option>
                         </select>
 
-                        <select class="subcategorias" id="sub_acessorios" title="Subcategorias">
+                        <select class="subcategorias" id="sub_acessorios" name="sub_acessorios" title="Subcategorias">
                             <option value="">Selecione</option>
                             <option value="mouse_pad">Mouse Pad</option>
                             <option value="monitor">Monitor</option>
@@ -61,12 +61,10 @@
                         </select>
 
                         <select class="subcategorias" id="sub_notebooks" title="Subcategorias">
-                            <option value="">Selecione</option>
                             <option value="notebook">Notebook</option>
                         </select>
 
                         <select class="subcategorias"  id="sub_desktops" title="Subcategorias">
-                            <option value="">Selecione</option>
                             <option value="desktop">Desktop</option>
                         </select>
                     </div>
@@ -108,10 +106,6 @@
                         <label for="produtoQtd">Estoque <span required>*</span></label>
                         <input  type="text" name="produtoQtd" id="produtoQtd">
                     </div>
-                        <!-- <div class="item">
-                            <label for="produtoQtd">Classe <span required>*</span></label>
-                            <input  type="text" name="classe" id="produtoQtd">
-                        </div> -->
                     <div class="buttons">
                         <button type="submit" name="cadastrar" class="flex">Cadastrar produto</button>
                         <a href="#" class="cancelar flex">
@@ -132,8 +126,6 @@
                 document.getElementsByClassName('subcategorias')[i].style.display = 'none';
             }
             document.querySelector('#sub_' + select.value).style.display = 'block';
-            document.querySelector('#sub_' + select.value).setAttribute("name", "subcategorias");
-            console.log(document.querySelector('#sub_' + select.value).name)
         }
     </script>
     <script src="toggleMenu.js"></script>
@@ -143,19 +135,36 @@
 </html>
 <?php
     if (isset($_POST['cadastrar'])) {
-        $conexao = mysqli_connect('localhost', 'andre', '@sR290905', 'techabc'); //realiza de fato a conexão com o banco de dados
+        $conexao = mysqli_connect('localhost', 'root', '', 'techabc'); //realiza de fato a conexão com o banco de dados
 
-        # var_dump($_FILES['fotoProduto']);
         $imagem = $_FILES['fotoProduto']['name'];
         $categoria = $_POST['categorias'];
         $nome_produto = $_POST['produtoNome'];
-        $tipo = $_POST['subcategorias'];
         $preco = $_POST['preco'];
         $peso = $_POST['peso'];
         $altura = $_POST['altura'];
         $largura = $_POST['largura'];
         $descricao = $_POST['descricao'];
         $estoque = $_POST['produtoQtd'];
+        $tipo;
+
+        if ($categoria == 'pecas') {
+
+            $tipo = $_POST['sub_pecas'];
+
+        } else if ($categoria == 'acessorios') {
+
+            $tipo = $_POST['sub_acessorios'];
+
+        } elseif ($categoria == 'notebook') {
+
+            $tipo = 'notebook';
+
+        } elseif ($categoria == 'desktop') {
+
+            $tipo = 'desktop';
+
+        }
 
         $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', '$imagem','$estoque', '$peso', '$altura', '$largura', NULL)";
 
