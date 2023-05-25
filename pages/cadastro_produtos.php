@@ -1,3 +1,16 @@
+<?php
+    include("../assets/php/conexao.php");
+    include("../assets/php/menu.php");
+    echo "<style>#sair{display:none}</style>";
+    echo "<style>#saair{display:none}</style>";
+
+    if(isset($_SESSION['user'])){
+        echo "<style>#teste{display:none}</style>";
+        echo "<style>#cadLogin{display:none}</style>";
+        echo "<style>#sair{display:flex;}</style>";
+        echo "<style>#saair{display:flex}</style>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -165,6 +178,7 @@
             $tipo = 'desktop';
 
         }
+
 
         $sql = "INSERT INTO $categoria (tipo, nome, descricao, preco, foto, quantidade, peso, altura, largura, id) VALUES ('$tipo', '$nome_produto', '$descricao', '$preco', '$imagem','$estoque', '$peso', '$altura', '$largura', NULL)";
 

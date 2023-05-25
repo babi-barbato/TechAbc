@@ -22,6 +22,7 @@
             flex: 0 0 50%;/*ele coloca os elementos em linha na horizontal*/
             display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
             flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
+            justify-content: center;
             align-items: center; /*alinha os elementos*/
             background-color: #efefef; /*cor de fundo*/
             color: #000;/*cor da letra*/} 
@@ -167,6 +168,7 @@
         color: #fff;/*cor da letra*/
         display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
         flex-direction: column; /*os itens são direcionados a ficar em coluna, um embaixo do outro*/
+        justify-content: center;
         align-items: center; /*alinha os elementos*/
         overflow-y: auto;/*esconde tudo que ultrapassa o limite do elemento*/
         
@@ -195,7 +197,8 @@
     .cliente{/*titulo do input das informações do dono do cartao*/
         font-weight: 600; /*negrito*/} 
     .direita.image{/*div que armazena a imagem*/
-        margin-top: 20px;}
+        margin-top: 20px;
+    }
     #pagamento{/*div que armazena as imagensdos cartões*/
         display: flex;/*podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
         justify-content: space-around;/*distancia horizontal entre as imagens*/
