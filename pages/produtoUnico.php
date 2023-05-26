@@ -25,7 +25,7 @@
         <title>Produto</title>
     </head>
     <body>
-        <script src="../assets/js/menu-ofc.js"></script><!-- menu que chamamos por meio de um js-->
+        <script src="../assets/js/menu-oficial.js"></script><!-- menu que chamamos por meio de um js-->
         <div id="divContainer"><!-- div que pega todos os elementos da tela-->
             <div id="divEsquerda"><!-- div que pega os elementos da esquerda -->
                 <div id="divProduto"><!-- Div que vai ter o produto na esquerda -->
@@ -86,8 +86,12 @@
 
                                 </div>
                             </div>
-                            <button class='btnAzul'>Mover para carrinho</button>
-                            <button class='btnBranco'>Comprar Agora</button>
+                            <form  style='display:flex;justify-content:center;width:100%' method='post' name='form' action='../assets/php/carrinho.php'>
+                            <div style='width:100%;display:flex;gap:10px;flex-direction:column;align-items:center'>
+                            <button type='submit' class='btnAzul' name='carrinho'>Mover para carrinho</button>
+                            <button type='submit' name='compra' class='btnBranco'>Comprar Agora</button>
+                            </div>
+                            </form>
                         </div>
                     ";}
                     ?>

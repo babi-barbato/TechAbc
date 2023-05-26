@@ -25,7 +25,7 @@
         <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
     </head>
     <body>
-        <script src="../assets/js/menu-ofc.js"></script><!-- puxando menu que esta em um script -->
+        <script src="../assets/js/menu-oficial.js"></script><!-- puxando menu que esta em um script -->
         
         <div id="divContainer"><!-- div que contem tudo -->
             <div class="divTitulo"><!-- div que contem o titulo da página -->

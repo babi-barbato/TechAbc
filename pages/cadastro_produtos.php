@@ -27,7 +27,7 @@
     
 </head>
 <body>
-    <script src="../assets/js/menu-ofc.js"></script>
+    <script src="../assets/js/menu-oficia.js"></script>
 
     <div class="container">     
         <div class="title">
@@ -169,11 +169,11 @@
 
             $tipo = $_POST['sub_acessorios'];
 
-        } elseif ($categoria == 'notebook') {
+        } elseif ($categoria == 'notebooks') {
 
             $tipo = 'notebook';
 
-        } elseif ($categoria == 'desktop') {
+        } elseif ($categoria == 'desktops') {
 
             $tipo = 'desktop';
 
