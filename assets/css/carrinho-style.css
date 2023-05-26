@@ -1,310 +1,224 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-  } /*margens iniciais*/
+   @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); /*link da letra*/
+* {/*margens iniciais*/
+    margin: 0;/*maregm externa inicial*/
+    padding: 0;/*margem interna inicial*/
+  } 
   
- body{
-    background-color:#f2f2f2 ;
- }
-  .container {
-    margin: 15px 40px;
-    display:flex;
-}
+ body{/*fundo de toda a página*/
+    background-color:#f2f2f2 ;/*cor de fundo*/}
+
+.container {/*div que armazena tudo*/
+    margin: 15px 40px;/*margem externa*/
+    display:flex;/*deixar os elementos flexiciveis*/}
  
-.produtos{
-    padding: 5px 5px;
-    width: 80%;
-    background-color: #fff;
-   
-}
-.content {
-  display: flex;
-  left: 0%;
-  padding: 10px ;
-  
+.produtos{/*armazena tudo que esta a esquerda*/
+    padding: 5px 5px;/*margem interna*/
+    width: 80%;/*largura máxima*/
+    background-color: #fff;/*cor de fundo*/}
 
-}
+.content {/*titulos da tabela*/
+  display: flex;/*deixa os elemnts flexiveis*/
+  left: 0%;/*começa da esqyerda para a direita*/
+  padding: 10px ;/*margem interna*/}
 
-.item{
-    width: 130px;
-    height: 130px;
-}
-.itens{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px 40px ;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+table {/*configurações da tabela*/
+    width: 100%;/*largura máxima*/
+    border-collapse: collapse;/*junta todas as bordas ta bela em uma coisa só*/}
   
-  table thead tr {
-    border-bottom: 2px solid #d3681b62; /*primeira linha*/
-  }
+table thead tr {/*linha abaixo dos titulos*/
+    border-bottom: 2px solid #d3681b62; /*cor da linha*/}
   
-  table thead  th {
-    text-align: center;
-    padding-bottom: 10px;
+table thead  th {/*condiguração do th*/
+    text-align: center;/*alinha os textos no centro*/
+    padding-bottom: 10px;/*margem interna na parte inferior*/
     text-transform: uppercase; /*deixa tudo com letra maiuscula */
-    color: #666;
-    width: 25%;
-  }
+    color: #666;/*cor da letra*/
+    width: 25%;/*largura maxima*/}
   
- 
-  
-  table tbody tr:last-child { /*caso tenha só 1 produto, deixa a proxima linha escondida*/
-    border: 0;
-  }
-  
-  table tbody tr td {
-    padding: 20px 0px 0px 0px;
-    text-align: center;
-  }
-  .product {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .product div{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }  
-  
-  .product img {
-    border-radius: 6px;
-  }
+.product {/*div que armazena as nformações da parte esquerda*/
+    display: flex;/*deixa os elementos flexiveis*/
+    align-items: center;/*alinha os itens no centro*/
+    justify-content: space-between;/*da espaçameto entre os elementos e alinha no centro*/}
 
-  .qtd {
-    background: #eee;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 70px;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 30px;
-border: none;}
+.product div{/*todas as divs que estão dentro da div product*/
+    width: 100%;/*largura máxima*/
+    display: flex;/*deixa os elementos flexiveis*/
+    align-items: center;/*alinha os itens na vertical*/
+    justify-content: center;/*alinha na horizontal*/
+    gap: 10px;/*espaçamento entre os elementos*/}  
+  
+.product img {/*imagem contina na div product*/
+    border-radius: 6px;/*arredondamento da borda*/}
 
-    
+.qtd {/*div que armazena o select*/
+    background: #eee;/*cor de fundo*/
+    display: inline-flex;/*deixa a linha flexivel*/
+    justify-content: center;/*alinha na horizontal*/
+    align-items: center;/*alinha na vertical*/
+    max-width: 70px;/*larura maxima*/
+    border-radius: 20px;/*arredondamento da borda*/
+    overflow: hidden;/*n deixa os elementos de dentro ultrapassar*/
+    height: 30px;/*altura maxima*/
+border: none;/*não existe borda*/}
       
-      .qtd button {
-        display: flex;
-        align-items: center;
-        background: transparent;
-        border: none;
-        font-size: 20px;
-        height: 100%;
+.excluir{/* div que armazena a lixeira*/
+        background-color: #eeeeee;/*cor de fundo*/
+    display: inline-flex;/*deixa os elementos da linha flexiveis*/
+    justify-content: center;/*alinha na horizontal*/
+    align-items: center;/*alinha na vertical*/
+    min-width: 40px;/*começa a partir desse tamanho*/
+    border-radius: 20px;/*arredondamento da borda*/
+    overflow: hidden;/*não deixa nada ultrapassar*/
+    height: 40px;/*altura máxima*/
+    border: none;/*não existe borda*/}
+
+.excluir i:hover{/* efeito quado se passa o mouse em cima*/
+      color:#0066FF;/*a cor do icone fica azul*/}
        
-      }
+.select{/*select*/
+        background-color: rgba(255, 255, 255, 0);/* cor de fundo*/
+        border: none;/*não existe borda*/}
       
-      .excluir{
-        background: #eee;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 40px;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 40px;
-    border: none;}
+.total {/*div que armazena a parte direita*/
+        border: none;/*não existe borda*/
+        width: 20%;/*largura maxima*/
+        margin-left: 1%;/*distancia externa que da a esquerda*/
+        background-color: #fff;/*cor de fundo*/
+        height: 40%;/*altura máxima*/}    
 
-    .excluir button{
-      display: flex;
-      align-items: center;
-      background: transparent;
-      border: none;
-      font-size: 20px;
-    
-    }
-    .excluir i:hover{
-      color:#0066FF;
-    }
+.total label {/*todas as label que existe na div total*/
+        color: #666;/*cor da letra*/
+        font-size: 16px;/*tamanho da letra*/
+        justify-content: center;/*centraliza os elementos*/
+        display: flex;/*deixa os elementos flexiveis*/
+        padding: 15px 10px 5px 10px;/*margem interna*/}
       
+.total label .resumo{/*pega a label que tem o nome de resumo*/
+        text-transform: uppercase;/*deixa tudo em letra maiuscula*/
+        font-weight: bold;/*deixa em negrito*/}
+
+.total  hr{/*linha de separação*/
+        border: 1.5px solid #d3681b62; /*cor e tamanho da linha*/
+        margin: 0px 7px;/*margem externa*/
+        margin-top: 6px;/*margem na parte superior*/}
+
+.titulo{/*armazena o nome e a imagem do produto*/
+        display: flex;/*deixa tudo flexivel*/
+        justify-content: center;/*alinha tudo nocentro*/
+        flex-direction: row-reverse;/*inverte a sequencia dos elementos*/
+        align-items: center;/*alinha os elementos */
+        margin-bottom: 10px;/*margem externa na parte inferior*/
+        color: #555;/*cor da letra*/
+        padding: 10px;/*margem interna*/
+        gap:5%;/*espaçamento entre os elementos*/
+        width: 100%;/*largura máxima*/}
+      
+.info{/*armazena o preço e o frete*/
+        display: flex;/*deixa os elementos flexivei*/
+        justify-content: center;/*alinha na horizontal*/
+        flex-direction: column;/*transforma a direção dos elementos em colunas*/
+        align-items: center;/*alinhas os itens na vertical*/
+        margin-bottom: 10px;/*margem externa na parte inferior*/
+        color: #555;/*cor da letra*/
+        padding: 10px;/*margem interna*/}
+
+.info div{/*todas a divs que estão dentro da info*/
+        width: 100%;/*largura maxima*/
+        display: flex;/*deixa os elementos flexiveis*/
+        justify-content: space-between;/*alinha e da espacamento entre os elementos*/}
+
+.mini-total{/*div que armazena o total da compra*/
+        display: flex;/*deixa os elementos flexiveis*/
+        justify-content: space-between;/*alinha e da espaçamento entre os elementos*/}
+
+.enviar{/*Botão de enviar*/
+        display: flex;/*deixa os elementos flexiveus*/
+        width: 100%; /*largura maxima*/
+        height: 43px;/*altura maixma*/
+        border: none; /*não apresenta borda*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        color: #fff;/*cor da letra*/
+        background-color:#D75A00 ;/*cor de fundo*/
+        font-family: sans-serif;/*tipo de fonte*/
+        border-radius: 6px;/*arredondamento das bordas*/
+        font-size: 17px;/*tamanho da letra*/
+        font-weight: 600;/*negrito*/
+        margin-bottom: 10px;/*margem externa na parte inferior*/}
+
+.continuar{/*botão de continuar comprando*/
+        display: flex;/*deixa os elementos flexiveis*/
+        width: 100%; /*largura maxima*/
+        height: 43px;/*altura maxima*/
+        border-color: #0066FF; /*deixa a borda na cor azul*/
+        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+        color: #0066FF;/*cor da letra*/
+        background-color:#f2eeeb00 ;/*fundo transparente*/
+        font-family: sans-serif;/*tipo de fonte*/
+        border-radius: 6px;/*arredondamento das bordas*/
+        font-size: 17px;/*tamanho da fonte*/
+        font-weight: 600;/*negrito*/}
      
-      .select{
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-      }
+.button{/*botões em geral*/
+        padding: 15px 10px 10px 10px ;/*margem interna*/}
+
+.nome, .imagem {/*nome e imagem do produto*/
+        display: none;/*não deixa aparecer na tela*/}
       
-
-      .total {
-        border: none;
-        width: 20%;
-        margin-left: 1%;
-        background: #fff;
-        height: 40%;
-       
-      }    
-
-      .total label {
-        color: #666;
-        font-size: 16px;
-        justify-content: center;
-        display: flex;
-        padding: 15px 10px 5px 10px;
-       
-       
-      }
-      .total label.resumo{
-        text-transform: uppercase;
-        font-weight: bold;
-      
-      }
-      .produto{
-        text-align: left;
-      }
-      .total  hr{
-        border: 1.5px solid #d3681b62; /*primeira linha*/
-        margin: 0px 7px;
-        margin-top: 6px;
+/*TAMANHO DE CELULAR*/
+@media only screen and (max-width: 600px){/*tamanho maximo de 600px*/
         
-      }
-      .titulo{
-        display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-bottom: 10px;
-        color: #555;
-        padding: 10px;
-        gap:5%;
-        width: 100%;
-      }
-      
-      .info{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
-        color: #555;
-        padding: 10px;
-
-      }
-      .info div{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-       
-      }
-
-      .mini-total{
-        display: flex;
-        justify-content: space-between;
-        
-      }
-
-      .total .info label .grat{
-        color: chartreuse;
-      }
-
-      .enviar{
-        display: flex;
-        width: 100%; /*largura*/
-        height: 43px;/*altura*/
-        border: none; /*não apresenta borda, botão envia*/
-        align-items: center; /*centraliza na horizontal*/
-        justify-content: center; /*centraliza na vertical*/
-        color: #fff;
-        background-color:#D75A00 ;
-        font-family: sans-serif;/*tipo de fonte*/
-        border-radius: 6px;
-        font-size: 17px;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-
-      .continuar{
-        display: flex;
-        width: 100%; /*largura*/
-        height: 43px;/*altura*/
-        border-color: #0066FF; /*não apresenta borda, botão envia*/
-        align-items: center; /*centraliza na horizontal*/
-        justify-content: center; /*centraliza na vertical*/
-        color: #0066FF;
-        background-color:#f2eeeb00 ;
-        font-family: sans-serif;/*tipo de fonte*/
-        border-radius: 6px;
-        font-size: 17px;
-        font-weight: 600;
-      }
-      .button{
-        padding: 15px 10px 10px 10px ;
-      }
-
-      .nome, .imagem {
-        display: none;
-      }
-      @media only screen and (max-width: 600px){
-        
-            .container{
-              flex-direction: column;
-            }
-            .total{
-              width: 100%;
-            }
-         thead {
-          display: none;
-         }
-          .produtos{
-            width: 100%;
-
-          }
-         .product{
-          display: grid;
-          width: 100%;
-          justify-content: flex-start;
-         }
-         .tot{
-          display: none;
-         }
-         .titulo{
-          display:none;
-         }
-         
-         .nome, .imagem{
-          display: flex;
-         }
-         .produtos .product{
-          display: grid;
-          grid-template-areas: 
-          "imagem nome nome nome "
-          " imagem preco qtd excluir";
-         margin-bottom: 40px;
-         padding: 3%;
-          gap:6%;
-         }
-         .product > .imagem{
-          grid-area: imagem;
-         }
-         .product > .nome{
-          grid-area: nome;
-          text-align: center;
-         
-         }
-         .product > .preco{
-          grid-area: preco;
-          text-align: center;
-        
-         }
-         .product > .qtd{
-          grid-area: qtd;
-          text-align: center;
-         
-         }
-         .product > .excluir{
-          grid-area: excluir;
-          justify-content: center;
+  .container{/*div que armazena tudo*/
+              flex-direction: column;/*transforma tudo em colunas*/}
+            
+  .total{/*div que armazena a parte direita*/
+              width: 100%;/*larura maixma*/}
+         thead {/* tabela*/
+          display: none;/*desaparece com a tabela*/}
           
-         }
-        .product > .titulo{
-          display: none;
+  .produtos{/*armazena tudo que esta a esquerda*/
+            width: 100%;/*largura maxima*/}
          
-        }
+  .product{/*div que armazena as nformações da parte esquerda*/
+          display: grid;/*separa essa div em colunas e linhas*/
+          width: 100%;/*largura maxima*/
+          justify-content: flex-start;/*agrupa todos os elementos no inicio*/}
+         
+  .tot{/*preço total*/
+          display: none;/*não deixa aparecer na tela */}
+       
+  .nome, .imagem{/*nome e imagem do produto*/
+          display: flex;/*deixa os elementos flexiveis*/}
+         
+  .produtos .product{/*divs que armazenam a parte direita e esuqerda*/
+          display: grid;/*separa a div em colunas e linhas*/
+          grid-template-areas: /*areas que serão ocupadas pelos elementos*/
+          "imagem nome nome nome "/*a imagem cobre a primeira linha da prmeira coluna, o nome ocupa a primeira linha e tres colunas*/
+          " imagem preco qtd excluir";/*a imagem cobre a segunda linha da primeira coluna, preço na segunda linha e segunda coluna, quantidade na segunda linha e erceira coluna, e a lixeira fica na segunda linha e quarta coluna*/
+         margin-bottom: 40px;/*margem externa da parte inferior*/
+         padding: 3%;/*margem interna*/
+          gap:6%;/*espaçamento entre os elementos*/}
+
+  .product > .imagem{/*imagem que esta dentro da div produto*/
+          grid-area: imagem;/*vai ocupar a area com o nome de imagem*/}
+
+  .product > .nome{/*nome que esta dentro da div produto*/
+          grid-area: nome;/*vai ocupar a area com o nome de nome*/
+          text-align: center;/*alinha no centro*/}
+
+  .product > .preco{/* preço que esta dentro da div produto*/
+          grid-area: preco;/*vai ocupar a area com o nome de preço*/
+          text-align: center;/*alinha no centro*/ }
+
+  .product > .qtd{/*quantidade que esta dentro da div produto*/
+          grid-area: qtd;/*vai ocupar a area com o nome de qtd*/
+          text-align: center;/*alinha no centro*/}
+         
+  .product > .excluir{/*lixeira que esta dentro da div produto*/
+          grid-area: excluir;/*vai ocupar a area com o nome de excluir*/
+          justify-content: center;/*alinha no centro*/}
+
+  .product > .titulo{/*armazena o nome e a imagem do produto*/
+          display: none;/*não deixa aparecer na tela*/}
         }
