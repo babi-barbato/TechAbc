@@ -19,7 +19,7 @@ header.innerHTML = `
                 <i class="fa fa-bars"></i>
                 </div>
                 <div class="center">
-                    <h2>LOGO</h2>
+                    <img style='width:130px' src="../img/log.png">
                 </div>
                 <div id="cadLogin" class="right flex">
                     <a href="cadastro_cliente.html" class="cadastro flex">
@@ -61,7 +61,7 @@ header.innerHTML = `
             <hr>
 
             <div class="middle-box flex">
-                <a href="#" class="carrinho flex">
+                <a href="../pages/carrinho.php" class="carrinho flex">
                     <div class="left flex">
                         <i class="fa fa-cart-shopping"></i>
                     </div>
@@ -153,9 +153,11 @@ header.innerHTML = `
 
         <nav class="desktop-nav">
             <div class="left">
+            <a href='../pages/index.php'>
             <div class="logo">
-            <img src="../img/logoMenor.png">
+            <img style='width:150px' src="../img/log.png">
             </div>
+            </a>
         </div>
         <div class="center">
             <div class="menu-opt">
@@ -244,7 +246,7 @@ header.innerHTML = `
             </a>
             <div></div>
             <div class="cart-container">
-                <a class="carrinho-btn" href="../pages/carrinho.html">
+                <a class="carrinho-btn" href="../pages/carrinho.php">
                     <div class="left">
                         <i class="fa fa-cart-shopping"></i>
                     </div>

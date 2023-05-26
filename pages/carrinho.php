@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <script src="../assets/js/menu-ofc.js"></script><!-- menu chamado pelo js-->
+  <script src="../assets/js/menu-ofici.js"></script><!-- menu chamado pelo js-->
   <div class="container"> <!--div que pega tudo-->
     <div class="produtos"> <!-- que armazena a caixinha da esquerda -->
       <table> <!--inicio da tabela-->

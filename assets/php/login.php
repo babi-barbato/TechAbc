@@ -21,12 +21,13 @@
             $quantidade = mysqli_num_rows($result); // pego a qtd de linhas (se tiver uma linha significa que tem um login)
            
             while ($linha = mysqli_fetch_array($result)){ // crio um while para armazenar as informações
-           
-                if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
+                
+                $_SESSION['idPe'] = $linha['idClientes'];
 
+                if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
                     $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
                     echo $_SESSION['user'];
-                    header("Location: ../../pages/monte_pc.php"); //leva para a pag cadastrar produtos
+                    header("Location: ../../pages/cadastro_produtos.php"); //leva para a pag cadastrar produtos
                     
                 }else if($quantidade == 1){ //parte de clientes abaixo
                     
