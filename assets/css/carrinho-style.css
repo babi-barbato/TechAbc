@@ -75,6 +75,9 @@ border: none;/*não existe borda*/}
 .excluir i:hover{/* efeito quado se passa o mouse em cima*/
       color:#0066FF;/*a cor do icone fica azul*/}
        
+.space{
+    gap: 40px;
+}
 .select{/*select*/
         background-color: rgba(255, 255, 255, 0);/* cor de fundo*/
         border: none;/*não existe borda*/}
@@ -151,6 +154,7 @@ border: none;/*não existe borda*/}
         width: 100%; /*largura maxima*/
         height: 43px;/*altura maxima*/
         border-color: #0066FF; /*deixa a borda na cor azul*/
+        border-style: solid;/*estilo da borda é solido*/
         align-items: center; /*centraliza na horizontal*/
         justify-content: center; /*centraliza na vertical*/
         color: #0066FF;/*cor da letra*/
