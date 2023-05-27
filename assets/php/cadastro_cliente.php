@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("conexao.php"); 
 
 if(!isset($_SESSION)){ //inicia a sessão
     session_start();

@@ -5,12 +5,12 @@
    if(isset($_POST['usuario']) || isset($_POST['senha'])){ //esse email e senha é do html (é pegado por meio do NAME do input)
 
        if(strlen($_POST['usuario']) == 0 ){ //caso a pessoa não tenha digitado nada aparecera isso
-           echo "<script> alert('Preencha seu e-mail')</script>";
-           echo "<script> window.location='../../pages/login.html'</script>";
+           echo "<script> alert('Preencha seu e-mail')</script>";//alerta
+           echo "<script> window.location='../../pages/login.html'</script>";//leva para a página de login
 
        }else if(strlen($_POST['senha']) == 0 ){ // caso a pessoa não tenha digitado nehnhuma senha aparece isso
-           echo "<script> alert('Preencha sua senha')</script>";
-           echo "<script> window.location='../../pages/login.html'</script>";
+           echo "<script> alert('Preencha sua senha')</script>";//alerta
+           echo "<script> window.location='../../pages/login.html'</script>";//leva para a pagina de login
 
        }else{// se a pessoa digitou tudo certinho vai seguir o código abaixo
             $email = $_POST['usuario'];// crio a variavel email e pego o valor digitado no email
@@ -22,7 +22,7 @@
            
             while ($linha = mysqli_fetch_array($result)){ // crio um while para armazenar as informações
                 
-                $_SESSION['idPe'] = $linha['idClientes'];
+                $_SESSION['idPe'] = $linha['idClientes'];//inicia uma sessão chamada idPe, selecionando o idCliente
 
                 if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
                     $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email

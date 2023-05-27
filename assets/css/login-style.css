@@ -1,131 +1,127 @@
-:root {
+:root { /*variaveis*/
     --orange: #D75A00; /* Variável para a cor Laranja */
     --blue: #0066FF; /* Variável para a cor Azul */
 }
 
-.container {
+.container {/*div que armazena tudo*/
     height: 100vh; /* .container recebe uma altura de 100vh (100% da altura da Viewport */
-    display: flex;
+    display: flex;/*deixa os itens flexiveis*/
 }
 
 /* PARTE ESQUERDA DA PÁGINA */
-.container .left {
+.container .left {/*div da que armazena a parte esquerda*/
     flex: 0 0 50%; /* O elemento .left recebe uma largura de 50% da largura do .container */
     background-color: var(--orange); /* Referência à variável orange, pegando a cor atribuída a ela */
-    padding: 20px;
-    color: #fff;
+    padding: 20px;/*margem interna*/
+    color: #fff;/*cor da letra*/
 }
-.container .left .back-to-menu {
-    display: flex;
+.container .left .back-to-menu {/*menu mobile*/
+    display: flex;/*deixa os itens flexiveis*/
     justify-content: space-between; /* Justifica os elementos de forma a ficarem distanciados uns dos outros por espaços iguais entre eles */
-    width: 145px;
-    align-items: center;
-    padding: 5px;
-    cursor: pointer;
-    color: #fff;
-    margin-bottom: 70px;
+    width: 145px;/*largura maxima*/
+    align-items: center;/*alinha os itens no centro*/
+    padding: 5px;/*margem interna*/
+    cursor: pointer;/*tipo de mouse*/
+    color: #fff;/*cor da letra*/
+    margin-bottom: 70px;/*maregm externa da parte inferior*/
 }
-.back-to-menu span {
-    font-weight: 600;
+.back-to-menu span {/*texto do menu*/
+    font-weight: 600;/*negrito*/
 }
-.container .left .text {
-    width: 500px;
-    margin: auto;
-    margin-top: 10px;
+.container .left .text {/*textos que contem na parte esquerda*/
+    width: 500px;/*largura maxima*/
+    margin: auto;/*margem externa automatica*/
+    margin-top: 10px;/*margem externa na parte superior*/
 }
-.container .left .text a {
-    color: #fff;
-    text-decoration: underline;
-    transition: all 0.1s ease;
+.container .left .text a {/*clique aqui*/
+    color: #fff;/*cor da letra*/
+    text-decoration: underline;/*sublinhado*/
+    transition: all 0.1s ease;/*tempo de transição*/
 }
-.container .left .text a:hover {
-    color: #0046ae;
+.container .left .text a:hover {/*quando passa o mouse em cima */
+    color: #0046ae;/*cor da letra para azul*/
 }
-.container .left .text h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+.container .left .text h1 {/*Entre ja*/
+    margin-bottom: 20px;/*maregm externa na parte inferior*/
+    font-size: 2.5rem;/*tamanho da letra*/
     text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35); /* Sombra no texto */
 }
-.container .left .text p {
-    font-size: 1.5rem;
-}
-.container .left .image {
-    width: 350px;
-    margin: 10px auto;
+.container .left .text p {/*segundo texto*/
+    font-size: 1.5rem;/**/
 }
 
 /* PARTE DIREITA DA PÁGINA */
-.container .right {
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #efefef;
+.container .right {/*div que armazena a parte direita*/
+    flex: 0 0 50%;/*ocupa a largura de 50%*/
+    display: flex;/*transforma o elemento em flexivel*/
+    flex-direction: column;/*divide em colunas*/
+    justify-content: center;/*linha os itens na horizontal*/
+    background-color: #efefef;/*cor de fundo*/
 }
-.container .right form {
-    padding: 10px;
-    width: 80%;
-    margin: 0 auto;
+.container .right form {/*formulario*/
+    padding: 10px; /*margem interna*/
+    width: 80%;/*largura maxima*/
+    margin: 0 auto;/*margem externa automatica*/
 }
-.container .right form .field {
-    line-height: 50px;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
+.container .right form .field {/*divs do formulario*/
+    line-height: 50px;/*altura da linha*/
+    margin-bottom: 20px;/*margem externa na parte inferior*/
+    font-size: 1.4rem;/*tamanho da letra*/
 }
-.container .right form .field label {
-    font-weight: 600;
+.container .right form .field label {/*titulos do formulario*/
+    font-weight: 600;/*negrito*/
 }
-.container .right form .field input {
-    width: 100%;
-    border: none;
-    padding: 15px 10px;
-    border-radius: 5px;
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);
+.container .right form .field input {/*caixinhas do formulario*/
+    width: 100%;/*largura maxima*/
+    border: none;/*sem borda*/
+    padding: 15px 10px;/*margem interna*/
+    border-radius: 5px;/*arredondamento da borda*/
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombreamento*/
 }
-.container .right form .field * {
-    display: block;
-}
-
-
-form .button button {
-    background-color: var(--orange);
-    border: none;
-    width: 100%;
-    height: 100%;
-    padding: 12px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.3rem;
-    border-radius: 10px;
-    transition: all .2s ease;
-    cursor: pointer;
-    margin-top: 10px;
-}
-form .button button:hover {
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298);
+.container .right form .field * {/*div do formulario*/
+    display: block;/*transforma o display em um bloco fixo*/
 }
 
-.container .right .back-to-menu {
-    display: flex;
-    justify-content: space-between;
-    width: 145px;
-    align-items: center;
-    padding: 5px;
-    cursor: pointer;
-    color: #000;
-    margin-bottom: 100px;
-    margin-left: 60px;
-    display: none;
+
+form .button button {/*botão*/
+    background-color: var(--orange);/*cor de fundo*/
+    border: none;/*não existe borda*/
+    width: 100%;/*largura maxima*/
+    height: 100%;/*altura maxima*/
+    padding: 12px;/*margem interna*/
+    color: #fff;/*cor da letra*/
+    font-weight: 600;/*negrito*/
+    font-size: 1.3rem;/*tamanho da letra*/
+    border-radius: 10px;/*arredondamento da borda*/
+    transition: all .2s ease;/*transição*/
+    cursor: pointer;/*tipo do mouse*/
+    margin-top: 10px;/*margem da parte superior*/
+}
+form .button button:hover {/*quando passa o mouse em cima do botão*/
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.298);/*sombra*/
 }
 
-@media only screen and (max-width: 1080px) {
-    .container .left  {
-        display: none;
+.container .right .back-to-menu {/*menu mobile*/
+    display: flex;/*transforma os elementos em flexiveis*/
+    justify-content: space-between;/*alinha e separa os itens*/
+    width: 145px;/*largura maxima*/
+    align-items: center;/*centraliza na vertical*/
+    padding: 5px;/*margem inetrna*/
+    cursor: pointer;/*tipo do mouse*/
+    color: #000;/*cor da letra*/
+    margin-bottom: 100px;/*margem externa na parte inferior*/
+    margin-left: 60px;/*margem externa na esquerda*/
+    display: none;/*fica invisivel */
+}
+ /*DESKTOP E TABLET*/
+@media only screen and (max-width: 1080px) {/*tamanho par desktop e tablet*/
+    .container .left  {/*div que armazena a parte esquerda*/
+        display: none;/*deixa invisivel*/
     }
-    .container .right {
-        flex: 0 0 100%;
+    .container .right {/*div que armazena a parte direita*/
+        flex: 0 0 100%;/*vai ocupar 100% da tela*/
     }
-    .container .right .back-to-menu {
-        display: flex;
+    .container .right .back-to-menu {/*menu*/
+        display: flex;/*deixa os elementos flexivei*/
     }
 }
