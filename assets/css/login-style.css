@@ -113,6 +113,10 @@ form .button button:hover {/*quando passa o mouse em cima do botão*/
     margin-left: 60px;/*margem externa na esquerda*/
     display: none;/*fica invisivel */
 }
+.image{
+    align-items: center;
+    justify-content: center;
+}
  /*DESKTOP E TABLET*/
 @media only screen and (max-width: 1080px) {/*tamanho par desktop e tablet*/
     .container .left  {/*div que armazena a parte esquerda*/
