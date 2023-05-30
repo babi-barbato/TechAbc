@@ -18,8 +18,8 @@
         <div class="container"><!-- div que contem tudo -->
                 <form action='' method='post' class='formProd'> <!--form que puzara o php-->
                     <div class='produto'>
-                    <button type='button' class='btnCoracao'>
-                    <i class='fa-solid fa-heart'></i><!--imagem do coração-->
+                    <button type='button' class='btnCoracao' >
+                    <i id="preenchido" class='fa-solid fa-heart' onclick=" borda()"></i><!--imagem do coração-->
                     </button>
                     <button class='submit'  type='submit'>
                     <div class='foto'>
@@ -47,5 +47,6 @@
         </div><!-- fecha divContainer  --> 
         <script src="../assets/js/footer.js"></script><!-- puxa footer que esta no js  -->
         <script src="../assets/js/toggleMenu.js"></script><!-- puxa js que faz menu de celular funcionar  -->
+        <script src="favoritos.js"></script>
     </body>
 </html>
