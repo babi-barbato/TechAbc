@@ -27,7 +27,7 @@
                 if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
                     $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
                     echo $_SESSION['user'];
-                    header("Location: ../../pages/cadastro_produtos.php"); //leva para a pag cadastrar produtos
+                    header("Location: ../../pages/home-adm.php"); //leva para a pag cadastrar produtos
                     
                 }else if($quantidade == 1){ //parte de clientes abaixo
                     
