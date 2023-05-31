@@ -25,7 +25,7 @@
         <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
     </head>
     <body>
-        <script src="../assets/js/menu-ofc.js"></script><!-- puxando menu que esta em um script -->
+        <script src="../assets/js/menu-oficial.js"></script><!-- puxando menu que esta em um script -->
         
         <div id="divContainer"><!-- div que contem tudo -->
             <div class="divTitulo"><!-- div que contem o titulo da página -->
@@ -52,7 +52,7 @@
                 <form action='prod.php' method='post' class='formProd'>
                     <div class='divProduto'>
                     <button type='button' onclick='teste()' class='btnCoracao'>
-                    <i class='fa-regular fa-heart'></i>
+                    <i  class='fa-regular fa-heart'></i>
                     </button>
                     <button class='submit' name='".$linha['id']."' type='submit'>
                     <div class='divImg'>
@@ -77,5 +77,6 @@
         </div><!-- fecha divContainer  --> 
         <script src="../assets/js/footer.js"></script><!-- puxa footer que esta no js  -->
         <script src="../assets/js/toggleMenu.js"></script><!-- puxa js que faz menu de celular funcionar  -->
+       
     </body>
 </html>

@@ -14,18 +14,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
-    <link rel="stylesheet" href="../assets/css/style-global.css">
-    <link rel="stylesheet" href="../assets/css/footer-style.css">
-    <title>TechABC</title>
-</head>
+        <meta charset="UTF-8"><!-- charset utf8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compativel com outros navegadores -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
+        <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
+        <link rel="stylesheet" href="../assets/css/produtos_Gerass-style.css">
+        <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
+        <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
+        <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
+    </head>
 <body>
-    <script src="../assets/js/menu-ofc.js"></script>
-
+    <script src="../assets/js/menu-oficial.js"></script>
+    
     <!-- DESKTOP NAV END -->
 
     <!-- SLIDE SHOW START -->
@@ -38,245 +39,90 @@
 
     <!-- SLIDE SHOW START -->
 
-
-    <div class="container mg-60" id="container">
-        <div class="announcement"></div>
-
-        <h1><i class="fa-regular fa-star"></i> Recomendados</h1>
-
-        <div class="products-container grid">
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
+    <div id="divContainer"><!-- div que contem tudo -->
+            <div class="divTitulo"><!-- div que contem o titulo da página -->
+                <h1><i class="fa-regular fa-star"></i> Produtos Novos e Lançamentos</h1>
             </div>
+            
+            <?php
+                $sqlProdutos = "SELECT * FROM notebooks limit 4"; //seleciona todos os produtos de uma determinada tabela
+                $resultado = mysqli_query($conexao,$sqlProdutos); //resultado 
+                $cont = 0;
+                $_SESSION['vetor'] = [];
+                
+                while ($linha = mysqli_fetch_array($resultado)){
+                    array_push($_SESSION['vetor'],$linha['id']);
+                    $cont++;
+                echo "
+                <form action='prod.php' method='post' class='formProd'>
+                    <div class='divProduto'>
+                    <button type='button' onclick='teste()' class='btnCoracao'>
+                    <i class='fa-regular fa-heart'></i>
+                    </button>
+                    <button class='submit' name='".$linha['id']."' type='submit'>
+                    <div class='divImg'>
+                    <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
+                        </div>
+                        <div class='divTextos'>
+                            <p class='pTitulo'>".$linha['nome']."</p>
+                            <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
+                            <div>
+                                <p class='pPreco'>R$ ".$linha['preco'].",00</p>
+                                <div class='divazul'>
+                                    <i class='fa fa-cart-shopping'></i>
+                                </div>
+                            </div>
+                            <p class='pTexto'>Parcele em até 12x sem juros</p>
+                        </div>
+                    </button>
+                    </div>
+                    </form>";
+                    // $_SESSION['produto'] = 'notebooks';
+                    // $_SESSION['tipo'] = 'notebooks';
+                }
+            ?>
 
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
+            <div class="divTitulo"><!-- div que contem o titulo da página -->
+                <h1><i class="fa-regular fa-star"></i> Produtos que agradam a todos</h1>
             </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
+            <?php
+                $sqlProdutos = "SELECT * FROM acessorios WHERE tipo = 'fone' limit 4"; //seleciona todos os produtos de uma determinada tabela
+                $resultado = mysqli_query($conexao,$sqlProdutos); //resultado 
+                $cont = 0;
+                $_SESSION['vetor'] = [];
+                
+                while ($linha = mysqli_fetch_array($resultado)){
+                    array_push($_SESSION['vetor'],$linha['id']);
+                    $cont++;
+                echo "
+                <form action='prod.php' method='post' class='formProd'>
+                    <div class='divProduto'>
+                    <button type='button' onclick='teste()' class='btnCoracao'>
+                    <i class='fa-regular fa-heart'></i>
+                    </button>
+                    <button class='submit' name='".$linha['id']."' type='submit'>
+                    <div class='divImg'>
+                    <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
+                        </div>
+                        <div class='divTextos'>
+                            <p class='pTitulo'>".$linha['nome']."</p>
+                            <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
+                            <div>
+                                <p class='pPreco'>R$ ".$linha['preco'].",00</p>
+                                <div class='divazul'>
+                                    <i class='fa fa-cart-shopping'></i>
+                                </div>
+                            </div>
+                            <p class='pTexto'>Parcele em até 12x sem juros</p>
+                        </div>
+                    </button>
                     </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="announcement"></div>
-
-        <h1><i class="fa-regular fa-star"></i> Produtos Novos e Lançamentos</h1>
-
-        <div class="products-container grid">
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <div class="image">
-                        <img src="https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Mouse gamer housenGamer 22Hz | 0.1ms de latência</h2>
-                        <small class="last-price">de <span>R$450,50</span> por:</small>
-                        <h3 class="current-price">R$420,00</h3>
-                        <small class="parcela">Parcele em até 12x sem juros</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
+                </form>";
+                }
+            ?>
+        </div><!-- fecha divContainer  --> 
+    
+   
     <script src="toggleMenu.js"></script>
     <script src="../assets/js/footer.js"></script>
 </body>

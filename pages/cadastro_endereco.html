@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compativel com outros navegadores -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
-    <link rel="stylesheet" href="../assets/css/cadastro_endereco.css"> <!--link do css-->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/cadastro-endereco.css"> <!--link do css-->
     
     <title> Cadastro de Endereço - Tech ABC</title> <!--titulo da pagina-->
 </head>
@@ -21,7 +24,7 @@
                     </div>
                     
                     <div class="field">
-                        <input id="cep" type="number"  placeholder="CEP"><!--input do telefone-->
+                        <input id="cep" type="text" oninput="consultaCep()" placeholder="CEP"><!--input do telefone-->
                     </div>
                     
                     <div class="field">
@@ -80,7 +83,7 @@
                     <!-- <img style="width: 450px;  margin-top: 20px;" src="teste.gif" alt="ícone de cadastro"> -->
             <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
                 <div id="fotoIcone" class="image">
-                    <img  style="width: 450px;  margin-top: 60px;" src="../img/endereco.png" alt="ícone de cadastro">
+                    <img  style="width: 450px;  margin-top: 60px;" src="../img/endereco.png" alt="ícone de cadastro"> <!---->
                 </div>
                 <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
                     <div id="cartao"> <!--armazena tudo que for do cartão-->
@@ -177,6 +180,34 @@
     <script src="../assets/js/cadastro_endereco.js"></script> <!--link do script-->
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+        $('#cep').mask('00000-000')
+        $('#numero').mask('N° 0000')
+    });
+    
+    function consultaCep(){
+        var ax_cep = document.getElementById("cep").value; //Variacel para acomular valor do cep digitado
+        var url = `https://viacep.com.br/ws/${ax_cep}/json`; //variavel que junta o caminho da api
+        var request = new XMLHttpRequest(); //crio uma variavel XML
+    
+        request.open('GET', url); //variavel 'request' abre usando GET com a variavel url que acomula a ur
+        
+        request.onload = () => { //se o caminho carregar
+            var response = JSON.parse(request.responseText); //crio uma variavel "response" que acomula o json do endereço
+            
+            if (response.erro === true){ //se o cep der erro
+                alert("Cep não encontrado")//alerta msg de erro
+                cep.value = "";
+            }else{//se der certo
+                rua.value = response.logradouro//adiciona o valor da rua no campo rua
+                bairro.value = response.bairro//adiciona o valor do bairro no campo bairro
+                cidade.value = `${response.localidade} - ${response.uf}` //adiciona a cidade e o estado no campo cidade
+            }
+        }
+        request.send();//faz a conexão
+    }
+</script>
 
 
 

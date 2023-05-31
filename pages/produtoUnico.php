@@ -25,7 +25,7 @@
         <title>Produto</title>
     </head>
     <body>
-        <script src="../assets/js/menu-ofc.js"></script><!-- menu que chamamos por meio de um js-->
+        <script src="../assets/js/menu-oficial.js"></script><!-- menu que chamamos por meio de um js-->
         <div id="divContainer"><!-- div que pega todos os elementos da tela-->
             <div id="divEsquerda"><!-- div que pega os elementos da esquerda -->
                 <div id="divProduto"><!-- Div que vai ter o produto na esquerda -->
@@ -38,7 +38,7 @@
                         echo " <img class='imgProduto' src='../img/".$linha1['tipo']."/".$linha1['foto']."'>";
                     }
                 ?>
-                    <i class="fa-regular fa-heart"></i><!-- icone de coração -->
+                    <i id="coracao" onclick="preenchimento()" class="fa-regular fa-heart"></i><!-- icone de coração -->
                 </div><!-- fecha div produto-->
                 <br>
                 <div id="divPagamento">
@@ -86,8 +86,12 @@
 
                                 </div>
                             </div>
-                            <button class='btnAzul'>Mover para carrinho</button>
-                            <button class='btnBranco'>Comprar Agora</button>
+                            <form  style='display:flex;justify-content:center;width:100%' method='post' name='form' action='../assets/php/carrinho.php'>
+                            <div style='width:100%;display:flex;gap:10px;flex-direction:column;align-items:center'>
+                            <button type='submit' class='btnAzul' name='carrinho'>Mover para carrinho</button>
+                            <button type='submit' name='compra' class='btnBranco'>Comprar Agora</button>
+                            </div>
+                            </form>
                         </div>
                     ";}
                     ?>
@@ -96,5 +100,6 @@
         </div>  <!-- fecha div container -->  
         <script src="../assets/js/footer.js"></script><!-- footer que chamamos por meio de um js-->
         <script src="../assets/js/toggleMenu.js"></script><!-- js que faz o menu mobille funcionar-->
+        <script src="../assets/js/bnt_coracao.js"></script>
     </body>
 </html>

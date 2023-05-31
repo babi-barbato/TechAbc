@@ -1,0 +1,63 @@
+#saair {
+        display: flex;
+    }
+
+    #sair {
+        display: flex;
+    }
+
+    div {
+        width: 100%;
+        text-align: center;
+    }
+
+    #divGeral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-family: 'Noto Sans';
+        background-color: white;
+        gap: 40px;
+    }
+
+    .divGraficos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .divGraficos div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30vh;
+    }
+    .divFormularios{
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 700px) {
+        .divGraficos div{
+            width: 80%;
+            height: 50vh;
+        }
+        .divFormularios{
+            flex-direction: row;
+            gap: 40px;
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .divGraficos div{
+            width: 70%;
+            height: 60vh;
+        }
+        #divProd{
+            display: grid;/*display grid (separar por colunas)*/
+            grid-template-columns: repeat(4,1fr);/*vai repitir as colunas quatro vez de forma fracionada*/
+        }
+    }

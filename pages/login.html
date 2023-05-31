@@ -1,49 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><!--inicia o html-->
+<html lang="pt-br"><!-- linguagem padrão de pt-br -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/login-style.css">
-    <link rel="stylesheet" href="../assets/css/style-global.css">
-    <title>Login - Tech ABC</title>
+    <meta charset="UTF-8"><!-- charset utf8 -->
+   <!-- compativel com outros navegadores -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
+    <link rel="stylesheet" href="../assets/css/login-style.css"><!--link do css-->
+    <link rel="stylesheet" href="../assets/css/style-global.css"><!--link do css global-->
+    <title>Login - Tech ABC</title><!--titulo da página-->
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <a href="index.php" class="back-to-menu">
-                <div class="icon">
-                    <i class="fa fa-chevron-left"></i>
+    <div class="container"><!--div que armazena tudo-->
+        <div class="left"><!--div que armazena toda a parte direita-->
+            <a href="index.php" class="back-to-menu"><!--link do menu mobile-->
+                <div class="icon"><!--div que armazena o icone do menu--><!--icone-->
+                    <i class="fa fa-chevron-left"></i><!--icone de voltar ao menu-->
                 </div>
-                <span>Voltar ao menu</span>
+                <span>Voltar ao menu</span><!--texto de voltar-->
             </a>
-            <div class="text">
+            <div class="text"><!--div que armazena o texto-->
                 <h1>Entre já!</h1>
                 <p>Agora que já realizou o  cadastro, logue-se para ver as novidades. Caso ainda não seja cadastrado,   clique <a href="#">aqui</a> e cadastre-se já.</p>
             </div>
-            <div class="image">
-                <img src="../img/login.PNG" alt="ícone de login">
+            <div class="image" style="display: flex; align-items: center; justify-content: center;"><!--div que armazena a imagem -->
+                <img src="../img/gif/login.gif" style="width: 420px;  margin-top: 0px; " alt="ícone de login"> <!--imagem-->
             </div>
         </div>
-        <div class="right">
-            <a href="index.php" class="back-to-menu">
-                <div class="icon">
-                    <i class="fa fa-chevron-left"></i>
+        <div class="right"><!--div que armazena a parte direita-->
+            <a href="index.php" class="back-to-menu"><!--menu para mobile-->
+                <div class="icon"><!--div que armazena o icone do menu-->
+                    <i class="fa fa-chevron-left"></i><!--icone de voltar ao menu-->
                 </div>  
-                <span class="aa">Voltar ao menu</span>
+                <span class="aa">Voltar ao menu</span><!--texto-->
             </a>
-            <form action="../assets/php/login.php" method="post" name="formulario">
-                <div class="field">
-                    <label for="user">Email</label>
-                    <input id="user" name="usuario" type="email" placeholder="username@example.com">
+            <form action="../assets/php/login.php" method="post" name="formulario"><!--formulario, chamada do arquivo php-->
+                <div class="field"> <!--div que armazena o emial -->
+                    <label for="user">Email</label> <!--titulo-->
+                    <input id="user" name="usuario" type="email" placeholder="username@example.com"><!--caixinha do email-->
                 </div>
-                <div class="field">
-                    <label for="pwd">Senha</label>
-                    <input id="pwd" name="senha" type="password" placeholder="Digite sua senha...">
+                <div class="field"><!--div que armazena o senha -->
+                    <label for="pwd">Senha</label><!--titulo-->
+                    <input id="pwd" name="senha" type="password" placeholder="Digite sua senha..."><!--caixinha do email-->
                 </div>
-                <div class="button">
-                    <button type="submit">
+                <div class="button"><!--div que armazena o botão-->
+                    <button type="submit"><!--botão-->
                         Login
                     </button>
                 </div>

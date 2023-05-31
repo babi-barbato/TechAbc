@@ -17,9 +17,9 @@
 </head>
 
 <body>
-  <script src="../assets/js/menu-ofc.js"></script><!-- menu chamado pelo js-->
+  <script src="../assets/js/menu-ofici.js"></script><!-- menu chamado pelo js-->
   <div class="container"> <!--div que pega tudo-->
-    <div class="produtos"> <!-- que armazena a caixinha da direita -->
+    <div class="produtos"> <!-- que armazena a caixinha da esquerda -->
       <table> <!--inicio da tabela-->
         <div class="content"> <!--ega o letreinoem cima da imagem-->
           <thead> <!--adicina uma linha-->
@@ -61,14 +61,13 @@
             </select>
           </div>
         </div>
-        <div>
+        <div class="space">
           <label class="tot">R$ 240</label> <!--div que armazena o preço total de um produto especifico-->
-          <td>
-            <button class="excluir"> <!--botão que excluir prosutos-->
-              <i class="fa fa-trash-can"></i><!--emoji de lixeira-->
-            </button>
-          </td>
+         
         </div>
+          <button class="excluir"> <!--botão que excluir prosutos-->
+            <i class="fa fa-trash-can"></i><!--emoji de lixeira-->
+          </button>
       </div>
     </div>
   
@@ -76,7 +75,7 @@
   <div class="total"><!--div que armazena a caixinha da parte direita-->
     <label class="resumo">Resumo da compra</label><!--titulo da caixinha-->
     <hr>
-    <div class="info"><!--div que armazena o sub preço-->
+    <div class="info"><!--div que armazena o o preço e o frete-->
       <div><label>Subtotal</label><!--titulo-->
         <label>R$ 418</label><!--preço final-->
       </div>
@@ -94,7 +93,7 @@
         Finalizar compra
       </button>
       <button type="button" class="continuar"><!--botão de continuar comprando-->
-        Continuar comprando
+        <a href="../pages/cadastro_enderecos.php" style="color:blue; border-color:blue">Cadastrar novo endereço  </a>
       </button>
     </div>
   </div>

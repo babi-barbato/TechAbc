@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
     <link rel="stylesheet" href="../assets/css/cadastro_cliente.css"> <!--link do css-->
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title> Cadastro - Tech ABC</title> <!--titulo da barra de pesquisa-->
 </head>
 <body>
@@ -24,7 +25,7 @@
                     Caso já tenha um cadastro, clique  <a href="login.html">aqui</a> <!--botão do clique aqui-->para se logar.</p><!--tesxto da parte laranja-->
            
             <div class="image"> <!--imagem da parte laranja-->
-                <img src="../img/gif/cadGeral.gif" style="width: 460px;  margin-top: 0px;" alt="ícone de login"> <!--style da image-->
+                <img src="../img/gif/cadGeral.gif" style="width: 440px;  margin-top: 0px;" alt="ícone de login"> <!--style da image-->
             </div>
         </div> 
         </div>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="field"><!--div que armazena a label e o input-->
                     <label for="telefone">Telefone</label><!--label- titulo do input-->
-                    <input id="telefone" name="telefone" type="number" required placeholder="(00) 00000-0000"><!--input do telefone. required- aviso de preenchimento de campo-->
+                    <input id="telefone" name="telefone" type="text" required placeholder="(00) 00000-0000"><!--input do telefone. required- aviso de preenchimento de campo-->
                 </div>
                 <div class="field"><!--div que armazena a label e o input-->
                     <label for="email">Email</label><!--label- titulo do input-->
@@ -85,7 +86,12 @@
         </div>
     </div>
     
-    <script src="../assets/js/cad_cliente.js"></script><!--link do script do formulário-->
+    <!-- <script src="../assets/js/cad_cliente.js"></script>link do script do formulário -->
     
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+        $('#telefone').mask('(99) 99999-9999')
+    });
+</script>
