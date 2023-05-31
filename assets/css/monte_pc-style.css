@@ -67,7 +67,6 @@ main > section .title {
     align-items: center;
     font-size: 1.1em;
     border-bottom: 2px solid #D75A00;
-    max-height: 45px;
 }
 .build-box > .box1 > .item > .edit-piece > label {
     background-color: transparent;
