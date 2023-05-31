@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
 #saair {
         display: flex;
     }
@@ -6,17 +9,27 @@
         display: flex;
     }
 
-    #divGeral {
+    .divGeral {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        font-family: 'Noto Sans';
         background-color: white;
         gap: 40px;
     }
-
+    .usuario{
+        font-family: 'Nunito Sans', sans-serif;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .usuario h1{
+        font-size: 16px;
+        font-weight: 300;
+    }
     .divGraficos {
         display: flex;
         align-items: center;

@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../../assets/css/dados.css">
+    <link rel="stylesheet" href="../../pages/teste.css">
     <link rel="stylesheet" href="../../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../../assets/css/footer-style.css">
     <title>Visão dos Produtos</title>
 </head>
-<style>
+<!--<style>
     .divForms{
         display: flex;
         align-items: center;
@@ -23,43 +23,49 @@
         background-color: #D75A00;
         width: 30%;
     }
-</style>
+</style>-->
 <body>
     <script src="../../assets/js/menu-do-adm.js"></script>
     <script src="../toggleMenu.js"></script>
 
-    <div id="divGeral">
-        <div style="width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <h1>Seja bem vindo <label for="" style="color:blue">usuario</label></h1>
-            <h3>Nesta tela você consiguirá alterar algumas informações pessoais da sua conta</h3>
+    <div class="divGeral">
+        <div class="usuario" >
+            <h1>Seja bem vindo <label style="color:blue">usuário</label></h1>
+            <p>Nesta tela você consiguirá alterar algumas informações pessoais da sua conta</p>
         </div>
-        <div class="divFormularios">
-            <div class="divForms" style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
-                <h1>Mudar Senha</h1>
-                <form action="" method="post" name="form">
-                    <p>Digite seu Email de Login:</p>
+    <div class="divFormularios">
+        <div class="divForms" >
+            <div class="laranja">
+                <label>Mudar Senha</label>
+            </div>
+            <div class="content">
+                <form action="" method="post" name="form" >
+                   <label> Email de Login:</label>
                     <input type="text" name="iptEmailLogin">
-                    <p>Digite sua nova Senha:</p>
+                   <label> Nova Senha:</label>
                     <input type="text" name="iptNovaSenha">
-                    <p>Confirme sua nova Senha:</p>
+                   <label>Confirme sua nova Senha:</label>
                     <input type="text" name="iptConfNovaSenha">
-                    <br>
-                    <button name="btnSenha">Mudar Senha</button>
+                    <button name="btnSenha"class="mudar">Mudar</button>
                 </form>
             </div>
-            <div class="divForms" style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
-                <h1>Mudar Email</h1>
-                <form action="" method="post" name="form">
-                    <p>Digite seu Email de Login:</p>
-                    <input type="text" name="iptSenhaLogin">
-                    <p>Digite sua nova Senha:</p>
-                    <input type="text" name="iptNovoEmail">
-                    <p>Confirme sua nova Senha:</p>
-                    <input type="text" name="iptEmail">
-                    <br>
-                    <button name="btnEmail">Mudar Senha</button>
-                </form>
+        </div>
+        <div class="divForms" >
+            <div class="laranja">
+                <label>Mudar Email</label>
             </div>
+            <div class="content">
+            <form action="" method="post" name="form">
+                 <label>Senha de Login:</label>
+                <input type="text" name="iptSenhaLogin">
+                 <label> Novo Email:</label>
+                <input type="text" name="iptNovoEmail">
+                 <label>Confirme seu novo Email:</label>
+                <input type="text" name="iptEmail">
+                <button name="btnEmail" class="mudar">Mudar</button>
+            </form>
+            </div>
+        </div>
         </div>
     </div>
 </body>
