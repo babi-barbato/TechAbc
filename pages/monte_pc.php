@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php 
-$conexao = mysqli_connect("localhost", "andre", "@sR290905", "techabc");
+$conexao = mysqli_connect("localhost", "root", "", "techabc");
 ?>
 
 <html lang="pt-br">
@@ -11,10 +11,11 @@ $conexao = mysqli_connect("localhost", "andre", "@sR290905", "techabc");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/monte_pc-style.css">
+    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <title>Monte seu PC</title>
 </head>
 <body>
-    <nav></nav>
+    <script src="../assets/js/menu-oficial.js"></script>
     <main>
         <section>
             <div class="container">
@@ -330,6 +331,7 @@ $conexao = mysqli_connect("localhost", "andre", "@sR290905", "techabc");
         </section>
     </main>
     <script src="../assets/js/monte_pc.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>
 
