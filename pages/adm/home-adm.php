@@ -77,64 +77,64 @@
         $qtdFone += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     }
     
-    // $sqlMonitor = "SELECT quantidade as contar FROM acessorios where tipo = 'monitor'";//SQL que seleciona a qtd
-    // $resultadoMonitor = mysqli_query($conexao,$sqlMonitor);//faz a conexão
-    // while ($linha = mysqli_fetch_array($resultadoMonitor)){//while para pegar valor
-    //     $qtdMonitor = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
-    // }
+    $sqlMonitor = "SELECT quantidade as contar FROM acessorios where tipo = 'monitor'";//SQL que seleciona a qtd
+    $resultadoMonitor = mysqli_query($conexao,$sqlMonitor);//faz a conexão
+    while ($linha = mysqli_fetch_array($resultadoMonitor)){//while para pegar valor
+        $qtdMonitor += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    }
     
-    // $sqlTeclado = "SELECT quantidade as contar FROM acessorios where tipo = 'teclado'";//SQL que seleciona a qtd
-    // $resultadoTeclado = mysqli_query($conexao,$sqlTeclado);//faz a conexão
-    // while ($linha = mysqli_fetch_array($resultadoTeclado)){//while para pegar valor
-    //     $qtdTeclado = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
-    // }
+    $sqlTeclado = "SELECT quantidade as contar FROM acessorios where tipo = 'teclado'";//SQL que seleciona a qtd
+    $resultadoTeclado = mysqli_query($conexao,$sqlTeclado);//faz a conexão
+    while ($linha = mysqli_fetch_array($resultadoTeclado)){//while para pegar valor
+        $qtdTeclado += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    }
     
-    // $sqlMousePad = "SELECT quantidade as contar FROM acessorios where tipo = 'mousePad'";//SQL que seleciona a qtd
-    // $resultadoMousePad = mysqli_query($conexao,$sqlMousePad);//faz a conexão
-    // while ($linha = mysqli_fetch_array($resultadoMousePad)){//while para pegar valor
-    //     $qtdMousePad = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
-    // }
+    $sqlMousePad = "SELECT quantidade as contar FROM acessorios where tipo = 'mousePad'";//SQL que seleciona a qtd
+    $resultadoMousePad = mysqli_query($conexao,$sqlMousePad);//faz a conexão
+    while ($linha = mysqli_fetch_array($resultadoMousePad)){//while para pegar valor
+        $qtdMousePad += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    }
 
     // $sqlGabinete = "SELECT quantidade as contar FROM acessorios where tipo = 'gabinete'";//SQL que seleciona a qtd
     // $resultadoGabinete = mysqli_query($conexao,$sqlGabinete);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoGabinete)){//while para pegar valor
-    //     $qtdGabinete = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdGabinete += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
     
     // $sqlProcessador = "SELECT quantidade as contar FROM acessorios where tipo = 'processador'";//SQL que seleciona a qtd
     // $resultadoProcessador = mysqli_query($conexao,$sqlProcessador);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoProcessador)){//while para pegar valor
-    //     $qtdProcessador = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdProcessador += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
     
     // $sqlRam = "SELECT quantidade as contar FROM acessorios where tipo = 'ram'";//SQL que seleciona a qtd
     // $resultadoRam = mysqli_query($conexao,$sqlRam);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoRam)){//while para pegar valor
-    //     $qtdRam = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdRam += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
 
     // $sqlPlacaMae = "SELECT quantidade as contar FROM acessorios where tipo = 'placaMae'";//SQL que seleciona a qtd
     // $resultadoPlacaMae = mysqli_query($conexao,$sqlPlacaMae);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoPlacaMae)){//while para pegar valor
-    //     $qtdPlacaMae = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdPlacaMae += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
     
     // $sqlPlacaVideo = "SELECT quantidade as contar FROM acessorios where tipo = 'placaVideo'";//SQL que seleciona a qtd
     // $resultadoPlacaVideo = mysqli_query($conexao,$sqlPlacaVideo);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoPlacaVideo)){//while para pegar valor
-    //     $qtdPlacaVideo = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdPlacaVideo += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
     
     // $sqlArmazenamento = "SELECT quantidade as contar FROM acessorios where tipo = 'armazenamento'";//SQL que seleciona a qtd
     // $resultadoArmazenamento = mysqli_query($conexao,$sqlArmazenamento);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoArmazenamento)){//while para pegar valor
-    //     $qtdArmazenamento = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdArmazenamento += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
     
     // $sqlCooler = "SELECT quantidade as contar FROM acessorios where tipo = 'cooler'";//SQL que seleciona a qtd
     // $resultadoCooler = mysqli_query($conexao,$sqlCooler);//faz a conexão
     // while ($linha = mysqli_fetch_array($resultadoCooler)){//while para pegar valor
-    //     $qtdCooler = $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
+    //     $qtdCooler += $linha['contar'];//fala q a variavel qtdMouse é igual a qtd de itens
     // }
 
     ?>

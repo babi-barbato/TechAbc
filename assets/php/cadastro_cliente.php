@@ -49,7 +49,6 @@ if (isset($_POST['cadastrar'])){
     
       // Verifica se os dígitos verificadores são iguais aos do número fornecido
     if($soma1 != $cpfSeparado[9] || $soma2 != $cpfSeparado[10]) {
-        echo "<script>alert('CPF INVALIDO')</script>";
         $erro++;
     }
 
@@ -71,6 +70,7 @@ if (isset($_POST['cadastrar'])){
                 echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
             }else{
                 if($erro != 0){
+                    echo "<script>alert('CPF INVALIDO')</script>";
                     echo "<script>window.location='../../pages/cadastro_cliente.html'</script>";
                 }else{
                     $sql="INSERT INTO clientes (nome, cpf, email, telefone, senha,idClientes) VALUES ('$nome', '$cpf','$email','$telefone','$senha','')"; 

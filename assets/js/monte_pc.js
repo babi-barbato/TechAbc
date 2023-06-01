@@ -1,7 +1,7 @@
 const inputsBox = document.querySelector('.radioInputs') 
 const items = document.querySelectorAll('.product-box') 
 const confirmar = document.querySelector('.confirmar')
-let inputs = [] 
+let inputs = []
 
 // Este laço serve para "setar" o atributo for para todos os itens (que são label) de forma dinâmica. Através do índice i do laço, cada label recebe um for de "radio0" em diante
 for (i = 0; i <= items.length - 1; i++) { 

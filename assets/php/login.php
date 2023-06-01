@@ -24,7 +24,7 @@
                 
                 $_SESSION['idPe'] = $linha['idClientes'];//inicia uma sessão chamada idPe, selecionando o idCliente
 
-                if($email === "babi@gmail.com" && $senha === "babi"){ //email de adm abaixo
+                if($email === "babi@gmail.com" && $senha === "ba"){ //email de adm abaixo
                     $_SESSION['user'] = $linha['nome'];// crio uma variavel global e dou a ela o valor do email
                     echo $_SESSION['user'];
                     header("Location: ../../pages/adm/home-adm.php"); //leva para a pag cadastrar produtos

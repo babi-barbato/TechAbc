@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 
 <?php 
-$conexao = mysqli_connect("localhost", "andre", "@sR290905", "techabc");
+include("../assets/php/conexao.php");
+include("../assets/php/menu.php");
+include("../assets/php/bloqueio.php");
+echo "<style>#sair{display:none}</style>";
+    echo "<style>#saair{display:none}</style>";
+
+    if(isset($_SESSION['user'])){
+        echo "<style>#teste{display:none}</style>";
+        echo "<style>#cadLogin{display:none}</style>";
+        echo "<style>#sair{display:flex;}</style>";
+        echo "<style>#saair{display:flex}</style>";
+    }
 ?>
 
 <html lang="pt-br">
@@ -10,11 +21,13 @@ $conexao = mysqli_connect("localhost", "andre", "@sR290905", "techabc");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../assets/css/monte_pc-style.css">
     <title>Monte seu PC</title>
 </head>
 <body>
-    <nav></nav>
+    
+<!-- <script src="../assets/js/menu-oficial.js"></script>puxando menu que esta em um script -->
     <main>
         <section>
             <div class="container">

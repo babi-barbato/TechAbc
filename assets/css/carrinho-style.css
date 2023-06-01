@@ -191,8 +191,7 @@ border: none;/*não existe borda*/}
          
   .tot{/*preço total*/
           display: none;/*não deixa aparecer na tela */}
-       
-  .nome, .imagem{/*nome e imagem do produto*/
+  .nome{/*nome e imagem do produto*/
           display: flex;/*deixa os elementos flexiveis*/}
          
   .produtos .product{/*divs que armazenam a parte direita e esuqerda*/

@@ -22,6 +22,7 @@ if(isset($_POST["carrinho"])){
 
     $sqlTeste = "INSERT INTO carrinho VALUES ('".$_SESSION['idProdutoCar']."','".$_SESSION['idPe']."','".$_SESSION['produto']."')";
     $sqlResult = mysqli_query($conexao,$sqlTeste);
+    header("Location: ../../pages/carrinho.php");
 
 }
 ?>
