@@ -23,11 +23,13 @@ echo "<style>#sair{display:none}</style>";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../assets/css/monte_pc-style.css">
+    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
     <title>Monte seu PC</title>
 </head>
 <body>
     
 <!-- <script src="../assets/js/menu-oficial.js"></script>puxando menu que esta em um script -->
+
     <main>
         <section>
             <div class="container">
@@ -343,6 +345,7 @@ echo "<style>#sair{display:none}</style>";
         </section>
     </main>
     <script src="../assets/js/monte_pc.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>
 

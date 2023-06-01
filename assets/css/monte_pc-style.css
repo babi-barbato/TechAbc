@@ -14,10 +14,7 @@ img {
 .flex {
     display: flex;
 }
-nav {
-    background-color: rgb(217, 85, 41);
-    height: 104px;
-}
+
 main {
     margin: 0 60px;
     padding: 20px 0px;
@@ -70,7 +67,6 @@ main > section .title {
     align-items: center;
     font-size: 1.1em;
     border-bottom: 2px solid #D75A00;
-    max-height: 45px;
 }
 .build-box > .box1 > .item > .edit-piece > label {
     background-color: transparent;
@@ -248,4 +244,47 @@ main > section .title {
 }
 input[type='radio'] {
     display: none;
+}
+
+
+@media only screen and (max-width: 1120px) {
+    main {
+        margin: 0px 20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .build-box {
+        flex-direction: column;
+        
+    }
+    .build-box .box1,
+    .build-box .box2 {
+        width: 100%;
+    }
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 770px) {
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 630px) {
+    main {
+        margin: 0px 8px;
+    }
+    .build-box .box1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box-opacity > .float-box > .center > .peças > .item > .image {
+        width: 80%;
+    }
+    .box-opacity > .float-box > .top {
+        font-size: 1rem;
+    }
 }
