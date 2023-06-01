@@ -9,21 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../../pages/teste.css">
+    <link rel="stylesheet" href="../../assets/css/meus_dados-style.css">
     <link rel="stylesheet" href="../../assets/css/menu_ofc_style.css">
     <link rel="stylesheet" href="../../assets/css/footer-style.css">
     <title>Visão dos Produtos</title>
 </head>
-<!--<style>
-    .divForms{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #D75A00;
-        width: 30%;
-    }
-</style>-->
+
 <body>
     <script src="../../assets/js/menu-do-adm.js"></script>
     <script src="../toggleMenu.js"></script>
