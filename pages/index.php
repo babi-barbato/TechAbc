@@ -45,14 +45,14 @@
             </div>
             
             <?php
-                $sqlProdutos = "SELECT * FROM notebooks limit 4"; //seleciona todos os produtos de uma determinada tabela
+                $sqlProdutos = "SELECT * FROM acessorios order by quantidade desc limit 8"; //seleciona todos os produtos de uma determinada tabela
                 $resultado = mysqli_query($conexao,$sqlProdutos); //resultado 
-                $cont = 0;
+                // $cont = 0;
                 $_SESSION['vetor'] = [];
                 
                 while ($linha = mysqli_fetch_array($resultado)){
                     array_push($_SESSION['vetor'],$linha['id']);
-                    $cont++;
+                    // $cont++;
                 echo "
                 <form action='prod.php' method='post' class='formProd'>
                     <div class='divProduto'>
@@ -77,23 +77,22 @@
                     </button>
                     </div>
                     </form>";
-                    // $_SESSION['produto'] = 'notebooks';
-                    // $_SESSION['tipo'] = 'notebooks';
                 }
+                // $_SESSION['produto'] = 'acessorios';
             ?>
 
             <div class="divTitulo"><!-- div que contem o titulo da página -->
                 <h1><i class="fa-regular fa-star"></i> Produtos que agradam a todos</h1>
             </div>
             <?php
-                $sqlProdutos = "SELECT * FROM acessorios WHERE tipo = 'fone' limit 4"; //seleciona todos os produtos de uma determinada tabela
+                $sqlProdutos = "SELECT * FROM acessorios order by preco asc limit 8"; //seleciona todos os produtos de uma determinada tabela
                 $resultado = mysqli_query($conexao,$sqlProdutos); //resultado 
-                $cont = 0;
+                // $cont = 0;
                 $_SESSION['vetor'] = [];
                 
                 while ($linha = mysqli_fetch_array($resultado)){
                     array_push($_SESSION['vetor'],$linha['id']);
-                    $cont++;
+                    // $cont++;
                 echo "
                 <form action='prod.php' method='post' class='formProd'>
                     <div class='divProduto'>

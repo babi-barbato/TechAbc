@@ -103,7 +103,7 @@ header.innerHTML = `
             </form>
         </div>
         <div class="right">
-            <a href="../assets/php/logout.php">
+            <a href="../../assets/php/logout.php">
                 <span id="saair" style="align-items:center;justify-content:center;margin:5px 0px;border-radius:10px;background-color:#0066FF;color:white;width:25vh;height:35px;font-size:17px;border:none" class="login">Sair</span>
             </a>
         </div>

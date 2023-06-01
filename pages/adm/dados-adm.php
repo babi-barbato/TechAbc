@@ -86,11 +86,11 @@
         $confEmail = $_POST['iptConfEmail'];
         
         if($confEmail != $novoEmail){
-            echo "<script>alert('Senha Diferentes!')</script>";
+            echo "<script>alert('Emails Diferentes!')</script>";
         }else if($confEmail == '' || $novoEmail = '' || $senha = ''){
             echo "<script>alert('Preencha todos os campos')</script>";
         }else{
-            echo "<script>alert('Senhas alterada com sucesso')</script>";
+            echo "<script>alert('Email alterado com sucesso')</script>";
             $sql = "UPDATE clientes SET email = '$novoEmail' WHERE senha = '$senha'";
             $resultado = mysqli_query($conexao,$sql);
         }

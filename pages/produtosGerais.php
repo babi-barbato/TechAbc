@@ -51,12 +51,10 @@
                 echo "
                 <form action='prod.php' method='post' class='formProd'>
                     <div class='divProduto'>
-                    <button type='button' onclick='teste()' class='btnCoracao'>
-                    <i  class='fa-regular fa-heart'></i>
-                    </button>
+                    
                     <button class='submit' name='".$linha['id']."' type='submit'>
                     <div class='divImg'>
-                    <img src='../img/".$linha['tipo']."/".$linha['foto']."'>
+                    <img style='' src='../img/".$linha['tipo']."/".$linha['foto']."'>
                         </div>
                         <div class='divTextos'>
                             <p class='pTitulo'>".$linha['nome']."</p>

@@ -38,7 +38,11 @@
                         echo " <img class='imgProduto' src='../img/".$linha1['tipo']."/".$linha1['foto']."'>";
                     }
                 ?>
-                    <i id="coracao" onclick="preenchimento()" class="fa-regular fa-heart"></i><!-- icone de coração -->
+                <form action="../assets/php/favoritos.php" method="post" name="formulario">
+                    <button name="favoritos" onclick="preenchimento()" type="submit">
+                        <i id="coracao"  class="fa-regular fa-heart"></i><!-- icone de coração -->
+                    </button>
+                </form>
                 </div><!-- fecha div produto-->
                 <br>
                 <div id="divPagamento">
@@ -99,7 +103,7 @@
             </div><!-- fecha div direita-->
         </div>  <!-- fecha div container -->  
         <script src="../assets/js/footer.js"></script><!-- footer que chamamos por meio de um js-->
-        <script src="../assets/js/toggleMenu.js"></script><!-- js que faz o menu mobille funcionar-->
+        <script src="toggleMenu.js"></script><!-- js que faz o menu mobille funcionar-->
         <script src="../assets/js/bnt_coracao.js"></script>
     </body>
 </html>

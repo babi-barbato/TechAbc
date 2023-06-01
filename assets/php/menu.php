@@ -35,4 +35,26 @@
         $_SESSION['tipo'] = "desktop";
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
+    
+    if(isset($_POST["mousePad"])){
+        $_SESSION['titulo'] = "Mouse Pads";
+        $_SESSION['produto'] = "acessorios";
+        $_SESSION['tipo'] = "mousePad";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["monitor"])){
+        $_SESSION['titulo'] = "Monitores";
+        $_SESSION['produto'] = "acessorios";
+        $_SESSION['tipo'] = "monitor";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["teclado"])){
+        $_SESSION['titulo'] = "Teclados";
+        $_SESSION['produto'] = "acessorios";
+        $_SESSION['tipo'] = "teclado";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+
 ?>

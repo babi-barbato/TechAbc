@@ -2,7 +2,7 @@
     include('../assets/php/conexao.php');
     session_start();
         
-    for($i = 0; $i < 100; $i++){
+    for($i = 0; $i < 200; $i++){
         if(isset($_POST[$i])){
             $_SESSION['testea'] = $i;
         }
