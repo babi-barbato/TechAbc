@@ -67,7 +67,7 @@ if(!isset($_SESSION)){ //inicia a sessão
 </html>
 <script src="../assets/js/cadastro_endereco.js"></script>
 <script>
-$(document).ready(function(){
+$(document).ready(function(){ 
     $('#cep').mask('00000-000')
     $('#numero').mask('N° 0000')
 });

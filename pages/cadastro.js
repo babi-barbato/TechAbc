@@ -1,5 +1,4 @@
 //OLINHO
-alert("01")
 var i = 0;
 function oiio1() {
   if(i == 0){

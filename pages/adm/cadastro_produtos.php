@@ -133,7 +133,7 @@
     </div>
 
     <script>
-        let selectSubcategorias = document.querySelectorAll("select.subcategorias");
+        let selectSubcategorias = document.querySelectorAll("select.subcategorias"); //variavel que armazena as subcaegorias
 
         function setSubcategory (select) {
             for (i = 0; i <= document.getElementsByClassName('subcategorias').length - 1; i++) {
