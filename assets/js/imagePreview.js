@@ -1,11 +1,11 @@
-const inputFile = document.querySelector("#picture_input");
-const pictureImage = document.querySelector('.picture_image');
-const pictureImageTxt = "Escolha uma imagem";
+const inputFile = document.querySelector("#picture_input"); //input/label que esta na  caixinha de adicionar imagem
+const pictureImage = document.querySelector('.picture_image'); //selecionar a imagem na pasta
+const pictureImageTxt = "Escolha uma imagem"; //texto que aparece dentro da caixinha da imagem quando ela esta vazia 
 pictureImage.innerHTML = pictureImageTxt;
 
 inputFile.addEventListener('change', function(e) {
     const inputTarget = e.target;
-    const file = inputTarget.files[0];
+    const file = inputTarget.files[0]; 
 
     if (file) {
             const reader = new FileReader();

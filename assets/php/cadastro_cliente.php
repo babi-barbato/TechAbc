@@ -52,6 +52,7 @@ if (isset($_POST['cadastrar'])) {
         $erro++;
     }
 
+<<<<<<< HEAD
     $sql_email = "SELECT * FROM clientes WHERE email = '$email'";
     $result1 = mysqli_query($conexao, $sql_email);
 
@@ -63,6 +64,18 @@ if (isset($_POST['cadastrar'])) {
         $result2 = mysqli_query($conexao, $sql_cpf);
 
         if (mysqli_num_rows($result2) != 0) {//se o cpf já tiver sido cadastrado
+=======
+    $sql_email= "SELECT * FROM clientes WHERE email = '$email'"; //ferifica se o email ja é existente
+    $result1 = mysqli_query($conexao,$sql_email);//testa a conexão
+        
+    if (mysqli_num_rows($result1) != 0){  
+        echo "<script>alert ('email ja cadastrado')</script>";
+        echo "<script>  window.location.href=' ../../pages/login.html '</script>";//se o result for diferente de zero, o email ja foi cadastrado e redireciona para a pagina de login
+    } else {       
+        $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'"; //verifica se o cpf ja existe
+        $result2 = mysqli_query($conexao,$sql_cpf);
+        if(mysqli_num_rows($result2) != 0){
+>>>>>>> 29891156a6023ed678a53de02341d1df04242c48
             echo "<script> alert ('cpf ja cadastrado')</script>";
             echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
         } else {

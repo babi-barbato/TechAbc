@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); /*link da letra*/
+
+/*BOTÃO DE SAIR*/
+#saair {/*desktop*/
+    display: flex;/*deixa os elementos flexiveis*/}
+
+#sair {/*celular*/
+    display: flex;/*deixa os elementos flexiveis*/}
+
+/*TAMANHO DE CELULAR*/
+body{/*cor de fundo*/
+    background-color:#f2f2f2/*cor de fundo*/}
+
+    .divGeral {/*div que pega tudo*/
+        display: flex;/*deixa os itens flexiveis*/
+        flex-direction: column;/*deixa os elementos em coluna*/
+        align-items: center;/*centraliza na horizontal*/
+        justify-content: center;/*centraliza na vertical*/
+        width: 100%;/*largura maxima*/
+        background-color: #f2f2f2;/*cor de fundo*/
+        gap: 40px;/*espaçamento entre os elementos*/
+        font-family: 'Nunito Sans', sans-serif;/*tipo de letra*/
+        margin-top: 20px;/*margem externa na parte*/}
+
+    .usuario{/*div que armazena o texto*/
+        width: 100%;/*largura maxima*/
+        display: flex;/*deixa os elementos flexiveis*/
+        align-items: center;/*centraliza na horizontal*/
+        justify-content: center;/*centraliza na vertical*/
+        flex-direction: column;/*deixa os elementos em coluna*/}
+    
+    .usuario h1{/*seja bem vindo*/
+        font-size: 30px;/*tamanho da  letra*/}
+
+    .usuario p{/*texto debaixo do seja bem vindo*/
+        font-size: 20px;/*tamanho da letra*/}
+
+    .divFormularios{/*div que armazena todos os formularios*/
+        display: flex;/*deixa os elementos flexiveis*/
+        align-items: center;/*centraliza na vertical*/
+        justify-content: center;/*centraliza na horizontal*/
+        flex-direction: column;/*deixa os elementos em coluna*/
+        width: 100%;/*largura maxima*/
+        gap: 20px;/*espaçamento entre os elementos*/}
+        
+    .divForms{/*caixinha*/
+            display: flex;/*deixa os elementos flexiveis*/
+            align-items: center;/*centraliza na vertical*/
+            justify-content: center;/*centraliza na horizontal*/
+            flex-direction: column;/*deixa os elementos em coluna*/
+            background-color: #fbfbfb;/*cor de fundo*/
+            border-radius: 6px;/*arredondamento das bordas*/
+            overflow: hidden;/*esconde tudo que ultrapassar esta div*/
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombreamento*/
+            width: 80%;/*largura maxima*/}
+    
+            .laranja label{/*titulo da caixiha*/
+                font-size: 20px;/*tamanho da letra*/
+                font-family: 'Lato';/*tipo de letra*/
+                font-weight: 600;/*negrito*/
+                color: #ffff;/*cor da letra*/
+            }
+            .content input{/*input dos formulario*/
+                width: 100%; /*largura*/
+                border: none;/*não tem borda*/
+                padding: 8px 8px;/*margem interna*/
+                border-radius: 6px; /*curvatura da borda*/
+                box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombra do input*/
+                font-size: 1.0rem;/*tamanho da letra*/
+                position: relative;/*posição relativa dos outros elementos*/
+                margin-bottom: 20px;/*margem externa na perte inferior*/
+                margin-top: 5px;/*margem externa na parte superior*/}
+                
+                .content label{/*label do formulario*/
+                    font-size: 20px;/*tamanho da letra*/
+                    font-family: 'Lato'; /*tipo da letra*/}
+                    
+                    .form{/*formulario*/
+                                    display: flex;/*deixa os elementos flexiveis*/
+                                    align-items: center;/*centraliza na vertical*/
+                                    justify-content: center;/*centraliza na horizontal*/
+                                    flex-direction: column;/*deixa os elementos em colunas*/
+                                    width: 100%;/*largura maxima*/
+                                }
+                    .mudar{/*botão*/
+                        width: 100%; /*largura*/
+                        border: none;/*não tem borda*/
+                        padding: 8px 8px;/*margem interna*/
+                        border-radius: 6px; /*curvatura da borda*/
+                        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.203);/*sombra do input*/
+                        margin-bottom: 20px;/*margem externa na parte inferior*/
+                        margin-top: 5px;/*margem externa na parte superior*/
+                        font-size: 17px;/*tamanho da letra*/
+                        position: relative;/*posição relativa dos outros elementos*/
+                        color: #fff;/*cor da letra*/
+                        background-color: #0066ff;/*cor de fundo*/
+                        font-family: 'Lato';/*tipo de letra*/
+                        font-weight: 600;/*negrito*/
+                        align-items: center; /*centraliza na horizontal*/
+        justify-content: center; /*centraliza na vertical*/
+      
+        
+    }
+    .laranja{/**/
+        width: 100%;/*largura maxima*/
+        height: 20%;/*altura maxima*/
+        background-color: #d75A00;/*cor de fundo*/
+        padding: 10px;/*margem interna*/
+        text-align: center;/*centraliza os textos */
+    }
+    .content{/**/
+        padding: 10px;/*margem interna*/
+    }
+    
+    /*TABLET*/
+    @media screen and (min-width: 1000px) {/**/
+        .divFormularios{/**/
+            flex-direction: row;/*deixa a direção dos elementos em linha*/
+            gap: 10%;/*espaçamento entre os elementos*/
+        }
+        .divForms{/**/
+            width: 40%;/*largura maxiima*/
+        }
+       
+    }
+
+/*DESKTOP*/
+    @media screen and (min-width: 1240px) {/**/
+        .divFormularios{/**/
+            flex-direction: row;/*deixa a direção dos elementos em linha*/
+        }
+        .divForms{/**/
+            width: 35%;/*largura maxima*/
+        }
+    }
