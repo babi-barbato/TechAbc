@@ -9,7 +9,6 @@ if (isset($_POST['cadastrar'])){
     
     include('conexao.php'); 
     $erro = 0;
-    
     $nome=$_POST['nome'];
     $cpf=$_POST['cpf'];
     $telefone=$_POST['telefone'];
