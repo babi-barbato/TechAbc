@@ -50,11 +50,50 @@
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
     
-    if(isset($_POST["teclado"])){
-        $_SESSION['titulo'] = "Teclados";
-        $_SESSION['produto'] = "acessorios";
-        $_SESSION['tipo'] = "teclado";
+    if(isset($_POST["cooler"])){
+        $_SESSION['titulo'] = "Coolers";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "cooler";
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
+    
+    if(isset($_POST["armazenamento"])){
+        $_SESSION['titulo'] = "Armazenamentos";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "armazenamento";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["ram"])){
+        $_SESSION['titulo'] = "Memórias Ram";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "ram";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["gabinete"])){
+        $_SESSION['titulo'] = "Gabinetes";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "gabinete";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["processador"])){
+        $_SESSION['titulo'] = "Procesadores";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "processador";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+    
+    if(isset($_POST["fonte"])){
+        $_SESSION['titulo'] = "Fontes";
+        $_SESSION['produto'] = "pecas";
+        $_SESSION['tipo'] = "fonte";
+        header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
+    }
+
+
+
+
 
 ?>

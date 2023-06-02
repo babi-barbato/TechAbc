@@ -1,7 +1,7 @@
 <?php
 
 include('conexao.php');
-include('bloqueio.php');
+// include('bloqueio.php');
 
 
 if(isset($_POST['favoritos'])){
@@ -17,6 +17,7 @@ if(isset($_POST['favoritos'])){
 
     $sqlTeste2 = "INSERT INTO favoritos VALUES ('".$_SESSION['idPe']."','".$_SESSION['idFavoritos']."','".$_SESSION['produto']."')";
     $sqlResult2 = mysqli_query($conexao,$sqlTeste2);
+
     header("Location: ../../pages/favoritos.php");
 
 }
