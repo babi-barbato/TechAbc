@@ -313,6 +313,8 @@ I
     .container .esquerda {
         flex: 0 0 100%; /* O elemento .left recebe uma largura de 100% da largura do .container 
         */
+        height: 90vh;
+        width: 100%;
         
       
 }

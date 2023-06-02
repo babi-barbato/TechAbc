@@ -95,6 +95,7 @@ main > section .title {
     height: 320px;
     margin: 15px 0px 20px 0px;
     padding: 10px;
+    overflow: scroll;
 }
 .build-box > .box2 > .middle > .config-info > .config-item {
     font-size: 1em;

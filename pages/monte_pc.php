@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-
-<?php 
+<?php
 include("../assets/php/conexao.php");
 include("../assets/php/menu.php");
 include("../assets/php/bloqueio.php");
 echo "<style>#sair{display:none}</style>";
-    echo "<style>#saair{display:none}</style>";
+echo "<style>#saair{display:none}</style>";
 
-    if(isset($_SESSION['user'])){
-        echo "<style>#teste{display:none}</style>";
-        echo "<style>#cadLogin{display:none}</style>";
-        echo "<style>#sair{display:flex;}</style>";
-        echo "<style>#saair{display:flex}</style>";
-    }
+if (isset($_SESSION['user'])) {
+    echo "<style>#teste{display:none}</style>";
+    echo "<style>#cadLogin{display:none}</style>";
+    echo "<style>#sair{display:flex;}</style>";
+    echo "<style>#saair{display:flex}</style>";
+}
 ?>
 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
-    <link rel="stylesheet" href="../assets/css/monte_pc-style.css">
-    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
+    <link rel="stylesheet" href="../assets/css/monte_seu_pc-style.css">
+    <link rel="stylesheet" href="../assets/css/footer-style.css">
     <title>Monte seu PC</title>
 </head>
+
 <body>
-    
-<!-- <script src="../assets/js/menu-oficial.js"></script>puxando menu que esta em um script -->
+
+    <!-- <script src="../assets/js/menu-oficial.js"></script>puxando menu que esta em um script -->
 
     <main>
         <section>
@@ -36,7 +37,7 @@ echo "<style>#sair{display:none}</style>";
                 <div class="title">
                     <h1>Monte seu PC</h1>
                 </div>
-                <form action="../TechAbc/pages/cadastro_endereco.html" name="form" method="post" class="build-box flex">
+                <form action="pagamento.php" name="form" method="post" class="build-box flex">
                     <div class="box1 grid">
                         <div class="item item1">
                             <h2>Processador</h2>
@@ -53,7 +54,7 @@ echo "<style>#sair{display:none}</style>";
                         </div>
                         <div class="item">
                             <h2>Placa Mãe</h2>
-                            <div class="select-piece" >
+                            <div class="select-piece">
                                 <button type="button" class="btn-select-piece" id="btn-placa-mae">
                                     <span>Selecionar</span>
                                     <i class="fa fa-arrow-up-right-from-square"></i>
@@ -175,156 +176,156 @@ echo "<style>#sair{display:none}</style>";
                             </div>
                             <div class="center">
                                 <?php
-                                    $sql_proc = "SELECT * FROM pecas WHERE tipo = 'processador'";
-                                    $resultado_proc = mysqli_query($conexao, $sql_proc);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_proc)) {
-                                        echo "
+                                $sql_proc = "SELECT * FROM pecas WHERE tipo = 'processador'";
+                                $resultado_proc = mysqli_query($conexao, $sql_proc);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_proc)) {
+                                    echo "
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?beach' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                     
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_placa_mae = "SELECT * FROM pecas WHERE tipo = 'placa_mae'";
-                                    $resultado_placa_mae = mysqli_query($conexao, $sql_placa_mae);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_placa_mae)) {
-                                        echo "
+                                $sql_placa_mae = "SELECT * FROM pecas WHERE tipo = 'placaMae'";
+                                $resultado_placa_mae = mysqli_query($conexao, $sql_placa_mae);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_placa_mae)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?animals' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_memoria_ram = "SELECT * FROM pecas WHERE tipo = 'memoria_ram'";
-                                    $resultado_memoria_ram = mysqli_query($conexao, $sql_memoria_ram);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_memoria_ram)) {
-                                        echo "
+                                $sql_memoria_ram = "SELECT * FROM pecas WHERE tipo = 'ram'";
+                                $resultado_memoria_ram = mysqli_query($conexao, $sql_memoria_ram);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_memoria_ram)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?houses' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_placa_de_video = "SELECT * FROM pecas WHERE tipo = 'placa_de_video'";
-                                    $resultado_placa_de_video = mysqli_query($conexao, $sql_placa_de_video);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_placa_de_video)) {
-                                        echo "
+                                $sql_placa_de_video = "SELECT * FROM pecas WHERE tipo = 'placaVideo'";
+                                $resultado_placa_de_video = mysqli_query($conexao, $sql_placa_de_video);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_placa_de_video)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?family' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_gabinete = "SELECT * FROM pecas WHERE tipo = 'gabinete'";
-                                    $resultado_gabinete = mysqli_query($conexao, $sql_gabinete);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_gabinete)) {
-                                        echo "
+                                $sql_gabinete = "SELECT * FROM pecas WHERE tipo = 'gabinete'";
+                                $resultado_gabinete = mysqli_query($conexao, $sql_gabinete);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_gabinete)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?children' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_armazenamento = "SELECT * FROM pecas WHERE tipo = 'armazenamento'";
-                                    $resultado_armazenamento = mysqli_query($conexao, $sql_armazenamento);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_armazenamento)) {
-                                        echo "
+                                $sql_armazenamento = "SELECT * FROM pecas WHERE tipo = 'armazenamento'";
+                                $resultado_armazenamento = mysqli_query($conexao, $sql_armazenamento);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_armazenamento)) {
+                                    echo "
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?church' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_fonte_de_energia = "SELECT * FROM pecas WHERE tipo = 'fonte_de_energia'";
-                                    $resultado_fonte_de_energia = mysqli_query($conexao, $sql_fonte_de_energia);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_fonte_de_energia)) {
-                                        echo "
+                                $sql_fonte_de_energia = "SELECT * FROM pecas WHERE tipo = 'fonte'";
+                                $resultado_fonte_de_energia = mysqli_query($conexao, $sql_fonte_de_energia);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_fonte_de_energia)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?girls' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
 
-                                    $sql_cooler = "SELECT * FROM pecas WHERE tipo = 'cooler'";
-                                    $resultado_cooler = mysqli_query($conexao, $sql_cooler);
-                                    echo "<div class='peças grid'>";
-                                    while ($linha = mysqli_fetch_array($resultado_cooler)) {
-                                        echo "
+                                $sql_cooler = "SELECT * FROM pecas WHERE tipo = 'cooler'";
+                                $resultado_cooler = mysqli_query($conexao, $sql_cooler);
+                                echo "<div class='peças grid'>";
+                                while ($linha = mysqli_fetch_array($resultado_cooler)) {
+                                    echo "
                                         
                                             <label class='item product-box'>
                                                 <div class='image'>
-                                                    <img src='https://source.unsplash.com/random/250x250/?boys' alt='Foto Produto'>
+                                                    <img src='../img/" . $linha['tipo'] . "/" . $linha['foto'] . "' alt='Foto Produto'>
                                                 </div>
                                                 <div class='name'>
-                                                    <strong class='nome-produto'>".$linha['nome']."</strong>
+                                                    <strong class='nome-produto'>" . $linha['nome'] . "</strong>
                                                 </div>
-                                                <div class='price'>".$linha['preco']."</div>
+                                                <div class='price'>" . $linha['preco'] . "</div>
                                             </label>
                                         ";
-                                    }
-                                    echo "</div>";
+                                }
+                                echo "</div>";
                                 ?>
                                 <div class="radioInputs"></div>
                             </div>
@@ -341,11 +342,11 @@ echo "<style>#sair{display:none}</style>";
                 </form>
             </div>
 
-            
+
         </section>
     </main>
     <script src="../assets/js/monte_pc.js"></script>
     <script src="../assets/js/footer.js"></script>
 </body>
-</html>
 
+</html>

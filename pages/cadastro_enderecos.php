@@ -1,4 +1,6 @@
 <?php
+include('../assets/php/conexao.php');
+include('../assets/php/bloqueio.php');
 if(!isset($_SESSION)){ //inicia a sessão
     session_start();
 }
@@ -115,7 +117,7 @@ if (isset($_POST['envior'])){
             
             $sqla = "INSERT INTO `enderecos`(`rua`, `bairro`, `movel`, `numero`, `cidade`, `cep`, `fkEndereco`) VALUES ('$rua','$bairro','$complemento','$num','$cidade','$cep',".$linha1['idClientes'].")";
             $result = mysqli_query($conexao,$sqla);
-            echo "<script>window.location.href = 'login.html'</script>";
+            echo "<script>window.location.href = 'index.php'</script>";
         }
     }else{
         echo "<script>alert('Insira seu email que abacou de ser cadastrado')</script>";

@@ -8,74 +8,50 @@
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/cadastro-endereco.css"> <!--link do css-->
+    <link rel="stylesheet" href="../assets/css/cad-endereco.css"> <!--link do css-->
     
     <title> Cadastro de Endereço - Tech ABC</title> <!--titulo da pagina-->
 </head>
 <body id="body">
     <div class="container"> <!--div que armazena tudo-->
-        
-        <div style="height: 100vh;" class="esquerda" id="esquerda"> <!--parte esquerda-->
-            <div id="cart" class="cart"> <!--formulário-->
-                <!--INPUTS-->
-                <div class="field"> <!--estão na mesma div pois precisam ficar uma do lado da outra-->
-                        <input id="nome" type="text"  placeholder="Nome completo" > <!--input do nome-->
-                        <input id="tel" type="text"  placeholder="N° de Telefone"><!--input do telefone-->
-                    </div>
-                    
-                    <div class="field">
-                        <input id="cep" type="text" oninput="consultaCep()" placeholder="CEP"><!--input do telefone-->
-                    </div>
-                    
-                    <div class="field">
-                        <input id="cidade" type="text" placeholder="Estado - Cidade"><!--input do telefone-->
-                    </div>
+    
+    <div style="height: 100vh;display: flex;justify-content: end;align-self: end;"  class="esquerda" id="esquerda"> <!--parte esquerda-->
+    <div style="height: auto;display:flex;flex-direction:column; gap:20px; margin-top:10px">
+        <?php
+        include("../assets/php/conexao.php");
+        include("../assets/php/menu.php");
 
-                    <div class="field">
-                        <input id="rua" type="text"   placeholder="Rua/Avenida"><!--input do telefone-->
-                    </div>
-
-                    <div class="field"><!--estão na mesma div pois precisam ficar uma do lado da outra-->
-                        <input id="bairro" type="text"  placeholder=" Bairro"><!--input do telefone-->
-                        <input id="numero" type="text"  placeholder="Número"><!--input do telefone-->
-                    </div>
-
-                    <div class="field">
-                        <input id="complemento" type="text" placeholder="Complemento"><!--input do telefone-->
-                    </div>
-                    
-                    <!--SALVAR-->
-                    <label class="salvar">Salvar Como:</label> <!--div que armazena o titulo do input-->
-                    <div class="salvar-btn" > <!--div dos botões-->
-                        <button name="text" type="submit" id="casa" onclick="cas()" > <!--botão da casa-->
-                            Casa <!--o que aparece escrito dentro do botão-->
-                        </button>
-                        <button name="text" type="submit" id="trabalho" onclick="trampo()" > <!--botão do trabalho-->
-                            Trabalho<!--o que aparece escrito dentro do botão-->
-                        </button>
-                    </div>
-
-                    <!--PAGAMENTO-->
-                    <div class="paga"> <!--div que armazena o select e a label-->
-                        <label class="salvar">Selecione a forma de pagamento:</label> <!--titulo dos inputs-->
-                        <select id="select" class="forma-pagamento" > <!--forma as opções de pagamento-->
-                            <option value="selecione">Selecione</option> <!--primeira opção-->
-                            <option value="cartao"> Cartão</option><!--segunda opção-->
-                            <option value="boleto">Boleto</option><!--terceira opção-->
-                            <option value="pix">Pix</option><!--quarta opção-->
-                        </select>
-                    </div>
-                    
-                    <!--BOTÃO-->
-                    <div class="button"> <!--dv que armazena os botões -->
-                        <button id="cancelar">
-                            <a href="index.php">
-                                Cancelar  <!--o que aparece dentro do botão-->
-                            </a>
-                        </button>
-                        <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
-                        </button>
-                    </div>  
+        $sql = "select * from enderecos where fkEndereco = ".$_SESSION['idPe']."";
+        $result = mysqli_query($conexao,$sql);
+        while($linha = mysqli_fetch_array($result)){
+            echo "<div style='display:flex;gap:30px'>
+            <input type='radio' name='local'>
+            <div>".$linha['rua']."<br>Bairro: ".$linha['bairro']."<br>CEP: ".$linha['cep']."<br>Estado / Cidade: ".$linha['cidade']."</div>
+            </div>";
+        }
+        ?>
+        </div>
+            <div id="cart" class="cart" style="justify-content: end;"> <!--formulário-->
+                <div class="paga"> <!--div que armazena o select e a label-->
+                    <label class="salvar">Selecione a forma de pagamento:</label> <!--titulo dos inputs-->
+                    <select id="select" class="forma-pagamento" > <!--forma as opções de pagamento-->
+                        <option value="selecione">Selecione</option> <!--primeira opção-->
+                        <option value="cartao"> Cartão</option><!--segunda opção-->
+                        <option value="boleto">Boleto</option><!--terceira opção-->
+                        <option value="pix">Pix</option><!--quarta opção-->
+                    </select>
+                </div>
+                
+                <!--BOTÃO-->
+                <div class="button"> <!--dv que armazena os botões -->
+                    <button id="cancelar" style="width:auto; padding:5px">
+                        <a href="index.php">
+                            Cancelar  <!--o que aparece dentro do botão-->
+                        </a>
+                    </button>
+                    <button onclick="pagar()" id="enviar"><!--botão de enviar --> Enviar
+                    </button>
+                </div>  
                 </div>
             </div>
             <div class="direita" style="height: 100vh;"> <!-- div que armazena tudo que aparece na direita-->
@@ -83,7 +59,7 @@
                     <!-- <img style="width: 450px;  margin-top: 20px;" src="teste.gif" alt="ícone de cadastro"> -->
             <div class="direita"> <!-- div que armazena tudo que aparece na direita-->
                 <div id="fotoIcone" class="image">
-                    <img  style="width: 450px;  margin-top: 60px;" src="../img/endereco.png" alt="ícone de cadastro"> <!---->
+                    <img  style="width: 450px;  margin-top: 60px;" src="../img/gif/cadEnd.gif" alt="ícone de cadastro"> <!---->
                 </div>
                 <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
                     <div id="cartao"> <!--armazena tudo que for do cartão-->
@@ -176,7 +152,6 @@
             </div>
             </form>
         </div>
-    </div>
     <script src="../assets/js/cadastro_endereco.js"></script> <!--link do script-->
 </body>
 </html>
