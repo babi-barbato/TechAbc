@@ -1,213 +1,214 @@
-@import url("style-global.css");
+@import url("style-global.css"); /*link do css global do menu*/
 
-:root {
-    --orange: #D75A00;
-    --blue: #0066FF;
-}
-
-select.subcategorias:not(select[name="sub_pecas"]) {
-    display: none;
+:root { /*variaveis*/
+    --orange: #D75A00;/*cor laranja*/
+    --blue: #0066FF;/*cor azul*/
 }
 
-span[required] {
-    color: var(--orange) !important;
+select.subcategorias:not(select[name="sub_pecas"]) {/*select das subcategorias*/
+    display: none;/*deixa invisivel*/
 }
 
-.container {
-    margin: 20px 60px;
-}
-.container > .title {
-    padding: 10px;
-    text-align: center;
-}
-.container .form-container form {
-    padding: 10px;
-    gap: 20px;
-}
-.container .form-container form .left {
-    width: 70%;
+span[required] {/**/
+    color: var(--orange) !important;/*cor da letra*/
 }
 
-.container .form-container form .right {
-    width: 30%;
+.container {/**/
+    margin: 20px 60px;/*margem externa*/
+}
+.container > .title {/*titulo*/
+    padding: 10px;/*margem inetrna*/
+    text-align: center;/*alinha os textos no centro*/
+}
+.container .form-container form {/**/
+    padding: 10px;/*margem interna*/
+    gap: 20px;/*espaçamento entre os elementos*/
+}
+.container .form-container form .left {/**/
+    width: 70%;/*largura maxima*/
+}
+
+.container .form-container form .right {/**/
+    width: 30%;/*largura maxima*/
 }
 
 /* LEFT BOX */
-.container .form-container form > .left {
-    grid-template-areas:
+.container .form-container form > .left {/**/
+    grid-template-areas:/*areas que irão ser preenchidas*/
     "box1 box1 box1 box1 box1 box1"
     "box2 box2 box3 box3 box4 box4"
     "box5 box5 box6 box6 box7 box7"
-    "box8 box8 box8 box8 box8 box8";
-    padding: 10px;
-    gap: 15px;
+    "box8 box8 box8 box8 box8 box8";/*area que cada elemento vai ocupar*/
+    padding: 10px;/*margem interna*/
+    gap: 15px;/*espaçamento entre os elementos*/
 }
 .container .form-container form .left .item input,
 .container .form-container form .left .item select,
 .container .form-container form .right .item input,
-.container .form-container form .right .item select {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.358);
-    border-radius: 3px;
-    background-color: #fff;
-    margin-top: 10px;
+.container .form-container form .right .item select {/*todos os inputs dos formularios da direita e da esquerda*/
+    width: 100%;/*largura maxima*/
+    padding: 5px;/*marge interna*/
+    border: 1px solid rgba(0, 0, 0, 0.358);/*sombreamento da borda*/
+    border-radius: 3px;/*arredondamento da borda*/
+    background-color: #fff;/*cor de fundo*/
+    margin-top: 10px;/*margem externa na parte superior*/
 }
-.container .form-container form .left .item textarea {
-    width: 100%;
-    min-height: 150px;
-    padding: 5px;
-    text-align: justify;
-    border: 1px solid rgba(0, 0, 0, 0.358);
-    margin-top: 10px;
+.container .form-container form .left .item textarea {/**/
+    width: 100%;/*largura maxima*/
+    min-height: 150px;/*altura minima*/
+    padding: 5px;/*margem interna*/
+    text-align: justify;/*formatação de texto*/
+    border: 1px solid rgba(0, 0, 0, 0.358);/*sombreamento da borda*/
+    margin-top: 10px;/*margem externa da parte superior*/
 }
 .container .form-container form .left .item label,
-.container .form-container form .right .item label {
-    font-weight: 600;
-    display: block;
+.container .form-container form .right .item label {/*label dosformularios da direita e da esquerda*/
+    font-weight: 600;/*negrito*/
+    display: block;/*transforma os elementos em bloco*/
 }
-.container .form-container form .left .item:nth-child(1) {
-    grid-area: box1;
+.container .form-container form .left .item:nth-child(1) {/**/
+    grid-area: box1;/*ocupação da grid area*/
 }
-.container .form-container form .left .item:nth-child(2) {
-    grid-area: box2;
+.container .form-container form .left .item:nth-child(2) {/**/
+    grid-area: box2;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(3) {
-    grid-area: box3;
+    grid-area: box3;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(4) {
-    grid-area: box4;
+    grid-area: box4;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(5) {
-    grid-area: box5;
+    grid-area: box5;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(6) {
-    grid-area: box6;
+    grid-area: box6;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(7) {
-    grid-area: box7;
+    grid-area: box7;/*ocupação da grid area*/
 }
 .container .form-container form .left .item:nth-child(8) {
-    grid-area: box8;
+    grid-area: box8;/*ocupação da grid area*/
 }
 
 /* RIGHT BOX */
-.container .form-container form .right {
-    /* background-color: lightseagreen; */
-    padding: 10px;
-    grid-template-areas: 
+.container .form-container form .right {/**/
+    padding: 10px;/*margem interna*/
+    grid-template-areas: /*areas que irão ser preenchidas*/
     "box1 box1"
     "box2 box3"
-    "box4 box4";
-    gap: 15px;
+    "box4 box4";/*areas que esta sendo dividida a pagina*/
+    gap: 15px;/*espaçamento dos elementos*/
 }
-.container .form-container form .right .item:nth-child(1){
-    grid-area: box1;
+.container .form-container form .right .item:nth-child(1){/**/
+    grid-area: box1;/*ocupação da grid area*/
 }
-.container .form-container form .right .item:nth-child(2){
-    grid-area: box2;
+.container .form-container form .right .item:nth-child(2){/**/
+    grid-area: box2;/*ocupação da grid area*/
 }
-.container .form-container form .right .item:nth-child(3){
-    grid-area: box3;
+.container .form-container form .right .item:nth-child(3){/**/
+    grid-area: box3;/*ocupação da grid area*/
 }
-.container .form-container form .right .item .pick-image {
-    background-color: #dcdcdc;
-    width: 180px;
-    aspect-ratio: 16/16;
-    font-size: 16px;
-    color: #999;
-    cursor: pointer;
-    border-radius: 0px;
-    margin-top: 10px;
-    border: 2px dashed;
-    transition: all .2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container .form-container form .right .item .pick-image {/**/
+    background-color: #dcdcdc;/*cor de fundo*/
+    width: 180px;/*largura maxima*/
+    aspect-ratio: 16/16;/*formatação da imagem*/
+    font-size: 16px;/*tamanho da letra*/
+    color: #999;/*cor da letra*/
+    cursor: pointer;/*tipo de mouse*/
+    border-radius: 0px;/*arredondamento da borda*/
+    margin-top: 10px;/*margem externa da parte superior*/
+    border: 2px dashed;/*configuração da borda*/
+    transition: all .2s ease;/*transição de um efeito*/
+    display: flex;/*deixa os elementos flexiveis*/
+    align-items: center;/*alinha na horizontal*/
+    justify-content: center;/*alinha na vertical*/
 }
-.container .form-container form .right .item .pick-image label {
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
+.container .form-container form .right .item .pick-image label {/**/
+    height: 100%;/*altura maxima*/
+    width: 100%;/*largura maxima*/
+    cursor: pointer;/*tipo de mouse*/
 }
-.container .form-container form .right .item .pick-image img.pictureImg {
-    width: 100%;
+.container .form-container form .right .item .pick-image img.pictureImg {/**/
+    width: 100%;/*largura maxima*/
 }
-.container .form-container form .right .item .pick-image .picture_image {
-    font-weight: normal;
+.container .form-container form .right .item .pick-image .picture_image {/**/
+    font-weight: normal;/*sem negrito*/
 }
 .container .form-container form .right .item .pick-image:hover {
-    background-color: #ccc;
-    color: #888;
+    background-color: #ccc;/*cor de fundo*/
+    color: #888;/*cor da letra*/
 }
 .container .form-container form .right .item .pick-image:active {
-    color: var(--orange);
-    background-color: #dca791;
+    color: var(--orange);/*cor da letra*/
+    background-color: #dca791;/*cor de fundo*/
 }
 .container .form-container form .right .item .image-box-right {
-    align-items: flex-end;
+    align-items: flex-end;/*comeca a alinhar de tras pra frente*/
 }
-.container .form-container form .right .item .image-box-right > div > small {
-    color: #555;
+.container .form-container form .right .item .image-box-right > div > small {/**/
+    color: #555;/*cor da letra*/
 }
 
 .container .form-container form .right .buttons {
-    grid-area: box4;
+    grid-area: box4;/*area que sera ocupada*/
 }
 .container .form-container form .right .buttons button[name='cadastrar'] {
-    border: none;
-    background-color: var(--orange);
-    color: #fff;
-    font-weight: 600;
-    font-size: 1em;
-    padding: 6px 10px;
-    width: 100%;
-    justify-content: center;
-    border-radius: 5px;
-    cursor: pointer;
+    border: none;/*nao existe borda*/
+    background-color: var(--orange);/*cor de fundo*/
+    color: #fff;/*cor da letra*/
+    font-weight: 600;/*negrito*/
+    font-size: 1em;/*tamanho da letra*/
+    padding: 6px 10px;/*margem interna*/
+    width: 100%;/*largura maxima*/
+    justify-content: center;/*alinha na vertical*/
+    border-radius: 5px;/*arredondamento das bordas*/
+    cursor: pointer;/*tipo de mouse*/
 }
 .container .form-container form .right .buttons a.cancelar {
-    border: 2px solid var(--orange);
-    color: var(--orange);
-    padding: 4px 7px;
-    font-weight: 600;
-    margin-top: 10px;
-    justify-content: center;
-    border-radius: 5px;
+    border: 2px solid var(--orange);/*tamanho da borda, solida e da cor laranja*/
+    color: var(--orange);/*cor da letra*/
+    padding: 4px 7px;/*margem interna*/
+    font-weight: 600;/*negrito*/
+    margin-top: 10px;/*margem externa na parte superior*/
+    justify-content: center;/*alinha na vertical*/
+    border-radius: 5px;/*arredondamento da borda*/
 }
 
+
+/*TABLET*/
 @media screen and (max-width: 900px) {
-    .container {
-        margin: 20px 20px;
+    .container {/**/
+        margin: 20px 20px;/*margem externa*/
     }
-    .form-container form {
-        flex-direction: column;
-        gap: 0;
+    .form-container form {/**/
+        flex-direction: column;/*deixa os elementos em coluna*/
+        gap: 0;/*espaçamento entre os elementos*/
     }
     .form-container form  .left,
-    .form-container form  .right {
-        width: 100% !important;
+    .form-container form  .right {/**/
+        width: 100% !important;/*largura maxima*/
     }
 
     .container .form-container form > .left {
-        grid-template-areas:
+        grid-template-areas:/*areas que irão ser preenchidas*/
         "box1 box1 box1 box1 box1 box1"
         "box2 box2 box2 box3 box3 box3"
         "box4 box4 box4 box5 box5 box5"
         "box6 box6 box6 box7 box7 box7"
-        "box8 box8 box8 box8 box8 box8";
-        gap: 8px !important;
+        "box8 box8 box8 box8 box8 box8";/*elementos que preencherão cada area*/
+        gap: 8px !important;/*espaçamento entre os elementos*/
     }
     .container .form-container form > .right {
-        grid-template-areas: 
+        grid-template-areas: /*areas que irão ser preenchidas*/
         "box1 box2 box2"
         "box1 box2 box2"
         "box1 box3 box3"
         "box1 box3 box3"
-        "box4 box4 box4";
-        gap: 5px !important;
+        "box4 box4 box4";/*elementos que preencherão*/
+        gap: 5px !important;/*espaçamento entre os elementos*/
     }
     .container .form-container form .item, .buttons {
-        margin-top: 10px;
+        margin-top: 10px;/*margem externa na parte superior*/
     }
 }

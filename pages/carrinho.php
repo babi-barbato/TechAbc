@@ -49,7 +49,7 @@ if (isset($_SESSION['user'])) {
             </table>
 
             <?php
-            // $vetor = [0,];
+            $vetor = [0,];
             // $resultadoFinal = 0;
             $sqlPesquisa = "SELECT * FROM carrinho WHERE fkCliente = ".$_SESSION['idPe']."";
             $resultado = mysqli_query($conexao,$sqlPesquisa);
@@ -59,7 +59,7 @@ if (isset($_SESSION['user'])) {
                 $result = mysqli_query($conexao,$sql);
                 
                 while($linha2 = mysqli_fetch_array($result)){
-                    // array_push($vetor,$linha2['id']);
+                    array_push($vetor,$linha2['id']);
                     // $resultadoFinal = $linha2['preco'] + $resultadoFinal;
                 echo"
                 
@@ -119,7 +119,7 @@ if (isset($_SESSION['user'])) {
             <hr>
             <div class='info'><!--div que armazena o o preço e o frete-->
                 <div><label>Subtotal</label><!--titulo-->
-                    <label>R$ </label><!--preço final-->
+                    <label>R$ ".$resultadoFinal."</label><!--preço final-->
                 </div>
                 <div><label>Frete</label><!--titulo-->
                     <label class='grat'>Gratuito</span> <!--titulo-->
@@ -128,11 +128,11 @@ if (isset($_SESSION['user'])) {
             <hr>
             <div class='mini-total'><!--armazena o total da compra-->
                 <label> Total</label><!--titulo-->
-                <label>R$ </label><!--preço final-->
+                <label>R$ ".$resultadoFinal."</label><!--preço final-->
             </div>
             <div class='button'> <!--div que armazena os botões-->
                 <button type='button' class='enviar'> <!--botão de finalizar compra-->
-                    <a href='pagamento.php'>Finalizar compra</a>
+                    Finalizar compra
                 </button>
                 <button type='button' class='continuar'><!--botão de continuar comprando-->
                     <a href='../pages/cadastro_enderecos.php' style='color:blue; border-color:blue'>Cadastrar novo endereço </a>
