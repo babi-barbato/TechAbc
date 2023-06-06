@@ -4,113 +4,113 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
-    font-family: sans-serif;
-    ali
+    margin: 0;/*margem externa*/
+    padding: 0;/*margem interna*/
+    box-sizing: border-box;/*faz o navegador contar as margens do elemento como tamanho dele*/
+    outline: 0;/*borda de fora do elemento*/
+    font-family: sans-serif;/*tipo de letra*/
+    
 }
 #container {
-    margin: 60px ;
+    margin: 60px ;/*margem externa*/
 }
 .grid {
-    display: grid;
+    display: grid;/*separa o elemento por grades*/
 }
 .flex {
-    display: flex;
+    display: flex;/*deixa os elemtnos flexiveis*/
 }
 body {
-    overflow-x: hidden;
+    overflow-x: hidden;/*não deixa os elementos ultrapassar a borda*/
 }
 a {
-    text-decoration: none;
-    color: #000;
+    text-decoration: none;/*tira a decoração do texto*/
+    color: #000;/*cor da letra*/
 }
 img {
-    width: 100%;
+    width: 100%;/*largura maxima*/
 }
 .mg-60 {
-    margin: 0px 60px;
+    margin: 0px 60px;/*margem externa*/
 }
 
 .slide-show {
-    display: flex;
-    width: 100%;
+    display: flex;/*deia os elementos flexiveis*/
+    width: 100%;/*largura maxima*/
 }
 .slide-show .slide {
-    width: 100%;
-    max-height: 100%;
+    width: 100%;/*largura maxima*/
+    max-height: 100%;/*altura maxima*/
 }
 
 .container > h1 {
-    margin: 30px 0px;
+    margin: 30px 0px;/*margem externa*/
 }
 .container > h1 > i {
-    color: #fff;
-    background-color: var(--orange);
-    font-size: 22px;
-    padding: 7px;
-    border-radius: 50%;
-    vertical-align: middle;
+    color: #fff;/*cor da letra*/
+    background-color: var(--orange);/*cor de fundo*/
+    font-size: 22px;/*tamanho da letra*/
+    padding: 7px;/*margem interna*/
+    border-radius: 50%;/*arredondamento da borda*/
+    vertical-align: middle;/*alinhamento na vertical no centro*/
 }
 
 .container .announcement {
-    height: 100px;
-    margin: 20px auto;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    border: 1px solid #0000004e;
+    height: 100px;/*altura maxima*/
+    margin: 20px auto;/*margem externa*/
+    margin-bottom: 40px;/*margem externa na parte inferior*/
+    border-radius: 8px;/*arredondamento da borda*/
+    border: 1px solid #0000004e;/*espeçura e cor da borda*/
 }
 
 .products-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);/*vai repitir as colunas uma vez de forma fracionada*/
+    gap: 20px;/*espaçamento dos elementos*/
 }
 .products-container .item {
-    border: 1px solid #00000040;
-    border-radius: 10px;
-    padding: 10px;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
+    border: 1px solid #00000040;/*espeçura e cor da borda*/
+    border-radius: 10px;/*arredondamento da borda*/
+    padding: 10px;/*margem inetrna*/
+    transition: all .2s ease-in-out;/*transicção de movimento*/
+    cursor: pointer;/*tipo de mouse*/
 }
 .products-container .item:hover {
-    border: 1px solid var(--orange);
-    transform: scale(1.04);
-    box-shadow: 0px 0px 10px #00000020;
+    border: 1px solid var(--orange);/*espeçura e cor da borda*/
+    transform: scale(1.04);/**/
+    box-shadow: 0px 0px 10px #00000020;/*sombreamento da borda*/
 }
 .products-container .item .image {
-    width: 80%;
-    margin: 10px auto;
+    width: 80%;/*largura maxima*/
+    margin: 10px auto;/*margem externa*/
 }
 .products-container .item h2 {
-    font-size: 22px;
-    margin-bottom: 8px;
-    color: #000;
+    font-size: 22px;/*tamanho da letra*/
+    margin-bottom: 8px;/*margem externa na parte inferior*/
+    color: #000;/*cor da letra*/
 }
 .products-container .item .parcela {
-    color: #000;
+    color: #000;/*cor da letra*/
 }
 .products-container .item .content .last-price {
-    color: red;
+    color: red;/*cor da letra*/
 }
 .products-container .item .last-price span {
-    text-decoration: line-through;
+    text-decoration: line-through;/*decoração do texto*/
 }
 .products-container .item .current-price {
-    margin: 10px 0px;
-    color: rgb(0, 174, 0);
+    margin: 10px 0px;/*margem externa*/
+    color: rgb(0, 174, 0);/*cor da letra*/
 }
 .products-container .item .content > h2 {
-    font-size: 18px;
+    font-size: 18px;/*tamanho da fonte*/
 }
 
 @media only screen and (max-width: 1020px) {
     .products-container {
-        grid-template-columns: repeat(3, 2fr);
+        grid-template-columns: repeat(3, 2fr);/*vai repitir as colunas uma vez de forma fracionada*/
     }
     #container {
-        margin: 40px;
+        margin: 40px;/*margem externa*/
     }
 }
 

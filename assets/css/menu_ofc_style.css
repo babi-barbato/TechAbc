@@ -9,222 +9,222 @@
 
 /*CELULAR*/
 
-hr {
-    margin-top: 10px;
+hr {/*linha*/
+    margin-top: 10px; /*margem externa na parte superior*/
 }
-:root {
-    --orange: #D75A00;
-    --blue: #0066FF;
+:root {/*variaveis*/
+    --orange: #D75A00;/*cor laranja*/
+    --blue: #0066FF;/*cor azul*/
 }
 
 .fa-chevron-down {
     transition: all .3s ease; /* aplica uma transição de 3 milésimos de duração */
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 12px;/*tamanho da letra*/
+    font-weight: bold;/*negrito*/
     height: fit-content; /* Altura fica de acordo com o espaço que os elementos dentro dele ocupam */
 }
 ul {
     list-style: none; /* A ul perde as bolinhas (características de listas não ordenadas) */
 }
 .flex {
-    display: flex;
+    display: flex;/*deixa os elementos flexiveis*/
 }
 
 .mobile-nav {
-    padding: 0px 10px;
+    padding: 0px 10px;/*margem interna*/
 }
 .mobile-nav > .top {
     justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
-    align-items: center;
-    padding: 15px 0px;
+    align-items: center;/*alinha os itens na horizontal*/
+    padding: 15px 0px;/*margem interna*/
 }
 
 .mobile-nav > .top > .left {
-    font-size: 24px;
+    font-size: 24px;/*tamanho da letra*/
 }
 .mobile-nav > .top > .left > i {
-    cursor: pointer;
+    cursor: pointer;/*tipo do mouse*/
 }
 
 .mobile-nav .search-box {
-    width: 100%;
-    padding: 5px 0px;
+    width: 100%;/*largura maxima*/
+    padding: 5px 0px;/*margem interna*/
 }
 .mobile-nav .search-box form {
-    width: 100%;
+    width: 100%;/*largura maxima*/
 }
 .mobile-nav .search-box .text-box {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: -1px 1px 5px rgba(0,0,0,0.2);
+    width: 100%;/*largura maxima*/
+    overflow: hidden;/*esconde tudo que ultrapassa a borda*/
+    border-radius: 5px;/*arredondamento da borda*/
+    box-shadow: -1px 1px 5px rgba(0,0,0,0.2);/*sombreamento*/
 }
 
 .mobile-nav .search-box .text-box input {
-    flex: 90%;
-    border: none;
-    background-color: #f0f0f0;
-    padding: 13px;
+    flex: 90%;/*ocupação da tela*/
+    border: none;/*não existe borda*/
+    background-color: #f0f0f0;/*cor de fundo*/
+    padding: 13px;/*margem interna*/
 }
 .mobile-nav .search-box .text-box .button-container {
-    flex: 0 0 10%;
+    flex: 0 0 10%;/*ocupação*/
 }
 .mobile-nav .search-box .text-box > .button-container button {
-    background-color: rgb(211, 89, 2);
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
+    background-color: rgb(211, 89, 2);/*cor de fundo*/
+    color: #fff;/*cor da letra*/
+    font-weight: 600;/*nerito*/
+    border: none;/*não existe borda*/
+    height: 100%;/*altura maxima*/
+    width: 100%;/*largura maxima*/
+    padding: 10px;/*margem interna*/
+    cursor: pointer;/*tipo de mouse*/
 }
 .menu-container .btnPhp {
-    color: #000;
-    transition: all .3s ease;
+    color: #000;/*cor da letra*/
+    transition: all .3s ease;/*transição de movimento*/
 }
 .box-opacity {
     background-color: #000000c0; /* Fundo preto semi-transparente */
     height: 100vh; /* vh = viewport height. 100vh = 100% da altura da viewport (tela) */
-    width: 100%;
+    width: 100%;/*largura maxima*/
     position: fixed; /* Fica fixo na tela */
-    top: 0;
-    left: 0;
+    top: 0;/*começa do topo*/
+    left: 0;/*começa da esquerda*/
     z-index: 0; /* camada 0 de profundidade */
-    display: none;
-    transition: all .3s ease;
+    display: none;/*fica invisivel*/
+    transition: all .3s ease;/*transição de movimento*/
 }
 .menu-container {
-    margin-left: -100%;
-    position: fixed;
-    background-color: #fff;
-    height: 100vh;
-    width: 80%;
-    padding: 10px 20px;
+    margin-left: -100%;/*margem externa na parte esquerda*/
+    position: fixed;/*posição fixada, não pode ser mover*/
+    background-color: #fff;/*cor de fundo*/
+    height: 100vh;/*altura maxima*/
+    width: 80%;/*largura maxima*/
+    padding: 10px 20px;/*margem interna*/
     overflow-y: auto; /* Adiciona uma barra de rolagem caso o conteúdo ultrapasse os limites do elemento */
     z-index: 1; /* Camada 1 de profundidade */
-    top: 0;
-    transition: all .3s ease;
+    top: 0;/*começa de cima*/
+    transition: all .3s ease;/*transição de movimento*/
 }
 .menu-container .top {
     justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
-    align-items: center;
-    padding: 0px 10px;
+    align-items: center;/*alinhas os itens na horizontal*/
+    padding: 0px 10px;/*margem interna*/
 }
 .menu-container .top .close {
-    font-size: 22px;
-    cursor: pointer;
-    color: rgb(237, 79, 0);
+    font-size: 22px;/*tamanho da letra*/
+    cursor: pointer;/*tipo de mouse*/
+    color: rgb(237, 79, 0);/*cor da letra*/
 }
 .menu-container .menu-opt {
-    margin-top: 20px;
+    margin-top: 20px;/*margem externa da parte superior*/
 }
 .menu-container .menu-opt > ul > li > .item:hover,
 .menu-container .menu-opt > ul > li > .item:hover > .btnPhp {
-    color: rgb(237, 79, 0);
+    color: rgb(237, 79, 0);/*cor da letra*/
 }
 .menu-container .menu-opt > ul > li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 10px;/*margem externa na parte inferior*/
 }
 .menu-container .menu-opt > ul > li > .item {
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all .3s ease;
+    padding: 5px 10px;/*margem interna*/
+    cursor: pointer;/*tipo de mouse*/
+    transition: all .3s ease;/*transição de movimento*/
 }
 .menu-container .menu-opt > ul > li > ul li {
-    padding: 10px 20px;
+    padding: 10px 20px;/*margem interna*/
 }
 .menu-container .menu-opt > ul > li > ul li:not(:last-child) {
-    border-bottom: 1px solid rgb(217, 79, 0);
+    border-bottom: 1px solid rgb(217, 79, 0);/*borda na parte inferior*/
 }
 
 .menu-container .menu-opt .cascading-opt {
-    height: 0px;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
+    height: 0px;/*altura maxima*/
+    overflow: hidden;/*esconde tudo que ultrapassa a borda*/
+    transition: all .3s ease-in-out;/*transição de movimeto*/
 }
 
 .mobile-nav .top .right {
-    justify-content: right;
-    width: 35%;
+    justify-content: right;/*alinha na vertical a direita*/
+    width: 35%;/*largura maxima*/
 }
 .mobile-nav .top .right .cadastro {
-    color: var(--blue);
-    border: 2px solid var(--blue);
-    padding: 5px 10px;
-    font-weight: 600;
-    border-radius: 5px;
-    margin-right: 15px;
+    color: var(--blue);/*cor da letra*/
+    border: 2px solid var(--blue);/*borda na espeçura de 2px, solida e com a cor azul*/
+    padding: 5px 10px;/*margem interna*/
+    font-weight: 600;/*negrito*/
+    border-radius: 5px;/*arredondamento da borda*/
+    margin-right: 15px;/*margem externa da parte direita*/
 }
 .mobile-nav .top .right .login {
-    color: #fff;
-    padding: 5px 25px;
-    font-weight: 600;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--blue);
-    border-radius: 5px;
+    color: #fff;/*cor da letra*/
+    padding: 5px 25px;/*margem interna*/
+    font-weight: 600;/*negrito*/
+    justify-content: center;/*centraliza os itens na vertical*/
+    align-items: center;/*centraliza os itens na horizontal*/
+    background-color: var(--blue);/*cor de fundo*/
+    border-radius: 5px;/*arredondamento da borda*/
 }
 
 .menu-container .middle-box {
-    margin-left: 10px;
+    margin-left: 10px;/*maregm externa da parte esquerda*/
     justify-content: space-between; /* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;/*maregm externa da parte superior*/
+    margin-bottom: 20px;/*margem externa da parte inferior*/
 }
 .menu-container .middle-box .carrinho {
-    background-color: var(--blue);
-    color: #fff;
-    font-size: 1.2rem;
-    width: 45%;
-    border-radius: 5px;
-    overflow: hidden;
+    background-color: var(--blue);/**/
+    color: #fff;/*cor da letra*/
+    font-size: 1.2rem;/*tamanho da letra*/
+    width: 45%;/*largura maxima*/
+    border-radius: 5px;/*arredondamento da borda*/
+    overflow: hidden;/*esconde tudo que ultrapassar a borda*/
 }
 .menu-container .middle-box .carrinho .left {
-    justify-content: center;
-    align-items: center;
-    background-color: #0055d5;
-    width: 25%;
-    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px 0px;
+    justify-content: center;/*centraliz os lementos a vertical*/
+    align-items: center;/*centraliza os elementos na horizontal*/
+    background-color: #0055d5;/*cor de fundo*/
+    width: 25%;/*lagura maxima*/
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);/*sombreamento*/
+    padding: 10px 0px;/*margem interna*/
 }
 .menu-container .middle-box .carrinho .right {
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    padding: 10px 0px;
+    align-items: center;/*alinha os itens na horizontal*/
+    justify-content: center;/*alinha os itens na vertical*/
+    width: 75%;/*largura maxima*/
+    padding: 10px 0px;/*margem interna*/
 }
 .menu-container .middle-box .favoritos {
-    background-color: var(--orange);
-    color: #fff;
-    font-size: 1.2rem;
-    width: 45%;
-    border-radius: 5px;
-    overflow: hidden;
+    background-color: var(--orange);/*cor de fundo*/
+    color: #fff;/*cor da letra*/
+    font-size: 1.2rem;/*tamanho da letra*/
+    width: 45%;/*largura maxima*/
+    border-radius: 5px;/*arredondamento da borda*/
+    overflow: hidden;/*não deixa nada ultrapassar a borda*/
 }
 .menu-container .middle-box .favoritos .left {
-    width: 75%;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0px;
+    width: 75%;/*largura maxima*/
+    justify-content: center;/*alinha os elementos na vertical*/
+    align-items: center;/*alinha os elementos na horizontal*/
+    padding: 10px 0px;/*margem interna*/
 }
 .menu-container .middle-box .favoritos .right {
-    background-color: #b64c00;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.2);
+    background-color: #b64c00;/*cor de fundo*/
+    width: 25%;/*largura maxima*/
+    justify-content: center;/*alinha os elementos na vertical*/
+    align-items: center;/*alinha os elementos na horizontal*/
+    box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.2);/*sombreamento*/
 }
 
 div.special {
-    justify-content: space-between;
+    justify-content: space-between;/* Deixa um espaço apenas no meio dos elementos (extremidades ficam sem margem) */
 }
 
 
 /*DESKTOP*/
 .desktop-nav {/*quando for pra celular, esconde o do desktop*/
     display: none;/*deixa invisivel o elemento*/
-    background-color: #fff;
+    background-color: #fff;/*cor de fundo*/
 }
 /*IMAGEM DO DESK*/
 .desktop-nav .left {
@@ -256,13 +256,11 @@ div.special {
     position: relative;/*a posição é relativa*/
 }
 .desktop-nav .center .menu-opt > ul > li {
-    position: relative;
-    /* padding: 0px 30px; */
+    position: relative;/*posição relativa, deixa os objetos se moverem*/
 }
 /*TITULO DAS OPÇÕES DA LISTA DO MENU*/
 .desktop-nav .center ul li .btnPhp {
-    transition: all .3s ease;/*cor da fonte*/
-    /* color: #fff; */
+    transition: all .3s ease;/*transição de movimento*/
 }
 /*EFEITO LARANJA NA LETRA*/
 .desktop-nav .center ul li:hover .btnPhp {/*muda a cor do texto quando passa o mouse em cima*/
@@ -283,75 +281,75 @@ div.special {
 /*ANIMAÇÃO BORDINHA LARANJA*/
 
 .desktop-nav .center > .menu-opt > ul > li:hover  {
-    color: var(--orange);
+    color: var(--orange);/*cor da letra*/
 }
 .desktop-nav .center > .menu-opt .cascading-opt > li:hover {
-    color: var(--orange);
+    color: var(--orange);/*cor da letra*/
 }
 .desktop-nav .center .menu-opt > ul > li:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    right: 0;
-    height: 3px;
-    border-radius: 20px;
-    background-color: var(--orange);
-    animation: borderBottom forwards .3s;
-    width: 100%;
+    content: "";/*elemento vazio*/
+    position: absolute;/*posição absoluta, não pode se mover*/
+    bottom: -8px;/*botão*/
+    right: 0;/*começa na parte direita*/
+    height: 3px;/*altura maxima*/
+    border-radius: 20px;/*arredondamento da borda*/
+    background-color: var(--orange);/*cor de fundo*/
+    animation: borderBottom forwards .3s;/*animação de movimento*/
+    width: 100%;/*largura maxima*/
 }
 
 .desktop-nav .center .cascading-opt {
-    z-index: 1;
-    height: 0px;
-    overflow-y: hidden;
-    position: absolute;
-    left: 0;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100px;
-    padding: 0px 5px;
-    transition: all .05s ease;
+    z-index: 1;/*sobrepor elementos*/
+    height: 0px;/*altura maxima*/
+    overflow-y: hidden;/*esconde tudo que ultrapassar a borda*/
+    position: absolute;/*posição absoluta, não pode mover o elemento*/
+    left: 0;/*começa na esquerda*/
+    justify-content: space-evenly;/**/
+    flex-direction: column;/*deixa os elementos el coluna*/
+    background-color: #fff;/*cor de fundo*/
+    width: 100px;/*largura maxima*/
+    padding: 0px 5px;/*margem interna*/
+    transition: all .05s ease;/*transição de movimento*/
 }
 .desktop-nav .center .menu-opt .cascading-opt > li {
-    padding: 5px 0px;
+    padding: 5px 0px;/*margem interna*/
 }
 .desktop-nav .center .menu-opt .cascading-opt > li:not(:last-child) {
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--orange);/*borda na parte inferior*/
 }
 .desktop-nav .center .menu-opt .cascading-opt > li > .btnPhp {
-    font-weight: normal;
+    font-weight: normal;/*sem negrito*/
 }
 
 .desktop-nav .center .menu-opt > ul > li:nth-child(2):hover > ul {
-    height: 200px;
+    height: 200px;/*altura maxima*/
 }
 
 .desktop-nav .center .pecas-opt {
-    z-index: 1;
-    height: 0px;
-    overflow-y: hidden;
-    position: absolute;
-    left: 0;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: #fff;
-    width: 150px;
-    padding: 0px 5px;
-    transition: all .05s ease;
+    z-index: 1;/*subrepor os elementos*/
+    height: 0px;/*altura maxima*/
+    overflow-y: hidden;/*esconde tudo que ultrapassar a borda*/
+    position: absolute;/*posição absoluta, não pode se mexer*/
+    left: 0;/*comeca a esquerda*/
+    justify-content: space-evenly;/**/
+    flex-direction: column;/*deixa os elementos em coluna*/
+    background-color: #fff;/*cor de fundo*/
+    width: 150px;/*largura maxima*/
+    padding: 0px 5px;/*margem interna*/
+    transition: all .05s ease;/*transião de movimento*/
 }
 .desktop-nav .center .menu-opt .pecas-opt > li {
-    padding: 5px 0px;
+    padding: 5px 0px;/*margem interna*/
 }
 .desktop-nav .center .menu-opt .pecas-opt > li:not(:last-child) {
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--orange);/*borda na parte inferior*/
 }
 .desktop-nav .center .menu-opt .pecas-opt > li > .btnPhp {
-    font-weight: normal;
+    font-weight: normal;/*sem negrito*/
 }
 
 .desktop-nav .center .menu-opt > ul > li:nth-child(1):hover > ul {
-    height: 350px;
+    height: 350px;/*altura maxima*/
 }
 
 @keyframes borderBottom {
@@ -449,13 +447,13 @@ div.special {
 }
 
 .btnPhp{
-    font-family: sans-serif;
-    font-weight: 100;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: #00000000;
-    font-size: 16px;
+    font-family: sans-serif;/*tipo de letra*/
+    font-weight: 100;/*negrito*/
+    margin: 0;/*margem externa*/
+    padding: 0;/*margem interna*/
+    border: none;/*não existe borda*/
+    background-color: #00000000;/*cor de fundo*/
+    font-size: 16px;/*tamanho da letra*/
 }
 
 @media only screen and (min-width: 900px) {/**/

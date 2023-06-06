@@ -23,20 +23,20 @@
     border: 3px solid #0066FF;/*borda*/
 }
 textarea {
-    border: none;
-    resize: none;
-    background-color: white;
-    color: black;
-    font-size: 17px;
-    width: 100%;
-    height: 80%;
+    border: none;/*não tem borda*/
+    resize: none;/*invalida o grid area*/
+    background-color: white;/*cor de fundo*/
+    color: black;/*cor da letra*/
+    font-size: 17px;/*tamanho da letra*/
+    width: 100%;/*largura maxima*/
+    height: 80%;/*altura maxima*/
   }
   .divTeste div{
-    width: 100%;
-    height: 300px;
+    width: 100%;/*largura maxima*/
+    height: 300px;/*altura maxima*/
   }
   .divTeste{
-    width: 100%;
+    width: 100%;/*altura maxima*/
   }
 /*CONFIGURAÇÕES DOS TEXTOS*/
 p{

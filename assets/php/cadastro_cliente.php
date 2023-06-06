@@ -5,20 +5,8 @@ if (!isset($_SESSION)) { //inicia a sessão
     session_start();
 }
 
-<<<<<<< HEAD
-if (isset($_POST['cadastrar'])){
-    
-    include('conexao.php'); 
-    $erro = 0;
-    $nome=$_POST['nome'];
-    $cpf=$_POST['cpf'];
-    $telefone=$_POST['telefone'];
-    $email=$_POST['email'];
-    $senha=$_POST['senha'];
-    $conf=$_POST['conf'];
-=======
+
 if (isset($_POST['cadastrar'])) {
->>>>>>> refs/remotes/origin/main
 
     include('conexao.php');
     $erro = 0;
@@ -65,19 +53,7 @@ if (isset($_POST['cadastrar'])) {
         $erro++;
     }
 
-<<<<<<< HEAD
-    $sql_email = "SELECT * FROM clientes WHERE email = '$email'";
-    $result1 = mysqli_query($conexao, $sql_email);
 
-    if (mysqli_num_rows($result1) != 0) {//Se o email já tiver sido cadastrado
-        echo "<script>alert ('email ja cadastrado')</script>";
-        echo "<script>  window.location.href=' ../../pages/cadastro_cliente.html '</script>";
-    } else {
-        $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'";
-        $result2 = mysqli_query($conexao, $sql_cpf);
-
-        if (mysqli_num_rows($result2) != 0) {//se o cpf já tiver sido cadastrado
-=======
     $sql_email= "SELECT * FROM clientes WHERE email = '$email'"; //ferifica se o email ja é existente
     $result1 = mysqli_query($conexao,$sql_email);//testa a conexão
         
@@ -88,7 +64,7 @@ if (isset($_POST['cadastrar'])) {
         $sql_cpf = "SELECT * FROM clientes WHERE cpf = '$cpf'"; //verifica se o cpf ja existe
         $result2 = mysqli_query($conexao,$sql_cpf);
         if(mysqli_num_rows($result2) != 0){
->>>>>>> 29891156a6023ed678a53de02341d1df04242c48
+
             echo "<script> alert ('cpf ja cadastrado')</script>";
             echo "<script> window.location='../../pages/cadastro_cliente.html'</script>";
         } else {
