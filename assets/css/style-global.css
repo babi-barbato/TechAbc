@@ -116,11 +116,11 @@ img {
 
 @media only screen and (max-width: 600px) {
     .products-container {
-        grid-template-columns: repeat(2, 2fr);
-        gap: 20px;
+        grid-template-columns: repeat(2, 2fr);/*vai repitir as colunas uma vez de forma fracionada*/
+        gap: 20px;/*espaçamento entre os elementos*/
     }
 
     #container {
-        margin: 30px;
+        margin: 30px;/*margem externa*/
     }
 }

@@ -2,21 +2,21 @@ const footer = document.createElement('template');
 
 footer.innerHTML = `
 <footer>
-    <div class="left">
-        <div class="expo-logo">
-            <h1>LOGO</h1>
+    <div class="left"> <!--div que pega a parte esquerda-->
+        <div class="expo-logo"> <!--amazena  aimg da expo-->
+            <h1>LOGO</h1><!--img-->
         </div>
-        <span class="copyright">© 2023 TechABC, Inc. Todos os direitos reservados.</span>
+        <span class="copyright">© 2023 TechABC, Inc. Todos os direitos reservados.</span><!--texto abaixo da img-->
     </div>
 
-    <span class="line"></span>
+    <span class="line"></span><!--linha vertical-->
 
-    <div class="cent-left">
-        <h3>Navegue</h3>
-        <ul>
-            <li><a href="">PCs</a></li>
-            <li><a href="">Acessórios</a></li>
-            <li><a href="">Peças</a></li>
+    <div class="cent-left"><!--caixinha que fica do lado da logo-->
+        <h3>Navegue</h3><!--texto-->
+        <ul><!--menu-->
+            <li><a href="">PCs</a></li><!---->
+            <li><a href="">Acessórios</a></li><!---->
+            <li><a href="">Peças</a></li><!---->
         </ul>
     </div>
 
