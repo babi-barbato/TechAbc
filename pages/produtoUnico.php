@@ -10,6 +10,9 @@
         echo "<style>#sair{display:flex;}</style>";
         echo "<style>#saair{display:flex}</style>";
     }
+    if(!isset($_SESSION)){ //inicia a sessão
+        session_start();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br"><!-- linguagem padrão de pt-br -->

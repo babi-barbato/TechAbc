@@ -33,13 +33,17 @@ if (isset($_SESSION['user'])) {
 <body>
     <script src="../assets/js/menu-oficial.js"></script><!--  menu que esta em um script -->
 
-    <div class='container'><!-- div que contem tudo -->
+    <!-- div que contem tudo -->
     <?php
     $vetorId = [0,];
     $vetorTabela = [0,];
     $sqlPesquisa = "SELECT * FROM favoritos WHERE fkCliente = ".$_SESSION['idPe']."";
     $resultado = mysqli_query($conexao,$sqlPesquisa);
     $cont = 1;
+    $linhas = mysqli_num_rows($resultado);
+    if($linhas < 1){
+        echo "<div style='height:60vh; width:100%; text-align:center'><h1>Você não tem nenhum produto favoritado</h1></div>";
+    }
     while($linha = mysqli_fetch_array($resultado)){
         $sql = "SELECT * FROM ".$linha['tabela']." WHERE id = ".$linha['fkProduto']."";
         $result = mysqli_query($conexao,$sql);
@@ -47,7 +51,7 @@ if (isset($_SESSION['user'])) {
         while($linha2 = mysqli_fetch_array($result)){
             array_push($vetorId,$linha2['id']);
             array_push($vetorTabela,$linha['tabela']);
-    echo"
+    echo"<div class='container'>
         <form action='' method='post' class='formProd'> <!--form que puzara o php-->
             <div class='produto'>
                 <button type='button' class='btnCoracao'>

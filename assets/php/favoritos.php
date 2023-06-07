@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){ //inicia a sessão
+    session_start();
+}
 
 include('conexao.php');
 // include('bloqueio.php');

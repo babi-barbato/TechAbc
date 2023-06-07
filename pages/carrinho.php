@@ -28,13 +28,14 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
 
     <link rel="stylesheet" href="../assets/css/carrinho-style.css"><!--css da página-->
+    <script src="carrinhos.js"></script>
     <title>Carrinho</title><!--titulo da página-->
 </head>
 
 <body>
     <script src="../assets/js/menu-oficial.js"></script><!-- menu chamado pelo js-->
     <div class="container"> <!--div que pega tudo-->
-        <div class="produtos" style="height:50vh"> <!-- que armazena a caixinha da esquerda -->
+        <div class="produtos" style="height:50vh;overflow-y:auto;"> <!-- que armazena a caixinha da esquerda -->
             <table> <!--inicio da tabela-->
                 <div class="content"> <!--ega o letreinoem cima da imagem-->
                     <thead> <!--adicina uma linha-->
@@ -54,6 +55,7 @@ if (isset($_SESSION['user'])) {
             $sqlPesquisa = "SELECT * FROM carrinho WHERE fkCliente = ".$_SESSION['idPe']."";
             $resultado = mysqli_query($conexao,$sqlPesquisa);
             $cont = 1;
+            $parametro = 0;
             while($linha = mysqli_fetch_array($resultado)){
                 $sql = "SELECT * FROM ".$linha['tabela']." WHERE id = ".$linha['fkProduto']."";
                 $result = mysqli_query($conexao,$sql);
@@ -63,7 +65,7 @@ if (isset($_SESSION['user'])) {
                     // $resultadoFinal = $linha2['preco'] + $resultadoFinal;
                 echo"
                 
-                <div class='product'> <!--div que armazena os produtos do carrinho -->
+                <div class='product' '> <!--div que armazena os produtos do carrinho -->
                     <div class='titulo'> <!--armazena a imagem e o nome do produto-->
                         <label class='name'>".$linha2['nome']."</label><!--nome do produto-->
                         <img style='width:100px' src='../img/".$linha2['tipo']."/".$linha2['foto']."' alt=' class='foto' /><!--imagem do produto-->
@@ -74,31 +76,32 @@ if (isset($_SESSION['user'])) {
                     </div>
                     <div>
                         <div class='qtd'><!--div que armazena o select-->
-                            <select id='slc' class='select'> <!--criação do select-->
+                            <select id='slc' class='select' name='select' onchange='mostraValor(this,".$parametro.")'> <!--criação do select-->
                                 <option value='1'>1</option><!--segunda opção-->
                                 <option value='2'>2</option><!--terceira opção-->
                                 <option value='3'>3</option><!--quarta opção-->
                                 <option value='4'>4</option><!--quinta opção-->
-                                <option value='1'>5</option><!--sexta opção-->
-                                <option value='2'>6</option><!--setima opção-->
-                                <option value='3'>7</option><!--oitava opção-->
-                                <option value='4'>8</option><!--nona opção-->
-                                <option value='3'>9</option><!--decima opção-->
-                                <option value='4'>10</option><!--decima primeira opção-->
+                                <option value='5'>5</option><!--sexta opção-->
+                                <option value='6'>6</option><!--setima opção-->
+                                <option value='7'>7</option><!--oitava opção-->
+                                <option value='8'>8</option><!--nona opção-->
+                                <option value='9'>9</option><!--decima opção-->
+                                <option value='10'>10</option><!--decima primeira opção-->
                             </select>
                         </div>
                     </div>";
+                    echo "<script>
+
+                    </script>";
                     echo"
-                    <div class='space'>
-                        <label id='totales' class='tot'></label> <!--div que armazena o preço total de um produto especifico-->
-                    </div>
                     <form action='' method='post' name='form'>
                     <button name=".$cont." class='excluir'> <!--botão que excluir prosutos-->
-                        <i class='fa fa-trash-can'></i><!--emoji de lixeira-->
+                    <i class='fa fa-trash-can'></i><!--emoji de lixeira-->
                     </button>
                     </form>
                 </div>";
                     $cont++; 
+                    $parametro++;
                 }
             } 
             for($i = 0; $i < 200 ; $i++){
@@ -111,15 +114,12 @@ if (isset($_SESSION['user'])) {
             }
             ?>
         </div>
-        
-        <?php
-        echo"
         <div class='total'><!--div que armazena a caixinha da parte direita-->
             <label class='resumo'>Resumo da compra</label><!--titulo da caixinha-->
             <hr>
             <div class='info'><!--div que armazena o o preço e o frete-->
                 <div><label>Subtotal</label><!--titulo-->
-                    <label>R$ ".$resultadoFinal."</label><!--preço final-->
+                    <label id='subtotall'>R$ </label><!--preço final-->
                 </div>
                 <div><label>Frete</label><!--titulo-->
                     <label class='grat'>Gratuito</span> <!--titulo-->
@@ -128,22 +128,23 @@ if (isset($_SESSION['user'])) {
             <hr>
             <div class='mini-total'><!--armazena o total da compra-->
                 <label> Total</label><!--titulo-->
-                <label>R$ ".$resultadoFinal."</label><!--preço final-->
+                <label>R$ </label><!--preço final-->
             </div>
             <div class='button'> <!--div que armazena os botões-->
-                <button type='button' class='enviar'> <!--botão de finalizar compra-->
+                <a href='../pages/pagamento.php' class='enviar'> <!--botão de finalizar compra-->
                     Finalizar compra
-                </button>
+                </a>
                 <button type='button' class='continuar'><!--botão de continuar comprando-->
                     <a href='../pages/cadastro_enderecos.php' style='color:blue; border-color:blue'>Cadastrar novo endereço </a>
                 </button>
             </div>
-        </div>";
-
-        
-        ?>
+        </div>
     </div>
+            <div id="eitaa">
+w
+            </div>
 </body>
 
 </html>
+<script src="carrinho.php"></script>
 <script src="../assets/js/footer.js"></script><!--link do js do footer-->
