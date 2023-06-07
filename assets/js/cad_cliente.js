@@ -2,7 +2,7 @@
 /*olinho 1*/
   var i = 0;/*variavel que verifica se o botão esta sendo clicado*/
   function ioi(){/*função do olinho 1*/
-    if(i == 0){/*se a varial for um = 0*/
+    if(i == 0){/*se a variável for = 0*/
         document.getElementById("senha").type = "text";/* muda o tipo do campo da senha de password para text*/
         i =1;/*e o valor da variavel vira 1*/
     }
@@ -14,7 +14,7 @@
 /*olinho 2*/
   var a = 0;/*variavel que verifica se o botão esta sendo clicado*/
 function oiio2() {/*função do olinho 2*/
-  if(a == 0){/*se a varial for um = 0*/
+  if(a == 0){/*se a varial for = 0*/
     document.getElementById("conf").type = 'text';/* muda o tipo do campo da senha de password para text*/
     a = 1;/*e o valor da variavel vira 1*/
   }else{/*se a pessoa clicar de novo*/

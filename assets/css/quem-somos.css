@@ -1,0 +1,59 @@
+img {
+    width: 100%;
+}
+
+section.quem-somos {
+    margin: 0 60px;
+}
+
+section.quem-somos .container .title {
+    text-align: center;
+    padding: 15px 0px;
+    margin-bottom: 30px;
+}
+
+section.quem-somos .container .items {
+    padding: 0px 30px;
+    justify-content: space-between;
+}
+section.quem-somos .container .items .item {
+    width: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.529);
+}
+section.quem-somos .container .items .item .top {
+    margin-bottom: 10px;
+}
+section.quem-somos .container .items .item .top .nome {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+section.quem-somos .container .items .item .bottom {
+    margin-bottom: 20px;
+}
+section.quem-somos .container .items .item .bottom .text {
+    /* background-color: lightgreen; */
+    padding: 0px 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+section.quem-somos .container .items .item .bottom .contact {
+    /* background-color: lightcoral; */
+    width: fit-content;
+    margin: 20px auto;
+}
+section.quem-somos .container .items .item .bottom .contact ul li {
+    display: inline-block;    
+}
+
+section.quem-somos .container .items .item .bottom .contact ul li:not(:last-child) {
+    margin-right: 25px;
+}
+section.quem-somos .container .items .item .bottom .contact ul li a {
+    color: #004AAD;
+    font-size: 1.2rem;
+}
