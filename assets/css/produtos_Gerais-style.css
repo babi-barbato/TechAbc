@@ -31,12 +31,12 @@
 /*IMAGENS*/
 .divImg{/*img dos produtos*/
     width: 200px;/*largura de 200px*/
-    height: 200px;
-    display: flex;
-    align-items: center;
+    height: 200px;/*altura maxima*/
+    display: flex;/*deixa os elementos flexiveis*/
+    align-items: center;/*alinha os itens na horizontal*/
 }
 img{
-    width: 100%;
+    width: 100%;/*largura maxima*/
 }
 .divTitulo img{/*img do titulo grande*/
     width: 60px;/*largura de 60px*/

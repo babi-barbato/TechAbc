@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');/*Importando font que usaremos no site*/
+* {
+    margin: 0;/*margem externa*/
+    padding: 0;/*margem interna*/
+    box-sizing: border-box;/**/
+    font-family: sans-serif;/*tipo de letra*/
+}
+img {
+    width: 100%;/*largura maxima*/
+}
+.grid {
+    display: grid;/**/
+}
+.flex {
+    display: flex;/*deixa os elementos flexiveis*/
+}
+
+main {
+    margin: 0 60px;/*margem externa*/
+    padding: 20px 0px;/*margem interna*/
+}
+main > section .title {
+    text-align: center;/*alinha o texto no centro*/
+    padding: 8px 0px 13px 0px;/*margem interna*/
+    font-size: 1.3rem;/*tamanho da letra*/
+}
+
+.build-box {
+    padding: 10px;/*margem interna*/
+}
+.build-box > .box1 {
+    width: 70%;/*largura maxima*/
+    grid-template-columns: repeat(2, 1fr);/*numero de colunas que sera dividido os elementos*/
+    gap: 20px;/*espaçamento entre os elementos*/
+}
+.build-box > .box1 > .item {
+    padding: 5px 20px;/*margem interna*/
+    position: relative;/*pocição variavel*/
+}
+
+.build-box > .box1 > .item > .select-piece > button {
+    border: 2px solid #D75A00;/*tamanho e cor da borda*/
+    border-radius: 6px;/*arredondamento da borda*/
+    color: #D75A00;/*cor da letra*/
+    background-color: transparent;/*cor de fundo*/
+    padding: 8px 0px;/*margem interna*/
+    width: 100%;/*largura maxima*/
+    font-size: 1em;/*tamanho da letra*/
+    font-weight: 600;/*negrito*/
+    cursor: pointer;/*tipo de mouse*/
+    margin-top: 10px;/*margem externa na parte superior*/
+    position: relative;/*pposição relativa*/
+    transition: all .3s ease;/*transição de movimento*/
+}
+.build-box > .box1 > .item > .select-piece > button:hover {
+    background-color: #D75A00;/*cor de fundo*/
+    color: #fff;/*cor da letra*/
+}
+.build-box > .box1 > .item > .select-piece > button > i {
+    margin-left: 30px;/*margem externa na parte esquerda*/
+}
+.build-box > .box1 > .item > .edit-piece {
+    display: none;/*fica invisivel*/
+    margin-top: 10px;/*margem externa na parte superior*/
+    padding: 10px;/*margem interna*/
+    justify-content: space-between;/*da espaçamento entre os elementos*/
+    align-items: center;/*alinha os itens na horizontal*/
+    font-size: 1.1em;/*tamanho da letra*/
+    border-bottom: 2px solid #D75A00;/*borda na parte inferior*/
+}
+.build-box > .box1 > .item > .edit-piece > label {
+    background-color: transparent;/*cor de fundo*/
+    border: none;/*não existe borda*/
+    color: #D75A00;/*cor da letra*/
+    font-size: 1.1em;/*tamanho da letra*/
+    cursor: pointer;/*tipo de mouse*/
+    margin-left: 15px;/*margem externa na parte esquerda*/
+}
+
+.build-box > .box2 {
+    width: 30%;/*largura maxima*/
+    padding: 10px;/*margem interna*/
+}
+.build-box > .box2 > .top {
+    justify-content: space-between;/**/
+}
+.build-box > .box2 > .top > h2 {
+    font-size: 1.3rem;/*tamanho da letra*/
+}
+.build-box > .box2 > .top > span {
+    font-size: 1.2rem;/*tamanho da letra*/
+}
+.build-box > .box2 > .middle > .config-info {
+    background-color: #ededed;/*cor de fundo*/
+    height: 320px;/*altura maxima*/
+    margin: 15px 0px 20px 0px;/*margem externa*/
+    padding: 10px;/*margem interna*/
+    overflow: scroll;/**/
+}
+.build-box > .box2 > .middle > .config-info > .config-item {
+    font-size: 1em;/*tamanho da letra*/
+    justify-content: space-between;/*espaçamento entre a lateral dos elementos*/
+    margin-bottom: 20px;/*margem externa na parte inferior*/
+}
+.build-box > .box2 > .bottom {
+    height: 10%;/*altura maxima*/
+    place-self: end;/**/
+    display: flex;/*deixa os elementos flexiveis*/
+    justify-content: center;/*alinha na vertical*/
+    align-items: center;/*alinha na horizontal*/
+}
+.build-box > .box2 > .bottom > button {
+    background-color: #0066FF;/*cor de fundo*/
+    border: 2px solid #0066FF;/*tamanho e cor da borda*/
+    padding: 8px;/*margem interna*/
+    border-radius: 5px;/*arredondamento da borda*/
+    font-size: 1rem;/*tamanho da letra*/
+    font-weight: 600;/*negrito*/
+    color: #fff;/*cor da letra*/
+    width: 100%;/*largura maxima*/
+    transition: all .3s ease;/*transição de movimento*/
+    cursor: pointer;/*tipo de mouse*/
+}
+.build-box > .box2 > .bottom > button:hover {
+    color: #0066FF;/*cor da letra*/
+    background-color: transparent;/*cor de fundo*/
+}
+
+.box-opacity {
+    position: fixed;/*posição fixada*/
+    top: 0;/*começa no topo*/
+    left: 0;/*começa na esquerda*/
+    height: 100vh;/*altura maxima*/
+    width: 100vw;/*largura maxima*/
+    background-color: #000000a6;/*cor de fundo*/
+    display: flex;/*deixa os elementos flexiveis*/
+    align-items: center;/*alinha na horizontal*/
+    justify-content: center;/*alinha na vertical*/
+    display: none;/*deixa invisivel*/
+}
+.box-opacity > .float-box {
+    background-color: #fff;/*cor de fundo*/
+    width: 85%;/*largura maxima*/
+    height: 85%;/*altura maxima*/
+    border-radius: 6px;/*arredondamento da borda*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.41);/*sombreamento*/
+    position: relative;/*posição relativa*/
+    overflow: hidden;/*esconde tudo que ultapassa a borda*/
+}
+.box-opacity > .float-box > .top {
+    justify-content: center;/*alinha os elementos na vertical*/
+    align-items: center;/*alinha os elementos na horizontal*/
+    font-size: 1.2em;/*tamanho da letra*/
+    height: 10%;/*altura maxima*/
+}
+.box-opacity > .float-box > .top > .fa-close {
+    position: absolute;/*posição absoluta*/
+    font-size: 1.5rem;/*tamanho da letra*/
+    top: 15px;/*distancia até o topo*/
+    right: 15px;/*distancia até que comece da direita*/
+    cursor: pointer;/*tipo de mouse*/
+    color: #D75A00;/*cor da letra*/
+}
+.box-opacity > .float-box > .center {
+    height: 75%;/*altura maxima*/
+}
+.box-opacity > .float-box > .center > .peças {
+    height: 100%;/*altura maxima*/
+    grid-template-columns: repeat(4, 1fr);/*define a quantidades de colunas do elemento*/
+    gap: 20px;/*espaçamento entre os elementos*/
+    padding: 6px 20px;/*margem interna*/
+    margin: 0 10px;/*margem externa*/
+}
+.box-opacity > .float-box > .center > .peças::-webkit-scrollbar {
+    background-color: transparent;/*cor de fundo*/
+    width: 6px;/*largura maxima*/
+    padding: 0px 5px;/*margem interna*/
+}
+.box-opacity > .float-box > .center > .peças::-webkit-scrollbar-thumb {
+    background-color: #0066FF;/*cor de fundo*/
+    border-radius: 20px;/*arredondamento da borda*/
+}
+.box-opacity > .float-box > .center > .peças > .item {
+    height: 340px;/*altura maxima*/
+    display: flex;/*deixa os elementos flexiveis*/
+    flex-direction: column;/*deixa os elementos em coluna*/
+    align-items: center;/*alinha os elementos na horizontal*/
+    padding: 10px;/*margem interna*/
+    cursor: pointer;/*tipo de mouse*/
+    position: relative;/*posição relativa*/
+    border-radius: 8px;/*arredondamento da borda*/
+}
+.box-opacity > .float-box > .center > .peças > .item:hover {
+    outline: 2px solid #D75A00;/*borda do lado de fora do elemento*/
+}
+.box-opacity > .float-box > .center > .peças > .item > .price {
+    position: absolute;/*posição absoluta*/
+    bottom: 0px;/*espaçamento da parte debaixo*/
+    right: 0px;/*espaçamento do lado direito*/
+    font-size: 1.1rem;/*tamanho da letra*/
+    color: rgb(0, 120, 0);/*cor da letra*/
+    padding: 10px;/*margem interna*/
+}
+
+.box-opacity > .float-box > .center > .peças > .item > .image {
+    width: 90%;/*largura maxima*/
+    aspect-ratio: 16/16;/*deixa a imagem quadrada*/
+    margin-bottom: 15px;/*margem externa na parte inferior*/
+}
+
+.box-opacity > .float-box > .bottom {
+    height: 15%;/*altura maxima*/
+    padding: 26px;/*margem interna*/
+    justify-content: flex-end;/*final do elemento sera flexivel*/
+    align-items: center;/*alinha os elementos na horizontal*/
+    gap: 15px;/*espaçamento entre os elementos*/
+}
+.box-opacity > .float-box > .bottom > button {
+    height: 40px;/*altura maxima*/
+    padding: 0px 30px;/*margem interna*/
+    border: none;/*não tem borda*/
+    color: #D75A00;/*cor da letra*/
+    border: 2px solid #D75A00;/*espeçura da borda e a cor*/
+    border-radius: 8px;/*arredondamento da borda*/
+    font-weight: bold;/*negrito*/
+    font-size: 1.1em;/*tamanho da letra*/
+    cursor: pointer;/*tipo de mouse*/
+}
+.box-opacity > .float-box > .bottom > .cancel {
+    background-color: transparent;/*cor de fundo*/
+}
+.box-opacity > .float-box > .bottom > .confirmar {
+    background-color: #0066FF;/*cor de fundo*/
+    border: 2px solid #0066FF;/*espeçura e cor da borda*/
+    color: #fff;/*cor da letra*/
+}
+.box-opacity > .float-box > .bottom > .confirmar:disabled {
+    background-color: #0043a7;/*cor de fundo*/
+    border: 2px solid #0043a7;/*espeçura e cor da borda*/
+    cursor: not-allowed;/*tipo de mouse, bloqueio*/
+}
+
+.outline-3 {
+    outline: 2px solid #D75A00;/*borda de fora, espeçura e cor*/
+}
+input[type='radio'] {
+    display: none;/*deixa invisivel*/
+}
+
+
+@media only screen and (max-width: 1120px) {
+    main {
+        margin: 0px 20px;/*margem externa*/
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .build-box {
+        flex-direction: column;/*deixa os elementos em coluna*/
+        
+    }
+    .build-box .box1,
+    .build-box .box2 {
+        width: 100%;/*largura maxima*/
+    }
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(3, 1fr);/*especifica quantas colunas o elemento sera dividido*/
+    }
+}
+@media only screen and (max-width: 770px) {
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(2, 1fr);/*especifica quantas colunas o elemento sera dividido*/
+    }
+}
+@media only screen and (max-width: 630px) {
+    main {
+        margin: 0px 8px;/*margem exterior*/
+    }
+    .build-box .box1 {
+        display: flex;/*dixa os elementos flexiveis*/
+        flex-direction: column;/*deixa os elementos em coluna*/
+    }
+    .box-opacity .float-box .center .peças {
+        grid-template-columns: repeat(1, 1fr);/*especifica quantas colunas este elemento sera dividido*/
+    }
+    .box-opacity > .float-box > .center > .peças > .item > .image {
+        width: 80%;/*largura maxima*/
+    }
+    .box-opacity > .float-box > .top {
+        font-size: 1rem;/*tamanho da letra*/
+    }
+}

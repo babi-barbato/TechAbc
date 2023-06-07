@@ -11,9 +11,9 @@
     height: 35px;/*altura do btn*/
     width: 90%;/*largura do btn*/
     font-size: 16px;/*tamanho do btn*/
-    padding: 5px;
+    padding: 5px;/*margem interna*/
     border-radius: 5px;/*curvatura do btn*/
-    font-family: "Noto Sans";
+    font-family: "Noto Sans";/*tipo de fonte*/
     border: 3px solid #0066FF;/*borda*/
 }
 .btnBranco{/*botão com fundo branco*/
@@ -21,28 +21,28 @@
     height: 35px;/*btn altura*/
     width: 90%;/*btn largura*/
     font-size: 16px;/*tamanho da fonte*/
-    font-family: "Noto Sans";
+    font-family: "Noto Sans";/*tipo de fonte*/
     background-color: white;/*cor de fundo*/
     color: #0066FF;/*cor da fonte*/
     border: 3px solid #0066FF;/*borda*/
-    padding: 5px;
-    font-weight: 600;
+    padding: 5px;/*margem interna*/
+    font-weight: 600;/*negrito*/
 }
 textarea {
-    border: none;
-    resize: none;
-    background-color: white;
-    color: black;
-    font-size: 17px;
-    width: 100%;
-    height: 100%;
+    border: none;/*não tem borda*/
+    resize: none;/*deixa o elemento do mesmo tamanho, independente da tela*/
+    background-color: white;/*cor de fundo*/
+    color: black;/*cor da letra*/
+    font-size: 17px;/*tamaho da letra*/
+    width: 100%;/*largura maxima*/
+    height: 100%;/*altura maxima*/
   }
   .divTeste div{
-    width: 100%;
-    height: 300px;
+    width: 100%;/*largura maxima*/
+    height: 300px;/*altura maxima*/
   }
   .divTeste{
-    width: 100%;
+    width: 100%;/*largura maxima*/
   }
 /*CONFIGURAÇÕES DOS TEXTOS*/
 p{
@@ -109,9 +109,9 @@ p{
     border:solid 3px #D75A00;/*borda: cor, tamanho, tipo*/
     padding: 20px;/*margem interna de 20px*/
     position: relative;/*posição relativa*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;/*deixa os elementos flexiveis*/
+    justify-content: center;/*alinha na vertical*/
+    align-items: center;/*alinha na horizontal*/
     width: 45vh;/*largura de 60% da divEsquerda*/
     height: 45vh;/*largura de 60% da divEsquerda*/
 }
