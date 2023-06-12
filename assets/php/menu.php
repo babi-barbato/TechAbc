@@ -92,7 +92,15 @@
         header("Location: produtosGerais.php"); //leva para a pag cadastrar produtos    
     }
 
+    if (isset($_POST['pesquisar'])) {
+        echo "<script>alert('pesquisou')</script>";
 
+        $_SESSION['nomeProduto'] = $_POST['search-value'];
+
+        
+        header("Location: ../pages/produtosPesquisa.php");
+        
+    }
 
 
 

@@ -35,7 +35,7 @@ header.innerHTML = `
             </div>
 
             <div class="search-box">
-                <form action="" method="post">
+                <form action="../assets/php/pesquisa.php" method="post">
                     <div class="text-box flex">
                         <input type="text" name="search-text" id="search" placeholder="Digite o que procura">
                     
@@ -223,7 +223,7 @@ header.innerHTML = `
                     </li>
                 </ul>
             </div>
-            <form action="" method="post">
+            <form action="../assets/php/pesquisa.php" method="post">
                 <div class="text-box">
                     <input id="search-text" name="search-value" type="text" placeholder="Digite o que procura...">
                     <button type="submit" name="search">

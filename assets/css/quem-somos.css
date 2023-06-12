@@ -48,6 +48,10 @@ section.quem-somos .container .items .item .bottom .contact {
 }
 section.quem-somos .container .items .item .bottom .contact ul li {
     display: inline-block;    
+    transition: all .1s ease;
+}
+section.quem-somos .container .items .item .bottom .contact ul li:hover {
+    transform: translateY(-5px);
 }
 
 section.quem-somos .container .items .item .bottom .contact ul li:not(:last-child) {
