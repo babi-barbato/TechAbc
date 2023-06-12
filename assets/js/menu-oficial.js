@@ -250,14 +250,10 @@ header.innerHTML = `
                     <div class="left">
                         <i class="fa fa-cart-shopping"></i>
                     </div>
-                    <div class="center">
-                        <span>
-                            <strong>Carrinho</strong>
-                        </span>
-                        <small>0 Produtos</small>
-                    </div>
-                    <div class="right">
-                        <i class="fa fa-chevron-down"></i>
+                </a>
+                <a class="favoritos-btn" href="../pages/favoritos.php">
+                    <div class="left">
+                        <i class="fa fa-star"></i>
                     </div>
                 </a>
             </div>

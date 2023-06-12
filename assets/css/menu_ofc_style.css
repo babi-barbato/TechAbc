@@ -438,12 +438,25 @@ div.special {
 .desktop-nav .carrinho-btn:hover {/**/
     background-color: #005de9;/*cor de fundo*/
 }
-.desktop-nav .carrinho-btn .center span {/**/
-    display: block;/*transforma em boco*/
+
+.desktop-nav .favoritos-btn {/**/
+    background-color: var(--orange);/*cor de fundo*/
+    display: flex;/*ele coloca os elementos em linha na horizontal*/
+    justify-content: center;/*deixa os elementos centralizados na horizontal*/
+    align-items: center;/*alinha os itens no centro*/
+    max-height: 40px;/*altura máxima*/
+    padding: 10px;/*margem interna, altura e largura*/
+    width: 50%;/*laruramáxima*/
+    border-radius: 5px;/*arredondamneto das bordas*/
+    cursor: pointer;/*estilo do mouse: mão*/
+    transition: all .2s ease;/*cor do botão para mais escuro */
+    color: #fff;/*cor da letra*/
 }
-.desktop-nav .carrinho-btn .center {/**/
-    text-align: left;/*alinhado a esquerda*/
-    font-size: 15px;/*tamanho da letra*/
+.desktop-nav .favoritos-btn .left {/**/
+    font-size: 20px;/*tamanho da letra*/
+}
+.desktop-nav .favoritos-btn:hover {/**/
+    background-color: #c05000;/*cor de fundo*/
 }
 
 .btnPhp{
