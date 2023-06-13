@@ -56,11 +56,11 @@
                         <label for="Subcategorias">Subcategoria <span required>*</span></label>
                         <select class="subcategorias" id="sub_pecas" name="sub_pecas" title="Subcategorias">
                             <option value="">Selecione</option>
-                            <option value="placa_mae">Placa Mãe</option>
+                            <option value="placaMae">Placa Mãe</option>
                             <option value="processador">Processador</option>
-                            <option value="memoria_ram">Memória RAM</option>
-                            <option value="placa_de_video">Placa de Vídeo</option>
-                            <option value="fonte_de_energia">Fonte de Energia</option>
+                            <option value="ram">Memória RAM</option>
+                            <option value="placaVideo">Placa de Vídeo</option>
+                            <option value="fonte">Fonte de Energia</option>
                             <option value="cooler">Cooler</option>
                             <option value="armazenamento">Armazenamento</option>
                             <option value="gabinete">Gabinete</option>
