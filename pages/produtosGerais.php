@@ -20,12 +20,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
         <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
         <link rel="stylesheet" href="../assets/css/produtos_Gerass-style.css">
-        <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
+    <link rel="stylesheet" href="../assets/css/menu__style.css"><!-- css do menu -->
         <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
         <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
     </head>
     <body>
-        <script src="../assets/js/menu-oficial.js"></script><!-- puxando menu que esta em um script -->
+        <script src="../assets/js/menu-oficiall.js"></script><!-- puxando menu que esta em um script -->
         
         <div id="divContainer"><!-- div que contem tudo -->
             <div class="divTitulo"><!-- div que contem o titulo da página -->
@@ -73,7 +73,7 @@
                 }
             ?>
         </div><!-- fecha divContainer  --> 
-        <script src="../assets/js/footer.js"></script><!-- puxa footer que esta no js  -->
+        <script src="../assets/js/footer_.js"></script><!-- puxa footer que esta no js  -->
         <script src="../assets/js/toggleMenu.js"></script><!-- puxa js que faz menu de celular funcionar  -->
        
     </body>

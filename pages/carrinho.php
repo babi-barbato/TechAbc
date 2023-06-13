@@ -1,4 +1,5 @@
 <?php
+//Php explicado no Index
 include("../assets/php/conexao.php");
 include("../assets/php/menu.php");
 echo "<style>#sair{display:none}</style>";
@@ -24,7 +25,7 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- Link dos icones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
     <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
-    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
+    <link rel="stylesheet" href="../assets/css/menu__style.css"><!-- css do menu -->
     <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
 
     <link rel="stylesheet" href="../assets/css/carrinho-style.css"><!--css da página-->
@@ -33,7 +34,7 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <script src="../assets/js/menu-oficial.js"></script><!-- menu chamado pelo js-->
+    <script src="../assets/js/menu-oficiall.js"></script><!-- menu chamado pelo js-->
     <div class="container"> <!--div que pega tudo-->
         <div class="produtos" style="height:50vh;overflow-y:auto;"> <!-- que armazena a caixinha da esquerda -->
             <table> <!--inicio da tabela-->
@@ -65,17 +66,17 @@ if (isset($_SESSION['user'])) {
                     // $resultadoFinal = $linha2['preco'] + $resultadoFinal;
                 echo"
                 
-                <div class='product' '> <!--div que armazena os produtos do carrinho -->
-                    <div class='titulo'> <!--armazena a imagem e o nome do produto-->
+                <div class='product' style=''> <!--div que armazena os produtos do carrinho -->
+                    <div class='titulo' style='width:25%'> <!--armazena a imagem e o nome do produto-->
                         <label class='name'>".$linha2['nome']."</label><!--nome do produto-->
                         <img style='width:100px' src='../img/".$linha2['tipo']."/".$linha2['foto']."' alt=' class='foto' /><!--imagem do produto-->
                     </div>
                     <label class='nome'>".$linha2['nome']."</label><!--imagem do produto-->
-                    <div>
+                    <div style='width:25%'>
                         <label class='preco'>".$linha2['preco']."</label> <!--preço do produto-->
                     </div>
-                    <div>
-                        <div class='qtd'><!--div que armazena o select-->
+                    <div style='width:25%'>
+                        <div class='qtd' style='width:100%'><!--div que armazena o select-->
                             <select id='slc' class='select' name='select' onchange='mostraValor(this,".$parametro.")'> <!--criação do select-->
                                 <option value='1'>1</option><!--segunda opção-->
                                 <option value='2'>2</option><!--terceira opção-->
@@ -94,7 +95,7 @@ if (isset($_SESSION['user'])) {
 
                     </script>";
                     echo"
-                    <form action='' method='post' name='form'>
+                    <form action='' method='post' name='form' style='display: flex;width: 25%;align-items: center;justify-content: center;'>
                     <button name=".$cont." class='excluir'> <!--botão que excluir prosutos-->
                     <i class='fa fa-trash-can'></i><!--emoji de lixeira-->
                     </button>
@@ -140,9 +141,6 @@ if (isset($_SESSION['user'])) {
             </div>
         </div>
     </div>
-            <div id="eitaa">
-w
-            </div>
 </body>
 
 </html>

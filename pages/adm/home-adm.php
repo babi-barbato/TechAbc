@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../../assets/css/home-adm.css">
-    <link rel="stylesheet" href="../../assets/css/menu_ofc_style.css">
+    <link rel="stylesheet" href="../../assets/css/menu__style.css">
     <link rel="stylesheet" href="../../assets/css/footer-style.css">
     <title>Home Administrador</title>
 </head>
@@ -134,20 +134,23 @@
     }
 
     ?>
-    <script src="../../assets/js/menu-do-adm.js"></script>
-    <script src="../toggleMenu.js"></script>
+    <script src="../../assets/js/menu-do-adm.js"></script> <!-- componente que é o menu de adm -->
+    <script src="../toggleMenu.js"></script><!-- js que faz esse enu funcinar em celular -->
 
-    <div id="divGeral">
-        <div style="width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <br>
-            <h1>Itens no geral dentro do estoque</h1>
-            <br>
-            <div class="divGraficos">
+    <div id="divGeral"><!-- divGeral -->
+
+        <div style="width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;"><!-- divi que vai pegar um gráfcio -->
+            <br><!-- pula linha -->
+            <h1>Itens no geral dentro do estoque</h1> <!-- titulo geral do gráfico -->
+            <br><!-- pula linha -->
+            <div class="divGraficos"> <!-- div que pega o grafico em si (canvas) -->
                 <div style="position: relative;">
-                    <canvas id="graficoProdutos"></canvas>
+                    <canvas id="graficoProdutos"></canvas><!-- elemento canvas que permite que criemos um gráfico (usa o canvas pois é o unico elemento que permite que 'desenhamos nele) -->
                 </div>
             </div>
         </div>
+
+        <!-- explicação no codigo acima -->
         <div style="width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <br>
             <h1 style="color:'#ff6384'">Acessórios no estoque</h1>
@@ -158,6 +161,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- explicação no codigo acima -->
         <div style="width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <br>
             <h1 style="color:'#ff6384'">Peças no estoque</h1>
@@ -172,7 +177,9 @@
 </body>
 
 </html>
-<?php echo "<script>
+<?php 
+  //Abaixo vou realizar a configuração desses gráficos
+  echo "<script>
     const ctx = document.getElementById('graficoProdutos'); //Pego o elemento CANVAS que ficara meu gráfico
     new Chart(ctx, {//Crio o grafico
       type: 'bar',//é tipo de barras

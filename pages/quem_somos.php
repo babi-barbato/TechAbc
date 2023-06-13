@@ -1,3 +1,20 @@
+<?php
+include("../assets/php/conexao.php");
+include("../assets/php/menu.php");
+echo "<style>#sair{display:none}</style>";
+echo "<style>#saair{display:none}</style>";
+
+if(!isset($_SESSION['user'])){
+  header("Location: login.html");
+}
+
+if (isset($_SESSION['user'])) {
+    echo "<style>#teste{display:none}</style>";
+    echo "<style>#cadLogin{display:none}</style>";
+    echo "<style>#sair{display:flex;}</style>";
+    echo "<style>#saair{display:flex}</style>";
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,13 +23,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/menu_ofc_style.css">
+    <link rel="stylesheet" href="../assets/css/menu__style.css">
     <link rel="stylesheet" href="../assets/css/footer-style.css">
     <link rel="stylesheet" href="../assets/css/quem-somos.css">
     <title>Quem Somos</title>
 </head>
 <body>
-    <script src="../assets/js/menu-oficial.js"></script>
+    <script src="../assets/js/menu-oficiall.js"></script>
 
     <section class="quem-somos">
         <div class="container">
@@ -155,6 +172,6 @@
         </div>
     </section>
 
-    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/footer_.js"></script>
 </body>
 </html>

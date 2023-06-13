@@ -31,9 +31,7 @@
             <div class="divTitulo">
                 <?php 
                     include('../assets/php/conexao.php');
-                    if (!session_start()) {
-                        session_start();
-                    }
+                    
                     $erro = 0;
                     echo "<h1>Busca por: '".$_SESSION['nomeProduto']."'</h1>";
                 ?>

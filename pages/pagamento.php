@@ -18,16 +18,16 @@
     <div style="height: 100vh;display: flex;justify-content: end;align-self: end;"  class="esquerda" id="esquerda"> <!--parte esquerda-->
     <div style="height: auto;display:flex;flex-direction:column; gap:20px; margin-top:10px">
         <?php
-        include("../assets/php/conexao.php");
-        include("../assets/php/menu.php");
+        include("../assets/php/conexao.php");//inclui php que realiza a conexão
+        include("../assets/php/menu.php");//inclui o php que faz o menu funcionar
 
-        $sql = "select * from enderecos where fkEndereco = ".$_SESSION['idPe']."";
-        $result = mysqli_query($conexao,$sql);
-        while($linha = mysqli_fetch_array($result)){
-            echo "<div style='display:flex;gap:30px'>
-            <input type='radio' name='local'>
+        $sql = "select * from enderecos where fkEndereco = ".$_SESSION['idPe'].""; // busco todos os endereços da pessoa que esta logada
+        $result = mysqli_query($conexao,$sql);//resultado dessa pesquisa
+        while($linha = mysqli_fetch_array($result)){//crio um while que acomuda tds os resultads
+            echo "<div style='display:flex;gap:30px'><!-- Crio uma div que vai acomular um endereço -->
+            <input type='radio' name='local'><!-- Input para selecionar o endereço -->
             <div>".$linha['rua']."<br>Bairro: ".$linha['bairro']."<br>CEP: ".$linha['cep']."<br>Estado / Cidade: ".$linha['cidade']."</div>
-            </div>";
+            </div>";//fecha a div que pega (rua, bairro, cep, estado e cidade)
         }
         ?>
         </div>
@@ -61,7 +61,7 @@
                 <div id="fotoIcone" class="image">
                     <img  style="width: 450px;  margin-top: 60px;" src="../img/gif/cadEnd.gif" alt="ícone de cadastro"> <!---->
                 </div>
-                <form action="" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
+                <form action="../assets/php/pagamento.php" method="post" class="form" onsubmit="return formControl(this)"> <!--chama a função quando é clcado no enviar-->
                     <div id="cartao"> <!--armazena tudo que for do cartão-->
                         <label class="info">Informações do cartão:</label> <!--for - usado para identificar qual input pertence essa label, titulo do campo-->
                 <div id="pagamento" ><!--armazena todas as imagens-->
@@ -75,31 +75,31 @@
                 </div>
                 
                 <div class="form-branco"> <!--classe do input-->
-                    <input id="numero-c" type="text" required placeholder="Numero do cartão"><!--input do numero do cartao-->
+                    <input id="numero-c" type="text" name="a"  placeholder="Numero do cartão"><!--input do numero do cartao-->
                 </div>
                 
                 <div class="form-branco"><!--classe do input-->
-                    <input id="data" type="text"  required placeholder="Data de validade (MM/AA)"><!--input da data de validade-->
-                    <input id="cvv" type="text"  required placeholder="CVV"><!--input do cvv-->
+                    <input id="data" type="text" name="a"  placeholder="Data de validade (MM/AA)"><!--input da data de validade-->
+                    <input id="cvv" type="text" name="a"  placeholder="CVV"><!--input do cvv-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="nome-c" type="text" required placeholder="Nome no cartão"><!--input do nome que esta no cartao-->
+                    <input id="nome-c" type="text" name="a"  placeholder="Nome no cartão"><!--input do nome que esta no cartao-->
                 </div>
                 
                 <label class="cliente">Informações do dono:</label> <!--titulo do input-->
                 <div class="form-branco"><!--classe do input-->
-                    <input id="c" type="text" required placeholder="CEP"><!--input do cep-->
+                    <input id="c" type="text" name="a"  placeholder="CEP"><!--input do cep-->
                 </div>
                 
                 <div class="form-branco"><!--classe do input-->
-                    <input id="est" type="text" required placeholder="Estado"><!--input dp estado-->
-                    <input id="num" type="text" required placeholder="Número"><!--input do numero da casa-->
+                    <input id="est" type="text" name="a"  placeholder="Estado"><!--input dp estado-->
+                    <input id="num" type="text" name="a"  placeholder="Número"><!--input do numero da casa-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="av" type="text" required placeholder="Rua/Avenida"><!--input da rua-->
+                    <input id="av" type="text" name="a"  placeholder="Rua/Avenida"><!--input da rua-->
                 </div>
                 <div class="form-branco"><!--classe do input-->
-                    <input id="comp" type="text" required placeholder="Complemento"><!--input do complemento-->
+                    <input id="comp" type="text" name="a"  placeholder="Complemento"><!--input do complemento-->
                 </div>
                   <!--BOTÃO-->
                   <div class="button"> <!--classe do botão-->
@@ -110,7 +110,7 @@
                     </button>    
                       
                  
-                    <button type="submit" id="enviar"><!--botão de cancelar-->
+                    <button type="submit" id="enviar" name="pagar"><!--botão de cancelar-->
                         Enviar <!--o que aparece dentro do botão-->
                     </button>
                 </div>
@@ -120,7 +120,7 @@
             <div style="display:none;flex-direction: column;" id="boleto"><!--div que armazena todas as informações do boleto-->
                 <label class="pag-boleto">Insira seu email para receber o boleto:</label> <!--titulo do input-->
                 <div class="form-branco"><!--classe do input-->
-                    <input id="bolet" type="text" required placeholder="Insira um email válido"><!-- input para inserir email-->
+                    <input id="bolet" type="text" name="a"  placeholder="Insira um email válido"><!-- input para inserir email-->
                 </div>
                 <div class="button"> <!--classe do botão-->
                     <button type="submit"  id="cancelar-boleto"><!--botão de cancelar-->
@@ -128,7 +128,7 @@
                         Cancelar  <!--o que aparece dentro do botão-->
                     </a>
                     </button> 
-                    <button type="submit"  id="enviar-boleto"><!--botão de cancelar-->
+                    <button type="submit"  id="enviar-boleto" name="pagar"><!--botão de cancelar-->
                         Enviar <!--o que aparece dentro do botão-->
                     </button>
                 </div>
@@ -144,8 +144,8 @@
                         Cancelar  <!--o que aparece dentro do botão-->
                     </a>
                     </button>
-                    <button type="submit" id="voltar"><!--botão de cancelar-->
-                        <a href="index.php">
+                    <button type="submit" id="voltar" name="pagar"><!--botão de cancelar-->
+                        <a href="index.php" style="color: white;">
                             Voltar  <!--o que aparece dentro do botão-->
                         </a>
                     </button>
@@ -156,9 +156,9 @@
 </body>
 </html>
 <script>
-    $(document).ready(function(){
-        $('#cep').mask('00000-000')
-        $('#numero').mask('N° 0000')
+    $(document).ready(function(){//JQUERY para criar mascara
+        $('#cep').mask('00000-000')//mascara do cep
+        $('#numero').mask('N° 0000')//mascara do número do local
     });
     
     function consultaCep(){

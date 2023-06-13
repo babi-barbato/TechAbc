@@ -420,7 +420,7 @@ div.special {
 .desktop-nav .carrinho-btn {/**/
     background-color: var(--blue);/*cor de fundo*/
     display: flex;/*ele coloca os elementos em linha na horizontal*/
-    justify-content: space-between;/*deixa o mesmo espaçodos elementos na horizontal*/
+    justify-content: center;/*deixa o mesmo espaçodos elementos na horizontal*/
     align-items: center;/*alinha os itens no centro*/
     max-height: 40px;/*altura máxima*/
     line-height: normal;/*espaçamento na vertical entre as linhas*/
@@ -446,7 +446,7 @@ div.special {
     align-items: center;/*alinha os itens no centro*/
     max-height: 40px;/*altura máxima*/
     padding: 10px;/*margem interna, altura e largura*/
-    width: 50%;/*laruramáxima*/
+    width: 100%;/*laruramáxima*/
     border-radius: 5px;/*arredondamneto das bordas*/
     cursor: pointer;/*estilo do mouse: mão*/
     transition: all .2s ease;/*cor do botão para mais escuro */
@@ -454,6 +454,11 @@ div.special {
 }
 .desktop-nav .favoritos-btn .left {/**/
     font-size: 20px;/*tamanho da letra*/
+}
+.desktop-nav .cart-container {/**/
+    display: flex;
+    width: 70%;
+    gap: 10px;
 }
 .desktop-nav .favoritos-btn:hover {/**/
     background-color: #c05000;/*cor de fundo*/

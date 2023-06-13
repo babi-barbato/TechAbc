@@ -4,7 +4,7 @@ footer.innerHTML = `
 <footer>
     <div class="left"> <!--div que pega a parte esquerda-->
         <div class="expo-logo"> <!--amazena  aimg da expo-->
-            <h1>LOGO</h1><!--img-->
+            <img src='../img/exposoft_logo_claro.svg' style='width:160px'><!--img-->
         </div>
         <span class="copyright">© 2023 TechABC, Inc. Todos os direitos reservados.</span><!--texto abaixo da img-->
     </div>
@@ -40,7 +40,7 @@ footer.innerHTML = `
         <h3>Institucional</h3>
         <ul>
             <li>
-                <a href="#">Sobre Nós</a>
+                <a href="quem_somos.php">Sobre Nós</a>
             </li>
             <li>
                 <span>(11) 9876-6789</span>

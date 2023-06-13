@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../../assets/css/meus_dados-style.css">
-    <link rel="stylesheet" href="../../assets/css/menu_ofc_style.css">
+    <link rel="stylesheet" href="../../assets/css/menu__style.css">
     <link rel="stylesheet" href="../../assets/css/footer-style.css">
     <title>Visão dos Produtos</title>
 </head>
 
 <body>
-    <script src="../../assets/js/menu-do-adm.js"></script>
-    <script src="../toggleMenu.js"></script>
+    <script src="../../assets/js/menu-do-adm.js"></script><!-- inclui o componente menu-do-adm -->
+    <script src="../toggleMenu.js"></script><!-- inclui o js que faz o menu de celular funcionar -->
 
     <div class="divGeral">
         <div class="usuario" >
@@ -63,24 +63,24 @@
 
 </html>
 <?php
-    include('../../assets/php/conexao.php');
-    if(isset($_POST['btnSenha'])){
-        $email = $_POST['iptEmailLogin'];
-        $novaSenha = $_POST['iptNovaSenha'];
-        $confSenha = $_POST['iptConfNovaSenha'];
+    include('../../assets/php/conexao.php');// inclui o arquivo de conexão
+    if(isset($_POST['btnSenha'])){//se a pessoa clicou no botão de mudar senha
+        $email = $_POST['iptEmailLogin'];// cria uma variavel e pega o valo do email de login
+        $novaSenha = $_POST['iptNovaSenha'];// cria uma variavel e pega o valo da nova senha
+        $confSenha = $_POST['iptConfNovaSenha'];// cria uma variavel e pega o valor da confirmação de senha
         
-        if($confSenha != $novaSenha){
-            echo "<script>alert('Senha Diferentes!')</script>";
-        }else if($email == '' || $novoSenha = '' || $confSenha = ''){
-            echo "<script>alert('Preencha todos os campos')</script>";
-        }else{
-            echo "<script>alert('Senhas alterada com sucesso')</script>";
-            $sql = "UPDATE clientes SET senha = '$novaSenha' WHERE email = '$email'";
-            $resultado = mysqli_query($conexao,$sql);
+        if($confSenha != $novaSenha){//se as senhas forem diferentes
+            echo "<script>alert('Senha Diferentes!')</script>";//alerta
+        }else if($email == '' || $novoSenha = '' || $confSenha = ''){//se algum campo não tiver sido preenchido
+            echo "<script>alert('Preencha todos os campos')</script>";//alerta
+        }else{//se tud ocore bem
+            echo "<script>alert('Senhas alterada com sucesso')</script>";//alerta
+            $sql = "UPDATE clientes SET senha = '$novaSenha' WHERE email = '$email'";//sql que muda a senha 
+            $resultado = mysqli_query($conexao,$sql);//realiza a sql acima
         }
     }
 
-    if(isset($_POST['btnEmail'])){
+    if(isset($_POST['btnEmail'])){//Exatamente a mesma coisa que o PHP acima, mas para mudar o email
         $senha = $_POST['iptSenhaLogin'];
         $novoEmail = $_POST['iptNovoEmail'];
         $confEmail = $_POST['iptConfEmail'];

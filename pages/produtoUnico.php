@@ -23,12 +23,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- compativel com outros navegadores -->
         <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon"><!-- icone que aparece na aba da página -->
         <link rel="stylesheet" href="../assets/css/produto-nico-style.css"><!-- css dessa página -->
-        <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
+    <link rel="stylesheet" href="../assets/css/menu__style.css"><!-- css do menu -->
         <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
         <title>Produto</title>
     </head>
     <body>
-        <script src="../assets/js/menu-oficial.js"></script><!-- menu que chamamos por meio de um js-->
+        <script src="../assets/js/menu-oficiall.js"></script><!-- menu que chamamos por meio de um js-->
         <div id="divContainer"><!-- div que pega todos os elementos da tela-->
             <div id="divEsquerda"><!-- div que pega os elementos da esquerda -->
                 <div id="divProduto"><!-- Div que vai ter o produto na esquerda -->
@@ -105,7 +105,7 @@
                 </div>
             </div><!-- fecha div direita-->
         </div>  <!-- fecha div container -->  
-        <script src="../assets/js/footer.js"></script><!-- footer que chamamos por meio de um js-->
+        <script src="../assets/js/footer_.js"></script><!-- footer que chamamos por meio de um js-->
         <script src="toggleMenu.js"></script><!-- js que faz o menu mobille funcionar-->
         <script src="../assets/js/bnt_coracao.js"></script>
     </body>

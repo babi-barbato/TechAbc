@@ -346,7 +346,7 @@ if (isset($_SESSION['user'])) {
         </section>
     </main>
     <script src="../assets/js/monte_pc.js"></script>
-    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/footer_.js"></script>
 </body>
 
 </html>

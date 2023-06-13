@@ -223,14 +223,12 @@ header.innerHTML = `
                     </li>
                 </ul>
             </div>
-            <form action="../assets/php/pesquisa.php" method="post">
                 <div class="text-box">
                     <input id="search-text" name="search-value" type="text" placeholder="Digite o que procura...">
-                    <button type="submit" name="search">
+                    <button type="submit" name="pesquisar">
                         <i class="fa fa-magnifying-glass"></i>
                     </button>
                 </div>
-            </form>
         </div>
         <div class="right">
             <div id="teste" class="cadastro-login">
