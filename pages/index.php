@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="../assets/css/produtos_Gerass-style.css">
         <link rel="stylesheet" href="../assets/css/menu_ofc_style.css"><!-- css do menu -->
         <link rel="stylesheet" href="../assets/css/footer-style.css"><!-- css do footer -->
-        <title>Produtos Gerais</title><!-- titulo que aparece na aba do site -->
+        <title>Tech ABC</title><!-- titulo que aparece na aba do site -->
     </head>
 <body>
     <script src="../assets/js/menu-oficial.js"></script>

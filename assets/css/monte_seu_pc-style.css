@@ -19,6 +19,9 @@ main {
     margin: 0 60px;/*margem externa*/
     padding: 20px 0px;/*margem interna*/
 }
+main .back-to-menu:hover {
+    text-decoration: underline;
+}
 main > section .title {
     text-align: center;/*alinha o texto no centro*/
     padding: 8px 0px 13px 0px;/*margem interna*/
@@ -101,6 +104,12 @@ main > section .title {
     font-size: 1em;/*tamanho da letra*/
     justify-content: space-between;/*espaçamento entre a lateral dos elementos*/
     margin-bottom: 20px;/*margem externa na parte inferior*/
+}
+.build-box > .box2 > .middle > .config-info > .config-item > span:nth-child(1) {
+    margin-right: 30px;
+}
+.build-box > .box2 > .middle > .config-info > .config-item > span:nth-child(2) {
+    color: darkgreen;
 }
 .build-box > .box2 > .bottom {
     height: 10%;/*altura maxima*/
@@ -194,12 +203,10 @@ main > section .title {
     outline: 2px solid #D75A00;/*borda do lado de fora do elemento*/
 }
 .box-opacity > .float-box > .center > .peças > .item > .price {
-    position: absolute;/*posição absoluta*/
-    bottom: 0px;/*espaçamento da parte debaixo*/
-    right: 0px;/*espaçamento do lado direito*/
     font-size: 1.1rem;/*tamanho da letra*/
     color: rgb(0, 120, 0);/*cor da letra*/
     padding: 10px;/*margem interna*/
+    place-self: end;/*alinha o elemento no final do elemento pai*/
 }
 
 .box-opacity > .float-box > .center > .peças > .item > .image {

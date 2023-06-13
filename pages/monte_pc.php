@@ -34,6 +34,9 @@ if (isset($_SESSION['user'])) {
     <main>
         <section>
             <div class="container">
+                <div class="back-to-menu" >
+                    <a href="index.php" style="color: black;"><span class="fa fa-chevron-left" style="margin-right: 10px;"></span> Voltar ao menu</a>
+                </div>
                 <div class="title">
                     <h1>Monte seu PC</h1>
                 </div>
