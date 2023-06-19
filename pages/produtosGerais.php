@@ -61,9 +61,6 @@
                             <p class='pverm'>De <label>R$ ".$linha['precoAntigo'].",00</label> por:</p>
                             <div>
                                 <p class='pPreco'>R$ ".$linha['preco'].",00</p>
-                                <div class='divazul'>
-                                    <i class='fa fa-cart-shopping'></i>
-                                </div>
                             </div>
                             <p class='pTexto'>Parcele em até 12x sem juros</p>
                         </div>

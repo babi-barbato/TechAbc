@@ -179,6 +179,7 @@ main > section .title {
     gap: 20px;/*espaçamento entre os elementos*/
     padding: 6px 20px;/*margem interna*/
     margin: 0 10px;/*margem externa*/
+    overflow-y: auto;
 }
 .box-opacity > .float-box > .center > .peças::-webkit-scrollbar {
     background-color: transparent;/*cor de fundo*/
@@ -190,7 +191,7 @@ main > section .title {
     border-radius: 20px;/*arredondamento da borda*/
 }
 .box-opacity > .float-box > .center > .peças > .item {
-    height: 340px;/*altura maxima*/
+    min-height: 360px;/*altura maxima*/
     display: flex;/*deixa os elementos flexiveis*/
     flex-direction: column;/*deixa os elementos em coluna*/
     align-items: center;/*alinha os elementos na horizontal*/

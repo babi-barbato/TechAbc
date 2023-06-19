@@ -32,7 +32,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <script src="../assets/js/menu-oficiall.js"></script><!--  menu que esta em um script -->
-
+    
     <!-- div que contem tudo -->
     <?php
     $vetorId = [0,];
@@ -44,6 +44,7 @@ if (isset($_SESSION['user'])) {
     if($linhas < 1){
         echo "<div style='height:60vh; width:100%; text-align:center'><h1>Você não tem nenhum produto favoritado</h1></div>";
     }
+    echo"<div class='container'>";
     while($linha = mysqli_fetch_array($resultado)){
         $sql = "SELECT * FROM ".$linha['tabela']." WHERE id = ".$linha['fkProduto']."";
         $result = mysqli_query($conexao,$sql);
@@ -51,7 +52,7 @@ if (isset($_SESSION['user'])) {
         while($linha2 = mysqli_fetch_array($result)){
             array_push($vetorId,$linha2['id']);
             array_push($vetorTabela,$linha['tabela']);
-    echo"<div class='container'>
+    echo"
         <form action='' method='post' class='formProd'> <!--form que puzara o php-->
             <div class='produto'>
                 <button type='button' class='btnCoracao'>

@@ -78,6 +78,7 @@ if (isset($_SESSION['user'])) {
                     <div style='width:25%'>
                         <div class='qtd' style='width:100%'><!--div que armazena o select-->
                             <select id='slc' class='select' name='select' onchange='mostraValor(this,".$parametro.")'> <!--criação do select-->
+                                <option value='a'>0</option><!--segunda opção-->
                                 <option value='1'>1</option><!--segunda opção-->
                                 <option value='2'>2</option><!--terceira opção-->
                                 <option value='3'>3</option><!--quarta opção-->
@@ -119,7 +120,7 @@ if (isset($_SESSION['user'])) {
             <label class='resumo'>Resumo da compra</label><!--titulo da caixinha-->
             <hr>
             <div class='info'><!--div que armazena o o preço e o frete-->
-                <div><label>Subtotal</label><!--titulo-->
+                <div><label>Total</label><!--titulo-->
                     <label id='subtotall'>R$ </label><!--preço final-->
                 </div>
                 <div><label>Frete</label><!--titulo-->
@@ -127,14 +128,12 @@ if (isset($_SESSION['user'])) {
                 </div>
             </div>
             <hr>
-            <div class='mini-total'><!--armazena o total da compra-->
-                <label> Total</label><!--titulo-->
-                <label>R$ </label><!--preço final-->
-            </div>
             <div class='button'> <!--div que armazena os botões-->
-                <a href='../pages/pagamento.php' class='enviar'> <!--botão de finalizar compra-->
-                    Finalizar compra
-                </a>
+                <!-- <a href='../pages/pagamento.php' class='enviar'> botão de finalizar compra -->
+                    <button class="enviar"onclick="verificar()">
+                        Finalizar compra
+                    </button>
+                <!-- </a> -->
                 <button type='button' class='continuar'><!--botão de continuar comprando-->
                     <a href='../pages/cadastro_enderecos.php' style='color:blue; border-color:blue'>Cadastrar novo endereço </a>
                 </button>
@@ -145,4 +144,22 @@ if (isset($_SESSION['user'])) {
 
 </html>
 <script src="carrinho.php"></script>
-<script src="../assets/js/footer.js"></script><!--link do js do footer-->
+<script src="../assets/js/footer_.js"></script><!--link do js do footer-->
+<script>
+    function verificar(){
+        var x = document.querySelectorAll('#slc')//seleciono todos os selects
+        var erro = 0 //crio um arquivo que vai verificar se algum produto não esta selecionado
+        
+        x.forEach((item, i) => {//crio um forEach, ou seja, ele vai procurar alguma coisa nos meus selects
+            if(x[i].value == 'a'){ //se (x[i].value == 'a') ou seja, se o select estiver sem valor
+                erro++ //adicione 1 na variavel erro
+            }
+        })
+
+        if(erro != 0){//se erro for diferente de 0 
+            alert('Adicione ou remova todos os produtos no carrinho');//alerta
+        }else{//se td estiver certo
+            alert('ok')//leva para a página de pagamento
+        }
+    }
+</script>

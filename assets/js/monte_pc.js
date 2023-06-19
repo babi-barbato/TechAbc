@@ -109,7 +109,7 @@ confirmar.addEventListener('click', () => {
             precoTotalPreview.innerHTML = somaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             
             // Adiciona na lista de produtos selecionados o nome do produto e o preço
-            pieceListItem[btnSelectIndex].innerHTML = `<span>${nomeProduto[i].innerHTML}</span><span>${precoProduto[i].innerHTML}</span>`;
+            pieceListItem[btnSelectIndex].innerHTML = `<span>${nomeProduto[i].innerHTML}</span><span>${precoProduto[i].innerHTML},00</span>`;
         }
         
     })
