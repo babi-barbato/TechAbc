@@ -53,65 +53,61 @@ if (isset($_SESSION['user'])) {
             <?php
             $vetor = [0,];
             // $resultadoFinal = 0;
-            $sqlPesquisa = "SELECT * FROM carrinho WHERE fkCliente = ".$_SESSION['idPe']."";
-            $resultado = mysqli_query($conexao,$sqlPesquisa);
-            $cont = 1;
-            $parametro = 0;
+            $sqlPesquisa = "SELECT * FROM carrinho WHERE fkCliente = ".$_SESSION['idPe'].""; # seleciona da tabela carrinho todos os produtos cuja foreign key (chave estrangeira) é igual ao valor da variável idPe
+            $resultado = mysqli_query($conexao,$sqlPesquisa); # resultado que irá executar a query acima
+            $cont = 1; # inicia o contador em 1
+            $parametro = 0; # inicia o parametro em 0
             while($linha = mysqli_fetch_array($resultado)){
-                $sql = "SELECT * FROM ".$linha['tabela']." WHERE id = ".$linha['fkProduto']."";
-                $result = mysqli_query($conexao,$sql);
+                $sql = "SELECT * FROM ".$linha['tabela']." WHERE id = ".$linha['fkProduto'].""; # seleciona das tabelas específicas os seus respectivos produtos
+                $result = mysqli_query($conexao,$sql); # result que executa a query
                 
                 while($linha2 = mysqli_fetch_array($result)){
-                    array_push($vetor,$linha2['id']);
                     // $resultadoFinal = $linha2['preco'] + $resultadoFinal;
-                echo"
-                
-                <div class='product' style=''> <!--div que armazena os produtos do carrinho -->
-                    <div class='titulo' style='width:25%'> <!--armazena a imagem e o nome do produto-->
-                        <label class='name'>".$linha2['nome']."</label><!--nome do produto-->
-                        <img style='width:100px' src='../img/".$linha2['tipo']."/".$linha2['foto']."' alt=' class='foto' /><!--imagem do produto-->
-                    </div>
-                    <label class='nome'>".$linha2['nome']."</label><!--imagem do produto-->
-                    <div style='width:25%'>
-                        <label class='preco'>".$linha2['preco']."</label> <!--preço do produto-->
-                    </div>
-                    <div style='width:25%'>
-                        <div class='qtd' style='width:100%'><!--div que armazena o select-->
-                            <select id='slc' class='select' name='select' onchange='mostraValor(this,".$parametro.")'> <!--criação do select-->
-                                <option value='a'>0</option><!--segunda opção-->
-                                <option value='1'>1</option><!--segunda opção-->
-                                <option value='2'>2</option><!--terceira opção-->
-                                <option value='3'>3</option><!--quarta opção-->
-                                <option value='4'>4</option><!--quinta opção-->
-                                <option value='5'>5</option><!--sexta opção-->
-                                <option value='6'>6</option><!--setima opção-->
-                                <option value='7'>7</option><!--oitava opção-->
-                                <option value='8'>8</option><!--nona opção-->
-                                <option value='9'>9</option><!--decima opção-->
-                                <option value='10'>10</option><!--decima primeira opção-->
-                            </select>
-                        </div>
-                    </div>";
-                    echo "<script>
-
-                    </script>";
                     echo"
-                    <form action='' method='post' name='form' style='display: flex;width: 25%;align-items: center;justify-content: center;'>
-                    <button name=".$cont." class='excluir'> <!--botão que excluir prosutos-->
-                    <i class='fa fa-trash-can'></i><!--emoji de lixeira-->
-                    </button>
-                    </form>
-                </div>";
+                    
+                    <div class='product' style=''> <!--div que armazena os produtos do carrinho -->
+                        <div class='titulo' style='width:25%'> <!--armazena a imagem e o nome do produto-->
+                            <label class='name'>".$linha2['nome']."</label><!--nome do produto-->
+                            <img style='width:100px' src='../img/".$linha2['tipo']."/".$linha2['foto']."' alt=' class='foto' /><!--imagem do produto-->
+                        </div>
+                        <label class='nome'>".$linha2['nome']."</label><!--imagem do produto-->
+                        <div style='width:25%'>
+                            <label class='preco'>".$linha2['preco']."</label> <!--preço do produto-->
+                        </div>
+                        <div style='width:25%'>
+                            <div class='qtd' style='width:100%'><!--div que armazena o select-->
+                                <select id='slc' class='select' name='select' onchange='mostraValor(this,".$parametro.")'> <!--criação do select-->
+                                    <option value='a'>0</option><!--segunda opção-->
+                                    <option value='1'>1</option><!--segunda opção-->
+                                    <option value='2'>2</option><!--terceira opção-->
+                                    <option value='3'>3</option><!--quarta opção-->
+                                    <option value='4'>4</option><!--quinta opção-->
+                                    <option value='5'>5</option><!--sexta opção-->
+                                    <option value='6'>6</option><!--setima opção-->
+                                    <option value='7'>7</option><!--oitava opção-->
+                                    <option value='8'>8</option><!--nona opção-->
+                                    <option value='9'>9</option><!--decima opção-->
+                                    <option value='10'>10</option><!--decima primeira opção-->
+                                </select>
+                            </div>
+                        </div>";
+                        echo"
+                        <form action='' method='post' name='form' style='display: flex;width: 25%;align-items: center;justify-content: center;'>
+                        <button name=".$cont." class='excluir'> <!--botão que excluir prosutos-->
+                        <i class='fa fa-trash-can'></i><!--emoji de lixeira-->
+                        </button>
+                        </form>
+                    </div>"; // Cria cada linha da tabela do carrinho, onde haverá a foto do produto, seu nome, um select para que o usuário possa selecionar a quantia que deseja (entre um e dez), o preço e um botão de lixeira para que o usuário possa excluir o item do carrinho.
                     $cont++; 
                     $parametro++;
                 }
             } 
             for($i = 0; $i < 200 ; $i++){
                 if(isset($_POST[$i])){
-                    $sql = "DELETE FROM carrinho WHERE fkCliente = ".$_SESSION['idPe']." AND fkProduto = ".$vetor[$i]."";
-                    $resultados = mysqli_query($conexao,$sql);
+                    $sql = "DELETE FROM carrinho WHERE fkCliente = ".$_SESSION['idPe']." AND fkProduto = ".$vetor[$i].""; // deleta da tabela carrinho o produto que o usuário excluiu
+                    $resultados = mysqli_query($conexao,$sql); // result que executa a query
                     echo "<script>window.location.href = 'carrinho.php'</script>";
-                    $i = 201;
+                    $i = 201; // insere um valor maior do que o valor maximo do laço para "estourá-lo"
                 }
             }
             ?>

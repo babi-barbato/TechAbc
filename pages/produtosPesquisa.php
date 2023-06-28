@@ -39,9 +39,9 @@
 
             <?php
                 
-                $sqlPecas = "SELECT * from pecas WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' ";
-                $resultPecas = mysqli_query($conexao, $sqlPecas);
-                $numPecas = mysqli_num_rows($resultPecas);
+                $sqlPecas = "SELECT * from pecas WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' "; // Select das peças 
+                $resultPecas = mysqli_query($conexao, $sqlPecas); // Result que executa a query
+                $numPecas = mysqli_num_rows($resultPecas); // Numero de linhas retornadas
                 if($numPecas > 0){
                     while($linha = mysqli_fetch_array($resultPecas)){
                         echo "
@@ -65,15 +65,15 @@
                                 </div>
                             </button>
                             </div>
-                        </form>";
+                        </form>"; // Gera uma div com display grid que conterá todos os os produtos da categoria selecionada
                     }
                 } else {
-                    $erro++;
+                    $erro++; // Soma 1 no valor da variável erro
                 }
 
-                $sqlAcessorios = "SELECT * from acessorios WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' ";
-                $resultAcessorios = mysqli_query($conexao, $sqlAcessorios);
-                $numAcessorios = mysqli_num_rows($resultAcessorios);
+                $sqlAcessorios = "SELECT * from acessorios WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' "; // Select dos acessorios
+                $resultAcessorios = mysqli_query($conexao, $sqlAcessorios); // Result que executa a query
+                $numAcessorios = mysqli_num_rows($resultAcessorios); // Numero de linhas retornada
                 if($numAcessorios > 0){
                     while($linha = mysqli_fetch_array($resultAcessorios)){
                         echo "
@@ -97,15 +97,15 @@
                                 </div>
                             </button>
                             </div>
-                        </form>";
+                        </form>"; // Gera uma div com display grid que conterá todos os os produtos da categoria selecionada
                     }
                 } else {
-                    $erro++;
+                    $erro++; // Soma 1 no valor da variável erro
                 }
 
-                $sqlNotebooks = "SELECT * from notebooks WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' ";
-                $resultNotebooks = mysqli_query($conexao, $sqlNotebooks);
-                $numNotebooks = mysqli_num_rows($resultNotebooks);
+                $sqlNotebooks = "SELECT * from notebooks WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' "; // Select dos notebooks
+                $resultNotebooks = mysqli_query($conexao, $sqlNotebooks); // Result que executa a query
+                $numNotebooks = mysqli_num_rows($resultNotebooks); // Numero de linhas retornadas
                 if($numNotebooks > 0){
                     while($linha = mysqli_fetch_array($resultNotebooks)){
                         echo "
@@ -129,15 +129,15 @@
                                 </div>
                             </button>
                             </div>
-                        </form>";
+                        </form>"; // Gera uma div com display grid que conterá todos os os produtos da categoria selecionada
                     }
                 } else {
-                    $erro++;
+                    $erro++; // Soma 1 no valor da variável erro
                 }
 
-                $sqlDesktops = "SELECT * from desktops WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' ";
-                $resultDesktops = mysqli_query($conexao, $sqlDesktops);
-                $numDesktops = mysqli_num_rows($resultDesktops);
+                $sqlDesktops = "SELECT * from desktops WHERE nome LIKE '%".$_SESSION['nomeProduto']."%' "; // Select dos desktops
+                $resultDesktops = mysqli_query($conexao, $sqlDesktops); // Result que executa a query
+                $numDesktops = mysqli_num_rows($resultDesktops); // Numero de linhas retornadas
                 if($numDesktops > 0){
                     while($linha = mysqli_fetch_array($resultDesktops)){
                         echo "
@@ -161,14 +161,14 @@
                                 </div>
                             </button>
                             </div>
-                        </form>";
+                        </form>"; // Gera uma div com display grid que conterá todos os os produtos da categoria selecionada
                     }
                 } else {
-                    $erro++;
+                    $erro++; // Soma 1 no valor da variável erro
                 }
 
                 if ($erro == 4) {
-                    echo "Não encontramos nenhum resultado para a pesquisa...";
+                    echo "Não encontramos nenhum resultado para a pesquisa..."; // Se a variavel erro tiver valor igual a quatro, mostra essa mensagem
                 }
             ?>
         </div><!-- fecha divContainer  --> 
